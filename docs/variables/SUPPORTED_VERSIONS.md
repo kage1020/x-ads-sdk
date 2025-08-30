@@ -1,0 +1,11 @@
+[**X Ads SDK v1.0.0**](../README.md)
+
+***
+
+[X Ads SDK](../globals.md) / SUPPORTED\_VERSIONS
+
+# Variable: SUPPORTED\_VERSIONS
+
+> `const` **SUPPORTED\_VERSIONS**: readonly \[[`V11`](../enumerations/APIVersion.md#v11), [`V12`](../enumerations/APIVersion.md#v12)\]
+
+Defined in: types/api-version.ts:14

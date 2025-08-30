@@ -1,0 +1,91 @@
+{
+  "name": "x-ads-sdk",
+  "version": "1.0.0",
+  "description": "Strongly typed, full-featured X (Twitter) Ads API client for Node.js",
+  "keywords": [
+    "twitter",
+    "x",
+    "ads",
+    "api",
+    "typescript",
+    "oauth",
+    "analytics",
+    "campaigns",
+    "advertising"
+  ],
+  "author": "kage1020",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./esm": {
+      "import": "./dist/index.esm.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./min": {
+      "import": "./dist/index.esm.min.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "npm run build:clean && npm run build:esm && npm run build:bundle",
+    "build:clean": "rimraf dist",
+    "build:esm": "tsc --project tsconfig.build.json",
+    "build:bundle": "rollup -c",
+    "build:analyze": "rollup -c --environment BUILD:analyze",
+    "dev": "vite",
+    "preview": "vite preview",
+    "test": "vitest --run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "docs": "typedoc",
+    "docs:serve": "npm run docs && npx http-server docs -p 8080 -o",
+    "docs:markdown": "typedoc --plugin typedoc-plugin-markdown --out docs-md",
+    "docs:json": "typedoc --json docs/api.json",
+    "docs:watch": "typedoc --watch",
+    "docs:generate": "node scripts/generate-docs.js",
+    "bundle:analyze": "node scripts/analyze-bundle.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kage1020/x-ads-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kage1020/x-ads-sdk/issues"
+  },
+  "homepage": "https://github.com/kage1020/x-ads-sdk#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.4",
+    "@types/node": "^20.19.11",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "http-server": "^14.1.1",
+    "rimraf": "^5.0.0",
+    "rollup": "^4.49.0",
+    "rollup-plugin-filesize": "^10.0.0",
+    "tslib": "^2.8.1",
+    "typedoc": "^0.28.0",
+    "typedoc-plugin-markdown": "^4.8.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vitest": "^3.2.4"
+  }
+}
