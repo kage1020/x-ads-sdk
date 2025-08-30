@@ -26,7 +26,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci || (rm -rf node_modules package-lock.json && npm install)
+          # Clear npm cache to avoid cached corrupted packages
+          npm cache clean --force
+          
+          # Try npm ci first
+          if npm ci; then
+            echo "npm ci succeeded"
+          else
+            echo "npm ci failed, trying alternative installation..."
+            rm -rf node_modules package-lock.json
+            
+            # Install with --no-optional to avoid optional dependency issues
+            npm install --no-optional
+            
+            # Then try to install optional dependencies separately
+            npm install --only=optional || echo "Optional dependencies installation failed, continuing..."
+          fi
 
       - name: Run linter
         run: npm run lint
@@ -68,7 +83,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci || (rm -rf node_modules package-lock.json && npm install)
+          # Clear npm cache to avoid cached corrupted packages
+          npm cache clean --force
+          
+          # Try npm ci first
+          if npm ci; then
+            echo "npm ci succeeded"
+          else
+            echo "npm ci failed, trying alternative installation..."
+            rm -rf node_modules package-lock.json
+            
+            # Install with --no-optional to avoid optional dependency issues
+            npm install --no-optional
+            
+            # Then try to install optional dependencies separately
+            npm install --only=optional || echo "Optional dependencies installation failed, continuing..."
+          fi
 
       - name: Run security audit
         run: npm audit --audit-level high
@@ -104,7 +134,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci || (rm -rf node_modules package-lock.json && npm install)
+          # Clear npm cache to avoid cached corrupted packages
+          npm cache clean --force
+          
+          # Try npm ci first
+          if npm ci; then
+            echo "npm ci succeeded"
+          else
+            echo "npm ci failed, trying alternative installation..."
+            rm -rf node_modules package-lock.json
+            
+            # Install with --no-optional to avoid optional dependency issues
+            npm install --no-optional
+            
+            # Then try to install optional dependencies separately
+            npm install --only=optional || echo "Optional dependencies installation failed, continuing..."
+          fi
 
       - name: Build package
         run: npm run build
