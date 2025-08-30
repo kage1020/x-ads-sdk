@@ -48,7 +48,6 @@ jobs:
           files: ./coverage/lcov.info
           flags: unittests
           name: codecov-umbrella
-          fail_on_error: false
 
   security:
     runs-on: ubuntu-latest
