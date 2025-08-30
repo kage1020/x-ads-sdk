@@ -42,6 +42,13 @@ jobs:
             # Then try to install optional dependencies separately
             npm install --only=optional || echo "Optional dependencies installation failed, continuing..."
           fi
+          
+          # Force reinstall Rollup without optional dependencies if the module is missing
+          if [ ! -f "node_modules/@rollup/rollup-$(node -p 'process.platform')-$(node -p 'process.arch')/package.json" ]; then
+            echo "Rollup native module missing, reinstalling rollup..."
+            npm uninstall rollup
+            npm install rollup --no-optional
+          fi
 
       - name: Run linter
         run: npm run lint
@@ -99,6 +106,13 @@ jobs:
             # Then try to install optional dependencies separately
             npm install --only=optional || echo "Optional dependencies installation failed, continuing..."
           fi
+          
+          # Force reinstall Rollup without optional dependencies if the module is missing
+          if [ ! -f "node_modules/@rollup/rollup-$(node -p 'process.platform')-$(node -p 'process.arch')/package.json" ]; then
+            echo "Rollup native module missing, reinstalling rollup..."
+            npm uninstall rollup
+            npm install rollup --no-optional
+          fi
 
       - name: Run security audit
         run: npm audit --audit-level high
@@ -149,6 +163,13 @@ jobs:
             
             # Then try to install optional dependencies separately
             npm install --only=optional || echo "Optional dependencies installation failed, continuing..."
+          fi
+          
+          # Force reinstall Rollup without optional dependencies if the module is missing
+          if [ ! -f "node_modules/@rollup/rollup-$(node -p 'process.platform')-$(node -p 'process.arch')/package.json" ]; then
+            echo "Rollup native module missing, reinstalling rollup..."
+            npm uninstall rollup
+            npm install rollup --no-optional
           fi
 
       - name: Build package

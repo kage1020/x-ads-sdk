@@ -1,9 +1,25 @@
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
+  esbuild: {
+    target: 'es2020',
+    format: 'esm'
+  },
   test: {
     environment: 'node',
     globals: true,
+    // Force use of esbuild instead of Rollup for transforms
+    deps: {
+      optimizer: {
+        ssr: {
+          exclude: ['rollup']
+        }
+      }
+    },
+    // Use esbuild for TypeScript transformation instead of Rollup
+    transformMode: {
+      ssr: ['**/*.ts']
+    },
     include: ['src/**/*.test.ts', 'src/**/__tests__/**/*.ts'],
     coverage: {
       provider: 'v8',
