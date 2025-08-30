@@ -51,6 +51,10 @@ jobs:
 
   security:
     runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -72,6 +76,9 @@ jobs:
         with:
           languages: typescript
 
+      - name: Build for CodeQL
+        run: npm run build
+
       - name: Run CodeQL Analysis
         uses: github/codeql-action/analyze@v3
 
@@ -79,6 +86,9 @@ jobs:
     needs: [test, security]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    permissions:
+      contents: write
+      packages: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
