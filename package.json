@@ -72,6 +72,15 @@
   "overrides": {
     "rollup": "^4.49.0"
   },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.49.0",
+    "@rollup/rollup-linux-x64-musl": "^4.49.0",
+    "@rollup/rollup-darwin-x64": "^4.49.0",
+    "@rollup/rollup-darwin-arm64": "^4.49.0",
+    "@rollup/rollup-win32-x64-msvc": "^4.49.0",
+    "@rollup/rollup-win32-ia32-msvc": "^4.49.0",
+    "@rollup/rollup-win32-arm64-msvc": "^4.49.0"
+  },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
