@@ -1,28 +1,22 @@
 /**
  * Campaign Management Example for X Ads SDK
- * 
- * This example demonstrates how to create, manage, and optimize 
+ *
+ * This example demonstrates how to create, manage, and optimize
  * advertising campaigns using the X Ads SDK.
  */
 
-import { 
-  XAdsClient, 
-  Environment, 
-  CampaignObjective, 
-  CampaignStatus,
-  AdGroupStatus
-} from '../src/index.js';
+import { CampaignObjective, Environment, XAdsClient } from '../src/index.js';
 
 async function campaignManagementExample() {
   const client = new XAdsClient({
     auth: {
       consumer_key: process.env.X_CONSUMER_KEY!,
-      consumer_secret: process.env.X_CONSUMER_SECRET!,
-      access_token: process.env.X_ACCESS_TOKEN!,
-      access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
+      consumerSecret: process.env.X_CONSUMER_SECRET!,
+      accessToken: process.env.X_ACCESS_TOKEN!,
+      accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,
     },
     environment: Environment.SANDBOX,
-    rateLimitStrategy: 'wait'
+    rateLimitStrategy: 'wait',
   });
 
   try {
@@ -42,7 +36,7 @@ async function campaignManagementExample() {
       name: `Test Campaign ${Date.now()}`,
       objective: CampaignObjective.ENGAGEMENTS,
       daily_budget_amount_local_micro: 10000000, // $10 in micro currency
-      currency: 'USD'
+      currency: 'USD',
     });
     console.log(`✅ Created campaign: ${newCampaign.name} (${newCampaign.id})`);
 
@@ -51,13 +45,13 @@ async function campaignManagementExample() {
     const adGroup1 = await client.adGroups.create(accountId, {
       campaign_id: newCampaign.id,
       name: `Ad Group 1 - ${Date.now()}`,
-      bid_amount_local_micro: 1000000 // $1 bid
+      bid_amount_local_micro: 1000000, // $1 bid
     });
 
     const adGroup2 = await client.adGroups.create(accountId, {
       campaign_id: newCampaign.id,
       name: `Ad Group 2 - ${Date.now()}`,
-      bid_amount_local_micro: 1500000 // $1.5 bid
+      bid_amount_local_micro: 1500000, // $1.5 bid
     });
 
     console.log(`✅ Created ad group: ${adGroup1.name} (${adGroup1.id})`);
@@ -65,13 +59,9 @@ async function campaignManagementExample() {
 
     // 3. Update campaign settings
     console.log('\nUpdating campaign budget...');
-    const updatedCampaign = await client.campaigns.update(
-      accountId,
-      newCampaign.id,
-      {
-        daily_budget_amount_local_micro: 15000000 // Increase to $15
-      }
-    );
+    const updatedCampaign = await client.campaigns.update(accountId, newCampaign.id, {
+      daily_budget_amount_local_micro: 15000000, // Increase to $15
+    });
     console.log(`✅ Updated campaign budget to $15`);
 
     // 4. Pause one ad group and activate another
@@ -84,10 +74,7 @@ async function campaignManagementExample() {
 
     // 5. Get campaign performance overview
     console.log('\nFetching campaign performance...');
-    const activeAdGroups = await client.adGroups.getActiveByCampaign(
-      accountId, 
-      newCampaign.id
-    );
+    const activeAdGroups = await client.adGroups.getActiveByCampaign(accountId, newCampaign.id);
     console.log(`📊 Active ad groups in campaign: ${activeAdGroups.data.length}`);
 
     // 6. Bulk operations - get all active campaigns
@@ -97,11 +84,11 @@ async function campaignManagementExample() {
 
     // Display campaign summary
     console.log('\n📈 Campaign Summary:');
-    activeCampaigns.data.forEach(campaign => {
-      const budgetUSD = campaign.daily_budget_amount_local_micro 
+    activeCampaigns.data.forEach((campaign) => {
+      const budgetUSD = campaign.daily_budget_amount_local_micro
         ? (campaign.daily_budget_amount_local_micro / 1000000).toFixed(2)
         : 'Not set';
-      
+
       console.log(`  - ${campaign.name}`);
       console.log(`    Status: ${campaign.status}`);
       console.log(`    Objective: ${campaign.objective}`);
@@ -118,10 +105,10 @@ async function campaignManagementExample() {
         [newCampaign.id],
         {
           start_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-          end_date: new Date().toISOString().split('T')[0]
+          end_date: new Date().toISOString().split('T')[0],
         }
       );
-      
+
       if (campaignAnalytics.data.length > 0) {
         console.log('📊 Analytics data available');
       } else {
@@ -137,10 +124,9 @@ async function campaignManagementExample() {
     console.log(`⏸️  Paused test campaign: ${newCampaign.name}`);
 
     console.log('\n🎉 Campaign management example completed successfully!');
-
   } catch (error) {
     console.error('❌ Error in campaign management:', error);
-    
+
     if (error instanceof Error) {
       console.error('Message:', error.message);
       if ('statusCode' in error) {
@@ -156,7 +142,7 @@ function formatCurrency(microAmount: number | undefined, currency = 'USD'): stri
   const amount = microAmount / 1000000;
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
-    currency: currency
+    currency: currency,
   }).format(amount);
 }
 

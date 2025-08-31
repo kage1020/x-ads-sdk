@@ -2,84 +2,82 @@
 
 /**
  * Documentation Generation Script
- * 
+ *
  * This script generates comprehensive documentation for the X Ads SDK,
  * including TypeDoc API documentation and additional guides.
  */
 
-import { execSync } from 'child_process';
-import { existsSync, mkdirSync, writeFileSync } from 'fs';
-import { dirname, join } from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from "child_process"
+import { existsSync, mkdirSync, writeFileSync } from "fs"
+import { dirname, join } from "path"
+import { fileURLToPath } from "url"
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-const rootDir = join(__dirname, '..');
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const rootDir = join(__dirname, "..")
 
 // Colors for console output
 const colors = {
-  reset: '\x1b[0m',
-  red: '\x1b[31m',
-  green: '\x1b[32m',
-  yellow: '\x1b[33m',
-  blue: '\x1b[34m',
-  magenta: '\x1b[35m',
-  cyan: '\x1b[36m',
-  white: '\x1b[37m'
-};
+  reset: "\x1b[0m",
+  red: "\x1b[31m",
+  green: "\x1b[32m",
+  yellow: "\x1b[33m",
+  blue: "\x1b[34m",
+  magenta: "\x1b[35m",
+  cyan: "\x1b[36m",
+  white: "\x1b[37m",
+}
 
 function log(color, message) {
-  console.log(`${colors[color]}${message}${colors.reset}`);
+  console.log(`${colors[color]}${message}${colors.reset}`)
 }
 
 function run(command, options = {}) {
-  log('blue', `Running: ${command}`);
+  log("blue", `Running: ${command}`)
   try {
     const result = execSync(command, {
       cwd: rootDir,
-      stdio: 'pipe',
-      ...options
-    });
-    return result.toString();
+      stdio: "pipe",
+      ...options,
+    })
+    return result.toString()
   } catch (error) {
-    log('red', `Command failed: ${command}`);
-    log('red', error.message);
-    process.exit(1);
+    log("red", `Command failed: ${command}`)
+    log("red", error.message)
+    process.exit(1)
   }
 }
 
 function ensureDir(dir) {
   if (!existsSync(dir)) {
-    mkdirSync(dir, { recursive: true });
-    log('green', `Created directory: ${dir}`);
+    mkdirSync(dir, { recursive: true })
+    log("green", `Created directory: ${dir}`)
   }
 }
 
 function generateTypeDoc() {
-  log('cyan', '📚 Generating TypeDoc documentation...');
-  
-  // Clean existing docs
-  if (existsSync(join(rootDir, 'docs'))) {
-    run('npx rimraf docs');
-  }
-  
-  // Generate HTML documentation
-  run('npm run docs');
-  log('green', '✅ HTML documentation generated');
-  
+  log("cyan", "📚 Generating TypeDoc documentation...")
 
-  
+  // Clean existing docs
+  if (existsSync(join(rootDir, "docs"))) {
+    run("npx rimraf docs")
+  }
+
+  // Generate HTML documentation
+  run("npm run docs")
+  log("green", "✅ HTML documentation generated")
+
   // Generate JSON API reference
-  run('npm run docs:json');
-  log('green', '✅ JSON API reference generated');
+  run("npm run docs:json")
+  log("green", "✅ JSON API reference generated")
 }
 
 function generateAdditionalDocs() {
-  log('cyan', '📖 Generating additional documentation...');
-  
-  const docsDir = join(rootDir, 'docs');
-  ensureDir(docsDir);
-  
+  log("cyan", "📖 Generating additional documentation...")
+
+  const docsDir = join(rootDir, "docs")
+  ensureDir(docsDir)
+
   // Generate API coverage report
   const apiCoverage = `# API Coverage Report
 
@@ -91,7 +89,7 @@ This document provides an overview of the X Ads API endpoints covered by this SD
 
 ## Accounts Management
 - ✅ List advertising accounts
-- ✅ Get account details  
+- ✅ Get account details
 - ✅ Update account settings
 
 ## Campaign Management
@@ -128,11 +126,11 @@ This document provides an overview of the X Ads API endpoints covered by this SD
 - ✅ Extensible architecture
 
 Generated on ${new Date().toISOString()}
-`;
+`
 
-  writeFileSync(join(docsDir, 'api-coverage.md'), apiCoverage);
-  log('green', '✅ API coverage report generated');
-  
+  writeFileSync(join(docsDir, "api-coverage.md"), apiCoverage)
+  log("green", "✅ API coverage report generated")
+
   // Generate migration guide
   const migrationGuide = `# Migration Guide
 
@@ -156,10 +154,10 @@ import { XAdsClient, Environment } from 'x-ads-sdk';
 
 const client = new XAdsClient({
   auth: {
-    consumer_key: 'consumer_key',
-    consumer_secret: 'consumer_secret',
-    access_token: 'access_token',
-    access_token_secret: 'access_token_secret'
+    consumerKey: 'consumer_key',
+    consumerSecret: 'consumer_secret',
+    accessToken: 'access_token',
+    accessTokenSecret: 'access_token_secret'
   },
   environment: Environment.SANDBOX
 });
@@ -204,15 +202,15 @@ try {
 \`\`\`
 
 Generated on ${new Date().toISOString()}
-`;
+`
 
-  writeFileSync(join(docsDir, 'migration-guide.md'), migrationGuide);
-  log('green', '✅ Migration guide generated');
+  writeFileSync(join(docsDir, "migration-guide.md"), migrationGuide)
+  log("green", "✅ Migration guide generated")
 }
 
 function generateDevGuide() {
-  log('cyan', '🛠️ Generating development guide...');
-  
+  log("cyan", "🛠️ Generating development guide...")
+
   const devGuide = `# Development Guide
 
 ## Setting up the Development Environment
@@ -243,7 +241,7 @@ function generateDevGuide() {
 \`\`\`
 src/
 ├── auth/           # OAuth authentication
-├── client/         # HTTP client and base functionality  
+├── client/         # HTTP client and base functionality
 ├── modules/        # API modules (accounts, campaigns, etc.)
 ├── plugins/        # Plugin system implementation
 ├── paginators/     # Pagination utilities
@@ -261,7 +259,7 @@ import { HttpClient } from '../client/base.js';
 
 export class NewFeatureModule {
   constructor(private httpClient: HttpClient) {}
-  
+
   async list(accountId: string) {
     return this.httpClient.get(\`/accounts/\${accountId}/new-features\`);
   }
@@ -285,7 +283,7 @@ import { NewFeatureModule } from './modules/new-feature.js';
 
 export class XAdsClient {
   public newFeatures: NewFeatureModule;
-  
+
   constructor(config: ClientConfig) {
     // ... existing code
     this.newFeatures = new NewFeatureModule(this.httpClient);
@@ -320,17 +318,17 @@ import { XAdsPlugin } from 'x-ads-sdk';
 
 export class MyPlugin implements XAdsPlugin {
   name = 'my-plugin';
-  
+
   async beforeRequest(config: any) {
     // Modify request before sending
     return config;
   }
-  
+
   async afterResponse(response: any, config: any) {
     // Process response after receiving
     return response;
   }
-  
+
   async onError(error: any, config: any) {
     // Handle errors
     throw error;
@@ -349,40 +347,39 @@ export class MyPlugin implements XAdsPlugin {
 7. After merge, GitHub Actions will automatically publish
 
 Generated on ${new Date().toISOString()}
-`;
+`
 
-  const docsDir = join(rootDir, 'docs');
-  writeFileSync(join(docsDir, 'development-guide.md'), devGuide);
-  log('green', '✅ Development guide generated');
+  const docsDir = join(rootDir, "docs")
+  writeFileSync(join(docsDir, "development-guide.md"), devGuide)
+  log("green", "✅ Development guide generated")
 }
 
 function main() {
-  log('magenta', '🚀 Starting documentation generation...');
-  
-  try {
-    generateTypeDoc();
-    generateAdditionalDocs();
-    generateDevGuide();
-    
-    log('green', '🎉 Documentation generation completed successfully!');
-    log('cyan', '\nGenerated files:');
-    log('white', '  - docs/                 (HTML documentation)');
+  log("magenta", "🚀 Starting documentation generation...")
 
-    log('white', '  - docs/api.json         (JSON API reference)');
-    log('white', '  - docs/api-coverage.md  (API coverage report)');
-    log('white', '  - docs/migration-guide.md (Migration guide)');
-    log('white', '  - docs/development-guide.md (Development guide)');
-    
-    log('cyan', '\nTo serve documentation locally:');
-    log('white', '  npm run docs:serve');
-    
+  try {
+    generateTypeDoc()
+    generateAdditionalDocs()
+    generateDevGuide()
+
+    log("green", "🎉 Documentation generation completed successfully!")
+    log("cyan", "\nGenerated files:")
+    log("white", "  - docs/                 (HTML documentation)")
+
+    log("white", "  - docs/api.json         (JSON API reference)")
+    log("white", "  - docs/api-coverage.md  (API coverage report)")
+    log("white", "  - docs/migration-guide.md (Migration guide)")
+    log("white", "  - docs/development-guide.md (Development guide)")
+
+    log("cyan", "\nTo serve documentation locally:")
+    log("white", "  npm run docs:serve")
   } catch (error) {
-    log('red', '❌ Documentation generation failed:');
-    log('red', error.message);
-    process.exit(1);
+    log("red", "❌ Documentation generation failed:")
+    log("red", error.message)
+    process.exit(1)
   }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+  main()
 }

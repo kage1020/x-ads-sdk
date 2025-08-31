@@ -1,12 +1,12 @@
 /**
  * Environment Setup Example for X Ads SDK
- * 
+ *
  * This example shows how to configure the SDK for different
  * environments (sandbox vs production) and various settings.
  */
 
-import { XAdsClient, Environment } from '../src/index.js';
 import * as dotenv from 'dotenv';
+import { Environment, XAdsClient } from '../src/index.js';
 
 // Load environment variables
 dotenv.config();
@@ -15,37 +15,37 @@ dotenv.config();
 const developmentConfig = {
   auth: {
     consumer_key: process.env.X_CONSUMER_KEY!,
-    consumer_secret: process.env.X_CONSUMER_SECRET!,
-    access_token: process.env.X_ACCESS_TOKEN!,
-    access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
+    consumerSecret: process.env.X_CONSUMER_SECRET!,
+    accessToken: process.env.X_ACCESS_TOKEN!,
+    accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,
   },
   environment: Environment.SANDBOX,
   timeout: 30000, // 30 seconds
   maxRetries: 3,
-  rateLimitStrategy: 'wait' as const
+  rateLimitStrategy: 'wait' as const,
 };
 
 // Production Configuration
 const productionConfig = {
   auth: {
     consumer_key: process.env.X_PROD_CONSUMER_KEY!,
-    consumer_secret: process.env.X_PROD_CONSUMER_SECRET!,
-    access_token: process.env.X_PROD_ACCESS_TOKEN!,
-    access_token_secret: process.env.X_PROD_ACCESS_TOKEN_SECRET!
+    consumerSecret: process.env.X_PROD_CONSUMER_SECRET!,
+    accessToken: process.env.X_PROD_ACCESS_TOKEN!,
+    accessTokenSecret: process.env.X_PROD_ACCESS_TOKEN_SECRET!,
   },
   environment: Environment.PRODUCTION,
   timeout: 60000, // 60 seconds (production may need longer)
   maxRetries: 5, // More retries for production
-  rateLimitStrategy: 'wait' as const
+  rateLimitStrategy: 'wait' as const,
 };
 
 // High-throughput Configuration (for analytics/reporting)
 const analyticsConfig = {
   auth: {
     consumer_key: process.env.X_CONSUMER_KEY!,
-    consumer_secret: process.env.X_CONSUMER_SECRET!,
-    access_token: process.env.X_ACCESS_TOKEN!,
-    access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
+    consumerSecret: process.env.X_CONSUMER_SECRET!,
+    accessToken: process.env.X_ACCESS_TOKEN!,
+    accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,
   },
   environment: Environment.SANDBOX,
   timeout: 120000, // 2 minutes for large analytics requests
@@ -54,22 +54,22 @@ const analyticsConfig = {
   rateLimitOptions: {
     strategy: 'wait' as const,
     defaultLimit: 300, // Higher rate limit for analytics
-    defaultWindow: 900 // 15 minutes
-  }
+    defaultWindow: 900, // 15 minutes
+  },
 };
 
 // Strict Configuration (fail fast on errors)
 const strictConfig = {
   auth: {
     consumer_key: process.env.X_CONSUMER_KEY!,
-    consumer_secret: process.env.X_CONSUMER_SECRET!,
-    access_token: process.env.X_ACCESS_TOKEN!,
-    access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
+    consumerSecret: process.env.X_CONSUMER_SECRET!,
+    accessToken: process.env.X_ACCESS_TOKEN!,
+    accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,
   },
   environment: Environment.SANDBOX,
   timeout: 15000, // Short timeout
   maxRetries: 1, // Minimal retries
-  rateLimitStrategy: 'throw' as const // Throw on rate limits
+  rateLimitStrategy: 'throw' as const, // Throw on rate limits
 };
 
 async function environmentSetupExample() {
@@ -77,8 +77,8 @@ async function environmentSetupExample() {
 
   // 1. Development Environment Setup
   console.log('1. Development Environment (Sandbox)');
-  console.log('=' .repeat(40));
-  
+  console.log('='.repeat(40));
+
   try {
     new XAdsClient(developmentConfig);
     console.log('✅ Development client initialized');
@@ -89,8 +89,8 @@ async function environmentSetupExample() {
 
   // 2. Production Environment Setup (if credentials available)
   console.log('2. Production Environment Setup');
-  console.log('=' .repeat(40));
-  
+  console.log('='.repeat(40));
+
   if (process.env.X_PROD_CONSUMER_KEY) {
     try {
       new XAdsClient(productionConfig);
@@ -107,13 +107,13 @@ async function environmentSetupExample() {
 
   // 3. Analytics-Optimized Configuration
   console.log('3. Analytics-Optimized Configuration');
-  console.log('=' .repeat(40));
-  
+  console.log('='.repeat(40));
+
   try {
     const analyticsClient = new XAdsClient(analyticsConfig);
     console.log('✅ Analytics client initialized');
     console.log('📊 Optimized for large analytics requests');
-    
+
     // Test with an analytics request
     const accounts = await analyticsClient.accounts.list({ count: 1 });
     if (accounts.data.length > 0) {
@@ -136,8 +136,8 @@ async function environmentSetupExample() {
 
   // 4. Strict/Fail-Fast Configuration
   console.log('4. Strict/Fail-Fast Configuration');
-  console.log('=' .repeat(40));
-  
+  console.log('='.repeat(40));
+
   try {
     new XAdsClient(strictConfig);
     console.log('✅ Strict client initialized');
@@ -150,14 +150,14 @@ async function environmentSetupExample() {
 
   // 5. Custom Configuration Examples
   console.log('5. Custom Configuration Options');
-  console.log('=' .repeat(40));
-  
+  console.log('='.repeat(40));
+
   // Custom base URL (for testing or custom endpoints)
   const customConfig = {
     ...developmentConfig,
-    baseURL: 'https://custom.api.endpoint.com'
+    baseURL: 'https://custom.api.endpoint.com',
   };
-  
+
   console.log('Available configuration options:');
   console.log('• environment: Environment.SANDBOX | Environment.PRODUCTION');
   console.log('• baseURL: Custom API base URL');
@@ -169,7 +169,7 @@ async function environmentSetupExample() {
 
   // 6. Environment Variable Setup Guide
   console.log('6. Environment Variables Setup');
-  console.log('=' .repeat(40));
+  console.log('='.repeat(40));
   console.log('Create a .env file with the following variables:');
   console.log('');
   console.log('# Sandbox/Development Credentials');
@@ -213,10 +213,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   environmentSetupExample();
 }
 
-export { 
-  environmentSetupExample,
-  developmentConfig,
-  productionConfig,
+export {
   analyticsConfig,
-  strictConfig 
+  developmentConfig,
+  environmentSetupExample,
+  productionConfig,
+  strictConfig,
 };

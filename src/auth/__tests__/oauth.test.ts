@@ -5,10 +5,10 @@ import { OAuth } from '../oauth';
 
 describe('OAuth', () => {
   const validConfig = {
-    consumer_key: 'test_consumer_key',
-    consumer_secret: 'test_consumer_secret',
-    access_token: 'test_access_token',
-    access_token_secret: 'test_access_token_secret',
+    consumerKey: 'test_consumer_key',
+    consumerSecret: 'test_consumer_secret',
+    accessToken: 'test_access_token',
+    accessTokenSecret: 'test_access_token_secret',
   };
 
   describe('constructor', () => {
@@ -17,19 +17,19 @@ describe('OAuth', () => {
     });
 
     it('should throw AuthenticationError when missing consumer_key', () => {
-      const { consumer_key, ...config } = validConfig;
-      void consumer_key;
+      const { consumerKey, ...config } = validConfig;
+      void consumerKey;
 
       expect(() => new OAuth(config as AuthConfig)).toThrow(AuthenticationError);
       expect(() => new OAuth(config as AuthConfig)).toThrow(
-        'Missing required OAuth parameters: consumer_key'
+        'Missing required OAuth parameters: consumerKey'
       );
     });
 
     it('should throw AuthenticationError when missing multiple parameters', () => {
       const config = {
-        consumer_key: 'test',
-        consumer_secret: '',
+        consumerKey: 'test',
+        consumerSecret: '',
       };
 
       expect(() => new OAuth(config as AuthConfig)).toThrow(AuthenticationError);

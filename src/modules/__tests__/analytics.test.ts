@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { HttpClient } from '../../client/base';
 import type { AnalyticsOptions, AnalyticsResponse, DateRange } from '../../types/analytics';
 import { EntityType, Granularity, METRIC_GROUPS, Placement } from '../../types/analytics';

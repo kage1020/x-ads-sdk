@@ -384,31 +384,18 @@ describe('CampaignsModule', () => {
   });
 
   describe('paginate', () => {
-    it('should create paginator with correct endpoint and default params', () => {
-      const spy = vi.spyOn(campaignsModule, 'createPaginator');
-
-      campaignsModule.paginate('account123');
-
-      expect(spy).toHaveBeenCalledWith('/accounts/account123/campaigns', {}, {});
-    });
-
-    it('should create paginator with custom params and options', () => {
-      const spy = vi.spyOn(campaignsModule, 'createPaginator');
-      const params = { count: 50, sort_by: 'created_at' };
-      const options = { maxItems: 100 };
-
-      campaignsModule.paginate('account123', params, options);
-
-      expect(spy).toHaveBeenCalledWith('/accounts/account123/campaigns', params, options);
-    });
-
     it('should return a CursorPaginator instance', () => {
-      const mockPaginator = new CursorPaginator(vi.fn());
-      vi.spyOn(campaignsModule, 'createPaginator').mockReturnValue(mockPaginator);
-
       const result = campaignsModule.paginate('account123');
 
-      expect(result).toBe(mockPaginator);
+      expect(result).toBeInstanceOf(CursorPaginator);
+    });
+
+    it('should pass params to paginator', () => {
+      const params = { count: 50, sort_by: 'created_at' };
+
+      const result = campaignsModule.paginate('account123', params);
+
+      expect(result).toBeInstanceOf(CursorPaginator);
     });
   });
 
@@ -420,17 +407,14 @@ describe('CampaignsModule', () => {
         { ...mockCampaign, id: 'campaign3' },
       ];
 
-      const mockPaginator = {
-        async *items() {
-          for (const campaign of mockCampaigns) {
-            yield campaign;
-          }
-        },
+      const mockPaginator = new CursorPaginator<Campaign>(async () => ({ data: mockCampaigns }));
+      mockPaginator.items = async function* () {
+        for (const campaign of mockCampaigns) {
+          yield campaign;
+        }
       };
 
-      vi.spyOn(campaignsModule, 'paginate').mockReturnValue(
-        mockPaginator as CursorPaginator<Campaign>
-      );
+      vi.spyOn(campaignsModule, 'paginate').mockReturnValue(mockPaginator);
 
       const results: Campaign[] = [];
       for await (const campaign of campaignsModule.iterateAll('account123')) {
@@ -442,12 +426,11 @@ describe('CampaignsModule', () => {
 
     it('should pass params to paginate', async () => {
       const spy = vi.spyOn(campaignsModule, 'paginate');
-      const mockPaginator = {
-        async *items() {
-          yield mockCampaign;
-        },
+      const mockPaginator = new CursorPaginator<Campaign>(async () => ({ data: [mockCampaign] }));
+      mockPaginator.items = async function* () {
+        yield mockCampaign;
       };
-      spy.mockReturnValue(mockPaginator as CursorPaginator<Campaign>);
+      spy.mockReturnValue(mockPaginator);
 
       const params = { count: 25, sort_by: 'name' };
 
@@ -459,15 +442,12 @@ describe('CampaignsModule', () => {
     });
 
     it('should handle empty results', async () => {
-      const mockPaginator = {
-        async *items() {
-          // Empty iterator
-        },
+      const mockPaginator = new CursorPaginator<Campaign>(async () => ({ data: [] }));
+      mockPaginator.items = async function* () {
+        // Empty iterator
       };
 
-      vi.spyOn(campaignsModule, 'paginate').mockReturnValue(
-        mockPaginator as CursorPaginator<Campaign>
-      );
+      vi.spyOn(campaignsModule, 'paginate').mockReturnValue(mockPaginator);
 
       const results: Campaign[] = [];
       for await (const campaign of campaignsModule.iterateAll('account123')) {

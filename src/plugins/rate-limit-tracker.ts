@@ -111,7 +111,21 @@ export class RateLimitTracker implements XAdsPlugin {
     if (headers instanceof Headers) {
       return headers.get(name);
     }
-    return headers[name] || headers[name.toLowerCase()] || null;
+    // Try exact match first, then lowercase, then case-insensitive search
+    if (headers[name]) {
+      return headers[name];
+    }
+    const lowerName = name.toLowerCase();
+    if (headers[lowerName]) {
+      return headers[lowerName];
+    }
+    // Try case-insensitive search through all keys
+    for (const key in headers) {
+      if (key.toLowerCase() === lowerName) {
+        return headers[key];
+      }
+    }
+    return null;
   }
 
   // Public API for accessing rate limit information

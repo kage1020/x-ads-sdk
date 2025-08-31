@@ -156,7 +156,10 @@ export class CampaignsModule extends BaseModule {
   /**
    * Iterate through all campaigns using async iterator
    */
-  async *iterateAll(accountId: string, params: CampaignListParams = {}): AsyncIterator<Campaign> {
+  async *iterateAll(
+    accountId: string,
+    params: CampaignListParams = {}
+  ): AsyncIterableIterator<Campaign> {
     const paginator = this.paginate(accountId, params);
     for await (const campaign of paginator.items()) {
       yield campaign;

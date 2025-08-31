@@ -17,10 +17,10 @@ import { HttpClient, type HttpClientConfig } from './base';
  *
  * const client = new XAdsClient({
  *   auth: {
- *     consumer_key: 'your_consumer_key',
- *     consumer_secret: 'your_consumer_secret',
- *     access_token: 'your_access_token',
- *     access_token_secret: 'your_access_token_secret'
+ *     consumerKey: 'your_consumer_key',
+ *     consumerSecret: 'your_consumer_secret',
+ *     accessToken: 'your_access_token',
+ *     accessTokenSecret: 'your_access_token_secret'
  *   },
  *   environment: Environment.SANDBOX
  * });
@@ -80,10 +80,10 @@ export class XAdsClient {
    * ```typescript
    * const client = new XAdsClient({
    *   auth: {
-   *     consumer_key: process.env.X_CONSUMER_KEY!,
-   *     consumer_secret: process.env.X_CONSUMER_SECRET!,
-   *     access_token: process.env.X_ACCESS_TOKEN!,
-   *     access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
+   *     consumerKey: process.env.X_CONSUMER_KEY!,
+   *     consumerSecret: process.env.X_CONSUMER_SECRET!,
+   *     accessToken: process.env.X_ACCESS_TOKEN!,
+   *     accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!
    *   },
    *   environment: Environment.SANDBOX,
    *   apiVersion: APIVersion.V12,

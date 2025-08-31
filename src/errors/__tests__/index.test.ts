@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   APIError,
   type APIErrorDetails,
@@ -712,25 +712,22 @@ describe('Error Stack Trace Handling', () => {
     expect(captureStackTraceSpy).toHaveBeenCalledWith(error, XAdsError);
 
     // Restore original
-    (
-      Error as typeof Error & { captureStackTrace?: typeof Error.captureStackTrace }
-    ).captureStackTrace = originalCaptureStackTrace;
+    // biome-ignore lint/suspicious/noExplicitAny: Testing internal API behavior
+    (Error as any).captureStackTrace = originalCaptureStackTrace;
   });
 
   it('should handle absence of Error.captureStackTrace gracefully', () => {
     // Mock Error.captureStackTrace to be undefined
     const originalCaptureStackTrace = Error.captureStackTrace;
-    (
-      Error as typeof Error & { captureStackTrace?: typeof Error.captureStackTrace }
-    ).captureStackTrace = undefined;
+    // biome-ignore lint/suspicious/noExplicitAny: Testing internal API behavior
+    (Error as any).captureStackTrace = undefined;
 
     expect(() => {
       new XAdsError('Test error');
     }).not.toThrow();
 
     // Restore original
-    (
-      Error as typeof Error & { captureStackTrace?: typeof Error.captureStackTrace }
-    ).captureStackTrace = originalCaptureStackTrace;
+    // biome-ignore lint/suspicious/noExplicitAny: Testing internal API behavior
+    (Error as any).captureStackTrace = originalCaptureStackTrace;
   });
 });

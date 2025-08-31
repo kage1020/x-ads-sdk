@@ -22,9 +22,9 @@ import { XAdsClient, Environment } from 'x-ads-sdk';
 const client = new XAdsClient({
   auth: {
     consumer_key: 'your_consumer_key',
-    consumer_secret: 'your_consumer_secret',
-    access_token: 'your_access_token',
-    access_token_secret: 'your_access_token_secret'
+    consumerSecret: 'your_consumer_secret',
+    accessToken: 'your_access_token',
+    accessTokenSecret: 'your_access_token_secret'
   },
   environment: Environment.SANDBOX
 });

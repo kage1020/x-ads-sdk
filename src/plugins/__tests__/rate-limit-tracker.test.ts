@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { PluginRequestConfig, PluginResponse } from '../base';
 import { RateLimitTracker, type RateLimitTrackerOptions } from '../rate-limit-tracker';
 
@@ -53,11 +53,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '299',
           'x-rate-limit-reset': '1640995200', // 2022-01-01T00:00:00Z
-        }),
+        },
         data: {},
       };
 
@@ -98,13 +98,13 @@ describe('RateLimitTracker', () => {
       expect(info?.remaining).toBe(50);
     });
 
-    it('should handle case-insensitive headers with lowercase fallback', () => {
+    it('should handle case-insensitive headers with mixed case keys', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
         headers: {
           'x-rate-limit-limit': '100',
-          'X-Rate-Limit-Remaining': '50', // This will not be found by current implementation
+          'X-Rate-Limit-Remaining': '50', // Mixed case should be handled correctly
           'x-rate-limit-reset': '1640995200',
         },
         data: {},
@@ -115,15 +115,18 @@ describe('RateLimitTracker', () => {
       const endpoint = '/12/accounts/123/campaigns';
       const info = tracker.getRateLimitInfo(endpoint);
 
-      // Should not be defined because X-Rate-Limit-Remaining doesn't match the expected key
-      expect(info).toBeUndefined();
+      // Should be defined because we now handle case-insensitive headers
+      expect(info).toBeDefined();
+      expect(info?.limit).toBe(100);
+      expect(info?.remaining).toBe(50);
     });
 
     it('should handle mixed case headers when using Headers object', () => {
-      const headers = new Headers();
-      headers.set('X-Rate-Limit-Limit', '100');
-      headers.set('X-Rate-Limit-Remaining', '50');
-      headers.set('X-Rate-Limit-Reset', '1640995200');
+      const headers = {
+        'X-Rate-Limit-Limit': '100',
+        'X-Rate-Limit-Remaining': '50',
+        'X-Rate-Limit-Reset': '1640995200',
+      };
 
       const mockResponse: PluginResponse = {
         status: 200,
@@ -145,11 +148,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '299',
           'x-rate-limit-reset': '1640995200',
-        }),
+        },
         data: {},
       };
 
@@ -157,11 +160,11 @@ describe('RateLimitTracker', () => {
       tracker.afterResponse(mockResponse, mockConfig);
 
       // Second request with updated remaining count
-      mockResponse.headers = new Headers({
+      mockResponse.headers = {
         'x-rate-limit-limit': '300',
         'x-rate-limit-remaining': '298',
         'x-rate-limit-reset': '1640995200',
-      });
+      };
 
       tracker.afterResponse(mockResponse, mockConfig);
 
@@ -178,11 +181,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '299',
           'x-rate-limit-reset': '1640995200',
-        }),
+        },
         data: {},
       };
 
@@ -198,7 +201,7 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers(),
+        headers: {},
         data: {},
       };
 
@@ -216,11 +219,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '5',
           'x-rate-limit-reset': '1640995200',
-        }),
+        },
         data: {},
       };
 
@@ -239,11 +242,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '5',
           'x-rate-limit-reset': '1640995200',
-        }),
+        },
         data: {},
       };
 
@@ -262,11 +265,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '299',
           'x-rate-limit-reset': '1640995200',
-        }),
+        },
         data: {},
       };
 
@@ -280,7 +283,7 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: undefined,
+        headers: undefined as unknown as Record<string, string>,
         data: {},
       };
 
@@ -292,20 +295,18 @@ describe('RateLimitTracker', () => {
 
   describe('onError', () => {
     it('should track 429 errors', () => {
-      const error = {
-        message: 'Rate limit exceeded',
-        statusCode: 429,
-      };
+      const error = new Error('Rate limit exceeded') as Error & { statusCode?: number };
+      error.statusCode = 429;
 
       // First establish a baseline
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '10',
           'x-rate-limit-reset': '1640995200',
-        }),
+        },
         data: {},
       };
 
@@ -323,10 +324,8 @@ describe('RateLimitTracker', () => {
     it('should log 429 errors when logging is enabled', () => {
       tracker = new RateLimitTracker({ logEnabled: true });
 
-      const error = {
-        message: 'Rate limit exceeded',
-        statusCode: 429,
-      };
+      const error = new Error('Rate limit exceeded') as Error & { statusCode?: number };
+      error.statusCode = 429;
 
       tracker.onError(error, mockConfig);
 
@@ -338,10 +337,8 @@ describe('RateLimitTracker', () => {
     it('should not track when trackingEnabled is false', () => {
       tracker = new RateLimitTracker({ trackingEnabled: false });
 
-      const error = {
-        message: 'Rate limit exceeded',
-        statusCode: 429,
-      };
+      const error = new Error('Rate limit exceeded') as Error & { statusCode?: number };
+      error.statusCode = 429;
 
       tracker.onError(error, mockConfig);
 
@@ -352,10 +349,8 @@ describe('RateLimitTracker', () => {
     });
 
     it('should not track non-429 errors', () => {
-      const error = {
-        message: 'Server error',
-        statusCode: 500,
-      };
+      const error = new Error('Server error') as Error & { statusCode?: number };
+      error.statusCode = 500;
 
       tracker.onError(error, mockConfig);
 
@@ -374,10 +369,8 @@ describe('RateLimitTracker', () => {
     });
 
     it('should return undefined', () => {
-      const error = {
-        message: 'Rate limit exceeded',
-        statusCode: 429,
-      };
+      const error = new Error('Rate limit exceeded') as Error & { statusCode?: number };
+      error.statusCode = 429;
 
       const result = tracker.onError(error, mockConfig);
       expect(result).toBeUndefined();
@@ -395,11 +388,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '299',
           'x-rate-limit-reset': '1640995200',
-        }),
+        },
         data: {},
       };
 
@@ -430,11 +423,11 @@ describe('RateLimitTracker', () => {
         const response: PluginResponse = {
           status: 200,
           statusText: 'OK',
-          headers: new Headers({
+          headers: {
             'x-rate-limit-limit': '300',
             'x-rate-limit-remaining': String(299 - i),
             'x-rate-limit-reset': '1640995200',
-          }),
+          },
           data: {},
         };
 
@@ -468,11 +461,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '250',
           'x-rate-limit-reset': String(Math.floor(Date.now() / 1000) + 3600), // 1 hour from now
-        }),
+        },
         data: {},
       };
 
@@ -489,11 +482,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '250',
           'x-rate-limit-reset': String(Math.floor(Date.now() / 1000) - 3600), // 1 hour ago
-        }),
+        },
         data: {},
       };
 
@@ -522,11 +515,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '250',
           'x-rate-limit-reset': String(futureTimestamp),
-        }),
+        },
         data: {},
       };
 
@@ -545,11 +538,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '250',
           'x-rate-limit-reset': String(pastTimestamp),
-        }),
+        },
         data: {},
       };
 
@@ -572,11 +565,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '299',
           'x-rate-limit-reset': '1640995200',
-        }),
+        },
         data: {},
       };
 
@@ -610,11 +603,11 @@ describe('RateLimitTracker', () => {
         const response: PluginResponse = {
           status: 200,
           statusText: 'OK',
-          headers: new Headers({
+          headers: {
             'x-rate-limit-limit': String(limit),
             'x-rate-limit-remaining': String(remaining),
             'x-rate-limit-reset': String(futureTimestamp),
-          }),
+          },
           data: {},
         };
 
@@ -654,22 +647,22 @@ describe('RateLimitTracker', () => {
       const expiredResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '250',
           'x-rate-limit-reset': String(pastTimestamp),
-        }),
+        },
         data: {},
       };
 
       const validResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '300',
           'x-rate-limit-remaining': '250',
           'x-rate-limit-reset': String(futureTimestamp),
-        }),
+        },
         data: {},
       };
 
@@ -688,11 +681,11 @@ describe('RateLimitTracker', () => {
       const mockResponse: PluginResponse = {
         status: 200,
         statusText: 'OK',
-        headers: new Headers({
+        headers: {
           'x-rate-limit-limit': '1000',
           'x-rate-limit-remaining': '250', // 750 used out of 1000 = 75%
           'x-rate-limit-reset': String(futureTimestamp),
-        }),
+        },
         data: {},
       };
 

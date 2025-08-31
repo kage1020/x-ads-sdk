@@ -15,10 +15,10 @@ vi.mock('../client/base.js', () => ({
 describe('XAdsClient', () => {
   const testConfig = {
     auth: {
-      consumer_key: 'test_consumer_key',
-      consumer_secret: 'test_consumer_secret',
-      access_token: 'test_access_token',
-      access_token_secret: 'test_access_token_secret',
+      consumerKey: 'test_consumer_key',
+      consumerSecret: 'test_consumer_secret',
+      accessToken: 'test_access_token',
+      accessTokenSecret: 'test_access_token_secret',
     },
   };
 

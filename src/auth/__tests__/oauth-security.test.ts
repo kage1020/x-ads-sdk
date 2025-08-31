@@ -4,10 +4,10 @@ import { OAuth } from '../oauth';
 
 describe('OAuth Security Analysis', () => {
   const validConfig = {
-    consumer_key: 'test_consumer_key',
-    consumer_secret: 'test_consumer_secret',
-    access_token: 'test_access_token',
-    access_token_secret: 'test_access_token_secret',
+    consumerKey: 'test_consumer_key',
+    consumerSecret: 'test_consumer_secret',
+    accessToken: 'test_access_token',
+    accessTokenSecret: 'test_access_token_secret',
   };
 
   describe('signature method security', () => {
@@ -36,7 +36,7 @@ describe('OAuth Security Analysis', () => {
     it('should support HMAC-SHA256 for enhanced security', async () => {
       const oauthSha256 = new OAuth({
         ...validConfig,
-        signature_method: 'HMAC-SHA256',
+        signatureMethod: 'HMAC-SHA256',
       });
 
       const signature = await oauthSha256.generateOAuthSignature({
@@ -93,8 +93,8 @@ describe('OAuth Security Analysis', () => {
       // OAuth 1.0a specification requires these fields
       expect(signature.oauth_signature_method).toBe('HMAC-SHA1');
       expect(signature.oauth_version).toBe('1.0');
-      expect(signature.oauth_consumer_key).toBe(validConfig.consumer_key);
-      expect(signature.oauth_token).toBe(validConfig.access_token);
+      expect(signature.oauth_consumer_key).toBe(validConfig.consumerKey);
+      expect(signature.oauth_token).toBe(validConfig.accessToken);
 
       // Signature should be present and valid
       expect(signature.oauth_signature).toBeDefined();
@@ -102,8 +102,8 @@ describe('OAuth Security Analysis', () => {
     });
 
     it('should generate different signatures for SHA1 vs SHA256', async () => {
-      const oauthSha1 = new OAuth({ ...validConfig, signature_method: 'HMAC-SHA1' });
-      const oauthSha256 = new OAuth({ ...validConfig, signature_method: 'HMAC-SHA256' });
+      const oauthSha1 = new OAuth({ ...validConfig, signatureMethod: 'HMAC-SHA1' });
+      const oauthSha256 = new OAuth({ ...validConfig, signatureMethod: 'HMAC-SHA256' });
 
       const requestOptions = {
         method: 'GET',
