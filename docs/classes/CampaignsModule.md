@@ -28,7 +28,7 @@ Defined in: [modules/campaigns.ts:14](https://github.com/kage1020/x-ads-sdk/blob
 
 ##### client
 
-[`HttpClient`](../interfaces/HttpClient.md)
+[`HttpClient`](HttpClient.md)
 
 #### Returns
 
@@ -550,7 +550,7 @@ Create a paginator for campaigns
 
 ### iterateAll()
 
-> **iterateAll**(`accountId`, `params`): `AsyncIterator`\<[`Campaign`](../interfaces/Campaign.md)\>
+> **iterateAll**(`accountId`, `params`): `AsyncIterableIterator`\<[`Campaign`](../interfaces/Campaign.md)\>
 
 Defined in: [modules/campaigns.ts:159](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L159)
 
@@ -568,13 +568,13 @@ Iterate through all campaigns using async iterator
 
 #### Returns
 
-`AsyncIterator`\<[`Campaign`](../interfaces/Campaign.md)\>
+`AsyncIterableIterator`\<[`Campaign`](../interfaces/Campaign.md)\>
 
 ## Properties
 
 ### client
 
-> `protected` **client**: [`HttpClient`](../interfaces/HttpClient.md)
+> `protected` **client**: [`HttpClient`](HttpClient.md)
 
 Defined in: [modules/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L6)
 

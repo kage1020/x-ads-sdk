@@ -6,6 +6,13 @@
 
 ## Hierarchy Summary
 
+### PluginClient
+
+- [PluginClient](interfaces/PluginClient.md)
+  - [HttpClient](classes/HttpClient.md)
+
+***
+
 ### PluginManager
 
 - [PluginManager](interfaces/PluginManager.md)

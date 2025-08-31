@@ -6,9 +6,9 @@
 
 # Function: toPluginConfig()
 
-> **toPluginConfig**(`config`, `baseURL`, `versionPath`): `PluginRequestConfig`
+> **toPluginConfig**(`config`, `baseURL`, `versionPath`): [`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)
 
-Defined in: utils/plugin.ts:16
+Defined in: [utils/plugin.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/plugin.ts#L16)
 
 Convert RequestConfig to PluginRequestConfig
 
@@ -34,6 +34,6 @@ API version path to prepend
 
 ## Returns
 
-`PluginRequestConfig`
+[`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)
 
 Plugin-compatible request configuration

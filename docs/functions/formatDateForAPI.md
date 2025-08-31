@@ -8,7 +8,7 @@
 
 > **formatDateForAPI**(`date`): `string`
 
-Defined in: utils/time.ts:37
+Defined in: [utils/time.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/time.ts#L37)
 
 Format date for API requests (ISO string)
 

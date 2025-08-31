@@ -11,7 +11,7 @@ async function basicExample() {
   // Initialize the SDK client
   const client = new XAdsClient({
     auth: {
-      consumer_key: process.env.X_CONSUMER_KEY!,
+      consumerKey: process.env.X_CONSUMER_KEY!,
       consumerSecret: process.env.X_CONSUMER_SECRET!,
       accessToken: process.env.X_ACCESS_TOKEN!,
       accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,

@@ -6,9 +6,9 @@
 
 # Function: toPluginResponse()
 
-> **toPluginResponse**\<`T`\>(`data`, `status`, `statusText`, `headers`): `PluginResponse`\<`T`\>
+> **toPluginResponse**\<`T`\>(`data`, `status`, `statusText`, `headers`): [`PluginResponse`](../interfaces/PluginResponse.md)\<`T`\>
 
-Defined in: utils/plugin.ts:70
+Defined in: [utils/plugin.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/plugin.ts#L70)
 
 Convert response data to PluginResponse format
 
@@ -46,6 +46,6 @@ Response headers (default: {})
 
 ## Returns
 
-`PluginResponse`\<`T`\>
+[`PluginResponse`](../interfaces/PluginResponse.md)\<`T`\>
 
 Plugin-compatible response

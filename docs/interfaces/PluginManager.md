@@ -6,7 +6,11 @@
 
 # Interface: PluginManager
 
-Defined in: [plugins/base.ts:48](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L48)
+Defined in: [plugins/base.ts:127](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L127)
+
+Plugin Manager Interface
+
+Manages plugin lifecycle and executes plugin hooks during HTTP operations.
 
 ## Methods
 
@@ -14,7 +18,9 @@ Defined in: [plugins/base.ts:48](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **use**(`plugin`): `void`
 
-Defined in: [plugins/base.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L51)
+Defined in: [plugins/base.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L132)
+
+Install a plugin
 
 #### Parameters
 
@@ -32,7 +38,9 @@ Defined in: [plugins/base.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **remove**(`pluginName`): `boolean`
 
-Defined in: [plugins/base.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L52)
+Defined in: [plugins/base.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L134)
+
+Remove a plugin by name
 
 #### Parameters
 
@@ -50,7 +58,9 @@ Defined in: [plugins/base.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **has**(`pluginName`): `boolean`
 
-Defined in: [plugins/base.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L53)
+Defined in: [plugins/base.ts:136](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L136)
+
+Check if a plugin is installed
 
 #### Parameters
 
@@ -68,7 +78,9 @@ Defined in: [plugins/base.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **get**(`pluginName`): `undefined` \| [`XAdsPlugin`](XAdsPlugin.md)
 
-Defined in: [plugins/base.ts:54](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L54)
+Defined in: [plugins/base.ts:138](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L138)
+
+Get a plugin by name
 
 #### Parameters
 
@@ -84,49 +96,55 @@ Defined in: [plugins/base.ts:54](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### executeBeforeRequest()
 
-> **executeBeforeRequest**(`config`): `Promise`\<`PluginRequestConfig`\>
+> **executeBeforeRequest**(`config`): `Promise`\<[`PluginRequestConfig`](PluginRequestConfig.md)\>
 
-Defined in: [plugins/base.ts:57](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L57)
+Defined in: [plugins/base.ts:141](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L141)
+
+Execute beforeRequest hooks for all plugins
 
 #### Parameters
 
 ##### config
 
-`PluginRequestConfig`
+[`PluginRequestConfig`](PluginRequestConfig.md)
 
 #### Returns
 
-`Promise`\<`PluginRequestConfig`\>
+`Promise`\<[`PluginRequestConfig`](PluginRequestConfig.md)\>
 
 ***
 
 ### executeAfterResponse()
 
-> **executeAfterResponse**(`response`, `config`): `Promise`\<`PluginResponse`\<`unknown`\>\>
+> **executeAfterResponse**(`response`, `config`): `Promise`\<[`PluginResponse`](PluginResponse.md)\<`unknown`\>\>
 
-Defined in: [plugins/base.ts:58](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L58)
+Defined in: [plugins/base.ts:143](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L143)
+
+Execute afterResponse hooks for all plugins
 
 #### Parameters
 
 ##### response
 
-`PluginResponse`
+[`PluginResponse`](PluginResponse.md)
 
 ##### config
 
-`PluginRequestConfig`
+[`PluginRequestConfig`](PluginRequestConfig.md)
 
 #### Returns
 
-`Promise`\<`PluginResponse`\<`unknown`\>\>
+`Promise`\<[`PluginResponse`](PluginResponse.md)\<`unknown`\>\>
 
 ***
 
 ### executeOnError()
 
-> **executeOnError**(`error`, `config`): `Promise`\<`PluginResponse`\<`unknown`\>\>
+> **executeOnError**(`error`, `config`): `Promise`\<[`PluginResponse`](PluginResponse.md)\<`unknown`\>\>
 
-Defined in: [plugins/base.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L62)
+Defined in: [plugins/base.ts:148](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L148)
+
+Execute onError hooks for all plugins
 
 #### Parameters
 
@@ -136,11 +154,11 @@ Defined in: [plugins/base.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### config
 
-`PluginRequestConfig`
+[`PluginRequestConfig`](PluginRequestConfig.md)
 
 #### Returns
 
-`Promise`\<`PluginResponse`\<`unknown`\>\>
+`Promise`\<[`PluginResponse`](PluginResponse.md)\<`unknown`\>\>
 
 ## Properties
 
@@ -148,4 +166,6 @@ Defined in: [plugins/base.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **plugins**: `Map`\<`string`, [`XAdsPlugin`](XAdsPlugin.md)\>
 
-Defined in: [plugins/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L49)
+Defined in: [plugins/base.ts:129](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L129)
+
+Map of installed plugins by name

@@ -8,7 +8,7 @@
 
 > **extractErrorDetails**(`errorData`): `undefined` \| [`APIErrorDetails`](../interfaces/APIErrorDetails.md)
 
-Defined in: utils/error.ts:41
+Defined in: [utils/error.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/error.ts#L42)
 
 Extract error details from unknown error data
 

@@ -4,9 +4,27 @@
 
 [X Ads SDK](../globals.md) / RateLimiter
 
-# Interface: RateLimiter
+# Class: RateLimiter
 
 Defined in: [client/rate-limit.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L16)
+
+## Constructors
+
+### Constructor
+
+> **new RateLimiter**(`options`): `RateLimiter`
+
+Defined in: [client/rate-limit.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L20)
+
+#### Parameters
+
+##### options
+
+`Partial`\<[`RateLimitOptions`](../interfaces/RateLimitOptions.md)\> = `{}`
+
+#### Returns
+
+`RateLimiter`
 
 ## Methods
 
@@ -88,7 +106,7 @@ Defined in: [client/rate-limit.ts:96](https://github.com/kage1020/x-ads-sdk/blob
 
 ### limits
 
-> `private` **limits**: `Map`\<`string`, [`ClientRateLimitInfo`](ClientRateLimitInfo.md)\>
+> `private` **limits**: `Map`\<`string`, [`ClientRateLimitInfo`](../interfaces/ClientRateLimitInfo.md)\>
 
 Defined in: [client/rate-limit.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L17)
 
@@ -96,6 +114,6 @@ Defined in: [client/rate-limit.ts:17](https://github.com/kage1020/x-ads-sdk/blob
 
 ### options
 
-> `private` **options**: [`RateLimitOptions`](RateLimitOptions.md)
+> `private` **options**: [`RateLimitOptions`](../interfaces/RateLimitOptions.md)
 
 Defined in: [client/rate-limit.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L18)

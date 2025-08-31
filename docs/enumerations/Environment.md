@@ -6,7 +6,7 @@
 
 # Enumeration: Environment
 
-Defined in: [types/common.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L24)
+Defined in: [types/common.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L28)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: [types/common.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **PRODUCTION**: `"production"`
 
-Defined in: [types/common.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L25)
+Defined in: [types/common.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L29)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [types/common.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **SANDBOX**: `"sandbox"`
 
-Defined in: [types/common.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L26)
+Defined in: [types/common.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L30)

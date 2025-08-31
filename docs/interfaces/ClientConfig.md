@@ -6,7 +6,7 @@
 
 # Interface: ClientConfig
 
-Defined in: [types/common.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L29)
+Defined in: [types/common.ts:33](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L33)
 
 ## Properties
 
@@ -14,23 +14,23 @@ Defined in: [types/common.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **auth**: `object`
 
-Defined in: [types/common.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L30)
+Defined in: [types/common.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L34)
 
-#### consumer\_key
+#### consumerKey
 
-> **consumer\_key**: `string`
+> **consumerKey**: `string`
 
-#### consumer\_secret
+#### consumerSecret
 
-> **consumer\_secret**: `string`
+> **consumerSecret**: `string`
 
-#### access\_token
+#### accessToken
 
-> **access\_token**: `string`
+> **accessToken**: `string`
 
-#### access\_token\_secret
+#### accessTokenSecret
 
-> **access\_token\_secret**: `string`
+> **accessTokenSecret**: `string`
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [types/common.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **environment**: [`Environment`](../enumerations/Environment.md)
 
-Defined in: [types/common.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L36)
+Defined in: [types/common.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L40)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [types/common.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **baseURL**: `string`
 
-Defined in: [types/common.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L37)
+Defined in: [types/common.ts:41](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L41)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [types/common.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **timeout**: `number`
 
-Defined in: [types/common.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L38)
+Defined in: [types/common.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L42)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [types/common.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **maxRetries**: `number`
 
-Defined in: [types/common.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L39)
+Defined in: [types/common.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L43)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [types/common.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **rateLimitStrategy**: `"wait"` \| `"throw"`
 
-Defined in: [types/common.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L40)
+Defined in: [types/common.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L44)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [types/common.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **apiVersion**: [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [types/common.ts:41](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L41)
+Defined in: [types/common.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L45)
 
 ***
 
@@ -86,4 +86,4 @@ Defined in: [types/common.ts:41](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **autoUpgradeVersion**: `boolean`
 
-Defined in: [types/common.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L42)
+Defined in: [types/common.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L46)

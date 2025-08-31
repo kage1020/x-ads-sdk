@@ -4,9 +4,27 @@
 
 [X Ads SDK](../globals.md) / RetryHandler
 
-# Interface: RetryHandler
+# Class: RetryHandler
 
 Defined in: [client/retry.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L17)
+
+## Constructors
+
+### Constructor
+
+> **new RetryHandler**(`options`): `RetryHandler`
+
+Defined in: [client/retry.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L20)
+
+#### Parameters
+
+##### options
+
+`Partial`\<[`RetryOptions`](../interfaces/RetryOptions.md)\> = `{}`
+
+#### Returns
+
+`RetryHandler`
 
 ## Methods
 
@@ -44,29 +62,11 @@ Defined in: [client/retry.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ***
 
-### isRetryableError()
-
-> `private` **isRetryableError**(`error`): `boolean`
-
-Defined in: [client/retry.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L71)
-
-#### Parameters
-
-##### error
-
-`Error`
-
-#### Returns
-
-`boolean`
-
-***
-
 ### getNextDelay()
 
 > **getNextDelay**(`attempt`): `number`
 
-Defined in: [client/retry.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L96)
+Defined in: [client/retry.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L71)
 
 #### Parameters
 
@@ -84,7 +84,7 @@ Defined in: [client/retry.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **isRetryable**(`error`): `boolean`
 
-Defined in: [client/retry.ts:103](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L103)
+Defined in: [client/retry.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L78)
 
 #### Parameters
 
@@ -100,6 +100,6 @@ Defined in: [client/retry.ts:103](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 ### options
 
-> `readonly` **options**: [`RetryOptions`](RetryOptions.md)
+> `readonly` **options**: [`RetryOptions`](../interfaces/RetryOptions.md)
 
 Defined in: [client/retry.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L18)

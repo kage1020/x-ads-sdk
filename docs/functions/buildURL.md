@@ -8,7 +8,7 @@
 
 > **buildURL**(`baseUrl`, `endpoint`, `params?`): `string`
 
-Defined in: utils/http.ts:25
+Defined in: [utils/http.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/http.ts#L25)
 
 Build URL with query parameters
 

@@ -25,7 +25,10 @@ export {
 } from './paginators';
 export {
   DefaultPluginManager,
+  type PluginClient,
   type PluginManager,
+  type PluginRequestConfig,
+  type PluginResponse,
   type RateLimitInfo,
   RateLimitTracker,
   type RateLimitTrackerOptions,

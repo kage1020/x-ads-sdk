@@ -31,7 +31,7 @@ import { XAdsClient, Environment } from 'x-ads-sdk';
 
 const client = new XAdsClient({
   auth: {
-    consumer_key: 'your_consumer_key',
+    consumerKey: 'your_consumer_key',
     consumerSecret: 'your_consumer_secret',
     accessToken: 'your_access_token',
     accessTokenSecret: 'your_access_token_secret'
@@ -56,7 +56,7 @@ Then use in your code:
 ```typescript
 const client = new XAdsClient({
   auth: {
-    consumer_key: process.env.X_CONSUMER_KEY!,
+    consumerKey: process.env.X_CONSUMER_KEY!,
     consumerSecret: process.env.X_CONSUMER_SECRET!,
     accessToken: process.env.X_ACCESS_TOKEN!,
     accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!
@@ -162,7 +162,7 @@ const lastWeekAnalytics = await client.analytics.getLastWeekAnalytics(
 ```typescript
 const client = new XAdsClient({
   auth: {
-    consumer_key: 'your_key',
+    consumerKey: 'your_key',
     consumerSecret: 'your_secret',
     accessToken: 'your_token',
     accessTokenSecret: 'your_token_secret'

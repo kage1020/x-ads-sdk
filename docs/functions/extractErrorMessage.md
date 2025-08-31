@@ -8,7 +8,7 @@
 
 > **extractErrorMessage**(`errorData`, `response`): `string`
 
-Defined in: utils/error.ts:13
+Defined in: [utils/error.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/error.ts#L13)
 
 Extract error message from unknown error data
 

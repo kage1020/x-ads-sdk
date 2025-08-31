@@ -28,7 +28,7 @@ Defined in: [modules/accounts.ts:12](https://github.com/kage1020/x-ads-sdk/blob/
 
 ##### client
 
-[`HttpClient`](../interfaces/HttpClient.md)
+[`HttpClient`](HttpClient.md)
 
 #### Returns
 
@@ -412,7 +412,7 @@ Defined in: [modules/base.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### client
 
-> `protected` **client**: [`HttpClient`](../interfaces/HttpClient.md)
+> `protected` **client**: [`HttpClient`](HttpClient.md)
 
 Defined in: [modules/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L6)
 

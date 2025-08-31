@@ -14,7 +14,7 @@ dotenv.config();
 // Development/Testing Configuration
 const developmentConfig = {
   auth: {
-    consumer_key: process.env.X_CONSUMER_KEY!,
+    consumerKey: process.env.X_CONSUMER_KEY!,
     consumerSecret: process.env.X_CONSUMER_SECRET!,
     accessToken: process.env.X_ACCESS_TOKEN!,
     accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,
@@ -28,7 +28,7 @@ const developmentConfig = {
 // Production Configuration
 const productionConfig = {
   auth: {
-    consumer_key: process.env.X_PROD_CONSUMER_KEY!,
+    consumerKey: process.env.X_PROD_CONSUMER_KEY!,
     consumerSecret: process.env.X_PROD_CONSUMER_SECRET!,
     accessToken: process.env.X_PROD_ACCESS_TOKEN!,
     accessTokenSecret: process.env.X_PROD_ACCESS_TOKEN_SECRET!,
@@ -42,7 +42,7 @@ const productionConfig = {
 // High-throughput Configuration (for analytics/reporting)
 const analyticsConfig = {
   auth: {
-    consumer_key: process.env.X_CONSUMER_KEY!,
+    consumerKey: process.env.X_CONSUMER_KEY!,
     consumerSecret: process.env.X_CONSUMER_SECRET!,
     accessToken: process.env.X_ACCESS_TOKEN!,
     accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,
@@ -61,7 +61,7 @@ const analyticsConfig = {
 // Strict Configuration (fail fast on errors)
 const strictConfig = {
   auth: {
-    consumer_key: process.env.X_CONSUMER_KEY!,
+    consumerKey: process.env.X_CONSUMER_KEY!,
     consumerSecret: process.env.X_CONSUMER_SECRET!,
     accessToken: process.env.X_ACCESS_TOKEN!,
     accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,

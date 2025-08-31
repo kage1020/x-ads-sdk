@@ -8,7 +8,7 @@
 
 > **isInPast**(`date`): `boolean`
 
-Defined in: utils/time.ts:28
+Defined in: [utils/time.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/time.ts#L28)
 
 Check if a date is in the past
 
