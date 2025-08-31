@@ -133,4 +133,4 @@ export class MyPlugin implements XAdsPlugin {
 6. Create PR to main branch
 7. After merge, GitHub Actions will automatically publish
 
-Generated on 2025-08-31T04:47:15.418Z
+Generated on 2025-08-31T04:50:49.782Z

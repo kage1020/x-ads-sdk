@@ -44,4 +44,4 @@ This document provides an overview of the X Ads API endpoints covered by this SD
 - ✅ Plugin lifecycle hooks
 - ✅ Extensible architecture
 
-Generated on 2025-08-31T04:47:15.418Z
+Generated on 2025-08-31T04:50:49.781Z
