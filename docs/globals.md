@@ -14,6 +14,8 @@
 
 - [OAuth](classes/OAuth.md)
 - [HttpClient](classes/HttpClient.md)
+- [RateLimiter](classes/RateLimiter.md)
+- [RetryHandler](classes/RetryHandler.md)
 - [XAdsError](classes/XAdsError.md)
 - [AuthenticationError](classes/AuthenticationError.md)
 - [RateLimitError](classes/RateLimitError.md)
@@ -35,9 +37,17 @@
 
 ## Interfaces
 
+- [HttpClientConfig](interfaces/HttpClientConfig.md)
+- [RequestConfig](interfaces/RequestConfig.md)
+- [ClientRateLimitInfo](interfaces/ClientRateLimitInfo.md)
+- [RateLimitOptions](interfaces/RateLimitOptions.md)
+- [RetryOptions](interfaces/RetryOptions.md)
 - [PaginatorOptions](interfaces/PaginatorOptions.md)
+- [CursorPaginatorResult](interfaces/CursorPaginatorResult.md)
 - [XAdsPlugin](interfaces/XAdsPlugin.md)
 - [PluginManager](interfaces/PluginManager.md)
+- [RateLimitInfo](interfaces/RateLimitInfo.md)
+- [RateLimitTrackerOptions](interfaces/RateLimitTrackerOptions.md)
 - [Account](interfaces/Account.md)
 - [UpdateAccountData](interfaces/UpdateAccountData.md)
 - [AccountListParams](interfaces/AccountListParams.md)

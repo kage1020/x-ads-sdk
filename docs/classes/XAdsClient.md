@@ -111,15 +111,13 @@ Defined in: [client.ts:126](https://github.com/kage1020/x-ads-sdk/blob/main/src/
 
 Get the underlying HTTP client for advanced usage
 
+This method is for advanced users who need direct access to the HTTP layer
+
 #### Returns
 
 [`HttpClient`](HttpClient.md)
 
 The HTTP client instance used by this SDK client
-
-#### Advanced
-
-This method is for advanced users who need direct access to the HTTP layer
 
 ***
 

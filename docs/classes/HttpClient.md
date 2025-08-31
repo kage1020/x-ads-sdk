@@ -20,7 +20,7 @@ Defined in: [client/base.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ##### config
 
-`HttpClientConfig`
+[`HttpClientConfig`](../interfaces/HttpClientConfig.md)
 
 #### Returns
 
@@ -78,7 +78,7 @@ Defined in: [client/base.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ##### config
 
-`RequestConfig`
+[`RequestConfig`](../interfaces/RequestConfig.md)
 
 #### Returns
 
@@ -102,7 +102,7 @@ Defined in: [client/base.ts:103](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### config
 
-`RequestConfig`
+[`RequestConfig`](../interfaces/RequestConfig.md)
 
 #### Returns
 
@@ -126,7 +126,7 @@ Defined in: [client/base.ts:124](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### config
 
-`RequestConfig`
+[`RequestConfig`](../interfaces/RequestConfig.md)
 
 #### Returns
 
@@ -382,7 +382,7 @@ Defined in: [client/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ### rateLimiter
 
-> `private` **rateLimiter**: `RateLimiter`
+> `private` **rateLimiter**: [`RateLimiter`](RateLimiter.md)
 
 Defined in: [client/base.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L36)
 
@@ -390,7 +390,7 @@ Defined in: [client/base.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ### retryHandler
 
-> `private` **retryHandler**: `RetryHandler`
+> `private` **retryHandler**: [`RetryHandler`](RetryHandler.md)
 
 Defined in: [client/base.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L37)
 

@@ -30,7 +30,7 @@ Defined in: [paginators/index.ts:18](https://github.com/kage1020/x-ads-sdk/blob/
 
 ##### fetcher
 
-(`cursor?`, `count?`) => `Promise`\<`CursorPaginatorResult`\<`T`\>\>
+(`cursor?`, `count?`) => `Promise`\<[`CursorPaginatorResult`](../interfaces/CursorPaginatorResult.md)\<`T`\>\>
 
 ##### options
 
@@ -150,7 +150,7 @@ Defined in: [paginators/index.ts:16](https://github.com/kage1020/x-ads-sdk/blob/
 
 ### fetcher()
 
-> `private` **fetcher**: (`cursor?`, `count?`) => `Promise`\<`CursorPaginatorResult`\<`T`\>\>
+> `private` **fetcher**: (`cursor?`, `count?`) => `Promise`\<[`CursorPaginatorResult`](../interfaces/CursorPaginatorResult.md)\<`T`\>\>
 
 Defined in: [paginators/index.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L19)
 
@@ -166,7 +166,7 @@ Defined in: [paginators/index.ts:19](https://github.com/kage1020/x-ads-sdk/blob/
 
 #### Returns
 
-`Promise`\<`CursorPaginatorResult`\<`T`\>\>
+`Promise`\<[`CursorPaginatorResult`](../interfaces/CursorPaginatorResult.md)\<`T`\>\>
 
 ***
 

@@ -319,7 +319,7 @@ The analytics module supports comprehensive metrics:
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+Contributions are welcome! Please follow these guidelines:
 
 - Code style and standards
 - Testing requirements

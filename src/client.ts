@@ -120,8 +120,8 @@ export class XAdsClient {
   /**
    * Get the underlying HTTP client for advanced usage
    * 
+   * This method is for advanced users who need direct access to the HTTP layer
    * @returns The HTTP client instance used by this SDK client
-   * @advanced This method is for advanced users who need direct access to the HTTP layer
    */
   getHttpClient(): HttpClient {
     return this.httpClient;

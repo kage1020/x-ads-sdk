@@ -24,7 +24,7 @@ Defined in: [plugins/rate-limit-tracker.ts:26](https://github.com/kage1020/x-ads
 
 ##### options
 
-`RateLimitTrackerOptions` = `{}`
+[`RateLimitTrackerOptions`](../interfaces/RateLimitTrackerOptions.md) = `{}`
 
 #### Returns
 
@@ -126,7 +126,7 @@ Defined in: [plugins/rate-limit-tracker.ts:109](https://github.com/kage1020/x-ad
 
 ### getRateLimitInfo()
 
-> **getRateLimitInfo**(`endpoint`): `undefined` \| `RateLimitInfo`
+> **getRateLimitInfo**(`endpoint`): `undefined` \| [`RateLimitInfo`](../interfaces/RateLimitInfo.md)
 
 Defined in: [plugins/rate-limit-tracker.ts:117](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L117)
 
@@ -138,19 +138,19 @@ Defined in: [plugins/rate-limit-tracker.ts:117](https://github.com/kage1020/x-ad
 
 #### Returns
 
-`undefined` \| `RateLimitInfo`
+`undefined` \| [`RateLimitInfo`](../interfaces/RateLimitInfo.md)
 
 ***
 
 ### getAllRateLimits()
 
-> **getAllRateLimits**(): `Map`\<`string`, `RateLimitInfo`\>
+> **getAllRateLimits**(): `Map`\<`string`, [`RateLimitInfo`](../interfaces/RateLimitInfo.md)\>
 
 Defined in: [plugins/rate-limit-tracker.ts:121](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L121)
 
 #### Returns
 
-`Map`\<`string`, `RateLimitInfo`\>
+`Map`\<`string`, [`RateLimitInfo`](../interfaces/RateLimitInfo.md)\>
 
 ***
 
@@ -240,7 +240,7 @@ Defined in: [plugins/rate-limit-tracker.ts:21](https://github.com/kage1020/x-ads
 
 ### rateLimits
 
-> `private` **rateLimits**: `Map`\<`string`, `RateLimitInfo`\>
+> `private` **rateLimits**: `Map`\<`string`, [`RateLimitInfo`](../interfaces/RateLimitInfo.md)\>
 
 Defined in: [plugins/rate-limit-tracker.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L23)
 
@@ -248,6 +248,6 @@ Defined in: [plugins/rate-limit-tracker.ts:23](https://github.com/kage1020/x-ads
 
 ### options
 
-> `private` **options**: `Required`\<`RateLimitTrackerOptions`\>
+> `private` **options**: `Required`\<[`RateLimitTrackerOptions`](../interfaces/RateLimitTrackerOptions.md)\>
 
 Defined in: [plugins/rate-limit-tracker.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L24)
