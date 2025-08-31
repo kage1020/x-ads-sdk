@@ -65,9 +65,6 @@ export class OAuth {
       this.percentEncode(this.access_token_secret)
     ].join('&');
 
-    // This is OAuth 1.0a signature generation (RFC 5849), not password hashing
-    // CodeQL may flag this as "insufficient computational effort" but this is
-    // HMAC-based request signing for API authentication, not password storage
     const hashAlgorithm = this.signature_method === 'HMAC-SHA256' ? 'sha256' : 'sha1';
     return createHmac(hashAlgorithm, signingKey)
       .update(signatureBaseString)
