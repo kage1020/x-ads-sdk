@@ -54,14 +54,14 @@ Defined in: [types/auth.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/sr
 
 > `optional` **signature\_method**: `"HMAC-SHA1"` \| `"HMAC-SHA256"`
 
-Defined in: [types/auth.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L13)
-
-OAuth signature method to use for request signing.
-This is for OAuth signature generation, not password hashing.
-HMAC-SHA1 is the standard OAuth 1.0a signature method as defined in RFC 5849.
+Defined in: [types/auth.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L14)
 
 #### Default
 
 ```ts
 'HMAC-SHA1' - Required by OAuth 1.0a specification for maximum compatibility
+
+OAuth signature method to use for request signing.
+This is for OAuth signature generation, not password hashing.
+HMAC-SHA1 is the standard OAuth 1.0a signature method as defined in RFC 5849.
 ```

@@ -6,7 +6,7 @@
 
 # Interface: OAuthSignature
 
-Defined in: [types/auth.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L16)
+Defined in: [types/auth.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L17)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/auth.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **oauth\_consumer\_key**: `string`
 
-Defined in: [types/auth.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L17)
+Defined in: [types/auth.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L18)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [types/auth.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **oauth\_nonce**: `string`
 
-Defined in: [types/auth.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L18)
+Defined in: [types/auth.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L19)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [types/auth.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **oauth\_signature**: `string`
 
-Defined in: [types/auth.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L19)
+Defined in: [types/auth.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L20)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [types/auth.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **oauth\_signature\_method**: `string`
 
-Defined in: [types/auth.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L20)
+Defined in: [types/auth.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L21)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [types/auth.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **oauth\_timestamp**: `string`
 
-Defined in: [types/auth.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L21)
+Defined in: [types/auth.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L22)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [types/auth.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **oauth\_token**: `string`
 
-Defined in: [types/auth.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L22)
+Defined in: [types/auth.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L23)
 
 ***
 
@@ -62,4 +62,4 @@ Defined in: [types/auth.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **oauth\_version**: `string`
 
-Defined in: [types/auth.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L23)
+Defined in: [types/auth.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L24)

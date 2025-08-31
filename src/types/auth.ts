@@ -5,10 +5,11 @@ export interface AuthConfig {
   access_token_secret: string;
   sandbox?: boolean;
   /**
+   * @default 'HMAC-SHA1' - Required by OAuth 1.0a specification for maximum compatibility
+   * 
    * OAuth signature method to use for request signing.
    * This is for OAuth signature generation, not password hashing.
    * HMAC-SHA1 is the standard OAuth 1.0a signature method as defined in RFC 5849.
-   * @default 'HMAC-SHA1' - Required by OAuth 1.0a specification for maximum compatibility
    */
   signature_method?: 'HMAC-SHA1' | 'HMAC-SHA256';
 }

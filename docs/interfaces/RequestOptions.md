@@ -6,7 +6,7 @@
 
 # Interface: RequestOptions
 
-Defined in: [types/auth.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L26)
+Defined in: [types/auth.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L27)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/auth.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **method**: `string`
 
-Defined in: [types/auth.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L27)
+Defined in: [types/auth.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L28)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [types/auth.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **url**: `string`
 
-Defined in: [types/auth.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L28)
+Defined in: [types/auth.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L29)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [types/auth.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `optional` **params**: `Record`\<`string`, `any`\>
 
-Defined in: [types/auth.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L29)
+Defined in: [types/auth.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L30)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [types/auth.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `optional` **body**: `any`
 
-Defined in: [types/auth.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L30)
+Defined in: [types/auth.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L31)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [types/auth.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [types/auth.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L31)
+Defined in: [types/auth.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L32)
