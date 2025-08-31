@@ -165,7 +165,6 @@ X_ACCESS_TOKEN_SECRET=your_token_secret
 
 - `npm run build` -- 8 seconds normally, set 30+ minute timeout for safety
 - `npm run docs:generate` -- 8.7 seconds normally, set 15+ minute timeout
-- `npm run bundle:analyze` -- 8.4 seconds normally, set 15+ minute timeout
 
 **Fast commands (can use shorter timeouts):**
 
