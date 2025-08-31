@@ -12,10 +12,10 @@ import type { APIErrorDetails } from '../errors';
  */
 export function extractErrorMessage(errorData: unknown, response: Response): string {
   if (errorData && typeof errorData === 'object') {
-    const data = errorData as any;
-    return (
-      data.errors?.[0]?.message || data.error || `HTTP ${response.status}: ${response.statusText}`
-    );
+    const data = errorData as Record<string, unknown>;
+    const errors = data.errors as Array<{ message?: string }> | undefined;
+    const errorMessage = errors?.[0]?.message || (data.error as string) || undefined;
+    return errorMessage || `HTTP ${response.status}: ${response.statusText}`;
   }
   return `HTTP ${response.status}: ${response.statusText}`;
 }
@@ -27,8 +27,9 @@ export function extractErrorMessage(errorData: unknown, response: Response): str
  */
 export function extractErrorCode(errorData: unknown): string | undefined {
   if (errorData && typeof errorData === 'object') {
-    const data = errorData as any;
-    return data.errors?.[0]?.code;
+    const data = errorData as Record<string, unknown>;
+    const errors = data.errors as Array<{ code?: string }> | undefined;
+    return errors?.[0]?.code;
   }
   return undefined;
 }
