@@ -1,8 +1,11 @@
+import type { APIVersion } from './api-version';
+
 export interface ListParams {
   count?: number;
   cursor?: string;
   sort_by?: string;
   with_deleted?: boolean;
+  [key: string]: unknown;
 }
 
 export interface PaginatedResponse<T> {
@@ -14,13 +17,13 @@ export interface PaginatedResponse<T> {
 export interface APIResponse<T> {
   data: T;
   request: {
-    params: Record<string, any>;
+    params: Record<string, unknown>;
   };
 }
 
 export enum Environment {
   PRODUCTION = 'production',
-  SANDBOX = 'sandbox'
+  SANDBOX = 'sandbox',
 }
 
 export interface ClientConfig {
@@ -35,6 +38,6 @@ export interface ClientConfig {
   timeout?: number;
   maxRetries?: number;
   rateLimitStrategy?: 'wait' | 'throw';
-  apiVersion?: import('./api-version.js').APIVersion;
+  apiVersion?: APIVersion;
   autoUpgradeVersion?: boolean;
 }

@@ -28,7 +28,7 @@ Defined in: [modules/analytics.ts:14](https://github.com/kage1020/x-ads-sdk/blob
 
 ##### client
 
-[`HttpClient`](HttpClient.md)
+[`HttpClient`](../interfaces/HttpClient.md)
 
 #### Returns
 
@@ -68,7 +68,7 @@ Get analytics data for entities
 
 > **getCampaignAnalytics**(`accountId`, `campaignIds`, `dateRange`, `options`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L46)
+Defined in: [modules/analytics.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L43)
 
 Get campaign analytics
 
@@ -100,7 +100,7 @@ Get campaign analytics
 
 > **getAdGroupAnalytics**(`accountId`, `adGroupIds`, `dateRange`, `options`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:63](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L63)
+Defined in: [modules/analytics.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L60)
 
 Get ad group (line item) analytics
 
@@ -132,7 +132,7 @@ Get ad group (line item) analytics
 
 > **getAccountAnalytics**(`accountId`, `dateRange`, `options`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:80](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L80)
+Defined in: [modules/analytics.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L77)
 
 Get account-level analytics
 
@@ -160,7 +160,7 @@ Get account-level analytics
 
 > **getEngagementAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L96)
+Defined in: [modules/analytics.ts:93](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L93)
 
 Get analytics with engagement metrics
 
@@ -196,7 +196,7 @@ Get analytics with engagement metrics
 
 > **getBillingAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L115)
+Defined in: [modules/analytics.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L112)
 
 Get analytics with billing metrics
 
@@ -232,7 +232,7 @@ Get analytics with billing metrics
 
 > **getVideoAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L134)
+Defined in: [modules/analytics.ts:131](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L131)
 
 Get analytics with video metrics
 
@@ -268,7 +268,7 @@ Get analytics with video metrics
 
 > **getComprehensiveAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:153](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L153)
+Defined in: [modules/analytics.ts:150](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L150)
 
 Get comprehensive analytics with all metric groups
 
@@ -304,7 +304,7 @@ Get comprehensive analytics with all metric groups
 
 > **getDailyAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `metricGroups`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:172](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L172)
+Defined in: [modules/analytics.ts:169](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L169)
 
 Get analytics for a specific date range with daily granularity
 
@@ -340,7 +340,7 @@ Get analytics for a specific date range with daily granularity
 
 > **getHourlyAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `metricGroups`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:191](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L191)
+Defined in: [modules/analytics.ts:188](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L188)
 
 Get analytics for a specific date range with hourly granularity
 
@@ -376,7 +376,7 @@ Get analytics for a specific date range with hourly granularity
 
 > `static` **createDateRange**(`days`): [`DateRange`](../interfaces/DateRange.md)
 
-Defined in: [modules/analytics.ts:210](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L210)
+Defined in: [modules/analytics.ts:207](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L207)
 
 Create date range for common periods
 
@@ -396,7 +396,7 @@ Create date range for common periods
 
 > **getLastWeekAnalytics**(`accountId`, `entityType`, `entityIds`, `metricGroups`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:224](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L224)
+Defined in: [modules/analytics.ts:221](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L221)
 
 Get analytics for the last 7 days
 
@@ -428,7 +428,7 @@ Get analytics for the last 7 days
 
 > **getLastMonthAnalytics**(`accountId`, `entityType`, `entityIds`, `metricGroups`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: [modules/analytics.ts:242](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L242)
+Defined in: [modules/analytics.ts:239](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L239)
 
 Get analytics for the last 30 days
 
@@ -518,7 +518,7 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makeGetRequest**\<`T`\>(`endpoint`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L30)
+Defined in: [modules/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L27)
 
 #### Type Parameters
 
@@ -546,7 +546,7 @@ Defined in: [modules/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makePostRequest**\<`T`\>(`endpoint`, `body`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L35)
+Defined in: [modules/base.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L32)
 
 #### Type Parameters
 
@@ -562,7 +562,7 @@ Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### body
 
-`any`
+`unknown`
 
 #### Returns
 
@@ -578,7 +578,7 @@ Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makePutRequest**\<`T`\>(`endpoint`, `body`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L40)
+Defined in: [modules/base.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L37)
 
 #### Type Parameters
 
@@ -594,7 +594,7 @@ Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### body
 
-`any`
+`unknown`
 
 #### Returns
 
@@ -610,7 +610,7 @@ Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makeDeleteRequest**(`endpoint`): `Promise`\<`void`\>
 
-Defined in: [modules/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L45)
+Defined in: [modules/base.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L42)
 
 #### Parameters
 
@@ -632,7 +632,7 @@ Defined in: [modules/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **createPaginator**\<`T`\>(`endpoint`, `baseParams`, `options`): [`CursorPaginator`](CursorPaginator.md)\<`T`\>
 
-Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L49)
+Defined in: [modules/base.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L46)
 
 #### Type Parameters
 
@@ -648,7 +648,7 @@ Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### baseParams
 
-`Record`\<`string`, `any`\> = `{}`
+`Record`\<`string`, `unknown`\> = `{}`
 
 ##### options
 
@@ -666,7 +666,7 @@ Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### client
 
-> `protected` **client**: [`HttpClient`](HttpClient.md)
+> `protected` **client**: [`HttpClient`](../interfaces/HttpClient.md)
 
 Defined in: [modules/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L6)
 

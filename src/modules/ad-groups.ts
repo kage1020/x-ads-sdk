@@ -1,13 +1,13 @@
-import { BaseModule } from './base.js';
-import { HttpClient } from '../client/base.js';
-import { PaginatedResponse } from '../types/common.js';
+import type { HttpClient } from '../client/base';
 import {
-  AdGroup,
-  CreateAdGroupData,
-  UpdateAdGroupData,
-  AdGroupListParams,
-  AdGroupStatus
-} from '../types/ad-group.js';
+  type AdGroup,
+  type AdGroupListParams,
+  AdGroupStatus,
+  type CreateAdGroupData,
+  type UpdateAdGroupData,
+} from '../types/ad-group';
+import type { PaginatedResponse } from '../types/common';
+import { BaseModule } from './base';
 
 export class AdGroupsModule extends BaseModule {
   constructor(client: HttpClient) {
@@ -38,7 +38,7 @@ export class AdGroupsModule extends BaseModule {
    */
   async create(accountId: string, data: CreateAdGroupData): Promise<AdGroup> {
     const endpoint = this.buildEndpoint(accountId, 'line_items');
-    
+
     // Convert data to API format
     const requestBody = {
       campaign_id: data.campaign_id,
@@ -50,7 +50,7 @@ export class AdGroupsModule extends BaseModule {
       bid_type: data.bid_type,
       target_cpa_local_micro: data.target_cpa_local_micro,
       daily_budget_amount_local_micro: data.daily_budget_amount_local_micro,
-      total_budget_amount_local_micro: data.total_budget_amount_local_micro
+      total_budget_amount_local_micro: data.total_budget_amount_local_micro,
     };
 
     return this.makePostRequest<AdGroup>(endpoint, requestBody);
@@ -59,11 +59,7 @@ export class AdGroupsModule extends BaseModule {
   /**
    * Update an existing ad group
    */
-  async update(
-    accountId: string,
-    adGroupId: string,
-    data: UpdateAdGroupData
-  ): Promise<AdGroup> {
+  async update(accountId: string, adGroupId: string, data: UpdateAdGroupData): Promise<AdGroup> {
     const endpoint = this.buildEndpoint(accountId, 'line_items', adGroupId);
     return this.makePutRequest<AdGroup>(endpoint, data);
   }
@@ -81,7 +77,7 @@ export class AdGroupsModule extends BaseModule {
    */
   async pause(accountId: string, adGroupId: string): Promise<AdGroup> {
     return this.update(accountId, adGroupId, {
-      status: AdGroupStatus.PAUSED
+      status: AdGroupStatus.PAUSED,
     });
   }
 
@@ -90,7 +86,7 @@ export class AdGroupsModule extends BaseModule {
    */
   async activate(accountId: string, adGroupId: string): Promise<AdGroup> {
     return this.update(accountId, adGroupId, {
-      status: AdGroupStatus.ACTIVE
+      status: AdGroupStatus.ACTIVE,
     });
   }
 
@@ -104,7 +100,7 @@ export class AdGroupsModule extends BaseModule {
   ): Promise<PaginatedResponse<AdGroup>> {
     return this.list(accountId, {
       ...params,
-      campaign_ids: [campaignId]
+      campaign_ids: [campaignId],
     });
   }
 
@@ -118,15 +114,15 @@ export class AdGroupsModule extends BaseModule {
   ): Promise<PaginatedResponse<AdGroup>> {
     const adGroups = await this.list(accountId, {
       ...params,
-      with_deleted: status === AdGroupStatus.DELETED
+      with_deleted: status === AdGroupStatus.DELETED,
     });
 
     // Filter ad groups by status
-    const filteredData = adGroups.data.filter(adGroup => adGroup.status === status);
+    const filteredData = adGroups.data.filter((adGroup) => adGroup.status === status);
 
     return {
       ...adGroups,
-      data: filteredData
+      data: filteredData,
     };
   }
 
@@ -169,11 +165,11 @@ export class AdGroupsModule extends BaseModule {
     params?: Omit<AdGroupListParams, 'campaign_ids' | 'with_deleted'>
   ): Promise<PaginatedResponse<AdGroup>> {
     const adGroups = await this.listByCampaign(accountId, campaignId, params);
-    const filteredData = adGroups.data.filter(adGroup => adGroup.status === AdGroupStatus.ACTIVE);
+    const filteredData = adGroups.data.filter((adGroup) => adGroup.status === AdGroupStatus.ACTIVE);
 
     return {
       ...adGroups,
-      data: filteredData
+      data: filteredData,
     };
   }
 }

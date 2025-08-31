@@ -1,3 +1,5 @@
+import { sleep } from '../utils';
+
 export interface RetryOptions {
   maxRetries: number;
   initialDelay: number;
@@ -13,7 +15,7 @@ export interface RetryContext {
 }
 
 export class RetryHandler {
-  private options: RetryOptions;
+  public readonly options: RetryOptions;
 
   constructor(options: Partial<RetryOptions> = {}) {
     this.options = {
@@ -22,7 +24,7 @@ export class RetryHandler {
       maxDelay: 30000, // 30 seconds
       backoffFactor: 2,
       retryableStatusCodes: [429, 500, 502, 503, 504],
-      ...options
+      ...options,
     };
   }
 
@@ -52,11 +54,11 @@ export class RetryHandler {
         // Log retry attempt
         console.warn(
           `Attempt ${attempt + 1} failed for ${context.method || 'request'} ${context.endpoint || ''}. ` +
-          `Retrying in ${delay}ms. Error: ${(error as Error).message}`
+            `Retrying in ${delay}ms. Error: ${(error as Error).message}`
         );
 
         // Wait before retrying
-        await this.sleep(delay);
+        await sleep(delay);
 
         // Calculate next delay with exponential backoff
         delay = Math.min(delay * this.options.backoffFactor, this.options.maxDelay);
@@ -79,7 +81,7 @@ export class RetryHandler {
 
     // Check for API errors with retryable status codes
     if ('statusCode' in error) {
-      const statusCode = (error as any).statusCode;
+      const statusCode = (error as { statusCode: number }).statusCode;
       return this.options.retryableStatusCodes.includes(statusCode);
     }
 
@@ -91,13 +93,9 @@ export class RetryHandler {
     return false;
   }
 
-  private sleep(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
   getNextDelay(attempt: number): number {
     return Math.min(
-      this.options.initialDelay * Math.pow(this.options.backoffFactor, attempt),
+      this.options.initialDelay * this.options.backoffFactor ** attempt,
       this.options.maxDelay
     );
   }

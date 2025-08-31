@@ -1,12 +1,12 @@
-import { BaseModule } from './base.js';
-import { HttpClient } from '../client/base.js';
-import { PaginatedResponse } from '../types/common.js';
+import type { HttpClient } from '../client/base';
 import {
-  Account,
-  UpdateAccountData,
-  AccountListParams,
-  AccountStatus
-} from '../types/account.js';
+  type Account,
+  type AccountListParams,
+  AccountStatus,
+  type UpdateAccountData,
+} from '../types/account';
+import type { PaginatedResponse } from '../types/common';
+import { BaseModule } from './base';
 
 export class AccountsModule extends BaseModule {
   constructor(client: HttpClient) {
@@ -46,15 +46,15 @@ export class AccountsModule extends BaseModule {
   ): Promise<PaginatedResponse<Account>> {
     const accounts = await this.list({
       ...params,
-      with_deleted: status === AccountStatus.DELETED
+      with_deleted: status === AccountStatus.DELETED,
     });
 
     // Filter accounts by status
-    const filteredData = accounts.data.filter(account => account.status === status);
-    
+    const filteredData = accounts.data.filter((account) => account.status === status);
+
     return {
       ...accounts,
-      data: filteredData
+      data: filteredData,
     };
   }
 

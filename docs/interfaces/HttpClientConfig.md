@@ -6,7 +6,7 @@
 
 # Interface: HttpClientConfig
 
-Defined in: [client/base.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L10)
+Defined in: [client/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L27)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [client/base.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **auth**: `object`
 
-Defined in: [client/base.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L11)
+Defined in: [client/base.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L28)
 
 #### consumer\_key
 
@@ -38,7 +38,7 @@ Defined in: [client/base.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **environment**: [`Environment`](../enumerations/Environment.md)
 
-Defined in: [client/base.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L17)
+Defined in: [client/base.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L34)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [client/base.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **baseURL**: `string`
 
-Defined in: [client/base.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L18)
+Defined in: [client/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L35)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [client/base.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **timeout**: `number`
 
-Defined in: [client/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L19)
+Defined in: [client/base.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L36)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [client/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **rateLimitOptions**: `Partial`\<[`RateLimitOptions`](RateLimitOptions.md)\>
 
-Defined in: [client/base.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L20)
+Defined in: [client/base.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L37)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [client/base.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **retryOptions**: `Partial`\<[`RetryOptions`](RetryOptions.md)\>
 
-Defined in: [client/base.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L21)
+Defined in: [client/base.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L38)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [client/base.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **apiVersion**: [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [client/base.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L22)
+Defined in: [client/base.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L39)
 
 ***
 
@@ -86,4 +86,4 @@ Defined in: [client/base.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **autoUpgradeVersion**: `boolean`
 
-Defined in: [client/base.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L23)
+Defined in: [client/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L40)

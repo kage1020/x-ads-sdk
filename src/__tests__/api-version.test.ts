@@ -1,11 +1,11 @@
-import { describe, it, expect, beforeEach } from 'vitest';
-import { 
-  APIVersionManager, 
-  APIVersion, 
-  SUPPORTED_VERSIONS, 
-  DEFAULT_VERSION, 
-  API_VERSION_METADATA 
-} from '../types/api-version.js';
+import { beforeEach, describe, expect, it } from 'vitest';
+import {
+  API_VERSION_METADATA,
+  APIVersion,
+  APIVersionManager,
+  DEFAULT_VERSION,
+  SUPPORTED_VERSIONS,
+} from '../types/api-version';
 
 describe('APIVersionManager', () => {
   let versionManager: APIVersionManager;
@@ -34,7 +34,7 @@ describe('APIVersionManager', () => {
   describe('version management', () => {
     it('should return correct version path', () => {
       expect(versionManager.getVersionPath()).toBe('/12.0');
-      
+
       versionManager.setVersion(APIVersion.V11);
       expect(versionManager.getVersionPath()).toBe('/11.0');
     });
@@ -66,7 +66,7 @@ describe('APIVersionManager', () => {
     it('should provide upgrade recommendations', () => {
       versionManager.setVersion(APIVersion.V11);
       const recommendation = versionManager.getUpgradeRecommendation();
-      
+
       expect(recommendation.currentVersion).toBe(APIVersion.V11);
       expect(recommendation.warnings.length).toBeGreaterThan(0);
       expect(recommendation.recommendedAction).toBe('upgrade');
@@ -77,7 +77,7 @@ describe('APIVersionManager', () => {
     it('should parse version headers correctly', () => {
       const headers = {
         'x-current-api-version': '12.0',
-        'x-api-warn': 'Version 11.0 is deprecated'
+        'x-api-warn': 'Version 11.0 is deprecated',
       };
 
       const response = versionManager.parseResponseHeaders(headers);
@@ -88,7 +88,7 @@ describe('APIVersionManager', () => {
     it('should detect version mismatch', () => {
       versionManager.setVersion(APIVersion.V11);
       const headers = {
-        'x-current-api-version': '12.0'
+        'x-current-api-version': '12.0',
       };
 
       const response = versionManager.parseResponseHeaders(headers);
@@ -126,11 +126,7 @@ describe('APIVersionManager', () => {
   describe('endpoint migration', () => {
     it('should return same endpoint for now', () => {
       const endpoint = '/accounts';
-      const migrated = versionManager.migrateEndpoint(
-        endpoint, 
-        APIVersion.V11, 
-        APIVersion.V12
-      );
+      const migrated = versionManager.migrateEndpoint(endpoint, APIVersion.V11, APIVersion.V12);
       expect(migrated).toBe(endpoint);
     });
   });
@@ -164,7 +160,7 @@ describe('API Version constants', () => {
   });
 
   it('should have valid metadata for all versions', () => {
-    SUPPORTED_VERSIONS.forEach(version => {
+    SUPPORTED_VERSIONS.forEach((version) => {
       const metadata = API_VERSION_METADATA[version];
       expect(metadata).toBeDefined();
       expect(metadata.version).toBe(version);

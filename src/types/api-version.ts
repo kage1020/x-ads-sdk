@@ -1,6 +1,6 @@
 /**
  * API Version Management Types for X Ads SDK
- * 
+ *
  * X Ads API follows a 6-month deprecation cycle with 2 concurrent versions supported.
  * This module provides type-safe version management.
  */
@@ -15,7 +15,7 @@ export const SUPPORTED_VERSIONS = [APIVersion.V11, APIVersion.V12] as const;
 export const DEFAULT_VERSION = APIVersion.V12;
 export const LEGACY_VERSION = APIVersion.V11;
 
-export type SupportedAPIVersion = typeof SUPPORTED_VERSIONS[number];
+export type SupportedAPIVersion = (typeof SUPPORTED_VERSIONS)[number];
 
 export interface APIVersionInfo {
   version: APIVersion;
@@ -33,14 +33,14 @@ export const API_VERSION_METADATA: Record<APIVersion, APIVersionInfo> = {
     deprecationDate: new Date('2022-10-27'), // When v12 was released
     supportedUntil: new Date('2023-04-27'), // 6 months after v12 release
     isDefault: false,
-    isDeprecated: true
+    isDeprecated: true,
   },
   [APIVersion.V12]: {
     version: APIVersion.V12,
     releaseDate: new Date('2022-10-27'),
     isDefault: true,
-    isDeprecated: false
-  }
+    isDeprecated: false,
+  },
 };
 
 export interface APIVersionResponse {
@@ -53,7 +53,7 @@ export interface APIVersionResponse {
 export class APIVersionManager {
   private version: APIVersion;
   private autoUpgrade: boolean;
-  
+
   constructor(version: APIVersion = DEFAULT_VERSION, autoUpgrade: boolean = false) {
     this.version = version;
     this.autoUpgrade = autoUpgrade;
@@ -62,7 +62,9 @@ export class APIVersionManager {
 
   private validateVersion(version: APIVersion): void {
     if (!SUPPORTED_VERSIONS.includes(version as SupportedAPIVersion)) {
-      throw new Error(`Unsupported API version: ${version}. Supported versions: ${SUPPORTED_VERSIONS.join(', ')}`);
+      throw new Error(
+        `Unsupported API version: ${version}. Supported versions: ${SUPPORTED_VERSIONS.join(', ')}`
+      );
     }
   }
 
@@ -99,7 +101,9 @@ export class APIVersionManager {
     let recommendedAction: 'upgrade' | 'maintain' | 'none' = 'none';
 
     if (currentInfo.isDeprecated) {
-      warnings.push(`API version ${this.version} is deprecated. Consider upgrading to ${DEFAULT_VERSION}.`);
+      warnings.push(
+        `API version ${this.version} is deprecated. Consider upgrading to ${DEFAULT_VERSION}.`
+      );
       recommendedAction = 'upgrade';
     }
 
@@ -112,24 +116,26 @@ export class APIVersionManager {
       currentVersion: this.version,
       warnings,
       isVersionSupported: SUPPORTED_VERSIONS.includes(this.version as SupportedAPIVersion),
-      recommendedAction
+      recommendedAction,
     };
   }
 
   parseResponseHeaders(headers: Record<string, string>): APIVersionResponse {
     const currentVersionHeader = headers['x-current-api-version'];
     const warningHeader = headers['x-api-warn'];
-    
+
     const warnings: string[] = [];
     if (warningHeader) {
       warnings.push(warningHeader);
     }
 
     let recommendedAction: 'upgrade' | 'maintain' | 'none' = 'none';
-    
+
     // If API reports a different current version, suggest upgrade
     if (currentVersionHeader && currentVersionHeader !== this.version) {
-      warnings.push(`API reports current version as ${currentVersionHeader}, you are using ${this.version}`);
+      warnings.push(
+        `API reports current version as ${currentVersionHeader}, you are using ${this.version}`
+      );
       recommendedAction = 'upgrade';
     }
 
@@ -137,7 +143,7 @@ export class APIVersionManager {
       currentVersion: this.version,
       warnings,
       isVersionSupported: true, // If we got a response, version is supported
-      recommendedAction
+      recommendedAction,
     };
   }
 

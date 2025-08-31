@@ -6,7 +6,7 @@
 
 # Class: ConfigurationError
 
-Defined in: [errors/index.ts:129](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L129)
+Defined in: [errors/index.ts:138](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L138)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: [errors/index.ts:129](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **new ConfigurationError**(`message`, `configField?`, `code?`): `ConfigurationError`
 
-Defined in: [errors/index.ts:130](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L130)
+Defined in: [errors/index.ts:139](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L139)
 
 #### Parameters
 
@@ -124,4 +124,4 @@ Defined in: [errors/index.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `readonly` `optional` **configField**: `string`
 
-Defined in: [errors/index.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L132)
+Defined in: [errors/index.ts:141](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L141)

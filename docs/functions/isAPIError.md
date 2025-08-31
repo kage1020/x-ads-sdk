@@ -8,13 +8,13 @@
 
 > **isAPIError**(`error`): `error is APIError`
 
-Defined in: [errors/index.ts:180](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L180)
+Defined in: [errors/index.ts:189](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L189)
 
 ## Parameters
 
 ### error
 
-`any`
+`unknown`
 
 ## Returns
 

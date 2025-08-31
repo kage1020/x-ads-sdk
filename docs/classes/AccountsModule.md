@@ -28,7 +28,7 @@ Defined in: [modules/accounts.ts:12](https://github.com/kage1020/x-ads-sdk/blob/
 
 ##### client
 
-[`HttpClient`](HttpClient.md)
+[`HttpClient`](../interfaces/HttpClient.md)
 
 #### Returns
 
@@ -264,7 +264,7 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makeGetRequest**\<`T`\>(`endpoint`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L30)
+Defined in: [modules/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L27)
 
 #### Type Parameters
 
@@ -292,7 +292,7 @@ Defined in: [modules/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makePostRequest**\<`T`\>(`endpoint`, `body`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L35)
+Defined in: [modules/base.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L32)
 
 #### Type Parameters
 
@@ -308,7 +308,7 @@ Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### body
 
-`any`
+`unknown`
 
 #### Returns
 
@@ -324,7 +324,7 @@ Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makePutRequest**\<`T`\>(`endpoint`, `body`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L40)
+Defined in: [modules/base.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L37)
 
 #### Type Parameters
 
@@ -340,7 +340,7 @@ Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### body
 
-`any`
+`unknown`
 
 #### Returns
 
@@ -356,7 +356,7 @@ Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makeDeleteRequest**(`endpoint`): `Promise`\<`void`\>
 
-Defined in: [modules/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L45)
+Defined in: [modules/base.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L42)
 
 #### Parameters
 
@@ -378,7 +378,7 @@ Defined in: [modules/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **createPaginator**\<`T`\>(`endpoint`, `baseParams`, `options`): [`CursorPaginator`](CursorPaginator.md)\<`T`\>
 
-Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L49)
+Defined in: [modules/base.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L46)
 
 #### Type Parameters
 
@@ -394,7 +394,7 @@ Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### baseParams
 
-`Record`\<`string`, `any`\> = `{}`
+`Record`\<`string`, `unknown`\> = `{}`
 
 ##### options
 
@@ -412,7 +412,7 @@ Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### client
 
-> `protected` **client**: [`HttpClient`](HttpClient.md)
+> `protected` **client**: [`HttpClient`](../interfaces/HttpClient.md)
 
 Defined in: [modules/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L6)
 

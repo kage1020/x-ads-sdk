@@ -6,7 +6,7 @@
 
 # Interface: RetryOptions
 
-Defined in: [client/retry.ts:1](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L1)
+Defined in: [client/retry.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L3)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [client/retry.ts:1](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **maxRetries**: `number`
 
-Defined in: [client/retry.ts:2](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L2)
+Defined in: [client/retry.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L4)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [client/retry.ts:2](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **initialDelay**: `number`
 
-Defined in: [client/retry.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L3)
+Defined in: [client/retry.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L5)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [client/retry.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **maxDelay**: `number`
 
-Defined in: [client/retry.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L4)
+Defined in: [client/retry.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L6)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [client/retry.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **backoffFactor**: `number`
 
-Defined in: [client/retry.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L5)
+Defined in: [client/retry.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L7)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [client/retry.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **retryableStatusCodes**: `number`[]
 
-Defined in: [client/retry.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L6)
+Defined in: [client/retry.ts:8](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/retry.ts#L8)

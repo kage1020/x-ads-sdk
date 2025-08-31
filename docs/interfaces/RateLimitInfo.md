@@ -6,7 +6,7 @@
 
 # Interface: RateLimitInfo
 
-Defined in: [plugins/rate-limit-tracker.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L3)
+Defined in: [plugins/rate-limit-tracker.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L4)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [plugins/rate-limit-tracker.ts:3](https://github.com/kage1020/x-ads-
 
 > **endpoint**: `string`
 
-Defined in: [plugins/rate-limit-tracker.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L4)
+Defined in: [plugins/rate-limit-tracker.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L5)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [plugins/rate-limit-tracker.ts:4](https://github.com/kage1020/x-ads-
 
 > **limit**: `number`
 
-Defined in: [plugins/rate-limit-tracker.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L5)
+Defined in: [plugins/rate-limit-tracker.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L6)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [plugins/rate-limit-tracker.ts:5](https://github.com/kage1020/x-ads-
 
 > **remaining**: `number`
 
-Defined in: [plugins/rate-limit-tracker.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L6)
+Defined in: [plugins/rate-limit-tracker.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L7)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [plugins/rate-limit-tracker.ts:6](https://github.com/kage1020/x-ads-
 
 > **resetTime**: `Date`
 
-Defined in: [plugins/rate-limit-tracker.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L7)
+Defined in: [plugins/rate-limit-tracker.ts:8](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L8)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [plugins/rate-limit-tracker.ts:7](https://github.com/kage1020/x-ads-
 
 > **resetTimeSeconds**: `number`
 
-Defined in: [plugins/rate-limit-tracker.ts:8](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L8)
+Defined in: [plugins/rate-limit-tracker.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L9)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [plugins/rate-limit-tracker.ts:8](https://github.com/kage1020/x-ads-
 
 > **requestCount**: `number`
 
-Defined in: [plugins/rate-limit-tracker.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L9)
+Defined in: [plugins/rate-limit-tracker.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L10)
 
 ***
 
@@ -62,4 +62,4 @@ Defined in: [plugins/rate-limit-tracker.ts:9](https://github.com/kage1020/x-ads-
 
 > **lastRequest**: `Date`
 
-Defined in: [plugins/rate-limit-tracker.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L10)
+Defined in: [plugins/rate-limit-tracker.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L11)

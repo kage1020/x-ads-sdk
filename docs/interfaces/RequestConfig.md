@@ -6,7 +6,7 @@
 
 # Interface: RequestConfig
 
-Defined in: [client/base.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L26)
+Defined in: [client/base.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L43)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [client/base.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **method**: `"GET"` \| `"POST"` \| `"PUT"` \| `"DELETE"`
 
-Defined in: [client/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L27)
+Defined in: [client/base.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L44)
 
 ***
 
@@ -22,23 +22,23 @@ Defined in: [client/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **endpoint**: `string`
 
-Defined in: [client/base.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L28)
+Defined in: [client/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L45)
 
 ***
 
 ### params?
 
-> `optional` **params**: `Record`\<`string`, `any`\>
+> `optional` **params**: `Record`\<`string`, `unknown`\>
 
-Defined in: [client/base.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L29)
+Defined in: [client/base.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L46)
 
 ***
 
 ### body?
 
-> `optional` **body**: `any`
+> `optional` **body**: `unknown`
 
-Defined in: [client/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L30)
+Defined in: [client/base.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L47)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [client/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [client/base.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L31)
+Defined in: [client/base.ts:48](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L48)

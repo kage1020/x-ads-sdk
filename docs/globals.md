@@ -6,16 +6,7 @@
 
 ## Classes
 
-### Client
-
-- [XAdsClient](classes/XAdsClient.md)
-
-### Other
-
 - [OAuth](classes/OAuth.md)
-- [HttpClient](classes/HttpClient.md)
-- [RateLimiter](classes/RateLimiter.md)
-- [RetryHandler](classes/RetryHandler.md)
 - [XAdsError](classes/XAdsError.md)
 - [AuthenticationError](classes/AuthenticationError.md)
 - [RateLimitError](classes/RateLimitError.md)
@@ -37,11 +28,23 @@
 
 ## Interfaces
 
+### Client
+
+- [XAdsClient](interfaces/XAdsClient.md)
+
+### Other
+
 - [HttpClientConfig](interfaces/HttpClientConfig.md)
 - [RequestConfig](interfaces/RequestConfig.md)
+- [HttpClient](interfaces/HttpClient.md)
 - [ClientRateLimitInfo](interfaces/ClientRateLimitInfo.md)
 - [RateLimitOptions](interfaces/RateLimitOptions.md)
+- [RateLimiter](interfaces/RateLimiter.md)
 - [RetryOptions](interfaces/RetryOptions.md)
+- [RetryHandler](interfaces/RetryHandler.md)
+- [APIErrorDetails](interfaces/APIErrorDetails.md)
+- [APIErrorRequest](interfaces/APIErrorRequest.md)
+- [APIErrorResponse](interfaces/APIErrorResponse.md)
 - [PaginatorOptions](interfaces/PaginatorOptions.md)
 - [CursorPaginatorResult](interfaces/CursorPaginatorResult.md)
 - [XAdsPlugin](interfaces/XAdsPlugin.md)
@@ -58,6 +61,7 @@
 - [MetricGroup](interfaces/MetricGroup.md)
 - [AnalyticsQuery](interfaces/AnalyticsQuery.md)
 - [AnalyticsMetrics](interfaces/AnalyticsMetrics.md)
+- [AnalyticsSegment](interfaces/AnalyticsSegment.md)
 - [AnalyticsData](interfaces/AnalyticsData.md)
 - [AnalyticsResponse](interfaces/AnalyticsResponse.md)
 - [DateRange](interfaces/DateRange.md)
@@ -91,6 +95,21 @@
 - [isRateLimitError](functions/isRateLimitError.md)
 - [isNetworkError](functions/isNetworkError.md)
 - [isTimeoutError](functions/isTimeoutError.md)
+- [extractErrorMessage](functions/extractErrorMessage.md)
+- [extractErrorCode](functions/extractErrorCode.md)
+- [extractErrorDetails](functions/extractErrorDetails.md)
+- [hasStatusCode](functions/hasStatusCode.md)
+- [headersToRecord](functions/headersToRecord.md)
+- [buildURL](functions/buildURL.md)
+- [extractEndpointFromUrl](functions/extractEndpointFromUrl.md)
+- [toPluginConfig](functions/toPluginConfig.md)
+- [fromPluginConfig](functions/fromPluginConfig.md)
+- [toPluginResponse](functions/toPluginResponse.md)
+- [unixTimestampToDate](functions/unixTimestampToDate.md)
+- [getCurrentUnixTimestamp](functions/getCurrentUnixTimestamp.md)
+- [isInPast](functions/isInPast.md)
+- [formatDateForAPI](functions/formatDateForAPI.md)
+- [sleep](functions/sleep.md)
 
 ## Variables
 

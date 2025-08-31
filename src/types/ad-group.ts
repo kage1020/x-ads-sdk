@@ -1,12 +1,12 @@
 export enum AdGroupStatus {
   ACTIVE = 'ACTIVE',
   PAUSED = 'PAUSED',
-  DELETED = 'DELETED'
+  DELETED = 'DELETED',
 }
 
 export enum AdGroupPlacement {
   ALL_ON_TWITTER = 'ALL_ON_TWITTER',
-  PUBLISHER_NETWORK = 'PUBLISHER_NETWORK'
+  PUBLISHER_NETWORK = 'PUBLISHER_NETWORK',
 }
 
 export enum AdGroupObjective {
@@ -18,13 +18,13 @@ export enum AdGroupObjective {
   REACH = 'REACH',
   VIDEO_VIEWS = 'VIDEO_VIEWS',
   WEBSITE_CLICKS = 'WEBSITE_CLICKS',
-  WEBSITE_CONVERSIONS = 'WEBSITE_CONVERSIONS'
+  WEBSITE_CONVERSIONS = 'WEBSITE_CONVERSIONS',
 }
 
 export enum BidType {
   AUTO = 'AUTO',
   MAX = 'MAX',
-  TARGET = 'TARGET'
+  TARGET = 'TARGET',
 }
 
 export interface AdGroup {
@@ -80,4 +80,5 @@ export interface AdGroupListParams {
   count?: number;
   cursor?: string;
   sort_by?: string;
+  [key: string]: unknown;
 }

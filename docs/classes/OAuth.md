@@ -44,7 +44,7 @@ Defined in: [auth/oauth.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateNonce**(): `string`
 
-Defined in: [auth/oauth.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L34)
+Defined in: [auth/oauth.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L32)
 
 #### Returns
 
@@ -56,7 +56,7 @@ Defined in: [auth/oauth.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateTimestamp**(): `string`
 
-Defined in: [auth/oauth.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L38)
+Defined in: [auth/oauth.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L36)
 
 #### Returns
 
@@ -68,7 +68,7 @@ Defined in: [auth/oauth.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **percentEncode**(`str`): `string`
 
-Defined in: [auth/oauth.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L42)
+Defined in: [auth/oauth.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L40)
 
 #### Parameters
 
@@ -112,7 +112,7 @@ Defined in: [auth/oauth.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateOAuthSignature**(`options`): [`OAuthSignature`](../interfaces/OAuthSignature.md)
 
-Defined in: [auth/oauth.ts:74](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L74)
+Defined in: [auth/oauth.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L72)
 
 #### Parameters
 
@@ -130,7 +130,7 @@ Defined in: [auth/oauth.ts:74](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateAuthorizationHeader**(`signature`): `string`
 
-Defined in: [auth/oauth.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L112)
+Defined in: [auth/oauth.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L106)
 
 #### Parameters
 
@@ -148,7 +148,7 @@ Defined in: [auth/oauth.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **signRequest**(`options`): [`RequestOptions`](../interfaces/RequestOptions.md)
 
-Defined in: [auth/oauth.ts:121](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L121)
+Defined in: [auth/oauth.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L115)
 
 #### Parameters
 

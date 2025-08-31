@@ -28,10 +28,7 @@ export default [
         showGzippedSize: true
       })
     ],
-    external: [
-      // Node.js built-ins
-      'crypto', 'http', 'https', 'url', 'querystring'
-    ]
+    external: ['node:crypto']
   },
   
   // Minified ESM build
@@ -51,6 +48,7 @@ export default [
       typescript({
         tsconfig: './tsconfig.build.json',
         declaration: false,
+        declarationMap: false,
         sourceMap: true
       }),
       terser({
@@ -74,63 +72,6 @@ export default [
         showGzippedSize: true
       })
     ],
-    external: [
-      // Node.js built-ins
-      'crypto', 'http', 'https', 'url', 'querystring'
-    ]
+    external: ['node:crypto']
   },
-
-  // Bundle analyzer build (includes all dependencies for size analysis)
-  {
-    input: 'src/index.ts',
-    output: {
-      file: 'dist/bundle-analysis.js',
-      format: 'esm',
-      sourcemap: false
-    },
-    plugins: [
-      resolve({
-        preferBuiltins: false, // Include polyfills to see full bundle size
-        browser: false
-      }),
-      typescript({
-        tsconfig: './tsconfig.build.json',
-        declaration: false,
-        sourceMap: false
-      }),
-      terser({
-        compress: {
-          drop_console: true,
-          drop_debugger: true,
-          passes: 3
-        },
-        mangle: true,
-        format: {
-          comments: false
-        }
-      }),
-      filesize({
-        showMinifiedSize: true,
-        showGzippedSize: true,
-        reporter: [
-          'boxen', 
-          function(options, bundle, { bundleSize, gzipSize }) {
-            console.log('📦 Bundle Analysis:');
-            console.log(`   Original size: ${(bundleSize / 1024).toFixed(2)} KB`);
-            console.log(`   Gzipped size:  ${(gzipSize / 1024).toFixed(2)} KB`);
-            
-            // Bundle size recommendations
-            if (gzipSize < 50 * 1024) {
-              console.log('   ✅ Excellent: Bundle size is under 50KB (gzipped)');
-            } else if (gzipSize < 100 * 1024) {
-              console.log('   ⚠️  Good: Bundle size is under 100KB (gzipped)');
-            } else {
-              console.log('   ❌ Large: Consider code splitting or removing unused code');
-            }
-          }
-        ]
-      })
-    ],
-    external: [] // Include everything for size analysis
-  }
 ];

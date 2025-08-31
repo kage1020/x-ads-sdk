@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { XAdsClient } from '../client.js';
-import { Environment } from '../types/common.js';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { XAdsClient } from '../client';
+import { Environment } from '../types/common';
 
 // Mock the HTTP client module
 vi.mock('../client/base.js', () => ({
@@ -8,8 +8,8 @@ vi.mock('../client/base.js', () => ({
     get: vi.fn(),
     post: vi.fn(),
     put: vi.fn(),
-    delete: vi.fn()
-  }))
+    delete: vi.fn(),
+  })),
 }));
 
 describe('XAdsClient', () => {
@@ -18,8 +18,8 @@ describe('XAdsClient', () => {
       consumer_key: 'test_consumer_key',
       consumer_secret: 'test_consumer_secret',
       access_token: 'test_access_token',
-      access_token_secret: 'test_access_token_secret'
-    }
+      access_token_secret: 'test_access_token_secret',
+    },
   };
 
   let client: XAdsClient;
@@ -47,7 +47,7 @@ describe('XAdsClient', () => {
     it('should use production environment when specified', () => {
       client = new XAdsClient({
         ...testConfig,
-        environment: Environment.PRODUCTION
+        environment: Environment.PRODUCTION,
       });
       expect(client).toBeInstanceOf(XAdsClient);
     });
@@ -57,7 +57,7 @@ describe('XAdsClient', () => {
         ...testConfig,
         timeout: 60000,
         maxRetries: 5,
-        rateLimitStrategy: 'throw'
+        rateLimitStrategy: 'throw',
       });
       expect(client).toBeInstanceOf(XAdsClient);
     });
@@ -106,7 +106,7 @@ describe('XAdsClient', () => {
     it('should return the underlying HTTP client', () => {
       client = new XAdsClient(testConfig);
       const httpClient = client.getHttpClient();
-      
+
       expect(httpClient).toBeDefined();
     });
   });

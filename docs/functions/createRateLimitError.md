@@ -8,7 +8,7 @@
 
 > **createRateLimitError**(`message`, `resetTime?`, `code?`): [`RateLimitError`](../classes/RateLimitError.md)
 
-Defined in: [errors/index.ts:167](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L167)
+Defined in: [errors/index.ts:176](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L176)
 
 ## Parameters
 

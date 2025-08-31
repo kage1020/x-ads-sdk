@@ -1,14 +1,14 @@
-import { BaseModule } from './base.js';
-import { HttpClient } from '../client/base.js';
+import type { HttpClient } from '../client/base';
 import {
-  AnalyticsQuery,
-  AnalyticsResponse,
-  AnalyticsOptions,
+  type AnalyticsOptions,
+  type AnalyticsQuery,
+  type AnalyticsResponse,
+  type DateRange,
   EntityType,
   Granularity,
   METRIC_GROUPS,
-  DateRange
-} from '../types/analytics.js';
+} from '../types/analytics';
+import { BaseModule } from './base';
 
 export class AnalyticsModule extends BaseModule {
   constructor(client: HttpClient) {
@@ -18,12 +18,9 @@ export class AnalyticsModule extends BaseModule {
   /**
    * Get analytics data for entities
    */
-  async getAnalytics(
-    accountId: string,
-    options: AnalyticsOptions
-  ): Promise<AnalyticsResponse> {
+  async getAnalytics(accountId: string, options: AnalyticsOptions): Promise<AnalyticsResponse> {
     const endpoint = this.buildEndpoint(accountId);
-    
+
     const query: AnalyticsQuery = {
       entity: options.entity_type,
       entity_ids: options.entity_ids,
@@ -34,7 +31,7 @@ export class AnalyticsModule extends BaseModule {
       placement: options.placement,
       segmentation_type: options.segmentation_type,
       country: options.country,
-      platform: options.platform
+      platform: options.platform,
     };
 
     return this.client.get<AnalyticsResponse>(endpoint, query);
@@ -53,7 +50,7 @@ export class AnalyticsModule extends BaseModule {
       ...options,
       entity_type: EntityType.CAMPAIGN,
       entity_ids: campaignIds,
-      date_range: dateRange
+      date_range: dateRange,
     });
   }
 
@@ -70,7 +67,7 @@ export class AnalyticsModule extends BaseModule {
       ...options,
       entity_type: EntityType.LINE_ITEM,
       entity_ids: adGroupIds,
-      date_range: dateRange
+      date_range: dateRange,
     });
   }
 
@@ -86,7 +83,7 @@ export class AnalyticsModule extends BaseModule {
       ...options,
       entity_type: EntityType.ACCOUNT,
       entity_ids: [accountId],
-      date_range: dateRange
+      date_range: dateRange,
     });
   }
 
@@ -105,7 +102,7 @@ export class AnalyticsModule extends BaseModule {
       entity_ids: entityIds,
       date_range: dateRange,
       granularity,
-      metric_groups: ['ENGAGEMENT']
+      metric_groups: ['ENGAGEMENT'],
     });
   }
 
@@ -124,7 +121,7 @@ export class AnalyticsModule extends BaseModule {
       entity_ids: entityIds,
       date_range: dateRange,
       granularity,
-      metric_groups: ['BILLING']
+      metric_groups: ['BILLING'],
     });
   }
 
@@ -143,7 +140,7 @@ export class AnalyticsModule extends BaseModule {
       entity_ids: entityIds,
       date_range: dateRange,
       granularity,
-      metric_groups: ['VIDEO']
+      metric_groups: ['VIDEO'],
     });
   }
 
@@ -162,7 +159,7 @@ export class AnalyticsModule extends BaseModule {
       entity_ids: entityIds,
       date_range: dateRange,
       granularity,
-      metric_groups: Object.keys(METRIC_GROUPS)
+      metric_groups: Object.keys(METRIC_GROUPS),
     });
   }
 
@@ -181,7 +178,7 @@ export class AnalyticsModule extends BaseModule {
       entity_ids: entityIds,
       date_range: dateRange,
       granularity: Granularity.DAY,
-      metric_groups: metricGroups
+      metric_groups: metricGroups,
     });
   }
 
@@ -200,7 +197,7 @@ export class AnalyticsModule extends BaseModule {
       entity_ids: entityIds,
       date_range: dateRange,
       granularity: Granularity.HOUR,
-      metric_groups: metricGroups
+      metric_groups: metricGroups,
     });
   }
 
@@ -214,7 +211,7 @@ export class AnalyticsModule extends BaseModule {
 
     return {
       start_date: startDate.toISOString().split('T')[0],
-      end_date: endDate.toISOString().split('T')[0]
+      end_date: endDate.toISOString().split('T')[0],
     };
   }
 
@@ -232,7 +229,7 @@ export class AnalyticsModule extends BaseModule {
       entity_type: entityType,
       entity_ids: entityIds,
       date_range: dateRange,
-      metric_groups: metricGroups
+      metric_groups: metricGroups,
     });
   }
 
@@ -250,7 +247,7 @@ export class AnalyticsModule extends BaseModule {
       entity_type: entityType,
       entity_ids: entityIds,
       date_range: dateRange,
-      metric_groups: metricGroups
+      metric_groups: metricGroups,
     });
   }
 }

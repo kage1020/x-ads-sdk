@@ -1,11 +1,11 @@
 export enum AccountStatus {
   ACTIVE = 'ACTIVE',
   SUSPENDED = 'SUSPENDED',
-  DELETED = 'DELETED'
+  DELETED = 'DELETED',
 }
 
 export enum AccountType {
-  PROMOTED_ACCOUNT = 'PROMOTED_ACCOUNT'
+  PROMOTED_ACCOUNT = 'PROMOTED_ACCOUNT',
 }
 
 export interface Account {
@@ -31,4 +31,5 @@ export interface AccountListParams {
   count?: number;
   cursor?: string;
   sort_by?: string;
+  [key: string]: unknown;
 }

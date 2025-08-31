@@ -1,6 +1,6 @@
 import { createHmac, randomBytes } from 'node:crypto';
-import { AuthConfig, OAuthSignature, RequestOptions } from '../types/auth.js';
-import { AuthenticationError } from '../errors/index.js';
+import { AuthenticationError } from '../errors';
+import type { AuthConfig, OAuthSignature, RequestOptions } from '../types/auth';
 
 export class OAuth {
   private consumer_key: string;
@@ -22,12 +22,10 @@ export class OAuth {
 
   private validateConfig(): void {
     const required = ['consumer_key', 'consumer_secret', 'access_token', 'access_token_secret'];
-    const missing = required.filter(key => !this[key as keyof OAuth]);
-    
+    const missing = required.filter((key) => !this[key as keyof OAuth]);
+
     if (missing.length > 0) {
-      throw new AuthenticationError(
-        `Missing required OAuth parameters: ${missing.join(', ')}`
-      );
+      throw new AuthenticationError(`Missing required OAuth parameters: ${missing.join(', ')}`);
     }
   }
 
@@ -40,8 +38,10 @@ export class OAuth {
   }
 
   percentEncode(str: string): string {
-    return encodeURIComponent(str)
-      .replace(/[!'()*]/g, (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`);
+    return encodeURIComponent(str).replace(
+      /[!'()*]/g,
+      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
+    );
   }
 
   generateSignature(
@@ -51,24 +51,22 @@ export class OAuth {
   ): string {
     const sortedParams = Object.keys(parameters)
       .sort()
-      .map(key => `${this.percentEncode(key)}=${this.percentEncode(parameters[key])}`)
+      .map((key) => `${this.percentEncode(key)}=${this.percentEncode(parameters[key])}`)
       .join('&');
 
     const signatureBaseString = [
       httpMethod.toUpperCase(),
       this.percentEncode(baseURL),
-      this.percentEncode(sortedParams)
+      this.percentEncode(sortedParams),
     ].join('&');
 
     const signingKey = [
       this.percentEncode(this.consumer_secret),
-      this.percentEncode(this.access_token_secret)
+      this.percentEncode(this.access_token_secret),
     ].join('&');
 
     const hashAlgorithm = this.signature_method === 'HMAC-SHA256' ? 'sha256' : 'sha1';
-    return createHmac(hashAlgorithm, signingKey)
-      .update(signatureBaseString)
-      .digest('base64');
+    return createHmac(hashAlgorithm, signingKey).update(signatureBaseString).digest('base64');
   }
 
   generateOAuthSignature(options: RequestOptions): OAuthSignature {
@@ -81,22 +79,18 @@ export class OAuth {
       oauth_signature_method: this.signature_method,
       oauth_timestamp: timestamp,
       oauth_token: this.access_token,
-      oauth_version: '1.0'
+      oauth_version: '1.0',
     };
 
     // Combine OAuth params with request params for signature generation
     const allParams = { ...oauthParams };
     if (options.params) {
-      Object.keys(options.params).forEach(key => {
-        allParams[key] = String(options.params![key]);
+      Object.keys(options.params).forEach((key) => {
+        allParams[key] = String(options.params?.[key]);
       });
     }
 
-    const signature = this.generateSignature(
-      options.method,
-      options.url,
-      allParams
-    );
+    const signature = this.generateSignature(options.method, options.url, allParams);
 
     return {
       oauth_consumer_key: this.consumer_key,
@@ -105,14 +99,14 @@ export class OAuth {
       oauth_signature_method: this.signature_method,
       oauth_timestamp: timestamp,
       oauth_token: this.access_token,
-      oauth_version: '1.0'
+      oauth_version: '1.0',
     };
   }
 
   generateAuthorizationHeader(signature: OAuthSignature): string {
     const authParams = Object.keys(signature)
       .sort()
-      .map(key => `${key}="${this.percentEncode(signature[key as keyof OAuthSignature])}"`)
+      .map((key) => `${key}="${this.percentEncode(signature[key as keyof OAuthSignature])}"`)
       .join(', ');
 
     return `OAuth ${authParams}`;
@@ -126,8 +120,8 @@ export class OAuth {
       ...options,
       headers: {
         ...options.headers,
-        'Authorization': authHeader
-      }
+        Authorization: authHeader,
+      },
     };
   }
 }

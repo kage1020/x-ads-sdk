@@ -4,9 +4,9 @@
 
 [X Ads SDK](../globals.md) / XAdsClient
 
-# Class: XAdsClient
+# Interface: XAdsClient
 
-Defined in: [client.ts:61](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L61)
+Defined in: client/x-ads-client.ts:61
 
 X Ads SDK Main Client
 
@@ -59,55 +59,13 @@ if (versionInfo.warnings.length > 0) {
 }
 ```
 
-## Constructors
-
-### Constructor
-
-> **new XAdsClient**(`config`): `XAdsClient`
-
-Defined in: [client.ts:94](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L94)
-
-Creates a new X Ads SDK client instance
-
-#### Parameters
-
-##### config
-
-[`ClientConfig`](../interfaces/ClientConfig.md)
-
-Client configuration including authentication and options
-
-#### Returns
-
-`XAdsClient`
-
-#### Throws
-
-When authentication credentials are invalid or missing
-
-#### Example
-
-```typescript
-const client = new XAdsClient({
-  auth: {
-    consumer_key: process.env.X_CONSUMER_KEY!,
-    consumer_secret: process.env.X_CONSUMER_SECRET!,
-    access_token: process.env.X_ACCESS_TOKEN!,
-    access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
-  },
-  environment: Environment.SANDBOX,
-  apiVersion: APIVersion.V12,
-  timeout: 30000
-});
-```
-
 ## Methods
 
 ### getHttpClient()
 
 > **getHttpClient**(): [`HttpClient`](HttpClient.md)
 
-Defined in: [client.ts:126](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L126)
+Defined in: client/x-ads-client.ts:126
 
 Get the underlying HTTP client for advanced usage
 
@@ -125,7 +83,7 @@ The HTTP client instance used by this SDK client
 
 > **use**(`plugin`): `this`
 
-Defined in: [client.ts:143](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L143)
+Defined in: client/x-ads-client.ts:143
 
 Add a plugin to the SDK for enhanced functionality
 
@@ -133,7 +91,7 @@ Add a plugin to the SDK for enhanced functionality
 
 ##### plugin
 
-[`XAdsPlugin`](../interfaces/XAdsPlugin.md)
+[`XAdsPlugin`](XAdsPlugin.md)
 
 The plugin instance to add
 
@@ -158,7 +116,7 @@ client.use(rateLimitTracker);
 
 > **removePlugin**(`pluginName`): `boolean`
 
-Defined in: [client.ts:154](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L154)
+Defined in: client/x-ads-client.ts:154
 
 Remove a plugin from the SDK
 
@@ -182,7 +140,7 @@ True if the plugin was removed, false if it wasn't found
 
 > **hasPlugin**(`pluginName`): `boolean`
 
-Defined in: [client.ts:164](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L164)
+Defined in: client/x-ads-client.ts:164
 
 Check if a plugin is currently installed
 
@@ -206,7 +164,7 @@ True if the plugin is installed, false otherwise
 
 > **getAPIVersion**(): [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [client.ts:173](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L173)
+Defined in: client/x-ads-client.ts:173
 
 Get the current API version being used for requests
 
@@ -222,7 +180,7 @@ The current API version
 
 > **setAPIVersion**(`version`): `void`
 
-Defined in: [client.ts:187](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L187)
+Defined in: client/x-ads-client.ts:187
 
 Set the API version to use for future requests
 
@@ -252,15 +210,15 @@ client.setAPIVersion(APIVersion.V12);
 
 ### getVersionInfo()
 
-> **getVersionInfo**(): [`APIVersionResponse`](../interfaces/APIVersionResponse.md)
+> **getVersionInfo**(): [`APIVersionResponse`](APIVersionResponse.md)
 
-Defined in: [client.ts:203](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L203)
+Defined in: client/x-ads-client.ts:203
 
 Get detailed version information and upgrade recommendations
 
 #### Returns
 
-[`APIVersionResponse`](../interfaces/APIVersionResponse.md)
+[`APIVersionResponse`](APIVersionResponse.md)
 
 Version information including warnings and recommendations
 
@@ -279,7 +237,7 @@ if (versionInfo.recommendedAction === 'upgrade') {
 
 > **isVersionDeprecated**(): `boolean`
 
-Defined in: [client.ts:212](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L212)
+Defined in: client/x-ads-client.ts:212
 
 Check if the current API version is deprecated
 
@@ -295,15 +253,15 @@ True if the current version is deprecated, false otherwise
 
 > `private` **httpClient**: [`HttpClient`](HttpClient.md)
 
-Defined in: [client.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L62)
+Defined in: client/x-ads-client.ts:62
 
 ***
 
 ### accounts
 
-> **accounts**: [`AccountsModule`](AccountsModule.md)
+> **accounts**: [`AccountsModule`](../classes/AccountsModule.md)
 
-Defined in: [client.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L65)
+Defined in: client/x-ads-client.ts:65
 
 Accounts module for managing advertising accounts
 
@@ -311,9 +269,9 @@ Accounts module for managing advertising accounts
 
 ### campaigns
 
-> **campaigns**: [`CampaignsModule`](CampaignsModule.md)
+> **campaigns**: [`CampaignsModule`](../classes/CampaignsModule.md)
 
-Defined in: [client.ts:67](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L67)
+Defined in: client/x-ads-client.ts:67
 
 Campaigns module for managing advertising campaigns
 
@@ -321,9 +279,9 @@ Campaigns module for managing advertising campaigns
 
 ### adGroups
 
-> **adGroups**: [`AdGroupsModule`](AdGroupsModule.md)
+> **adGroups**: [`AdGroupsModule`](../classes/AdGroupsModule.md)
 
-Defined in: [client.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L69)
+Defined in: client/x-ads-client.ts:69
 
 Ad Groups module for managing ad groups within campaigns
 
@@ -331,8 +289,8 @@ Ad Groups module for managing ad groups within campaigns
 
 ### analytics
 
-> **analytics**: [`AnalyticsModule`](AnalyticsModule.md)
+> **analytics**: [`AnalyticsModule`](../classes/AnalyticsModule.md)
 
-Defined in: [client.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L71)
+Defined in: client/x-ads-client.ts:71
 
 Analytics module for retrieving campaign performance data

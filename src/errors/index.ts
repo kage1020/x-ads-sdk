@@ -1,15 +1,15 @@
 export class XAdsError extends Error {
   public readonly timestamp: Date;
-  
+
   constructor(
-    message: string, 
+    message: string,
     public readonly code?: string,
     public readonly cause?: Error
   ) {
     super(message);
     this.name = 'XAdsError';
     this.timestamp = new Date();
-    
+
     // Maintain stack trace (for V8 engine)
     if (Error.captureStackTrace) {
       Error.captureStackTrace(this, this.constructor);
@@ -22,7 +22,7 @@ export class XAdsError extends Error {
       message: this.message,
       code: this.code,
       timestamp: this.timestamp.toISOString(),
-      stack: this.stack
+      stack: this.stack,
     };
   }
 }
@@ -56,21 +56,30 @@ export class ValidationError extends XAdsError {
   }
 }
 
+// Type definitions for error details
+export interface APIErrorDetails {
+  [key: string]: unknown;
+}
+
+export interface APIErrorRequest {
+  method: string;
+  url: string;
+  headers?: Record<string, string>;
+}
+
+export interface APIErrorResponse {
+  headers: Record<string, string>;
+  data?: unknown;
+}
+
 export class APIError extends XAdsError {
   constructor(
     message: string,
     public readonly statusCode: number,
     public readonly errorCode?: string,
-    public readonly details?: any,
-    public readonly request?: {
-      method: string;
-      url: string;
-      headers?: Record<string, string>;
-    },
-    public readonly response?: {
-      headers: Record<string, string>;
-      data?: any;
-    }
+    public readonly details?: APIErrorDetails,
+    public readonly request?: APIErrorRequest,
+    public readonly response?: APIErrorResponse
   ) {
     super(message, errorCode);
     this.name = 'APIError';
@@ -99,7 +108,7 @@ export class APIError extends XAdsError {
       errorCode: this.errorCode,
       details: this.details,
       request: this.request,
-      response: this.response
+      response: this.response,
     };
   }
 }
@@ -153,9 +162,9 @@ export const createAPIError = (
   statusCode: number,
   message: string,
   errorCode?: string,
-  details?: any,
-  request?: any,
-  response?: any
+  details?: APIErrorDetails,
+  request?: APIErrorRequest,
+  response?: APIErrorResponse
 ): APIError => {
   return new APIError(message, statusCode, errorCode, details, request, response);
 };
@@ -173,26 +182,26 @@ export const createRateLimitError = (
 };
 
 // Type guards for error checking
-export const isXAdsError = (error: any): error is XAdsError => {
+export const isXAdsError = (error: unknown): error is XAdsError => {
   return error instanceof XAdsError;
 };
 
-export const isAPIError = (error: any): error is APIError => {
+export const isAPIError = (error: unknown): error is APIError => {
   return error instanceof APIError;
 };
 
-export const isAuthenticationError = (error: any): error is AuthenticationError => {
+export const isAuthenticationError = (error: unknown): error is AuthenticationError => {
   return error instanceof AuthenticationError;
 };
 
-export const isRateLimitError = (error: any): error is RateLimitError => {
+export const isRateLimitError = (error: unknown): error is RateLimitError => {
   return error instanceof RateLimitError;
 };
 
-export const isNetworkError = (error: any): error is NetworkError => {
+export const isNetworkError = (error: unknown): error is NetworkError => {
   return error instanceof NetworkError;
 };
 
-export const isTimeoutError = (error: any): error is TimeoutError => {
+export const isTimeoutError = (error: unknown): error is TimeoutError => {
   return error instanceof TimeoutError;
 };

@@ -28,7 +28,7 @@ Defined in: [types/auth.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 ### params?
 
-> `optional` **params**: `Record`\<`string`, `any`\>
+> `optional` **params**: `Record`\<`string`, `unknown`\>
 
 Defined in: [types/auth.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L30)
 
@@ -36,7 +36,7 @@ Defined in: [types/auth.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 ### body?
 
-> `optional` **body**: `any`
+> `optional` **body**: `unknown`
 
 Defined in: [types/auth.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L31)
 

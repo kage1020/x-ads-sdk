@@ -54,7 +54,7 @@ Defined in: [types/api-version.ts:63](https://github.com/kage1020/x-ads-sdk/blob
 
 > **getCurrentVersion**(): [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [types/api-version.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L69)
+Defined in: [types/api-version.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L71)
 
 #### Returns
 
@@ -66,7 +66,7 @@ Defined in: [types/api-version.ts:69](https://github.com/kage1020/x-ads-sdk/blob
 
 > **setVersion**(`version`): `void`
 
-Defined in: [types/api-version.ts:73](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L73)
+Defined in: [types/api-version.ts:75](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L75)
 
 #### Parameters
 
@@ -84,7 +84,7 @@ Defined in: [types/api-version.ts:73](https://github.com/kage1020/x-ads-sdk/blob
 
 > **getVersionPath**(): `string`
 
-Defined in: [types/api-version.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L78)
+Defined in: [types/api-version.ts:80](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L80)
 
 #### Returns
 
@@ -96,7 +96,7 @@ Defined in: [types/api-version.ts:78](https://github.com/kage1020/x-ads-sdk/blob
 
 > **isVersionDeprecated**(`version?`): `boolean`
 
-Defined in: [types/api-version.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L82)
+Defined in: [types/api-version.ts:84](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L84)
 
 #### Parameters
 
@@ -114,7 +114,7 @@ Defined in: [types/api-version.ts:82](https://github.com/kage1020/x-ads-sdk/blob
 
 > **getVersionInfo**(`version?`): [`APIVersionInfo`](../interfaces/APIVersionInfo.md)
 
-Defined in: [types/api-version.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L87)
+Defined in: [types/api-version.ts:89](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L89)
 
 #### Parameters
 
@@ -132,7 +132,7 @@ Defined in: [types/api-version.ts:87](https://github.com/kage1020/x-ads-sdk/blob
 
 > **shouldUpgrade**(): `boolean`
 
-Defined in: [types/api-version.ts:92](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L92)
+Defined in: [types/api-version.ts:94](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L94)
 
 #### Returns
 
@@ -144,7 +144,7 @@ Defined in: [types/api-version.ts:92](https://github.com/kage1020/x-ads-sdk/blob
 
 > **getUpgradeRecommendation**(): [`APIVersionResponse`](../interfaces/APIVersionResponse.md)
 
-Defined in: [types/api-version.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L96)
+Defined in: [types/api-version.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L98)
 
 #### Returns
 
@@ -156,7 +156,7 @@ Defined in: [types/api-version.ts:96](https://github.com/kage1020/x-ads-sdk/blob
 
 > **parseResponseHeaders**(`headers`): [`APIVersionResponse`](../interfaces/APIVersionResponse.md)
 
-Defined in: [types/api-version.ts:119](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L119)
+Defined in: [types/api-version.ts:123](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L123)
 
 #### Parameters
 
@@ -174,7 +174,7 @@ Defined in: [types/api-version.ts:119](https://github.com/kage1020/x-ads-sdk/blo
 
 > **migrateEndpoint**(`endpoint`, `_fromVersion`, `_toVersion`): `string`
 
-Defined in: [types/api-version.ts:148](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L148)
+Defined in: [types/api-version.ts:154](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L154)
 
 Migrates endpoints between versions
 Some endpoints may change between versions
@@ -203,7 +203,7 @@ Some endpoints may change between versions
 
 > `static` **getAllVersions**(): [`APIVersionInfo`](../interfaces/APIVersionInfo.md)[]
 
-Defined in: [types/api-version.ts:157](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L157)
+Defined in: [types/api-version.ts:163](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L163)
 
 Gets all available versions with their status
 
@@ -217,7 +217,7 @@ Gets all available versions with their status
 
 > `static` **getLatestVersion**(): [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [types/api-version.ts:164](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L164)
+Defined in: [types/api-version.ts:170](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L170)
 
 Gets the latest supported version
 
@@ -231,7 +231,7 @@ Gets the latest supported version
 
 > `static` **isVersionSupported**(`version`): `boolean`
 
-Defined in: [types/api-version.ts:171](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L171)
+Defined in: [types/api-version.ts:177](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L177)
 
 Checks if a version is currently supported
 

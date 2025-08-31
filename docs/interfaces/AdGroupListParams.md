@@ -8,6 +8,10 @@
 
 Defined in: [types/ad-group.ts:75](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/ad-group.ts#L75)
 
+## Indexable
+
+\[`key`: `string`\]: `unknown`
+
 ## Properties
 
 ### line\_item\_ids?

@@ -6,7 +6,11 @@
 
 # Interface: AnalyticsQuery
 
-Defined in: [types/analytics.ts:73](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L73)
+Defined in: [types/analytics.ts:67](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L67)
+
+## Indexable
+
+\[`key`: `string`\]: `unknown`
 
 ## Properties
 
@@ -14,7 +18,7 @@ Defined in: [types/analytics.ts:73](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > **entity**: [`EntityType`](../enumerations/EntityType.md)
 
-Defined in: [types/analytics.ts:74](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L74)
+Defined in: [types/analytics.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L68)
 
 ***
 
@@ -22,7 +26,7 @@ Defined in: [types/analytics.ts:74](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > **entity\_ids**: `string`[]
 
-Defined in: [types/analytics.ts:75](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L75)
+Defined in: [types/analytics.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L69)
 
 ***
 
@@ -30,7 +34,7 @@ Defined in: [types/analytics.ts:75](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > **start\_time**: `string`
 
-Defined in: [types/analytics.ts:76](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L76)
+Defined in: [types/analytics.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L70)
 
 ***
 
@@ -38,7 +42,7 @@ Defined in: [types/analytics.ts:76](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > **end\_time**: `string`
 
-Defined in: [types/analytics.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L77)
+Defined in: [types/analytics.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L71)
 
 ***
 
@@ -46,7 +50,7 @@ Defined in: [types/analytics.ts:77](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > **granularity**: [`Granularity`](../enumerations/Granularity.md)
 
-Defined in: [types/analytics.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L78)
+Defined in: [types/analytics.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L72)
 
 ***
 
@@ -54,7 +58,7 @@ Defined in: [types/analytics.ts:78](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **metric\_groups**: `string`[]
 
-Defined in: [types/analytics.ts:79](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L79)
+Defined in: [types/analytics.ts:73](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L73)
 
 ***
 
@@ -62,7 +66,7 @@ Defined in: [types/analytics.ts:79](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **placement**: [`Placement`](../enumerations/Placement.md)
 
-Defined in: [types/analytics.ts:80](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L80)
+Defined in: [types/analytics.ts:74](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L74)
 
 ***
 
@@ -70,7 +74,7 @@ Defined in: [types/analytics.ts:80](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **segmentation\_type**: `string`
 
-Defined in: [types/analytics.ts:81](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L81)
+Defined in: [types/analytics.ts:75](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L75)
 
 ***
 
@@ -78,7 +82,7 @@ Defined in: [types/analytics.ts:81](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **country**: `string`
 
-Defined in: [types/analytics.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L82)
+Defined in: [types/analytics.ts:76](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L76)
 
 ***
 
@@ -86,4 +90,4 @@ Defined in: [types/analytics.ts:82](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **platform**: `string`
 
-Defined in: [types/analytics.ts:83](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L83)
+Defined in: [types/analytics.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L77)

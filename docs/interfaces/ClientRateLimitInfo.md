@@ -6,7 +6,7 @@
 
 # Interface: ClientRateLimitInfo
 
-Defined in: [client/rate-limit.ts:1](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L1)
+Defined in: [client/rate-limit.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L3)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [client/rate-limit.ts:1](https://github.com/kage1020/x-ads-sdk/blob/
 
 > **limit**: `number`
 
-Defined in: [client/rate-limit.ts:2](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L2)
+Defined in: [client/rate-limit.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L4)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [client/rate-limit.ts:2](https://github.com/kage1020/x-ads-sdk/blob/
 
 > **remaining**: `number`
 
-Defined in: [client/rate-limit.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L3)
+Defined in: [client/rate-limit.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L5)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [client/rate-limit.ts:3](https://github.com/kage1020/x-ads-sdk/blob/
 
 > **resetTime**: `Date`
 
-Defined in: [client/rate-limit.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L4)
+Defined in: [client/rate-limit.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L6)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: [client/rate-limit.ts:4](https://github.com/kage1020/x-ads-sdk/blob/
 
 > **resetTimeSeconds**: `number`
 
-Defined in: [client/rate-limit.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L5)
+Defined in: [client/rate-limit.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L7)

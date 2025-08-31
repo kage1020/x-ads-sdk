@@ -2,18 +2,18 @@ export enum EntityType {
   ACCOUNT = 'ACCOUNT',
   CAMPAIGN = 'CAMPAIGN',
   LINE_ITEM = 'LINE_ITEM',
-  PROMOTED_TWEET = 'PROMOTED_TWEET'
+  PROMOTED_TWEET = 'PROMOTED_TWEET',
 }
 
 export enum Granularity {
   HOUR = 'HOUR',
   DAY = 'DAY',
-  TOTAL = 'TOTAL'
+  TOTAL = 'TOTAL',
 }
 
 export enum Placement {
   ALL_ON_TWITTER = 'ALL_ON_TWITTER',
-  PUBLISHER_NETWORK = 'PUBLISHER_NETWORK'
+  PUBLISHER_NETWORK = 'PUBLISHER_NETWORK',
 }
 
 export interface MetricGroup {
@@ -35,12 +35,9 @@ export const METRIC_GROUPS: MetricGroup = {
     'likes',
     'follows',
     'card_engagements',
-    'carousel_swipes'
+    'carousel_swipes',
   ],
-  BILLING: [
-    'billed_charge_local_micro',
-    'billed_engagements'
-  ],
+  BILLING: ['billed_charge_local_micro', 'billed_engagements'],
   VIDEO: [
     'video_total_views',
     'video_views_25',
@@ -48,26 +45,23 @@ export const METRIC_GROUPS: MetricGroup = {
     'video_views_75',
     'video_views_100',
     'video_cta_clicks',
-    'video_content_starts'
+    'video_content_starts',
   ],
-  MEDIA: [
-    'media_views',
-    'media_engagements'
-  ],
+  MEDIA: ['media_views', 'media_engagements'],
   WEB_CONVERSION: [
     'conversion_purchases',
     'conversion_sign_ups',
     'conversion_site_visits',
     'conversion_downloads',
-    'conversion_custom'
+    'conversion_custom',
   ],
   MOBILE_CONVERSION: [
     'mobile_conversion_installs',
     'mobile_conversion_purchases',
     'mobile_conversion_sign_ups',
     'mobile_conversion_downloads',
-    'mobile_conversion_custom'
-  ]
+    'mobile_conversion_custom',
+  ],
 };
 
 export interface AnalyticsQuery {
@@ -81,6 +75,7 @@ export interface AnalyticsQuery {
   segmentation_type?: string;
   country?: string;
   platform?: string;
+  [key: string]: unknown;
 }
 
 export interface AnalyticsMetrics {
@@ -93,10 +88,10 @@ export interface AnalyticsMetrics {
   follows?: number;
   card_engagements?: number;
   carousel_swipes?: number;
-  
+
   billed_charge_local_micro?: number;
   billed_engagements?: number;
-  
+
   video_total_views?: number;
   video_views_25?: number;
   video_views_50?: number;
@@ -104,16 +99,16 @@ export interface AnalyticsMetrics {
   video_views_100?: number;
   video_cta_clicks?: number;
   video_content_starts?: number;
-  
+
   media_views?: number;
   media_engagements?: number;
-  
+
   conversion_purchases?: number;
   conversion_sign_ups?: number;
   conversion_site_visits?: number;
   conversion_downloads?: number;
   conversion_custom?: number;
-  
+
   mobile_conversion_installs?: number;
   mobile_conversion_purchases?: number;
   mobile_conversion_sign_ups?: number;
@@ -121,10 +116,15 @@ export interface AnalyticsMetrics {
   mobile_conversion_custom?: number;
 }
 
+// Segment can contain various analytics segmentation data
+export interface AnalyticsSegment {
+  [key: string]: string | number | boolean | null;
+}
+
 export interface AnalyticsData {
   id: string;
   id_data: Array<{
-    segment: any;
+    segment: AnalyticsSegment;
     metrics: AnalyticsMetrics;
   }>;
 }
