@@ -1,4 +1,4 @@
-**X Ads SDK v1.0.1**
+**X Ads SDK v1.0.2**
 
 ***
 

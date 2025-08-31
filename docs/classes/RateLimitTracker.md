@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -149,7 +149,7 @@ Defined in: [plugins/rate-limit-tracker.ts:110](https://github.com/kage1020/x-ad
 
 > **getRateLimitInfo**(`endpoint`): `undefined` \| [`RateLimitInfo`](../interfaces/RateLimitInfo.md)
 
-Defined in: [plugins/rate-limit-tracker.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L132)
+Defined in: [plugins/rate-limit-tracker.ts:126](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L126)
 
 #### Parameters
 
@@ -167,7 +167,7 @@ Defined in: [plugins/rate-limit-tracker.ts:132](https://github.com/kage1020/x-ad
 
 > **getAllRateLimits**(): `Map`\<`string`, [`RateLimitInfo`](../interfaces/RateLimitInfo.md)\>
 
-Defined in: [plugins/rate-limit-tracker.ts:136](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L136)
+Defined in: [plugins/rate-limit-tracker.ts:130](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L130)
 
 #### Returns
 
@@ -179,7 +179,7 @@ Defined in: [plugins/rate-limit-tracker.ts:136](https://github.com/kage1020/x-ad
 
 > **getRemainingRequests**(`endpoint`): `null` \| `number`
 
-Defined in: [plugins/rate-limit-tracker.ts:140](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L140)
+Defined in: [plugins/rate-limit-tracker.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L134)
 
 #### Parameters
 
@@ -197,7 +197,7 @@ Defined in: [plugins/rate-limit-tracker.ts:140](https://github.com/kage1020/x-ad
 
 > **getTimeUntilReset**(`endpoint`): `null` \| `number`
 
-Defined in: [plugins/rate-limit-tracker.ts:155](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L155)
+Defined in: [plugins/rate-limit-tracker.ts:149](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L149)
 
 #### Parameters
 
@@ -215,7 +215,7 @@ Defined in: [plugins/rate-limit-tracker.ts:155](https://github.com/kage1020/x-ad
 
 > **clearTrackedLimits**(): `void`
 
-Defined in: [plugins/rate-limit-tracker.ts:172](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L172)
+Defined in: [plugins/rate-limit-tracker.ts:166](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L166)
 
 #### Returns
 
@@ -227,7 +227,7 @@ Defined in: [plugins/rate-limit-tracker.ts:172](https://github.com/kage1020/x-ad
 
 > **getSummary**(): `object`[]
 
-Defined in: [plugins/rate-limit-tracker.ts:177](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L177)
+Defined in: [plugins/rate-limit-tracker.ts:171](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/rate-limit-tracker.ts#L171)
 
 #### Returns
 

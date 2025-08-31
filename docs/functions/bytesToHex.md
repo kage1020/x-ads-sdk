@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **bytesToHex**(`bytes`): `string`
 
-Defined in: [utils/crypto.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L26)
+Defined in: [utils/crypto.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L28)
 
 Convert bytes to hex string
 

@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **stringToBytes**(`str`): `Uint8Array`
 
-Defined in: [utils/crypto.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L35)
+Defined in: [utils/crypto.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L37)
 
 Convert string to UTF-8 bytes
 

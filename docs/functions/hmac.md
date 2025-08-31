@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **hmac**(`algorithm`, `key`, `data`): `Promise`\<`string`\>
 
-Defined in: [utils/crypto.ts:56](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L56)
+Defined in: [utils/crypto.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L60)
 
 HMAC signature generation using Web Crypto API
 
