@@ -7,12 +7,15 @@ export class OAuth {
   private consumer_secret: string;
   private access_token: string;
   private access_token_secret: string;
+  private signature_method: 'HMAC-SHA1' | 'HMAC-SHA256';
 
   constructor(config: AuthConfig) {
     this.consumer_key = config.consumer_key;
     this.consumer_secret = config.consumer_secret;
     this.access_token = config.access_token;
     this.access_token_secret = config.access_token_secret;
+    // Default to HMAC-SHA1 for OAuth 1.0a compatibility as per RFC 5849
+    this.signature_method = config.signature_method || 'HMAC-SHA1';
 
     this.validateConfig();
   }
@@ -62,7 +65,8 @@ export class OAuth {
       this.percentEncode(this.access_token_secret)
     ].join('&');
 
-    return createHmac('sha1', signingKey)
+    const hashAlgorithm = this.signature_method === 'HMAC-SHA256' ? 'sha256' : 'sha1';
+    return createHmac(hashAlgorithm, signingKey)
       .update(signatureBaseString)
       .digest('base64');
   }
@@ -74,7 +78,7 @@ export class OAuth {
     const oauthParams: Record<string, string> = {
       oauth_consumer_key: this.consumer_key,
       oauth_nonce: nonce,
-      oauth_signature_method: 'HMAC-SHA1',
+      oauth_signature_method: this.signature_method,
       oauth_timestamp: timestamp,
       oauth_token: this.access_token,
       oauth_version: '1.0'
@@ -98,7 +102,7 @@ export class OAuth {
       oauth_consumer_key: this.consumer_key,
       oauth_nonce: nonce,
       oauth_signature: signature,
-      oauth_signature_method: 'HMAC-SHA1',
+      oauth_signature_method: this.signature_method,
       oauth_timestamp: timestamp,
       oauth_token: this.access_token,
       oauth_version: '1.0'
