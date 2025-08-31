@@ -165,7 +165,9 @@ describe('crypto utilities (Web standards)', () => {
       Object.defineProperty(globalThis, 'btoa', { value: undefined, configurable: true });
 
       const bytes = new Uint8Array([72, 101, 108, 108, 111]);
-      expect(() => bytesToBase64(bytes)).toThrow('btoa not available');
+      expect(() => bytesToBase64(bytes)).toThrow(
+        'btoa is not available in this environment. btoa is provided by browsers, but not by Node.js, Deno, or Bun by default. Consider using Buffer or a polyfill for base64 encoding in non-browser environments.'
+      );
 
       // Restore original btoa
       globalThis.btoa = originalBtoa;
