@@ -34,10 +34,6 @@ const client = new XAdsClient({
   },
   environment: Environment.SANDBOX // or Environment.PRODUCTION
 });
-
-// Test the connection
-const isConnected = await client.testConnection();
-console.log('Connected:', isConnected);
 ```
 
 ### Environment Variables Setup

@@ -80,16 +80,8 @@ async function environmentSetupExample() {
   console.log('=' .repeat(40));
   
   try {
-    const devClient = new XAdsClient(developmentConfig);
+    new XAdsClient(developmentConfig);
     console.log('✅ Development client initialized');
-    
-    const isConnected = await devClient.testConnection();
-    console.log(`Connection test: ${isConnected ? '✅ Success' : '❌ Failed'}`);
-    
-    if (isConnected) {
-      const accounts = await devClient.accounts.list({ count: 1 });
-      console.log(`Accounts accessible: ${accounts.data.length}`);
-    }
   } catch (error) {
     console.error('❌ Development setup failed:', (error as Error).message);
   }
@@ -101,13 +93,9 @@ async function environmentSetupExample() {
   
   if (process.env.X_PROD_CONSUMER_KEY) {
     try {
-      const prodClient = new XAdsClient(productionConfig);
+      new XAdsClient(productionConfig);
       console.log('✅ Production client initialized');
       console.log('⚠️  Production environment - use with caution!');
-      
-      // Only test connection in production, don't perform operations
-      const isConnected = await prodClient.testConnection();
-      console.log(`Production connection: ${isConnected ? '✅ Success' : '❌ Failed'}`);
     } catch (error) {
       console.error('❌ Production setup failed:', (error as Error).message);
     }
@@ -151,13 +139,9 @@ async function environmentSetupExample() {
   console.log('=' .repeat(40));
   
   try {
-    const strictClient = new XAdsClient(strictConfig);
+    new XAdsClient(strictConfig);
     console.log('✅ Strict client initialized');
     console.log('⚡ Configured for fail-fast behavior');
-    
-    // This should work or fail quickly
-    const testResult = await strictClient.testConnection();
-    console.log(`Strict connection test: ${testResult ? '✅ Success' : '❌ Failed'}`);
   } catch (error) {
     console.error('❌ Strict client failed:', (error as Error).message);
     console.log('This is expected behavior in strict mode');
