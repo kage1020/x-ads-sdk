@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -16,21 +16,21 @@ Defined in: [client/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 Defined in: [client/base.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L28)
 
-#### consumer\_key
+#### consumerKey
 
-> **consumer\_key**: `string`
+> **consumerKey**: `string`
 
-#### consumer\_secret
+#### consumerSecret
 
-> **consumer\_secret**: `string`
+> **consumerSecret**: `string`
 
-#### access\_token
+#### accessToken
 
-> **access\_token**: `string`
+> **accessToken**: `string`
 
-#### access\_token\_secret
+#### accessTokenSecret
 
-> **access\_token\_secret**: `string`
+> **accessTokenSecret**: `string`
 
 ***
 

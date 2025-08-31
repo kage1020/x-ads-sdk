@@ -10,7 +10,11 @@ export interface ListParams {
 
 export interface PaginatedResponse<T> {
   data: T[];
+  request?: {
+    params: Record<string, unknown>;
+  };
   next_cursor?: string;
+  previous_cursor?: string;
   total_count?: number;
 }
 
@@ -28,10 +32,10 @@ export enum Environment {
 
 export interface ClientConfig {
   auth: {
-    consumer_key: string;
-    consumer_secret: string;
-    access_token: string;
-    access_token_secret: string;
+    consumerKey: string;
+    consumerSecret: string;
+    accessToken: string;
+    accessTokenSecret: string;
   };
   environment?: Environment;
   baseURL?: string;

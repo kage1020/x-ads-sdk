@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -6,7 +6,11 @@
 
 # Class: DefaultPluginManager
 
-Defined in: [plugins/base.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L65)
+Defined in: [plugins/base.ts:158](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L158)
+
+Default implementation of PluginManager
+
+Handles plugin installation, removal, and execution of plugin hooks.
 
 ## Implements
 
@@ -18,13 +22,17 @@ Defined in: [plugins/base.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **new DefaultPluginManager**(`client?`): `DefaultPluginManager`
 
-Defined in: [plugins/base.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L68)
+Defined in: [plugins/base.ts:166](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L166)
+
+Create a new plugin manager
 
 #### Parameters
 
 ##### client?
 
-`PluginClient`
+[`PluginClient`](../interfaces/PluginClient.md)
+
+Optional client instance for plugin hooks
 
 #### Returns
 
@@ -36,7 +44,9 @@ Defined in: [plugins/base.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **use**(`plugin`): `void`
 
-Defined in: [plugins/base.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L70)
+Defined in: [plugins/base.ts:168](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L168)
+
+Install a plugin
 
 #### Parameters
 
@@ -58,7 +68,9 @@ Defined in: [plugins/base.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **remove**(`pluginName`): `boolean`
 
-Defined in: [plugins/base.ts:83](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L83)
+Defined in: [plugins/base.ts:181](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L181)
+
+Remove a plugin by name
 
 #### Parameters
 
@@ -80,7 +92,9 @@ Defined in: [plugins/base.ts:83](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **has**(`pluginName`): `boolean`
 
-Defined in: [plugins/base.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L97)
+Defined in: [plugins/base.ts:195](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L195)
+
+Check if a plugin is installed
 
 #### Parameters
 
@@ -102,7 +116,9 @@ Defined in: [plugins/base.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **get**(`pluginName`): `undefined` \| [`XAdsPlugin`](../interfaces/XAdsPlugin.md)
 
-Defined in: [plugins/base.ts:101](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L101)
+Defined in: [plugins/base.ts:199](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L199)
+
+Get a plugin by name
 
 #### Parameters
 
@@ -122,19 +138,21 @@ Defined in: [plugins/base.ts:101](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 ### executeBeforeRequest()
 
-> **executeBeforeRequest**(`config`): `Promise`\<`PluginRequestConfig`\>
+> **executeBeforeRequest**(`config`): `Promise`\<[`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)\>
 
-Defined in: [plugins/base.ts:105](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L105)
+Defined in: [plugins/base.ts:203](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L203)
+
+Execute beforeRequest hooks for all plugins
 
 #### Parameters
 
 ##### config
 
-`PluginRequestConfig`
+[`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)
 
 #### Returns
 
-`Promise`\<`PluginRequestConfig`\>
+`Promise`\<[`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)\>
 
 #### Implementation of
 
@@ -144,23 +162,25 @@ Defined in: [plugins/base.ts:105](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 ### executeAfterResponse()
 
-> **executeAfterResponse**(`response`, `config`): `Promise`\<`PluginResponse`\<`unknown`\>\>
+> **executeAfterResponse**(`response`, `config`): `Promise`\<[`PluginResponse`](../interfaces/PluginResponse.md)\<`unknown`\>\>
 
-Defined in: [plugins/base.ts:118](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L118)
+Defined in: [plugins/base.ts:216](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L216)
+
+Execute afterResponse hooks for all plugins
 
 #### Parameters
 
 ##### response
 
-`PluginResponse`
+[`PluginResponse`](../interfaces/PluginResponse.md)
 
 ##### config
 
-`PluginRequestConfig`
+[`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)
 
 #### Returns
 
-`Promise`\<`PluginResponse`\<`unknown`\>\>
+`Promise`\<[`PluginResponse`](../interfaces/PluginResponse.md)\<`unknown`\>\>
 
 #### Implementation of
 
@@ -170,9 +190,11 @@ Defined in: [plugins/base.ts:118](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 ### executeOnError()
 
-> **executeOnError**(`error`, `config`): `Promise`\<`PluginResponse`\<`unknown`\>\>
+> **executeOnError**(`error`, `config`): `Promise`\<[`PluginResponse`](../interfaces/PluginResponse.md)\<`unknown`\>\>
 
-Defined in: [plugins/base.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L134)
+Defined in: [plugins/base.ts:232](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L232)
+
+Execute onError hooks for all plugins
 
 #### Parameters
 
@@ -182,11 +204,11 @@ Defined in: [plugins/base.ts:134](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 ##### config
 
-`PluginRequestConfig`
+[`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)
 
 #### Returns
 
-`Promise`\<`PluginResponse`\<`unknown`\>\>
+`Promise`\<[`PluginResponse`](../interfaces/PluginResponse.md)\<`unknown`\>\>
 
 #### Implementation of
 
@@ -198,7 +220,9 @@ Defined in: [plugins/base.ts:134](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **plugins**: `Map`\<`string`, [`XAdsPlugin`](../interfaces/XAdsPlugin.md)\>
 
-Defined in: [plugins/base.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L66)
+Defined in: [plugins/base.ts:160](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L160)
+
+Map of installed plugins
 
 #### Implementation of
 
@@ -208,6 +232,8 @@ Defined in: [plugins/base.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### client?
 
-> `private` `optional` **client**: `PluginClient`
+> `private` `optional` **client**: [`PluginClient`](../interfaces/PluginClient.md)
 
-Defined in: [plugins/base.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L68)
+Defined in: [plugins/base.ts:166](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L166)
+
+Optional client instance for plugin hooks

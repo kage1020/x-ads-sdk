@@ -1,30 +1,29 @@
 /**
  * Advanced Features Example for X Ads SDK
- * 
+ *
  * This example demonstrates advanced features like pagination,
  * plugins, and enhanced error handling.
  */
 
-import { 
-  XAdsClient, 
+import {
   Environment,
-  RateLimitTracker,
-  CursorPaginator,
   isAPIError,
   isRateLimitError,
-  isTimeoutError 
+  isTimeoutError,
+  RateLimitTracker,
+  XAdsClient,
 } from '../src/index.js';
 
 async function advancedFeaturesExample() {
   const client = new XAdsClient({
     auth: {
-      consumer_key: process.env.X_CONSUMER_KEY!,
-      consumer_secret: process.env.X_CONSUMER_SECRET!,
-      access_token: process.env.X_ACCESS_TOKEN!,
-      access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
+      consumerKey: process.env.X_CONSUMER_KEY!,
+      consumerSecret: process.env.X_CONSUMER_SECRET!,
+      accessToken: process.env.X_ACCESS_TOKEN!,
+      accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,
     },
     environment: Environment.SANDBOX,
-    rateLimitStrategy: 'wait'
+    rateLimitStrategy: 'wait',
   });
 
   console.log('🚀 X Ads SDK Advanced Features Example\n');
@@ -32,12 +31,12 @@ async function advancedFeaturesExample() {
   try {
     // 1. Plugin Usage - Rate Limit Tracking
     console.log('1. Setting up Rate Limit Tracking Plugin');
-    console.log('=' .repeat(50));
+    console.log('='.repeat(50));
 
     const rateLimitTracker = new RateLimitTracker({
       trackingEnabled: true,
       logEnabled: true,
-      warningThreshold: 5
+      warningThreshold: 5,
     });
 
     client.use(rateLimitTracker);
@@ -49,25 +48,29 @@ async function advancedFeaturesExample() {
       console.log('❌ No accounts found');
       return;
     }
-    
+
     const accountId = accounts.data[0].id;
 
     // 2. Pagination with Async Iterators
     console.log('2. Advanced Pagination Examples');
-    console.log('=' .repeat(50));
+    console.log('='.repeat(50));
 
     // Method 1: Using paginator directly
     console.log('📄 Method 1: Using CursorPaginator');
-    const campaignPaginator = client.campaigns.paginate(accountId, {}, {
-      maxResults: 20,
-      pageSize: 5
-    });
+    const campaignPaginator = client.campaigns.paginate(
+      accountId,
+      {},
+      {
+        maxResults: 20,
+        pageSize: 5,
+      }
+    );
 
     let pageCount = 0;
     for await (const campaignPage of campaignPaginator) {
       pageCount++;
       console.log(`  Page ${pageCount}: ${campaignPage.length} campaigns`);
-      campaignPage.forEach(campaign => {
+      campaignPage.forEach((campaign) => {
         console.log(`    - ${campaign.name} (${campaign.status})`);
       });
     }
@@ -78,8 +81,9 @@ async function advancedFeaturesExample() {
     for await (const campaign of client.campaigns.iterateAll(accountId)) {
       itemCount++;
       console.log(`  Campaign ${itemCount}: ${campaign.name}`);
-      
-      if (itemCount >= 10) { // Limit to first 10 items
+
+      if (itemCount >= 10) {
+        // Limit to first 10 items
         console.log('  ... (limited to first 10 items)');
         break;
       }
@@ -92,12 +96,12 @@ async function advancedFeaturesExample() {
 
     // 3. Rate Limit Information
     console.log('\n3. Rate Limit Information');
-    console.log('=' .repeat(50));
+    console.log('='.repeat(50));
 
     const rateLimitSummary = rateLimitTracker.getSummary();
     if (rateLimitSummary.length > 0) {
       console.log('📊 Rate Limit Summary:');
-      rateLimitSummary.forEach(info => {
+      rateLimitSummary.forEach((info) => {
         console.log(`  ${info.endpoint}:`);
         console.log(`    Remaining: ${info.remaining}/${info.limit}`);
         console.log(`    Utilization: ${info.utilizationRate.toFixed(1)}%`);
@@ -110,17 +114,17 @@ async function advancedFeaturesExample() {
 
     // 4. Enhanced Error Handling
     console.log('4. Enhanced Error Handling Examples');
-    console.log('=' .repeat(50));
+    console.log('='.repeat(50));
 
     // Simulate various error scenarios
     console.log('🔍 Testing error handling...');
-    
+
     try {
       // This should cause an authentication error with invalid credentials
       await client.campaigns.get(accountId, 'invalid_campaign_id');
     } catch (error) {
       console.log('✅ Caught error successfully:');
-      
+
       if (isAPIError(error)) {
         console.log(`  Type: API Error`);
         console.log(`  Status: ${error.statusCode}`);
@@ -144,20 +148,25 @@ async function advancedFeaturesExample() {
 
     // 5. Plugin Management
     console.log('\n5. Plugin Management');
-    console.log('=' .repeat(50));
+    console.log('='.repeat(50));
 
-    console.log(`Installed plugins: ${client.hasPlugin('rate-limit-tracker') ? '✅' : '❌'} rate-limit-tracker`);
-    
+    console.log(
+      `Installed plugins: ${client.hasPlugin('rate-limit-tracker') ? '✅' : '❌'} rate-limit-tracker`
+    );
+
     // Get plugin information
     if (client.hasPlugin('rate-limit-tracker')) {
-      const tracker = client.getHttpClient().getPluginManager().get('rate-limit-tracker') as RateLimitTracker;
+      const tracker = client
+        .getHttpClient()
+        .getPluginManager()
+        .get('rate-limit-tracker') as RateLimitTracker;
       const allRateLimits = tracker.getAllRateLimits();
       console.log(`📊 Tracking ${allRateLimits.size} endpoints`);
     }
 
     // 6. Chaining Operations with Error Recovery
     console.log('\n6. Chaining Operations with Error Recovery');
-    console.log('=' .repeat(50));
+    console.log('='.repeat(50));
 
     try {
       // Chain multiple operations with proper error handling
@@ -166,22 +175,18 @@ async function advancedFeaturesExample() {
 
       if (activecampaigns.data.length > 0) {
         const campaign = activecampaigns.data[0];
-        
+
         // Get ad groups for the campaign
         const adGroups = await client.adGroups.listByCampaign(accountId, campaign.id);
         console.log(`Campaign "${campaign.name}" has ${adGroups.data.length} ad groups`);
 
         // Get analytics if available
         try {
-          const analytics = await client.analytics.getCampaignAnalytics(
-            accountId,
-            [campaign.id],
-            {
-              start_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-              end_date: new Date().toISOString().split('T')[0]
-            }
-          );
-          
+          const analytics = await client.analytics.getCampaignAnalytics(accountId, [campaign.id], {
+            start_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+            end_date: new Date().toISOString().split('T')[0],
+          });
+
           if (analytics.data.length > 0) {
             console.log(`✅ Analytics data available for ${campaign.name}`);
           }
@@ -189,23 +194,21 @@ async function advancedFeaturesExample() {
           console.log(`ℹ️  Analytics data not available: ${(analyticsError as Error).message}`);
         }
       }
-
     } catch (error) {
       console.error(`❌ Chain operation failed: ${(error as Error).message}`);
     }
 
     console.log('\n🎉 Advanced features example completed!');
-
   } catch (error) {
     console.error('❌ Example failed:', error);
-    
+
     // Detailed error analysis
     if (isAPIError(error)) {
       console.error('API Error Details:', {
         status: error.statusCode,
         code: error.code,
         retryable: error.isRetryable(),
-        timestamp: error.timestamp
+        timestamp: error.timestamp,
       });
     }
   }
@@ -216,11 +219,15 @@ function serializeError(error: any): string {
   if (error && typeof error.toJSON === 'function') {
     return JSON.stringify(error.toJSON(), null, 2);
   }
-  return JSON.stringify({
-    name: error?.name,
-    message: error?.message,
-    stack: error?.stack
-  }, null, 2);
+  return JSON.stringify(
+    {
+      name: error?.name,
+      message: error?.message,
+      stack: error?.stack,
+    },
+    null,
+    2
+  );
 }
 
 // Run the example if this file is executed directly

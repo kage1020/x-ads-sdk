@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: APIResponse\<T\>
 
-Defined in: [types/common.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L17)
+Defined in: [types/common.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L21)
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ Defined in: [types/common.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **data**: `T`
 
-Defined in: [types/common.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L18)
+Defined in: [types/common.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L22)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [types/common.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **request**: `object`
 
-Defined in: [types/common.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L19)
+Defined in: [types/common.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L23)
 
 #### params
 

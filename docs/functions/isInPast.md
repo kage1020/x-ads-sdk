@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **isInPast**(`date`): `boolean`
 
-Defined in: utils/time.ts:28
+Defined in: [utils/time.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/time.ts#L28)
 
 Check if a date is in the past
 

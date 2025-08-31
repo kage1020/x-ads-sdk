@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -42,13 +42,13 @@ Defined in: [auth/oauth.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 ### generateNonce()
 
-> **generateNonce**(): `string`
+> **generateNonce**(): `Promise`\<`string`\>
 
 Defined in: [auth/oauth.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L32)
 
 #### Returns
 
-`string`
+`Promise`\<`string`\>
 
 ***
 
@@ -84,7 +84,7 @@ Defined in: [auth/oauth.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 ### generateSignature()
 
-> **generateSignature**(`httpMethod`, `baseURL`, `parameters`): `string`
+> **generateSignature**(`httpMethod`, `baseURL`, `parameters`): `Promise`\<`string`\>
 
 Defined in: [auth/oauth.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L47)
 
@@ -104,13 +104,13 @@ Defined in: [auth/oauth.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 #### Returns
 
-`string`
+`Promise`\<`string`\>
 
 ***
 
 ### generateOAuthSignature()
 
-> **generateOAuthSignature**(`options`): [`OAuthSignature`](../interfaces/OAuthSignature.md)
+> **generateOAuthSignature**(`options`): `Promise`\<[`OAuthSignature`](../interfaces/OAuthSignature.md)\>
 
 Defined in: [auth/oauth.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L72)
 
@@ -122,7 +122,7 @@ Defined in: [auth/oauth.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 #### Returns
 
-[`OAuthSignature`](../interfaces/OAuthSignature.md)
+`Promise`\<[`OAuthSignature`](../interfaces/OAuthSignature.md)\>
 
 ***
 
@@ -146,7 +146,7 @@ Defined in: [auth/oauth.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ### signRequest()
 
-> **signRequest**(`options`): [`RequestOptions`](../interfaces/RequestOptions.md)
+> **signRequest**(`options`): `Promise`\<[`RequestOptions`](../interfaces/RequestOptions.md)\>
 
 Defined in: [auth/oauth.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L115)
 
@@ -158,44 +158,44 @@ Defined in: [auth/oauth.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 #### Returns
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+`Promise`\<[`RequestOptions`](../interfaces/RequestOptions.md)\>
 
 ## Properties
 
-### consumer\_key
+### consumerKey
 
-> `private` **consumer\_key**: `string`
+> `private` **consumerKey**: `string`
 
 Defined in: [auth/oauth.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L6)
 
 ***
 
-### consumer\_secret
+### consumerSecret
 
-> `private` **consumer\_secret**: `string`
+> `private` **consumerSecret**: `string`
 
 Defined in: [auth/oauth.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L7)
 
 ***
 
-### access\_token
+### accessToken
 
-> `private` **access\_token**: `string`
+> `private` **accessToken**: `string`
 
 Defined in: [auth/oauth.ts:8](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L8)
 
 ***
 
-### access\_token\_secret
+### accessTokenSecret
 
-> `private` **access\_token\_secret**: `string`
+> `private` **accessTokenSecret**: `string`
 
 Defined in: [auth/oauth.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L9)
 
 ***
 
-### signature\_method
+### signatureMethod
 
-> `private` **signature\_method**: `"HMAC-SHA1"` \| `"HMAC-SHA256"`
+> `private` **signatureMethod**: `"HMAC-SHA1"` \| `"HMAC-SHA256"`
 
 Defined in: [auth/oauth.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L10)

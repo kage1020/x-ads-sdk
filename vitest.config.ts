@@ -3,22 +3,25 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
   esbuild: {
     target: 'es2020',
-    format: 'esm'
+    format: 'esm',
   },
   test: {
     environment: 'node',
     globals: true,
+    // Suppress unhandled promise rejection warnings from mock operations
+    testTimeout: 10000,
+    setupFiles: ['./vitest.setup.ts'],
     // Force use of esbuild instead of Rollup for transforms
     deps: {
       optimizer: {
         ssr: {
-          exclude: ['rollup']
-        }
-      }
+          exclude: ['rollup'],
+        },
+      },
     },
     // Use esbuild for TypeScript transformation instead of Rollup
-    transformMode: {
-      ssr: ['**/*.ts']
+    testTransformMode: {
+      ssr: ['**/*.ts'],
     },
     include: ['src/**/*.test.ts', 'src/**/__tests__/**/*.ts'],
     coverage: {
@@ -39,16 +42,16 @@ export default defineConfig({
         'examples/',
         'scripts/',
         '**/*.d.ts',
-        '*.config.*'
+        '*.config.*',
       ],
       thresholds: {
         global: {
           branches: 75,
           functions: 75,
           lines: 75,
-          statements: 75
-        }
-      }
-    }
-  }
+          statements: 75,
+        },
+      },
+    },
+  },
 });

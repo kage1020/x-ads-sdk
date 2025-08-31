@@ -1,8 +1,8 @@
 export interface AuthConfig {
-  consumer_key: string;
-  consumer_secret: string;
-  access_token: string;
-  access_token_secret: string;
+  consumerKey: string;
+  consumerSecret: string;
+  accessToken: string;
+  accessTokenSecret: string;
   sandbox?: boolean;
   /**
    * @default 'HMAC-SHA1' - Required by OAuth 1.0a specification for maximum compatibility
@@ -11,7 +11,7 @@ export interface AuthConfig {
    * This is for OAuth signature generation, not password hashing.
    * HMAC-SHA1 is the standard OAuth 1.0a signature method as defined in RFC 5849.
    */
-  signature_method?: 'HMAC-SHA1' | 'HMAC-SHA256';
+  signatureMethod?: 'HMAC-SHA1' | 'HMAC-SHA256';
 }
 
 export interface OAuthSignature {

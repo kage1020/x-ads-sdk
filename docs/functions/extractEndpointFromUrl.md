@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **extractEndpointFromUrl**(`fullUrl`, `basePath`): `string`
 
-Defined in: utils/http.ts:49
+Defined in: [utils/http.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/http.ts#L49)
 
 Extract endpoint path from a complete URL
 

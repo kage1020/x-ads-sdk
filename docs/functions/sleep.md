@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **sleep**(`ms`): `Promise`\<`void`\>
 
-Defined in: utils/time.ts:46
+Defined in: [utils/time.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/time.ts#L46)
 
 Sleep for a specified number of milliseconds
 

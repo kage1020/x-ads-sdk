@@ -1,12 +1,20 @@
-[**X Ads SDK v1.0.1**](README.md)
+[**X Ads SDK v1.0.2**](README.md)
 
 ***
 
-# X Ads SDK v1.0.1
+# X Ads SDK v1.0.2
 
 ## Classes
 
+### Client
+
+- [XAdsClient](classes/XAdsClient.md)
+
+### Other
+
 - [OAuth](classes/OAuth.md)
+- [RateLimiter](classes/RateLimiter.md)
+- [RetryHandler](classes/RetryHandler.md)
 - [XAdsError](classes/XAdsError.md)
 - [AuthenticationError](classes/AuthenticationError.md)
 - [RateLimitError](classes/RateLimitError.md)
@@ -22,33 +30,28 @@
 - [CampaignsModule](classes/CampaignsModule.md)
 - [CursorPaginator](classes/CursorPaginator.md)
 - [OffsetPaginator](classes/OffsetPaginator.md)
-- [DefaultPluginManager](classes/DefaultPluginManager.md)
-- [RateLimitTracker](classes/RateLimitTracker.md)
 - [APIVersionManager](classes/APIVersionManager.md)
 
+### Plugin
+
+- [HttpClient](classes/HttpClient.md)
+- [DefaultPluginManager](classes/DefaultPluginManager.md)
+- [RateLimitTracker](classes/RateLimitTracker.md)
+
 ## Interfaces
-
-### Client
-
-- [XAdsClient](interfaces/XAdsClient.md)
 
 ### Other
 
 - [HttpClientConfig](interfaces/HttpClientConfig.md)
 - [RequestConfig](interfaces/RequestConfig.md)
-- [HttpClient](interfaces/HttpClient.md)
 - [ClientRateLimitInfo](interfaces/ClientRateLimitInfo.md)
 - [RateLimitOptions](interfaces/RateLimitOptions.md)
-- [RateLimiter](interfaces/RateLimiter.md)
 - [RetryOptions](interfaces/RetryOptions.md)
-- [RetryHandler](interfaces/RetryHandler.md)
 - [APIErrorDetails](interfaces/APIErrorDetails.md)
 - [APIErrorRequest](interfaces/APIErrorRequest.md)
 - [APIErrorResponse](interfaces/APIErrorResponse.md)
 - [PaginatorOptions](interfaces/PaginatorOptions.md)
 - [CursorPaginatorResult](interfaces/CursorPaginatorResult.md)
-- [XAdsPlugin](interfaces/XAdsPlugin.md)
-- [PluginManager](interfaces/PluginManager.md)
 - [RateLimitInfo](interfaces/RateLimitInfo.md)
 - [RateLimitTrackerOptions](interfaces/RateLimitTrackerOptions.md)
 - [Account](interfaces/Account.md)
@@ -80,6 +83,14 @@
 - [APIResponse](interfaces/APIResponse.md)
 - [ClientConfig](interfaces/ClientConfig.md)
 
+### Plugin
+
+- [PluginRequestConfig](interfaces/PluginRequestConfig.md)
+- [PluginResponse](interfaces/PluginResponse.md)
+- [PluginClient](interfaces/PluginClient.md)
+- [XAdsPlugin](interfaces/XAdsPlugin.md)
+- [PluginManager](interfaces/PluginManager.md)
+
 ## Type Aliases
 
 - [SupportedAPIVersion](type-aliases/SupportedAPIVersion.md)
@@ -95,6 +106,12 @@
 - [isRateLimitError](functions/isRateLimitError.md)
 - [isNetworkError](functions/isNetworkError.md)
 - [isTimeoutError](functions/isTimeoutError.md)
+- [randomBytes](functions/randomBytes.md)
+- [bytesToHex](functions/bytesToHex.md)
+- [stringToBytes](functions/stringToBytes.md)
+- [bytesToBase64](functions/bytesToBase64.md)
+- [hmac](functions/hmac.md)
+- [randomHex](functions/randomHex.md)
 - [extractErrorMessage](functions/extractErrorMessage.md)
 - [extractErrorCode](functions/extractErrorCode.md)
 - [extractErrorDetails](functions/extractErrorDetails.md)

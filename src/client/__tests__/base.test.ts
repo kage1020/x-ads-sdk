@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { APIError, AuthenticationError } from '../../errors';
+import { APIError, AuthenticationError, NetworkError, TimeoutError } from '../../errors';
+import { APIVersion } from '../../types';
 import { Environment } from '../../types/common';
 import { HttpClient } from '../base';
 
@@ -10,10 +11,10 @@ global.fetch = mockFetch;
 describe('HttpClient', () => {
   const testConfig = {
     auth: {
-      consumer_key: 'test_consumer_key',
-      consumer_secret: 'test_consumer_secret',
-      access_token: 'test_access_token',
-      access_token_secret: 'test_access_token_secret',
+      consumerKey: 'test_consumer_key',
+      consumerSecret: 'test_consumer_secret',
+      accessToken: 'test_access_token',
+      accessTokenSecret: 'test_access_token_secret',
     },
   };
 
@@ -170,7 +171,7 @@ describe('HttpClient', () => {
         timeout: 50,
       });
 
-      await expect(shortTimeoutClient.get('/test')).rejects.toThrow('Request timeout');
+      await expect(shortTimeoutClient.get('/test')).rejects.toThrow(TimeoutError);
     });
 
     it('should include query parameters for GET requests', async () => {
@@ -210,6 +211,290 @@ describe('HttpClient', () => {
       expect(url.searchParams.get('param1')).toBe('value1');
       expect(url.searchParams.has('param2')).toBe(false);
       expect(url.searchParams.has('param3')).toBe(false);
+    });
+
+    it('should handle network errors', async () => {
+      const networkError = new TypeError('Failed to fetch');
+      networkError.message = 'fetch failed';
+      mockFetch.mockRejectedValue(networkError);
+
+      await expect(client.get('/test')).rejects.toThrow(NetworkError);
+    });
+
+    it('should handle 429 rate limit error with dynamic import', async () => {
+      // Mock retry behavior to avoid long waits
+      const rateLimitClient = new HttpClient({
+        ...testConfig,
+        retryOptions: { maxRetries: 0 }, // Disable retries for this test
+      });
+
+      const mockResponse = {
+        ok: false,
+        status: 429,
+        url: 'https://ads-api-sandbox.x.com/12/test',
+        headers: new Headers({
+          'x-rate-limit-reset': '1640995200',
+        }),
+        json: vi.fn().mockResolvedValue({
+          errors: [{ message: 'Rate limit exceeded' }],
+        }),
+      };
+      mockFetch.mockResolvedValue(mockResponse);
+
+      // The actual error message will be 'Rate limit exceeded' after processing
+      await expect(rateLimitClient.get('/test')).rejects.toThrow();
+    });
+
+    it('should handle text responses when content-type is not json', async () => {
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Headers({
+          'content-type': 'text/plain',
+        }),
+        text: vi.fn().mockResolvedValue('plain text response'),
+      };
+      mockFetch.mockResolvedValue(mockResponse);
+
+      const result = await client.get('/test');
+      expect(result).toBe('plain text response');
+    });
+
+    it('should handle empty content-type header', async () => {
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Headers(),
+      };
+      mockFetch.mockResolvedValue(mockResponse);
+
+      const result = await client.get('/test');
+      expect(result).toEqual({});
+    });
+
+    it('should handle error parsing failure gracefully', async () => {
+      const mockResponse = {
+        ok: false,
+        status: 400,
+        url: 'https://ads-api-sandbox.x.com/12/test',
+        headers: new Headers({
+          'content-type': 'application/json',
+        }),
+        json: vi.fn().mockRejectedValue(new Error('Failed to parse JSON')),
+        text: vi.fn().mockRejectedValue(new Error('Failed to parse text')),
+      };
+      mockFetch.mockResolvedValue(mockResponse);
+
+      await expect(client.get('/test')).rejects.toThrow(APIError);
+    });
+
+    it('should handle non-json error response', async () => {
+      // Mock retry behavior to avoid long waits
+      const errorClient = new HttpClient({
+        ...testConfig,
+        retryOptions: { maxRetries: 0 }, // Disable retries for this test
+      });
+
+      const mockResponse = {
+        ok: false,
+        status: 500,
+        statusText: 'Internal Server Error',
+        url: 'https://ads-api-sandbox.x.com/12/test',
+        headers: new Headers({
+          'content-type': 'text/plain',
+        }),
+        text: vi.fn().mockResolvedValue('Internal Server Error'),
+      };
+      mockFetch.mockResolvedValue(mockResponse);
+
+      // The error message will be from statusText when text parsing fails or from the parsed text
+      await expect(errorClient.get('/test')).rejects.toThrow();
+    });
+
+    it('should handle POST request with string body', async () => {
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Headers({
+          'content-type': 'application/json',
+        }),
+        json: vi.fn().mockResolvedValue({ data: 'created' }),
+      };
+      mockFetch.mockResolvedValue(mockResponse);
+
+      const stringBody = 'raw string data';
+      const result = await client.post('/test', stringBody);
+
+      expect(mockFetch).toHaveBeenCalledWith(
+        expect.stringContaining('/test'),
+        expect.objectContaining({
+          method: 'POST',
+          body: 'raw string data',
+        })
+      );
+      expect(result).toEqual({ data: 'created' });
+    });
+
+    it('should handle API version headers processing', async () => {
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Headers({
+          'content-type': 'application/json',
+          'x-api-version': '11.0',
+          'x-api-version-deprecated': 'true',
+          'x-api-version-latest': '12.0',
+        }),
+        json: vi.fn().mockResolvedValue({ data: 'test' }),
+      };
+      mockFetch.mockResolvedValue(mockResponse);
+
+      const result = await client.get('/test');
+      expect(result).toEqual({ data: 'test' });
+
+      // Verify that version processing happens by checking the version manager state
+      const versionManager = client.getVersionManager();
+      expect(versionManager).toBeDefined();
+    });
+
+    it('should handle plugin error recovery', async () => {
+      // First mock the initial request to fail
+      mockFetch.mockRejectedValueOnce(new Error('Initial error'));
+
+      // Mock plugin error handling to return a successful response
+      const mockPluginResponse = {
+        data: { recovered: true },
+        status: 200,
+        statusText: 'OK',
+        headers: {},
+      };
+      vi.spyOn(client.getPluginManager(), 'executeOnError').mockResolvedValueOnce(
+        mockPluginResponse
+      );
+
+      const result = await client.get('/test');
+      expect(result).toEqual({ recovered: true });
+    });
+
+    it('should handle plugin error handling failure', async () => {
+      const originalError = new Error('Original request failed');
+      mockFetch.mockRejectedValueOnce(originalError);
+
+      // Mock plugin error handling to also fail
+      vi.spyOn(client.getPluginManager(), 'executeOnError').mockRejectedValueOnce(
+        new Error('Plugin error handling failed')
+      );
+
+      await expect(client.get('/test')).rejects.toThrow('Original request failed');
+    });
+  });
+
+  describe('API Version methods', () => {
+    it('should get current API version', () => {
+      const version = client.getAPIVersion();
+      expect(version).toBeDefined();
+    });
+
+    it('should set API version', () => {
+      expect(() => {
+        client.setAPIVersion(APIVersion.V12);
+      }).not.toThrow();
+    });
+
+    it('should get version manager', () => {
+      const versionManager = client.getVersionManager();
+      expect(versionManager).toBeDefined();
+    });
+
+    it('should get version info', () => {
+      const versionInfo = client.getVersionInfo();
+      expect(versionInfo).toBeDefined();
+    });
+
+    it('should check if version is deprecated', () => {
+      const isDeprecated = client.isVersionDeprecated();
+      expect(typeof isDeprecated).toBe('boolean');
+    });
+  });
+
+  describe('convenience methods', () => {
+    beforeEach(() => {
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Headers({
+          'content-type': 'application/json',
+        }),
+        json: vi.fn().mockResolvedValue({ success: true }),
+      };
+      mockFetch.mockResolvedValue(mockResponse);
+    });
+
+    it('should make PUT request', async () => {
+      const body = { name: 'updated' };
+      const result = await client.put('/test', body);
+
+      expect(mockFetch).toHaveBeenCalledWith(
+        expect.stringContaining('/test'),
+        expect.objectContaining({
+          method: 'PUT',
+          body: JSON.stringify(body),
+        })
+      );
+      expect(result).toEqual({ success: true });
+    });
+
+    it('should make DELETE request', async () => {
+      const result = await client.delete('/test');
+
+      expect(mockFetch).toHaveBeenCalledWith(
+        expect.stringContaining('/test'),
+        expect.objectContaining({
+          method: 'DELETE',
+        })
+      );
+      expect(result).toEqual({ success: true });
+    });
+
+    it('should include custom headers in requests', async () => {
+      const headers = { 'X-Custom-Header': 'custom-value' };
+      await client.get('/test', undefined, headers);
+
+      expect(mockFetch).toHaveBeenCalledWith(
+        expect.stringContaining('/test'),
+        expect.objectContaining({
+          headers: expect.objectContaining({
+            'X-Custom-Header': 'custom-value',
+          }),
+        })
+      );
+    });
+  });
+
+  describe('configuration options', () => {
+    it('should handle custom timeout configuration', () => {
+      const customClient = new HttpClient({
+        ...testConfig,
+        timeout: 60000,
+      });
+      expect(customClient).toBeInstanceOf(HttpClient);
+    });
+
+    it('should handle retry options configuration', () => {
+      const retryClient = new HttpClient({
+        ...testConfig,
+        retryOptions: { maxRetries: 5, initialDelay: 2000 },
+      });
+      expect(retryClient).toBeInstanceOf(HttpClient);
+    });
+
+    it('should handle API version configuration', () => {
+      const versionClient = new HttpClient({
+        ...testConfig,
+        apiVersion: APIVersion.V12,
+        autoUpgradeVersion: true,
+      });
+      expect(versionClient).toBeInstanceOf(HttpClient);
     });
   });
 });

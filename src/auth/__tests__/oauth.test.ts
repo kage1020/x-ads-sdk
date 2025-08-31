@@ -5,10 +5,10 @@ import { OAuth } from '../oauth';
 
 describe('OAuth', () => {
   const validConfig = {
-    consumer_key: 'test_consumer_key',
-    consumer_secret: 'test_consumer_secret',
-    access_token: 'test_access_token',
-    access_token_secret: 'test_access_token_secret',
+    consumerKey: 'test_consumer_key',
+    consumerSecret: 'test_consumer_secret',
+    accessToken: 'test_access_token',
+    accessTokenSecret: 'test_access_token_secret',
   };
 
   describe('constructor', () => {
@@ -17,19 +17,19 @@ describe('OAuth', () => {
     });
 
     it('should throw AuthenticationError when missing consumer_key', () => {
-      const { consumer_key, ...config } = validConfig;
-      void consumer_key;
+      const { consumerKey, ...config } = validConfig;
+      void consumerKey;
 
       expect(() => new OAuth(config as AuthConfig)).toThrow(AuthenticationError);
       expect(() => new OAuth(config as AuthConfig)).toThrow(
-        'Missing required OAuth parameters: consumer_key'
+        'Missing required OAuth parameters: consumerKey'
       );
     });
 
     it('should throw AuthenticationError when missing multiple parameters', () => {
       const config = {
-        consumer_key: 'test',
-        consumer_secret: '',
+        consumerKey: 'test',
+        consumerSecret: '',
       };
 
       expect(() => new OAuth(config as AuthConfig)).toThrow(AuthenticationError);
@@ -38,17 +38,17 @@ describe('OAuth', () => {
   });
 
   describe('generateNonce', () => {
-    it('should generate a 32-character hex string', () => {
+    it('should generate a 32-character hex string', async () => {
       const oauth = new OAuth(validConfig);
-      const nonce = oauth.generateNonce();
+      const nonce = await oauth.generateNonce();
 
       expect(nonce).toMatch(/^[a-f0-9]{32}$/);
     });
 
-    it('should generate different nonces on each call', () => {
+    it('should generate different nonces on each call', async () => {
       const oauth = new OAuth(validConfig);
-      const nonce1 = oauth.generateNonce();
-      const nonce2 = oauth.generateNonce();
+      const nonce1 = await oauth.generateNonce();
+      const nonce2 = await oauth.generateNonce();
 
       expect(nonce1).not.toBe(nonce2);
     });
@@ -90,7 +90,7 @@ describe('OAuth', () => {
   });
 
   describe('generateSignature', () => {
-    it('should generate consistent signature for same parameters', () => {
+    it('should generate consistent signature for same parameters', async () => {
       const oauth = new OAuth(validConfig);
       const params = {
         oauth_consumer_key: 'test',
@@ -98,13 +98,21 @@ describe('OAuth', () => {
         oauth_nonce: 'testnonce',
       };
 
-      const signature1 = oauth.generateSignature('GET', 'https://api.example.com/test', params);
-      const signature2 = oauth.generateSignature('GET', 'https://api.example.com/test', params);
+      const signature1 = await oauth.generateSignature(
+        'GET',
+        'https://api.example.com/test',
+        params
+      );
+      const signature2 = await oauth.generateSignature(
+        'GET',
+        'https://api.example.com/test',
+        params
+      );
 
       expect(signature1).toBe(signature2);
     });
 
-    it('should generate different signatures for different methods', () => {
+    it('should generate different signatures for different methods', async () => {
       const oauth = new OAuth(validConfig);
       const params = {
         oauth_consumer_key: 'test',
@@ -112,15 +120,23 @@ describe('OAuth', () => {
         oauth_nonce: 'testnonce',
       };
 
-      const getSignature = oauth.generateSignature('GET', 'https://api.example.com/test', params);
-      const postSignature = oauth.generateSignature('POST', 'https://api.example.com/test', params);
+      const getSignature = await oauth.generateSignature(
+        'GET',
+        'https://api.example.com/test',
+        params
+      );
+      const postSignature = await oauth.generateSignature(
+        'POST',
+        'https://api.example.com/test',
+        params
+      );
 
       expect(getSignature).not.toBe(postSignature);
     });
   });
 
   describe('signRequest', () => {
-    it('should add Authorization header to request', () => {
+    it('should add Authorization header to request', async () => {
       const oauth = new OAuth(validConfig);
       const requestOptions = {
         method: 'GET' as const,
@@ -128,13 +144,13 @@ describe('OAuth', () => {
         headers: {},
       };
 
-      const signedRequest = oauth.signRequest(requestOptions);
+      const signedRequest = await oauth.signRequest(requestOptions);
 
       expect(signedRequest.headers).toHaveProperty('Authorization');
       expect(signedRequest.headers?.Authorization).toMatch(/^OAuth /);
     });
 
-    it('should preserve existing headers', () => {
+    it('should preserve existing headers', async () => {
       const oauth = new OAuth(validConfig);
       const requestOptions = {
         method: 'GET' as const,
@@ -145,14 +161,14 @@ describe('OAuth', () => {
         },
       };
 
-      const signedRequest = oauth.signRequest(requestOptions);
+      const signedRequest = await oauth.signRequest(requestOptions);
 
       expect(signedRequest.headers?.['Content-Type']).toBe('application/json');
       expect(signedRequest.headers?.['User-Agent']).toBe('test-agent');
       expect(signedRequest.headers).toHaveProperty('Authorization');
     });
 
-    it('should include all required OAuth parameters in Authorization header', () => {
+    it('should include all required OAuth parameters in Authorization header', async () => {
       const oauth = new OAuth(validConfig);
       const requestOptions = {
         method: 'GET' as const,
@@ -160,7 +176,7 @@ describe('OAuth', () => {
         headers: {},
       };
 
-      const signedRequest = oauth.signRequest(requestOptions);
+      const signedRequest = await oauth.signRequest(requestOptions);
       const authHeader = signedRequest.headers?.Authorization;
 
       expect(authHeader).toMatch(/oauth_consumer_key="[^"]+"/);

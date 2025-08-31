@@ -11,15 +11,15 @@ async function basicExample() {
   // Initialize the SDK client
   const client = new XAdsClient({
     auth: {
-      consumer_key: process.env.X_CONSUMER_KEY!,
-      consumer_secret: process.env.X_CONSUMER_SECRET!,
-      access_token: process.env.X_ACCESS_TOKEN!,
-      access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
+      consumerKey: process.env.X_CONSUMER_KEY!,
+      consumerSecret: process.env.X_CONSUMER_SECRET!,
+      accessToken: process.env.X_ACCESS_TOKEN!,
+      accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!,
     },
     environment: Environment.SANDBOX, // Use sandbox for testing
     timeout: 30000, // 30 second timeout
     maxRetries: 3, // Retry failed requests up to 3 times
-    rateLimitStrategy: 'wait' // Wait when rate limits are hit
+    rateLimitStrategy: 'wait', // Wait when rate limits are hit
   });
 
   try {
@@ -44,7 +44,7 @@ async function basicExample() {
     console.log(`📊 Found ${campaigns.data.length} campaign(s)`);
 
     if (campaigns.data.length > 0) {
-      campaigns.data.forEach(campaign => {
+      campaigns.data.forEach((campaign) => {
         console.log(`  - ${campaign.name} (${campaign.status})`);
       });
     }
@@ -57,7 +57,7 @@ async function basicExample() {
       const adGroups = await client.adGroups.listByCampaign(account.id, campaign.id);
       console.log(`🎯 Found ${adGroups.data.length} ad group(s)`);
 
-      adGroups.data.forEach(adGroup => {
+      adGroups.data.forEach((adGroup) => {
         console.log(`  - ${adGroup.name} (${adGroup.status})`);
       });
     }
@@ -65,7 +65,7 @@ async function basicExample() {
     // 4. Get analytics for the last 7 days
     if (campaigns.data.length > 0) {
       console.log('\nFetching analytics for the last 7 days...');
-      const campaignIds = campaigns.data.slice(0, 3).map(c => c.id);
+      const campaignIds = campaigns.data.slice(0, 3).map((c) => c.id);
 
       const analytics = await client.analytics.getLastWeekAnalytics(
         account.id,
@@ -75,7 +75,7 @@ async function basicExample() {
 
       console.log(`📈 Analytics data points: ${analytics.data.length}`);
 
-      analytics.data.forEach(data => {
+      analytics.data.forEach((data) => {
         if (data.id_data.length > 0) {
           const metrics = data.id_data[0].metrics;
           console.log(`Campaign ${data.id}:`);
@@ -87,7 +87,6 @@ async function basicExample() {
     }
 
     console.log('\n🎉 Basic example completed successfully!');
-
   } catch (error) {
     console.error('❌ Error:', error);
 

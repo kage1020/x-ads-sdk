@@ -1,10 +1,17 @@
-[**X Ads SDK v1.0.1**](README.md)
+[**X Ads SDK v1.0.2**](README.md)
 
 ***
 
-# X Ads SDK v1.0.1
+# X Ads SDK v1.0.2
 
 ## Hierarchy Summary
+
+### PluginClient
+
+- [PluginClient](interfaces/PluginClient.md)
+  - [HttpClient](classes/HttpClient.md)
+
+***
 
 ### PluginManager
 

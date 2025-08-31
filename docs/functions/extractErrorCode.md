@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **extractErrorCode**(`errorData`): `undefined` \| `string`
 
-Defined in: utils/error.ts:28
+Defined in: [utils/error.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/error.ts#L28)
 
 Extract error code from unknown error data
 

@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -10,33 +10,33 @@ Defined in: [types/auth.ts:1](https://github.com/kage1020/x-ads-sdk/blob/main/sr
 
 ## Properties
 
-### consumer\_key
+### consumerKey
 
-> **consumer\_key**: `string`
+> **consumerKey**: `string`
 
 Defined in: [types/auth.ts:2](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L2)
 
 ***
 
-### consumer\_secret
+### consumerSecret
 
-> **consumer\_secret**: `string`
+> **consumerSecret**: `string`
 
 Defined in: [types/auth.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L3)
 
 ***
 
-### access\_token
+### accessToken
 
-> **access\_token**: `string`
+> **accessToken**: `string`
 
 Defined in: [types/auth.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L4)
 
 ***
 
-### access\_token\_secret
+### accessTokenSecret
 
-> **access\_token\_secret**: `string`
+> **accessTokenSecret**: `string`
 
 Defined in: [types/auth.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L5)
 
@@ -50,9 +50,9 @@ Defined in: [types/auth.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/sr
 
 ***
 
-### signature\_method?
+### signatureMethod?
 
-> `optional` **signature\_method**: `"HMAC-SHA1"` \| `"HMAC-SHA256"`
+> `optional` **signatureMethod**: `"HMAC-SHA1"` \| `"HMAC-SHA256"`
 
 Defined in: [types/auth.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L14)
 

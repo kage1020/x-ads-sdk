@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **fromPluginConfig**(`pluginConfig`, `versionPath`): [`RequestConfig`](../interfaces/RequestConfig.md)
 
-Defined in: utils/plugin.ts:47
+Defined in: [utils/plugin.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/plugin.ts#L47)
 
 Convert PluginRequestConfig back to RequestConfig
 
@@ -16,7 +16,7 @@ Convert PluginRequestConfig back to RequestConfig
 
 ### pluginConfig
 
-`PluginRequestConfig`
+[`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)
 
 Plugin request configuration
 

@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **hasStatusCode**(`error`, `statusCode`): `boolean`
 
-Defined in: utils/error.ts:54
+Defined in: [utils/error.ts:55](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/error.ts#L55)
 
 Check if an error has a specific status code
 

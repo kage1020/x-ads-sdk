@@ -1,8 +1,15 @@
-**X Ads SDK v1.0.1**
+**X Ads SDK v1.0.2**
 
 ***
 
 # X Ads SDK
+
+[![NPM Version](https://img.shields.io/npm/v/x-ads-sdk.svg)](https://www.npmjs.com/package/x-ads-sdk)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/x-ads-sdk.svg)](https://bundlephobia.com/package/x-ads-sdk)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/npm/l/x-ads-sdk.svg)](https://github.com/kage1020/x-ads-sdk/blob/main/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/kage1020/x-ads-sdk/ci.yml?branch=main)](https://github.com/kage1020/x-ads-sdk/actions)
+[![Coverage](https://img.shields.io/codecov/c/github/kage1020/x-ads-sdk.svg)](https://codecov.io/gh/kage1020/x-ads-sdk)
 
 A Node.js SDK for the X Ads API built with TypeScript. This SDK provides easy access to advertising campaign management, analytics, and reporting functionality.
 
@@ -31,10 +38,10 @@ import { XAdsClient, Environment } from 'x-ads-sdk';
 
 const client = new XAdsClient({
   auth: {
-    consumer_key: 'your_consumer_key',
-    consumer_secret: 'your_consumer_secret',
-    access_token: 'your_access_token',
-    access_token_secret: 'your_access_token_secret'
+    consumerKey: 'your_consumer_key',
+    consumerSecret: 'your_consumer_secret',
+    accessToken: 'your_access_token',
+    accessTokenSecret: 'your_access_token_secret'
   },
   environment: Environment.SANDBOX // or Environment.PRODUCTION
 });
@@ -56,10 +63,10 @@ Then use in your code:
 ```typescript
 const client = new XAdsClient({
   auth: {
-    consumer_key: process.env.X_CONSUMER_KEY!,
-    consumer_secret: process.env.X_CONSUMER_SECRET!,
-    access_token: process.env.X_ACCESS_TOKEN!,
-    access_token_secret: process.env.X_ACCESS_TOKEN_SECRET!
+    consumerKey: process.env.X_CONSUMER_KEY!,
+    consumerSecret: process.env.X_CONSUMER_SECRET!,
+    accessToken: process.env.X_ACCESS_TOKEN!,
+    accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!
   },
   environment: Environment.SANDBOX
 });
@@ -162,10 +169,10 @@ const lastWeekAnalytics = await client.analytics.getLastWeekAnalytics(
 ```typescript
 const client = new XAdsClient({
   auth: {
-    consumer_key: 'your_key',
-    consumer_secret: 'your_secret',
-    access_token: 'your_token',
-    access_token_secret: 'your_token_secret'
+    consumerKey: 'your_key',
+    consumerSecret: 'your_secret',
+    accessToken: 'your_token',
+    accessTokenSecret: 'your_token_secret'
   },
   environment: Environment.SANDBOX, // or Environment.PRODUCTION
   timeout: 30000, // Request timeout in milliseconds

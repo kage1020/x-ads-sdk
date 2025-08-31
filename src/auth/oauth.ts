@@ -1,27 +1,27 @@
-import { createHmac, randomBytes } from 'node:crypto';
 import { AuthenticationError } from '../errors';
 import type { AuthConfig, OAuthSignature, RequestOptions } from '../types/auth';
+import { hmac, randomHex } from '../utils/crypto';
 
 export class OAuth {
-  private consumer_key: string;
-  private consumer_secret: string;
-  private access_token: string;
-  private access_token_secret: string;
-  private signature_method: 'HMAC-SHA1' | 'HMAC-SHA256';
+  private consumerKey: string;
+  private consumerSecret: string;
+  private accessToken: string;
+  private accessTokenSecret: string;
+  private signatureMethod: 'HMAC-SHA1' | 'HMAC-SHA256';
 
   constructor(config: AuthConfig) {
-    this.consumer_key = config.consumer_key;
-    this.consumer_secret = config.consumer_secret;
-    this.access_token = config.access_token;
-    this.access_token_secret = config.access_token_secret;
+    this.consumerKey = config.consumerKey;
+    this.consumerSecret = config.consumerSecret;
+    this.accessToken = config.accessToken;
+    this.accessTokenSecret = config.accessTokenSecret;
     // Default to HMAC-SHA1 for OAuth 1.0a compatibility as per RFC 5849
-    this.signature_method = config.signature_method || 'HMAC-SHA1';
+    this.signatureMethod = config.signatureMethod || 'HMAC-SHA1';
 
     this.validateConfig();
   }
 
   private validateConfig(): void {
-    const required = ['consumer_key', 'consumer_secret', 'access_token', 'access_token_secret'];
+    const required = ['consumerKey', 'consumerSecret', 'accessToken', 'accessTokenSecret'];
     const missing = required.filter((key) => !this[key as keyof OAuth]);
 
     if (missing.length > 0) {
@@ -29,8 +29,8 @@ export class OAuth {
     }
   }
 
-  generateNonce(): string {
-    return randomBytes(16).toString('hex');
+  async generateNonce(): Promise<string> {
+    return randomHex(32);
   }
 
   generateTimestamp(): string {
@@ -44,11 +44,11 @@ export class OAuth {
     );
   }
 
-  generateSignature(
+  async generateSignature(
     httpMethod: string,
     baseURL: string,
     parameters: Record<string, string>
-  ): string {
+  ): Promise<string> {
     const sortedParams = Object.keys(parameters)
       .sort()
       .map((key) => `${this.percentEncode(key)}=${this.percentEncode(parameters[key])}`)
@@ -61,24 +61,24 @@ export class OAuth {
     ].join('&');
 
     const signingKey = [
-      this.percentEncode(this.consumer_secret),
-      this.percentEncode(this.access_token_secret),
+      this.percentEncode(this.consumerSecret),
+      this.percentEncode(this.accessTokenSecret),
     ].join('&');
 
-    const hashAlgorithm = this.signature_method === 'HMAC-SHA256' ? 'sha256' : 'sha1';
-    return createHmac(hashAlgorithm, signingKey).update(signatureBaseString).digest('base64');
+    const algorithm = this.signatureMethod === 'HMAC-SHA256' ? 'SHA-256' : 'SHA-1';
+    return hmac(algorithm, signingKey, signatureBaseString);
   }
 
-  generateOAuthSignature(options: RequestOptions): OAuthSignature {
-    const nonce = this.generateNonce();
+  async generateOAuthSignature(options: RequestOptions): Promise<OAuthSignature> {
+    const nonce = await this.generateNonce();
     const timestamp = this.generateTimestamp();
 
     const oauthParams: Record<string, string> = {
-      oauth_consumer_key: this.consumer_key,
+      oauth_consumer_key: this.consumerKey,
       oauth_nonce: nonce,
-      oauth_signature_method: this.signature_method,
+      oauth_signature_method: this.signatureMethod,
       oauth_timestamp: timestamp,
-      oauth_token: this.access_token,
+      oauth_token: this.accessToken,
       oauth_version: '1.0',
     };
 
@@ -90,15 +90,15 @@ export class OAuth {
       });
     }
 
-    const signature = this.generateSignature(options.method, options.url, allParams);
+    const signature = await this.generateSignature(options.method, options.url, allParams);
 
     return {
-      oauth_consumer_key: this.consumer_key,
+      oauth_consumer_key: this.consumerKey,
       oauth_nonce: nonce,
       oauth_signature: signature,
-      oauth_signature_method: this.signature_method,
+      oauth_signature_method: this.signatureMethod,
       oauth_timestamp: timestamp,
-      oauth_token: this.access_token,
+      oauth_token: this.accessToken,
       oauth_version: '1.0',
     };
   }
@@ -112,8 +112,8 @@ export class OAuth {
     return `OAuth ${authParams}`;
   }
 
-  signRequest(options: RequestOptions): RequestOptions {
-    const signature = this.generateOAuthSignature(options);
+  async signRequest(options: RequestOptions): Promise<RequestOptions> {
+    const signature = await this.generateOAuthSignature(options);
     const authHeader = this.generateAuthorizationHeader(signature);
 
     return {

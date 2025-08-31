@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.1**](../README.md)
+[**X Ads SDK v1.0.2**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **headersToRecord**(`headers`): `Record`\<`string`, `string`\>
 
-Defined in: utils/http.ts:10
+Defined in: [utils/http.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/http.ts#L10)
 
 Convert Headers object to a plain Record<string, string>
 

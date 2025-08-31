@@ -28,7 +28,7 @@ export default [
         showGzippedSize: true
       })
     ],
-    external: ['node:crypto']
+    external: []
   },
   
   // Minified ESM build
@@ -72,6 +72,6 @@ export default [
         showGzippedSize: true
       })
     ],
-    external: ['node:crypto']
+    external: []
   },
 ];

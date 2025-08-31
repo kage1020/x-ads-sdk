@@ -26,10 +26,10 @@ import { RetryHandler, type RetryOptions } from './retry';
 
 export interface HttpClientConfig {
   auth: {
-    consumer_key: string;
-    consumer_secret: string;
-    access_token: string;
-    access_token_secret: string;
+    consumerKey: string;
+    consumerSecret: string;
+    accessToken: string;
+    accessTokenSecret: string;
   };
   environment?: Environment;
   baseURL?: string;
@@ -178,7 +178,7 @@ export class HttpClient implements PluginClient {
 
   private async makeRequest<T>(config: RequestConfig): Promise<T> {
     const requestOptions = this.buildRequestOptions(config);
-    const signedOptions = this.oauth.signRequest(requestOptions);
+    const signedOptions = await this.oauth.signRequest(requestOptions);
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), this.timeout);
