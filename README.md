@@ -1,5 +1,12 @@
 # X Ads SDK
 
+[![NPM Version](https://img.shields.io/npm/v/x-ads-sdk.svg)](https://www.npmjs.com/package/x-ads-sdk)
+[![Bundle Size](https://img.shields.io/bundlephobia/minzip/x-ads-sdk.svg)](https://bundlephobia.com/package/x-ads-sdk)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/npm/l/x-ads-sdk.svg)](https://github.com/kage1020/x-ads-sdk/blob/main/LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/kage1020/x-ads-sdk/ci.yml?branch=main)](https://github.com/kage1020/x-ads-sdk/actions)
+[![Coverage](https://img.shields.io/codecov/c/github/kage1020/x-ads-sdk.svg)](https://codecov.io/gh/kage1020/x-ads-sdk)
+
 A Node.js SDK for the X Ads API built with TypeScript. This SDK provides easy access to advertising campaign management, analytics, and reporting functionality.
 
 ## 🚀 Features
