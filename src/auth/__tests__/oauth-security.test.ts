@@ -68,7 +68,7 @@ describe('OAuth Security Analysis', () => {
       const signingKey = 'test_consumer_secret&test_access_token_secret';
       const baseString = 'GET&https%3A//api.example.com/test&oauth_consumer_key%3Dtest';
 
-      // This is HMAC for OAuth signatures (what the code does)
+      // This is HMAC for OAuth signatures using Web Crypto API (what the code does)
       const oauthSignature = await hmac('SHA-1', signingKey, baseString);
 
       // This would be password hashing (what CodeQL thinks we're doing)

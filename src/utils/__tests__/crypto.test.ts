@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { bytesToBase64, bytesToHex, hmac, randomBytes, randomHex, stringToBytes } from '../crypto';
 
-describe('crypto utilities', () => {
+describe('crypto utilities (Web standards)', () => {
   describe('randomBytes', () => {
     it('should generate bytes of the specified length', async () => {
       const bytes = await randomBytes(16);
@@ -130,7 +130,7 @@ describe('crypto utilities', () => {
     });
   });
 
-  describe('cross-platform compatibility', () => {
+  describe('Web standards compatibility', () => {
     it('should work with OAuth-style signature generation', async () => {
       // Test with OAuth-like parameters
       const signingKey = 'consumer_secret&token_secret';
@@ -141,6 +141,35 @@ describe('crypto utilities', () => {
       expect(signature).toBeDefined();
       expect(typeof signature).toBe('string');
       expect(signature.length).toBeGreaterThan(0);
+    });
+
+    it('should use Web Crypto API when available', async () => {
+      // Verify that Web Crypto API is available in test environment
+      expect(globalThis.crypto).toBeDefined();
+      expect(globalThis.crypto.getRandomValues).toBeDefined();
+      expect(globalThis.crypto.subtle).toBeDefined();
+      
+      // Test that functions work with Web Crypto API
+      const bytes = await randomBytes(16);
+      expect(bytes).toBeInstanceOf(Uint8Array);
+      expect(bytes.length).toBe(16);
+      
+      const signature = await hmac('SHA-1', 'key', 'data');
+      expect(signature).toBeDefined();
+      expect(typeof signature).toBe('string');
+    });
+
+    it('should throw error if btoa is not available', () => {
+      // Mock btoa to be undefined
+      const originalBtoa = globalThis.btoa;
+      // @ts-expect-error - Intentionally setting to undefined for testing
+      globalThis.btoa = undefined;
+
+      const bytes = new Uint8Array([72, 101, 108, 108, 111]);
+      expect(() => bytesToBase64(bytes)).toThrow('btoa not available');
+
+      // Restore original btoa
+      globalThis.btoa = originalBtoa;
     });
   });
 });
