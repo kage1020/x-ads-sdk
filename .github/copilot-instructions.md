@@ -24,7 +24,6 @@
 - `npm run docs` -- generates TypeDoc HTML documentation
 - `npm run docs:serve` -- serves documentation on localhost:8080
 - `npm run docs:generate` -- generates comprehensive docs including development guide (~8.7 seconds)
-- `npm run docs:markdown` -- generates markdown documentation
 - `npm run docs:json` -- generates JSON API reference
 
 ### Bundle Analysis
@@ -88,7 +87,6 @@ src/
 ### Build Output
 - `dist/` -- All compiled output (auto-generated, don't edit)
 - `docs/` -- Generated HTML documentation
-- `docs-md/` -- Generated markdown documentation
 - `coverage/` -- Test coverage reports
 
 ## Common Development Tasks

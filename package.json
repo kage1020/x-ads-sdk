@@ -51,7 +51,7 @@
     "lint:fix": "eslint src/**/*.ts --fix",
     "docs": "typedoc",
     "docs:serve": "npm run docs && npx http-server docs -p 8080 -o",
-    "docs:markdown": "typedoc --plugin typedoc-plugin-markdown --out docs-md",
+
     "docs:json": "typedoc --json docs/api.json",
     "docs:watch": "typedoc --watch",
     "docs:generate": "node scripts/generate-docs.js",
