@@ -128,27 +128,6 @@ export class XAdsClient {
   }
 
   /**
-   * Test the connection and authentication credentials
-   * 
-   * @returns Promise that resolves to true if authentication is successful, false otherwise
-   * @example
-   * ```typescript
-   * const isConnected = await client.testConnection();
-   * if (!isConnected) {
-   *   throw new Error('Failed to authenticate with X Ads API');
-   * }
-   * ```
-   */
-  async testConnection(): Promise<boolean> {
-    try {
-      await this.accounts.list({ count: 1 });
-      return true;
-    } catch (error) {
-      return false;
-    }
-  }
-
-  /**
    * Add a plugin to the SDK for enhanced functionality
    * 
    * @param plugin - The plugin instance to add
