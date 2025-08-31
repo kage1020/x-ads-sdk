@@ -111,14 +111,27 @@ export class RateLimitTracker implements XAdsPlugin {
     if (headers instanceof Headers) {
       return headers.get(name);
     }
-    // Try exact match first, then lowercase, then case-insensitive search
+    
+    // For Record<string, string> headers, do case-insensitive search
+    const lowerName = name.toLowerCase();
+    
+    // First try exact match
     if (headers[name]) {
       return headers[name];
     }
-    const lowerName = name.toLowerCase();
+    
+    // Then try lowercase match
     if (headers[lowerName]) {
       return headers[lowerName];
     }
+    
+    // Finally, do case-insensitive search through all keys
+    for (const [key, value] of Object.entries(headers)) {
+      if (key.toLowerCase() === lowerName) {
+        return value;
+      }
+    }
+    
     return null;
   }
 
