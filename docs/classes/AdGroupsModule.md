@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [modules/ad-groups.ts:13](https://github.com/kage1020/x-ads-sdk/blob
 
 ##### client
 
-[`HttpClient`](HttpClient.md)
+[`HttpClient`](../interfaces/HttpClient.md)
 
 #### Returns
 
@@ -144,7 +144,7 @@ Update an existing ad group
 
 > **delete**(`accountId`, `adGroupId`): `Promise`\<`void`\>
 
-Defined in: [modules/ad-groups.ts:74](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L74)
+Defined in: [modules/ad-groups.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L70)
 
 Delete an ad group (soft delete)
 
@@ -168,7 +168,7 @@ Delete an ad group (soft delete)
 
 > **pause**(`accountId`, `adGroupId`): `Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
 
-Defined in: [modules/ad-groups.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L82)
+Defined in: [modules/ad-groups.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L78)
 
 Pause an ad group
 
@@ -192,7 +192,7 @@ Pause an ad group
 
 > **activate**(`accountId`, `adGroupId`): `Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
 
-Defined in: [modules/ad-groups.ts:91](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L91)
+Defined in: [modules/ad-groups.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L87)
 
 Activate an ad group
 
@@ -216,7 +216,7 @@ Activate an ad group
 
 > **listByCampaign**(`accountId`, `campaignId`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
 
-Defined in: [modules/ad-groups.ts:100](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L100)
+Defined in: [modules/ad-groups.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L96)
 
 List ad groups for a specific campaign
 
@@ -244,7 +244,7 @@ List ad groups for a specific campaign
 
 > **getByStatus**(`accountId`, `status`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
 
-Defined in: [modules/ad-groups.ts:114](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L114)
+Defined in: [modules/ad-groups.ts:110](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L110)
 
 Get ad groups by status
 
@@ -272,7 +272,7 @@ Get ad groups by status
 
 > **getActive**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
 
-Defined in: [modules/ad-groups.ts:136](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L136)
+Defined in: [modules/ad-groups.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L132)
 
 Get active ad groups
 
@@ -296,7 +296,7 @@ Get active ad groups
 
 > **getPaused**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
 
-Defined in: [modules/ad-groups.ts:146](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L146)
+Defined in: [modules/ad-groups.ts:142](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L142)
 
 Get paused ad groups
 
@@ -320,7 +320,7 @@ Get paused ad groups
 
 > **getDeleted**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
 
-Defined in: [modules/ad-groups.ts:156](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L156)
+Defined in: [modules/ad-groups.ts:152](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L152)
 
 Get deleted ad groups
 
@@ -344,7 +344,7 @@ Get deleted ad groups
 
 > **getActiveByCampaign**(`accountId`, `campaignId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
 
-Defined in: [modules/ad-groups.ts:166](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L166)
+Defined in: [modules/ad-groups.ts:162](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L162)
 
 Get active ad groups for a specific campaign
 
@@ -430,7 +430,7 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makeGetRequest**\<`T`\>(`endpoint`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L30)
+Defined in: [modules/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L27)
 
 #### Type Parameters
 
@@ -458,7 +458,7 @@ Defined in: [modules/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makePostRequest**\<`T`\>(`endpoint`, `body`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L35)
+Defined in: [modules/base.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L32)
 
 #### Type Parameters
 
@@ -474,7 +474,7 @@ Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### body
 
-`any`
+`unknown`
 
 #### Returns
 
@@ -490,7 +490,7 @@ Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makePutRequest**\<`T`\>(`endpoint`, `body`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L40)
+Defined in: [modules/base.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L37)
 
 #### Type Parameters
 
@@ -506,7 +506,7 @@ Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### body
 
-`any`
+`unknown`
 
 #### Returns
 
@@ -522,7 +522,7 @@ Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makeDeleteRequest**(`endpoint`): `Promise`\<`void`\>
 
-Defined in: [modules/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L45)
+Defined in: [modules/base.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L42)
 
 #### Parameters
 
@@ -544,7 +544,7 @@ Defined in: [modules/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **createPaginator**\<`T`\>(`endpoint`, `baseParams`, `options`): [`CursorPaginator`](CursorPaginator.md)\<`T`\>
 
-Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L49)
+Defined in: [modules/base.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L46)
 
 #### Type Parameters
 
@@ -560,7 +560,7 @@ Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### baseParams
 
-`Record`\<`string`, `any`\> = `{}`
+`Record`\<`string`, `unknown`\> = `{}`
 
 ##### options
 
@@ -578,7 +578,7 @@ Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### client
 
-> `protected` **client**: [`HttpClient`](HttpClient.md)
+> `protected` **client**: [`HttpClient`](../interfaces/HttpClient.md)
 
 Defined in: [modules/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L6)
 

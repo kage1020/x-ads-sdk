@@ -1,7 +1,7 @@
 export enum CampaignStatus {
   ACTIVE = 'ACTIVE',
-  PAUSED = 'PAUSED', 
-  DELETED = 'DELETED'
+  PAUSED = 'PAUSED',
+  DELETED = 'DELETED',
 }
 
 export enum CampaignObjective {
@@ -13,12 +13,12 @@ export enum CampaignObjective {
   REACH = 'REACH',
   VIDEO_VIEWS = 'VIDEO_VIEWS',
   WEBSITE_CLICKS = 'WEBSITE_CLICKS',
-  WEBSITE_CONVERSIONS = 'WEBSITE_CONVERSIONS'
+  WEBSITE_CONVERSIONS = 'WEBSITE_CONVERSIONS',
 }
 
 export enum CampaignPlacement {
   ALL_ON_TWITTER = 'ALL_ON_TWITTER',
-  PUBLISHER_NETWORK = 'PUBLISHER_NETWORK'
+  PUBLISHER_NETWORK = 'PUBLISHER_NETWORK',
 }
 
 export interface Campaign {
@@ -65,4 +65,5 @@ export interface CampaignListParams {
   count?: number;
   cursor?: string;
   sort_by?: string;
+  [key: string]: unknown;
 }

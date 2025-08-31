@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: NetworkError
 
-Defined in: [errors/index.ts:107](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L107)
+Defined in: [errors/index.ts:116](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L116)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: [errors/index.ts:107](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **new NetworkError**(`message`, `originalError?`, `code?`): `NetworkError`
 
-Defined in: [errors/index.ts:108](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L108)
+Defined in: [errors/index.ts:117](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L117)
 
 #### Parameters
 
@@ -124,4 +124,4 @@ Defined in: [errors/index.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `readonly` `optional` **originalError**: `Error`
 
-Defined in: [errors/index.ts:110](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L110)
+Defined in: [errors/index.ts:119](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L119)

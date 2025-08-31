@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -7,6 +7,10 @@
 # Interface: CampaignListParams
 
 Defined in: [types/campaign.ts:61](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L61)
+
+## Indexable
+
+\[`key`: `string`\]: `unknown`
 
 ## Properties
 

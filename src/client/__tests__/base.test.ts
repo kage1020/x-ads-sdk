@@ -1,7 +1,7 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { HttpClient } from '../base.js';
-import { Environment } from '../../types/common.js';
-import { AuthenticationError, APIError } from '../../errors/index.js';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { APIError, AuthenticationError } from '../../errors';
+import { Environment } from '../../types/common';
+import { HttpClient } from '../base';
 
 // Mock fetch globally
 const mockFetch = vi.fn();
@@ -13,8 +13,8 @@ describe('HttpClient', () => {
       consumer_key: 'test_consumer_key',
       consumer_secret: 'test_consumer_secret',
       access_token: 'test_access_token',
-      access_token_secret: 'test_access_token_secret'
-    }
+      access_token_secret: 'test_access_token_secret',
+    },
   };
 
   let client: HttpClient;
@@ -36,7 +36,7 @@ describe('HttpClient', () => {
     it('should use production URL when environment is production', () => {
       const prodClient = new HttpClient({
         ...testConfig,
-        environment: Environment.PRODUCTION
+        environment: Environment.PRODUCTION,
       });
       expect(prodClient).toBeInstanceOf(HttpClient);
     });
@@ -44,7 +44,7 @@ describe('HttpClient', () => {
     it('should use custom baseURL when provided', () => {
       const customClient = new HttpClient({
         ...testConfig,
-        baseURL: 'https://custom.api.com'
+        baseURL: 'https://custom.api.com',
       });
       expect(customClient).toBeInstanceOf(HttpClient);
     });
@@ -56,9 +56,9 @@ describe('HttpClient', () => {
         ok: true,
         status: 200,
         headers: new Headers({
-          'content-type': 'application/json'
+          'content-type': 'application/json',
         }),
-        json: vi.fn().mockResolvedValue({ data: 'test' })
+        json: vi.fn().mockResolvedValue({ data: 'test' }),
       };
       mockFetch.mockResolvedValue(mockResponse);
 
@@ -69,8 +69,8 @@ describe('HttpClient', () => {
         expect.objectContaining({
           method: 'GET',
           headers: expect.objectContaining({
-            'Authorization': expect.stringMatching(/^OAuth /)
-          })
+            Authorization: expect.stringMatching(/^OAuth /),
+          }),
         })
       );
       expect(result).toEqual({ data: 'test' });
@@ -81,9 +81,9 @@ describe('HttpClient', () => {
         ok: true,
         status: 200,
         headers: new Headers({
-          'content-type': 'application/json'
+          'content-type': 'application/json',
         }),
-        json: vi.fn().mockResolvedValue({ data: 'created' })
+        json: vi.fn().mockResolvedValue({ data: 'created' }),
       };
       mockFetch.mockResolvedValue(mockResponse);
 
@@ -97,8 +97,8 @@ describe('HttpClient', () => {
           body: JSON.stringify(body),
           headers: expect.objectContaining({
             'Content-Type': 'application/json',
-            'Authorization': expect.stringMatching(/^OAuth /)
-          })
+            Authorization: expect.stringMatching(/^OAuth /),
+          }),
         })
       );
       expect(result).toEqual({ data: 'created' });
@@ -110,8 +110,8 @@ describe('HttpClient', () => {
         status: 401,
         headers: new Headers(),
         json: vi.fn().mockResolvedValue({
-          errors: [{ message: 'Unauthorized' }]
-        })
+          errors: [{ message: 'Unauthorized' }],
+        }),
       };
       mockFetch.mockResolvedValue(mockResponse);
 
@@ -121,7 +121,7 @@ describe('HttpClient', () => {
     it('should handle rate limiting configuration', () => {
       const rateLimitClient = new HttpClient({
         ...testConfig,
-        rateLimitOptions: { strategy: 'throw', defaultLimit: 100 }
+        rateLimitOptions: { strategy: 'throw', defaultLimit: 100 },
       });
 
       expect(rateLimitClient).toBeInstanceOf(HttpClient);
@@ -133,8 +133,8 @@ describe('HttpClient', () => {
         status: 400,
         headers: new Headers(),
         json: vi.fn().mockResolvedValue({
-          errors: [{ message: 'Bad Request', code: 'INVALID_PARAM' }]
-        })
+          errors: [{ message: 'Bad Request', code: 'INVALID_PARAM' }],
+        }),
       };
       mockFetch.mockResolvedValue(mockResponse);
 
@@ -145,7 +145,7 @@ describe('HttpClient', () => {
       const mockResponse = {
         ok: true,
         status: 204,
-        headers: new Headers()
+        headers: new Headers(),
       };
       mockFetch.mockResolvedValue(mockResponse);
 
@@ -154,19 +154,20 @@ describe('HttpClient', () => {
     });
 
     it('should handle network timeout', async () => {
-      mockFetch.mockImplementation(() => 
-        new Promise((_, reject) => {
-          setTimeout(() => {
-            const error = new Error('Request timeout');
-            error.name = 'AbortError';
-            reject(error);
-          }, 100);
-        })
+      mockFetch.mockImplementation(
+        () =>
+          new Promise((_, reject) => {
+            setTimeout(() => {
+              const error = new Error('Request timeout');
+              error.name = 'AbortError';
+              reject(error);
+            }, 100);
+          })
       );
 
       const shortTimeoutClient = new HttpClient({
         ...testConfig,
-        timeout: 50
+        timeout: 50,
       });
 
       await expect(shortTimeoutClient.get('/test')).rejects.toThrow('Request timeout');
@@ -177,9 +178,9 @@ describe('HttpClient', () => {
         ok: true,
         status: 200,
         headers: new Headers({
-          'content-type': 'application/json'
+          'content-type': 'application/json',
         }),
-        json: vi.fn().mockResolvedValue({ data: 'test' })
+        json: vi.fn().mockResolvedValue({ data: 'test' }),
       };
       mockFetch.mockResolvedValue(mockResponse);
 
@@ -196,9 +197,9 @@ describe('HttpClient', () => {
         ok: true,
         status: 200,
         headers: new Headers({
-          'content-type': 'application/json'
+          'content-type': 'application/json',
         }),
-        json: vi.fn().mockResolvedValue({ data: 'test' })
+        json: vi.fn().mockResolvedValue({ data: 'test' }),
       };
       mockFetch.mockResolvedValue(mockResponse);
 

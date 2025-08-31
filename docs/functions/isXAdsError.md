@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -8,13 +8,13 @@
 
 > **isXAdsError**(`error`): `error is XAdsError`
 
-Defined in: [errors/index.ts:176](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L176)
+Defined in: [errors/index.ts:185](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L185)
 
 ## Parameters
 
 ### error
 
-`any`
+`unknown`
 
 ## Returns
 

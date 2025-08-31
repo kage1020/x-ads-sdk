@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AnalyticsMetrics
 
-Defined in: [types/analytics.ts:86](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L86)
+Defined in: [types/analytics.ts:81](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L81)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/analytics.ts:86](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **impressions**: `number`
 
-Defined in: [types/analytics.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L87)
+Defined in: [types/analytics.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L82)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [types/analytics.ts:87](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **clicks**: `number`
 
-Defined in: [types/analytics.ts:88](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L88)
+Defined in: [types/analytics.ts:83](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L83)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [types/analytics.ts:88](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **engagements**: `number`
 
-Defined in: [types/analytics.ts:89](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L89)
+Defined in: [types/analytics.ts:84](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L84)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [types/analytics.ts:89](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **retweets**: `number`
 
-Defined in: [types/analytics.ts:90](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L90)
+Defined in: [types/analytics.ts:85](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L85)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: [types/analytics.ts:90](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **replies**: `number`
 
-Defined in: [types/analytics.ts:91](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L91)
+Defined in: [types/analytics.ts:86](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L86)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: [types/analytics.ts:91](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **likes**: `number`
 
-Defined in: [types/analytics.ts:92](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L92)
+Defined in: [types/analytics.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L87)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: [types/analytics.ts:92](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **follows**: `number`
 
-Defined in: [types/analytics.ts:93](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L93)
+Defined in: [types/analytics.ts:88](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L88)
 
 ***
 
@@ -70,7 +70,7 @@ Defined in: [types/analytics.ts:93](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **card\_engagements**: `number`
 
-Defined in: [types/analytics.ts:94](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L94)
+Defined in: [types/analytics.ts:89](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L89)
 
 ***
 
@@ -78,7 +78,7 @@ Defined in: [types/analytics.ts:94](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **carousel\_swipes**: `number`
 
-Defined in: [types/analytics.ts:95](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L95)
+Defined in: [types/analytics.ts:90](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L90)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in: [types/analytics.ts:95](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **billed\_charge\_local\_micro**: `number`
 
-Defined in: [types/analytics.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L97)
+Defined in: [types/analytics.ts:92](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L92)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: [types/analytics.ts:97](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **billed\_engagements**: `number`
 
-Defined in: [types/analytics.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L98)
+Defined in: [types/analytics.ts:93](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L93)
 
 ***
 
@@ -102,7 +102,7 @@ Defined in: [types/analytics.ts:98](https://github.com/kage1020/x-ads-sdk/blob/m
 
 > `optional` **video\_total\_views**: `number`
 
-Defined in: [types/analytics.ts:100](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L100)
+Defined in: [types/analytics.ts:95](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L95)
 
 ***
 
@@ -110,7 +110,7 @@ Defined in: [types/analytics.ts:100](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **video\_views\_25**: `number`
 
-Defined in: [types/analytics.ts:101](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L101)
+Defined in: [types/analytics.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L96)
 
 ***
 
@@ -118,7 +118,7 @@ Defined in: [types/analytics.ts:101](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **video\_views\_50**: `number`
 
-Defined in: [types/analytics.ts:102](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L102)
+Defined in: [types/analytics.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L97)
 
 ***
 
@@ -126,7 +126,7 @@ Defined in: [types/analytics.ts:102](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **video\_views\_75**: `number`
 
-Defined in: [types/analytics.ts:103](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L103)
+Defined in: [types/analytics.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L98)
 
 ***
 
@@ -134,7 +134,7 @@ Defined in: [types/analytics.ts:103](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **video\_views\_100**: `number`
 
-Defined in: [types/analytics.ts:104](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L104)
+Defined in: [types/analytics.ts:99](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L99)
 
 ***
 
@@ -142,7 +142,7 @@ Defined in: [types/analytics.ts:104](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **video\_cta\_clicks**: `number`
 
-Defined in: [types/analytics.ts:105](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L105)
+Defined in: [types/analytics.ts:100](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L100)
 
 ***
 
@@ -150,7 +150,7 @@ Defined in: [types/analytics.ts:105](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **video\_content\_starts**: `number`
 
-Defined in: [types/analytics.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L106)
+Defined in: [types/analytics.ts:101](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L101)
 
 ***
 
@@ -158,7 +158,7 @@ Defined in: [types/analytics.ts:106](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **media\_views**: `number`
 
-Defined in: [types/analytics.ts:108](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L108)
+Defined in: [types/analytics.ts:103](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L103)
 
 ***
 
@@ -166,7 +166,7 @@ Defined in: [types/analytics.ts:108](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **media\_engagements**: `number`
 
-Defined in: [types/analytics.ts:109](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L109)
+Defined in: [types/analytics.ts:104](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L104)
 
 ***
 
@@ -174,7 +174,7 @@ Defined in: [types/analytics.ts:109](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **conversion\_purchases**: `number`
 
-Defined in: [types/analytics.ts:111](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L111)
+Defined in: [types/analytics.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L106)
 
 ***
 
@@ -182,7 +182,7 @@ Defined in: [types/analytics.ts:111](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **conversion\_sign\_ups**: `number`
 
-Defined in: [types/analytics.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L112)
+Defined in: [types/analytics.ts:107](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L107)
 
 ***
 
@@ -190,7 +190,7 @@ Defined in: [types/analytics.ts:112](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **conversion\_site\_visits**: `number`
 
-Defined in: [types/analytics.ts:113](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L113)
+Defined in: [types/analytics.ts:108](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L108)
 
 ***
 
@@ -198,7 +198,7 @@ Defined in: [types/analytics.ts:113](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **conversion\_downloads**: `number`
 
-Defined in: [types/analytics.ts:114](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L114)
+Defined in: [types/analytics.ts:109](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L109)
 
 ***
 
@@ -206,7 +206,7 @@ Defined in: [types/analytics.ts:114](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **conversion\_custom**: `number`
 
-Defined in: [types/analytics.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L115)
+Defined in: [types/analytics.ts:110](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L110)
 
 ***
 
@@ -214,7 +214,7 @@ Defined in: [types/analytics.ts:115](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **mobile\_conversion\_installs**: `number`
 
-Defined in: [types/analytics.ts:117](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L117)
+Defined in: [types/analytics.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L112)
 
 ***
 
@@ -222,7 +222,7 @@ Defined in: [types/analytics.ts:117](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **mobile\_conversion\_purchases**: `number`
 
-Defined in: [types/analytics.ts:118](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L118)
+Defined in: [types/analytics.ts:113](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L113)
 
 ***
 
@@ -230,7 +230,7 @@ Defined in: [types/analytics.ts:118](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **mobile\_conversion\_sign\_ups**: `number`
 
-Defined in: [types/analytics.ts:119](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L119)
+Defined in: [types/analytics.ts:114](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L114)
 
 ***
 
@@ -238,7 +238,7 @@ Defined in: [types/analytics.ts:119](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **mobile\_conversion\_downloads**: `number`
 
-Defined in: [types/analytics.ts:120](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L120)
+Defined in: [types/analytics.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L115)
 
 ***
 
@@ -246,4 +246,4 @@ Defined in: [types/analytics.ts:120](https://github.com/kage1020/x-ads-sdk/blob/
 
 > `optional` **mobile\_conversion\_custom**: `number`
 
-Defined in: [types/analytics.ts:121](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L121)
+Defined in: [types/analytics.ts:116](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L116)

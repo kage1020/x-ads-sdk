@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -8,13 +8,13 @@
 
 > **isAuthenticationError**(`error`): `error is AuthenticationError`
 
-Defined in: [errors/index.ts:184](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L184)
+Defined in: [errors/index.ts:193](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L193)
 
 ## Parameters
 
 ### error
 
-`any`
+`unknown`
 
 ## Returns
 

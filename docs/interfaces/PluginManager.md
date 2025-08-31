@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: PluginManager
 
-Defined in: [plugins/base.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L15)
+Defined in: [plugins/base.ts:48](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L48)
 
 ## Methods
 
@@ -14,7 +14,7 @@ Defined in: [plugins/base.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **use**(`plugin`): `void`
 
-Defined in: [plugins/base.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L18)
+Defined in: [plugins/base.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L51)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [plugins/base.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **remove**(`pluginName`): `boolean`
 
-Defined in: [plugins/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L19)
+Defined in: [plugins/base.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L52)
 
 #### Parameters
 
@@ -50,7 +50,7 @@ Defined in: [plugins/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **has**(`pluginName`): `boolean`
 
-Defined in: [plugins/base.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L20)
+Defined in: [plugins/base.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L53)
 
 #### Parameters
 
@@ -68,7 +68,7 @@ Defined in: [plugins/base.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **get**(`pluginName`): `undefined` \| [`XAdsPlugin`](XAdsPlugin.md)
 
-Defined in: [plugins/base.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L21)
+Defined in: [plugins/base.ts:54](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L54)
 
 #### Parameters
 
@@ -84,63 +84,63 @@ Defined in: [plugins/base.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### executeBeforeRequest()
 
-> **executeBeforeRequest**(`config`): `Promise`\<`any`\>
+> **executeBeforeRequest**(`config`): `Promise`\<`PluginRequestConfig`\>
 
-Defined in: [plugins/base.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L24)
+Defined in: [plugins/base.ts:57](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L57)
 
 #### Parameters
 
 ##### config
 
-`any`
+`PluginRequestConfig`
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise`\<`PluginRequestConfig`\>
 
 ***
 
 ### executeAfterResponse()
 
-> **executeAfterResponse**(`response`, `config`): `Promise`\<`any`\>
+> **executeAfterResponse**(`response`, `config`): `Promise`\<`PluginResponse`\<`unknown`\>\>
 
-Defined in: [plugins/base.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L25)
+Defined in: [plugins/base.ts:58](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L58)
 
 #### Parameters
 
 ##### response
 
-`any`
+`PluginResponse`
 
 ##### config
 
-`any`
+`PluginRequestConfig`
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise`\<`PluginResponse`\<`unknown`\>\>
 
 ***
 
 ### executeOnError()
 
-> **executeOnError**(`error`, `config`): `Promise`\<`any`\>
+> **executeOnError**(`error`, `config`): `Promise`\<`PluginResponse`\<`unknown`\>\>
 
-Defined in: [plugins/base.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L26)
+Defined in: [plugins/base.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L62)
 
 #### Parameters
 
 ##### error
 
-`any`
+`Error`
 
 ##### config
 
-`any`
+`PluginRequestConfig`
 
 #### Returns
 
-`Promise`\<`any`\>
+`Promise`\<`PluginResponse`\<`unknown`\>\>
 
 ## Properties
 
@@ -148,4 +148,4 @@ Defined in: [plugins/base.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **plugins**: `Map`\<`string`, [`XAdsPlugin`](XAdsPlugin.md)\>
 
-Defined in: [plugins/base.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L16)
+Defined in: [plugins/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L49)

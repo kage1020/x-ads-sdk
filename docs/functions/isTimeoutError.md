@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -8,13 +8,13 @@
 
 > **isTimeoutError**(`error`): `error is TimeoutError`
 
-Defined in: [errors/index.ts:196](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L196)
+Defined in: [errors/index.ts:205](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L205)
 
 ## Parameters
 
 ### error
 
-`any`
+`unknown`
 
 ## Returns
 

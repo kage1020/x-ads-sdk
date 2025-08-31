@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RequestOptions
 
-Defined in: [types/auth.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L19)
+Defined in: [types/auth.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L27)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/auth.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **method**: `string`
 
-Defined in: [types/auth.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L20)
+Defined in: [types/auth.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L28)
 
 ***
 
@@ -22,23 +22,23 @@ Defined in: [types/auth.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **url**: `string`
 
-Defined in: [types/auth.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L21)
+Defined in: [types/auth.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L29)
 
 ***
 
 ### params?
 
-> `optional` **params**: `Record`\<`string`, `any`\>
+> `optional` **params**: `Record`\<`string`, `unknown`\>
 
-Defined in: [types/auth.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L22)
+Defined in: [types/auth.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L30)
 
 ***
 
 ### body?
 
-> `optional` **body**: `any`
+> `optional` **body**: `unknown`
 
-Defined in: [types/auth.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L23)
+Defined in: [types/auth.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L31)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [types/auth.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [types/auth.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L24)
+Defined in: [types/auth.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L32)

@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -6,7 +6,11 @@
 
 # Interface: ListParams
 
-Defined in: [types/common.ts:1](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L1)
+Defined in: [types/common.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L3)
+
+## Indexable
+
+\[`key`: `string`\]: `unknown`
 
 ## Properties
 
@@ -14,7 +18,7 @@ Defined in: [types/common.ts:1](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **count**: `number`
 
-Defined in: [types/common.ts:2](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L2)
+Defined in: [types/common.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L4)
 
 ***
 
@@ -22,7 +26,7 @@ Defined in: [types/common.ts:2](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **cursor**: `string`
 
-Defined in: [types/common.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L3)
+Defined in: [types/common.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L5)
 
 ***
 
@@ -30,7 +34,7 @@ Defined in: [types/common.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **sort\_by**: `string`
 
-Defined in: [types/common.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L4)
+Defined in: [types/common.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L6)
 
 ***
 
@@ -38,4 +42,4 @@ Defined in: [types/common.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **with\_deleted**: `boolean`
 
-Defined in: [types/common.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L5)
+Defined in: [types/common.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L7)

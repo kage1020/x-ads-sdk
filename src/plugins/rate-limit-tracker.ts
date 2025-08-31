@@ -1,4 +1,5 @@
-import { XAdsPlugin } from './base.js';
+import { hasStatusCode, unixTimestampToDate } from '../utils';
+import type { PluginRequestConfig, PluginResponse, XAdsPlugin } from './base';
 
 export interface RateLimitInfo {
   endpoint: string;
@@ -28,34 +29,34 @@ export class RateLimitTracker implements XAdsPlugin {
       trackingEnabled: true,
       logEnabled: false,
       warningThreshold: 10,
-      ...options
+      ...options,
     };
   }
 
-  afterResponse(response: any, config: any): any {
+  afterResponse(response: PluginResponse, config: PluginRequestConfig): PluginResponse {
     if (!this.options.trackingEnabled) {
       return response;
     }
 
-    const endpoint = this.extractEndpoint(config.url || config.endpoint);
+    const endpoint = this.extractEndpoint(config.url);
     const headers = response.headers || new Headers();
-    
+
     const limit = this.getHeaderValue(headers, 'x-rate-limit-limit');
     const remaining = this.getHeaderValue(headers, 'x-rate-limit-remaining');
     const reset = this.getHeaderValue(headers, 'x-rate-limit-reset');
 
     if (limit && remaining && reset) {
-      const resetTime = new Date(parseInt(reset) * 1000);
+      const resetTime = unixTimestampToDate(reset);
       const existingInfo = this.rateLimits.get(endpoint);
-      
+
       const rateLimitInfo: RateLimitInfo = {
         endpoint,
-        limit: parseInt(limit),
-        remaining: parseInt(remaining),
+        limit: parseInt(limit, 10),
+        remaining: parseInt(remaining, 10),
         resetTime,
-        resetTimeSeconds: parseInt(reset),
+        resetTimeSeconds: parseInt(reset, 10),
         requestCount: (existingInfo?.requestCount || 0) + 1,
-        lastRequest: new Date()
+        lastRequest: new Date(),
       };
 
       this.rateLimits.set(endpoint, rateLimitInfo);
@@ -64,7 +65,7 @@ export class RateLimitTracker implements XAdsPlugin {
       if (this.options.logEnabled && rateLimitInfo.remaining <= this.options.warningThreshold) {
         console.warn(
           `Rate limit warning for ${endpoint}: ${rateLimitInfo.remaining}/${rateLimitInfo.limit} requests remaining. ` +
-          `Resets at ${rateLimitInfo.resetTime.toISOString()}`
+            `Resets at ${rateLimitInfo.resetTime.toISOString()}`
         );
       }
     }
@@ -72,16 +73,16 @@ export class RateLimitTracker implements XAdsPlugin {
     return response;
   }
 
-  onError(error: any, config: any): any {
+  onError(error: Error, config: PluginRequestConfig): undefined {
     if (!this.options.trackingEnabled) {
       return;
     }
 
     // Track 429 errors even if headers aren't available
-    if (error.statusCode === 429) {
-      const endpoint = this.extractEndpoint(config.url || config.endpoint);
+    if (hasStatusCode(error, 429)) {
+      const endpoint = this.extractEndpoint(config.url);
       const existingInfo = this.rateLimits.get(endpoint);
-      
+
       if (existingInfo) {
         existingInfo.remaining = 0;
         existingInfo.lastRequest = new Date();
@@ -124,7 +125,9 @@ export class RateLimitTracker implements XAdsPlugin {
 
   getRemainingRequests(endpoint: string): number | null {
     const info = this.rateLimits.get(endpoint);
-    if (!info) {return null;}
+    if (!info) {
+      return null;
+    }
 
     // Check if reset time has passed
     if (new Date() >= info.resetTime) {
@@ -137,11 +140,13 @@ export class RateLimitTracker implements XAdsPlugin {
 
   getTimeUntilReset(endpoint: string): number | null {
     const info = this.rateLimits.get(endpoint);
-    if (!info) {return null;}
+    if (!info) {
+      return null;
+    }
 
     const now = Date.now();
     const resetTime = info.resetTime.getTime();
-    
+
     if (now >= resetTime) {
       this.rateLimits.delete(endpoint);
       return null;
@@ -163,8 +168,15 @@ export class RateLimitTracker implements XAdsPlugin {
     requestCount: number;
     utilizationRate: number;
   }> {
-    const summary: any[] = [];
-    
+    const summary: Array<{
+      endpoint: string;
+      limit: number;
+      remaining: number;
+      resetTime: Date;
+      requestCount: number;
+      utilizationRate: number;
+    }> = [];
+
     for (const [endpoint, info] of this.rateLimits) {
       // Skip expired entries
       if (new Date() >= info.resetTime) {
@@ -178,7 +190,7 @@ export class RateLimitTracker implements XAdsPlugin {
         limit: info.limit,
         resetTime: info.resetTime,
         requestCount: info.requestCount,
-        utilizationRate: ((info.limit - info.remaining) / info.limit) * 100
+        utilizationRate: ((info.limit - info.remaining) / info.limit) * 100,
       });
     }
 

@@ -1,4 +1,4 @@
-**X Ads SDK v1.0.0**
+**X Ads SDK v1.0.1**
 
 ***
 
@@ -38,10 +38,6 @@ const client = new XAdsClient({
   },
   environment: Environment.SANDBOX // or Environment.PRODUCTION
 });
-
-// Test the connection
-const isConnected = await client.testConnection();
-console.log('Connected:', isConnected);
 ```
 
 ### Environment Variables Setup
@@ -327,7 +323,7 @@ The analytics module supports comprehensive metrics:
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on:
+Contributions are welcome! Please follow these guidelines:
 
 - Code style and standards
 - Testing requirements

@@ -1,14 +1,14 @@
-import { BaseModule } from './base.js';
-import { HttpClient } from '../client/base.js';
-import { PaginatedResponse } from '../types/common.js';
-import { CursorPaginator, PaginatorOptions } from '../paginators/index.js';
+import type { HttpClient } from '../client/base';
+import type { CursorPaginator, PaginatorOptions } from '../paginators';
 import {
-  Campaign,
-  CreateCampaignData,
-  UpdateCampaignData,
-  CampaignListParams,
-  CampaignStatus
-} from '../types/campaign.js';
+  type Campaign,
+  type CampaignListParams,
+  CampaignStatus,
+  type CreateCampaignData,
+  type UpdateCampaignData,
+} from '../types/campaign';
+import type { PaginatedResponse } from '../types/common';
+import { BaseModule } from './base';
 
 export class CampaignsModule extends BaseModule {
   constructor(client: HttpClient) {
@@ -19,7 +19,7 @@ export class CampaignsModule extends BaseModule {
    * List campaigns for an account
    */
   async list(
-    accountId: string, 
+    accountId: string,
     params: CampaignListParams = {}
   ): Promise<PaginatedResponse<Campaign>> {
     const endpoint = this.buildEndpoint(accountId, 'campaigns');
@@ -39,7 +39,7 @@ export class CampaignsModule extends BaseModule {
    */
   async create(accountId: string, data: CreateCampaignData): Promise<Campaign> {
     const endpoint = this.buildEndpoint(accountId, 'campaigns');
-    
+
     // Convert data to API format
     const requestBody = {
       name: data.name,
@@ -49,7 +49,7 @@ export class CampaignsModule extends BaseModule {
       start_time: data.start_time,
       end_time: data.end_time,
       daily_budget_amount_local_micro: data.daily_budget_amount_local_micro,
-      total_budget_amount_local_micro: data.total_budget_amount_local_micro
+      total_budget_amount_local_micro: data.total_budget_amount_local_micro,
     };
 
     return this.makePostRequest<Campaign>(endpoint, requestBody);
@@ -58,11 +58,7 @@ export class CampaignsModule extends BaseModule {
   /**
    * Update an existing campaign
    */
-  async update(
-    accountId: string, 
-    campaignId: string, 
-    data: UpdateCampaignData
-  ): Promise<Campaign> {
+  async update(accountId: string, campaignId: string, data: UpdateCampaignData): Promise<Campaign> {
     const endpoint = this.buildEndpoint(accountId, 'campaigns', campaignId);
     return this.makePutRequest<Campaign>(endpoint, data);
   }
@@ -79,8 +75,8 @@ export class CampaignsModule extends BaseModule {
    * Pause a campaign
    */
   async pause(accountId: string, campaignId: string): Promise<Campaign> {
-    return this.update(accountId, campaignId, { 
-      status: CampaignStatus.PAUSED 
+    return this.update(accountId, campaignId, {
+      status: CampaignStatus.PAUSED,
     });
   }
 
@@ -88,8 +84,8 @@ export class CampaignsModule extends BaseModule {
    * Activate a campaign
    */
   async activate(accountId: string, campaignId: string): Promise<Campaign> {
-    return this.update(accountId, campaignId, { 
-      status: CampaignStatus.ACTIVE 
+    return this.update(accountId, campaignId, {
+      status: CampaignStatus.ACTIVE,
     });
   }
 
@@ -97,21 +93,21 @@ export class CampaignsModule extends BaseModule {
    * Get campaigns by status
    */
   async getByStatus(
-    accountId: string, 
+    accountId: string,
     status: CampaignStatus,
     params: Omit<CampaignListParams, 'with_deleted'> = {}
   ): Promise<PaginatedResponse<Campaign>> {
     const campaigns = await this.list(accountId, {
       ...params,
-      with_deleted: status === CampaignStatus.DELETED
+      with_deleted: status === CampaignStatus.DELETED,
     });
 
     // Filter campaigns by status
-    const filteredData = campaigns.data.filter(campaign => campaign.status === status);
-    
+    const filteredData = campaigns.data.filter((campaign) => campaign.status === status);
+
     return {
       ...campaigns,
-      data: filteredData
+      data: filteredData,
     };
   }
 
@@ -119,7 +115,7 @@ export class CampaignsModule extends BaseModule {
    * Get active campaigns
    */
   async getActive(
-    accountId: string, 
+    accountId: string,
     params?: Omit<CampaignListParams, 'with_deleted'>
   ): Promise<PaginatedResponse<Campaign>> {
     return this.getByStatus(accountId, CampaignStatus.ACTIVE, params);
@@ -129,7 +125,7 @@ export class CampaignsModule extends BaseModule {
    * Get paused campaigns
    */
   async getPaused(
-    accountId: string, 
+    accountId: string,
     params?: Omit<CampaignListParams, 'with_deleted'>
   ): Promise<PaginatedResponse<Campaign>> {
     return this.getByStatus(accountId, CampaignStatus.PAUSED, params);
@@ -139,7 +135,7 @@ export class CampaignsModule extends BaseModule {
    * Get deleted campaigns
    */
   async getDeleted(
-    accountId: string, 
+    accountId: string,
     params?: Omit<CampaignListParams, 'with_deleted'>
   ): Promise<PaginatedResponse<Campaign>> {
     return this.getByStatus(accountId, CampaignStatus.DELETED, params);
@@ -160,10 +156,7 @@ export class CampaignsModule extends BaseModule {
   /**
    * Iterate through all campaigns using async iterator
    */
-  async *iterateAll(
-    accountId: string,
-    params: CampaignListParams = {}
-  ): AsyncIterator<Campaign> {
+  async *iterateAll(accountId: string, params: CampaignListParams = {}): AsyncIterator<Campaign> {
     const paginator = this.paginate(accountId, params);
     for await (const campaign of paginator.items()) {
       yield campaign;

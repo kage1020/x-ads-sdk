@@ -22,10 +22,7 @@ export class CursorPaginator<T> implements AsyncIterable<T[]> {
 
   async *[Symbol.asyncIterator](): AsyncIterator<T[]> {
     while (this.hasMore && this.shouldContinue()) {
-      const result = await this.fetcher(
-        this.currentCursor,
-        this.options.pageSize
-      );
+      const result = await this.fetcher(this.currentCursor, this.options.pageSize);
 
       if (result.data.length === 0) {
         break;
@@ -86,16 +83,16 @@ export class OffsetPaginator<T> implements AsyncIterable<T[]> {
   private totalFetched = 0;
 
   constructor(
-    private fetcher: (offset: number, limit?: number) => Promise<{ data: T[]; total_count?: number }>,
+    private fetcher: (
+      offset: number,
+      limit?: number
+    ) => Promise<{ data: T[]; total_count?: number }>,
     private options: PaginatorOptions = {}
   ) {}
 
   async *[Symbol.asyncIterator](): AsyncIterator<T[]> {
     while (this.hasMore && this.shouldContinue()) {
-      const result = await this.fetcher(
-        this.currentOffset,
-        this.options.pageSize
-      );
+      const result = await this.fetcher(this.currentOffset, this.options.pageSize);
 
       if (result.data.length === 0) {
         break;
@@ -103,7 +100,7 @@ export class OffsetPaginator<T> implements AsyncIterable<T[]> {
 
       this.totalFetched += result.data.length;
       this.currentOffset += result.data.length;
-      
+
       // Check if we have more based on page size
       this.hasMore = result.data.length === (this.options.pageSize || 20);
 

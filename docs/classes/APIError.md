@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: APIError
 
-Defined in: [errors/index.ts:59](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L59)
+Defined in: [errors/index.ts:75](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L75)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: [errors/index.ts:59](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **new APIError**(`message`, `statusCode`, `errorCode?`, `details?`, `request?`, `response?`): `APIError`
 
-Defined in: [errors/index.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L60)
+Defined in: [errors/index.ts:76](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L76)
 
 #### Parameters
 
@@ -40,31 +40,15 @@ Defined in: [errors/index.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### details?
 
-`any`
+[`APIErrorDetails`](../interfaces/APIErrorDetails.md)
 
 ##### request?
 
-###### method
-
-`string`
-
-###### url
-
-`string`
-
-###### headers?
-
-`Record`\<`string`, `string`\>
+[`APIErrorRequest`](../interfaces/APIErrorRequest.md)
 
 ##### response?
 
-###### headers
-
-`Record`\<`string`, `string`\>
-
-###### data?
-
-`any`
+[`APIErrorResponse`](../interfaces/APIErrorResponse.md)
 
 #### Returns
 
@@ -80,7 +64,7 @@ Defined in: [errors/index.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **isRetryable**(): `boolean`
 
-Defined in: [errors/index.ts:79](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L79)
+Defined in: [errors/index.ts:88](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L88)
 
 #### Returns
 
@@ -92,7 +76,7 @@ Defined in: [errors/index.ts:79](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **isRateLimit**(): `boolean`
 
-Defined in: [errors/index.ts:83](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L83)
+Defined in: [errors/index.ts:92](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L92)
 
 #### Returns
 
@@ -104,7 +88,7 @@ Defined in: [errors/index.ts:83](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **isServerError**(): `boolean`
 
-Defined in: [errors/index.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L87)
+Defined in: [errors/index.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L96)
 
 #### Returns
 
@@ -116,7 +100,7 @@ Defined in: [errors/index.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **isClientError**(): `boolean`
 
-Defined in: [errors/index.ts:91](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L91)
+Defined in: [errors/index.ts:100](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L100)
 
 #### Returns
 
@@ -128,7 +112,7 @@ Defined in: [errors/index.ts:91](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **toJSON**(): `object`
 
-Defined in: [errors/index.ts:95](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L95)
+Defined in: [errors/index.ts:104](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L104)
 
 #### Returns
 
@@ -164,15 +148,15 @@ Defined in: [errors/index.ts:95](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### details
 
-> **details**: `any`
+> **details**: `undefined` \| [`APIErrorDetails`](../interfaces/APIErrorDetails.md)
 
 ##### request
 
-> **request**: `undefined` \| \{ `method`: `string`; `url`: `string`; `headers?`: `Record`\<`string`, `string`\>; \}
+> **request**: `undefined` \| [`APIErrorRequest`](../interfaces/APIErrorRequest.md)
 
 ##### response
 
-> **response**: `undefined` \| \{ `headers`: `Record`\<`string`, `string`\>; `data?`: `any`; \}
+> **response**: `undefined` \| [`APIErrorResponse`](../interfaces/APIErrorResponse.md)
 
 #### Overrides
 
@@ -220,7 +204,7 @@ Defined in: [errors/index.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `readonly` **statusCode**: `number`
 
-Defined in: [errors/index.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L62)
+Defined in: [errors/index.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L78)
 
 ***
 
@@ -228,48 +212,28 @@ Defined in: [errors/index.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `readonly` `optional` **errorCode**: `string`
 
-Defined in: [errors/index.ts:63](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L63)
+Defined in: [errors/index.ts:79](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L79)
 
 ***
 
 ### details?
 
-> `readonly` `optional` **details**: `any`
+> `readonly` `optional` **details**: [`APIErrorDetails`](../interfaces/APIErrorDetails.md)
 
-Defined in: [errors/index.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L64)
+Defined in: [errors/index.ts:80](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L80)
 
 ***
 
 ### request?
 
-> `readonly` `optional` **request**: `object`
+> `readonly` `optional` **request**: [`APIErrorRequest`](../interfaces/APIErrorRequest.md)
 
-Defined in: [errors/index.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L65)
-
-#### method
-
-> **method**: `string`
-
-#### url
-
-> **url**: `string`
-
-#### headers?
-
-> `optional` **headers**: `Record`\<`string`, `string`\>
+Defined in: [errors/index.ts:81](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L81)
 
 ***
 
 ### response?
 
-> `readonly` `optional` **response**: `object`
+> `readonly` `optional` **response**: [`APIErrorResponse`](../interfaces/APIErrorResponse.md)
 
-Defined in: [errors/index.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L70)
-
-#### headers
-
-> **headers**: `Record`\<`string`, `string`\>
-
-#### data?
-
-> `optional` **data**: `any`
+Defined in: [errors/index.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L82)

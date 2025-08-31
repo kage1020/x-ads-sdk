@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -7,6 +7,10 @@
 # Interface: AdGroupListParams
 
 Defined in: [types/ad-group.ts:75](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/ad-group.ts#L75)
+
+## Indexable
+
+\[`key`: `string`\]: `unknown`
 
 ## Properties
 

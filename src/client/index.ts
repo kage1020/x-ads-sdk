@@ -1,6 +1,7 @@
-export { HttpClient } from './base.js';
-export { RateLimiter } from './rate-limit.js';
-export { RetryHandler } from './retry.js';
-export type { HttpClientConfig, RequestConfig } from './base.js';
-export type { RateLimitInfo, RateLimitOptions } from './rate-limit.js';
-export type { RetryOptions, RetryContext } from './retry.js';
+export type { HttpClientConfig, RequestConfig } from './base';
+export { HttpClient } from './base';
+export type { RateLimitInfo, RateLimitOptions } from './rate-limit';
+export { RateLimiter } from './rate-limit';
+export type { RetryContext, RetryOptions } from './retry';
+export { RetryHandler } from './retry';
+export { XAdsClient } from './x-ads-client';

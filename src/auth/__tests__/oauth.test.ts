@@ -1,13 +1,14 @@
-import { describe, it, expect } from 'vitest';
-import { OAuth } from '../oauth.js';
-import { AuthenticationError } from '../../errors/index.js';
+import { describe, expect, it } from 'vitest';
+import { AuthenticationError } from '../../errors';
+import type { AuthConfig } from '../../types/auth';
+import { OAuth } from '../oauth';
 
 describe('OAuth', () => {
   const validConfig = {
     consumer_key: 'test_consumer_key',
     consumer_secret: 'test_consumer_secret',
     access_token: 'test_access_token',
-    access_token_secret: 'test_access_token_secret'
+    access_token_secret: 'test_access_token_secret',
   };
 
   describe('constructor', () => {
@@ -16,21 +17,23 @@ describe('OAuth', () => {
     });
 
     it('should throw AuthenticationError when missing consumer_key', () => {
-      const config = { ...validConfig };
-      delete (config as any).consumer_key;
-      
-      expect(() => new OAuth(config as any)).toThrow(AuthenticationError);
-      expect(() => new OAuth(config as any)).toThrow('Missing required OAuth parameters: consumer_key');
+      const { consumer_key, ...config } = validConfig;
+      void consumer_key;
+
+      expect(() => new OAuth(config as AuthConfig)).toThrow(AuthenticationError);
+      expect(() => new OAuth(config as AuthConfig)).toThrow(
+        'Missing required OAuth parameters: consumer_key'
+      );
     });
 
     it('should throw AuthenticationError when missing multiple parameters', () => {
       const config = {
         consumer_key: 'test',
-        consumer_secret: ''
+        consumer_secret: '',
       };
-      
-      expect(() => new OAuth(config as any)).toThrow(AuthenticationError);
-      expect(() => new OAuth(config as any)).toThrow('Missing required OAuth parameters');
+
+      expect(() => new OAuth(config as AuthConfig)).toThrow(AuthenticationError);
+      expect(() => new OAuth(config as AuthConfig)).toThrow('Missing required OAuth parameters');
     });
   });
 
@@ -38,7 +41,7 @@ describe('OAuth', () => {
     it('should generate a 32-character hex string', () => {
       const oauth = new OAuth(validConfig);
       const nonce = oauth.generateNonce();
-      
+
       expect(nonce).toMatch(/^[a-f0-9]{32}$/);
     });
 
@@ -46,7 +49,7 @@ describe('OAuth', () => {
       const oauth = new OAuth(validConfig);
       const nonce1 = oauth.generateNonce();
       const nonce2 = oauth.generateNonce();
-      
+
       expect(nonce1).not.toBe(nonce2);
     });
   });
@@ -55,15 +58,15 @@ describe('OAuth', () => {
     it('should generate a numeric timestamp string', () => {
       const oauth = new OAuth(validConfig);
       const timestamp = oauth.generateTimestamp();
-      
+
       expect(timestamp).toMatch(/^\d+$/);
     });
 
     it('should generate current timestamp within reasonable range', () => {
       const oauth = new OAuth(validConfig);
-      const timestamp = parseInt(oauth.generateTimestamp());
+      const timestamp = parseInt(oauth.generateTimestamp(), 10);
       const now = Math.floor(Date.now() / 1000);
-      
+
       expect(timestamp).toBeGreaterThanOrEqual(now - 1);
       expect(timestamp).toBeLessThanOrEqual(now + 1);
     });
@@ -72,7 +75,7 @@ describe('OAuth', () => {
   describe('percentEncode', () => {
     it('should encode reserved characters correctly', () => {
       const oauth = new OAuth(validConfig);
-      
+
       expect(oauth.percentEncode('hello world')).toBe('hello%20world');
       expect(oauth.percentEncode('test!value')).toBe('test%21value');
       expect(oauth.percentEncode('data(test)')).toBe('data%28test%29');
@@ -81,7 +84,7 @@ describe('OAuth', () => {
     it('should not encode unreserved characters', () => {
       const oauth = new OAuth(validConfig);
       const unreserved = 'abcDEF123-._~';
-      
+
       expect(oauth.percentEncode(unreserved)).toBe(unreserved);
     });
   });
@@ -92,12 +95,12 @@ describe('OAuth', () => {
       const params = {
         oauth_consumer_key: 'test',
         oauth_timestamp: '1234567890',
-        oauth_nonce: 'testnonce'
+        oauth_nonce: 'testnonce',
       };
 
       const signature1 = oauth.generateSignature('GET', 'https://api.example.com/test', params);
       const signature2 = oauth.generateSignature('GET', 'https://api.example.com/test', params);
-      
+
       expect(signature1).toBe(signature2);
     });
 
@@ -106,12 +109,12 @@ describe('OAuth', () => {
       const params = {
         oauth_consumer_key: 'test',
         oauth_timestamp: '1234567890',
-        oauth_nonce: 'testnonce'
+        oauth_nonce: 'testnonce',
       };
 
       const getSignature = oauth.generateSignature('GET', 'https://api.example.com/test', params);
       const postSignature = oauth.generateSignature('POST', 'https://api.example.com/test', params);
-      
+
       expect(getSignature).not.toBe(postSignature);
     });
   });
@@ -122,13 +125,13 @@ describe('OAuth', () => {
       const requestOptions = {
         method: 'GET' as const,
         url: 'https://api.example.com/test',
-        headers: {}
+        headers: {},
       };
 
       const signedRequest = oauth.signRequest(requestOptions);
-      
+
       expect(signedRequest.headers).toHaveProperty('Authorization');
-      expect(signedRequest.headers!['Authorization']).toMatch(/^OAuth /);
+      expect(signedRequest.headers?.Authorization).toMatch(/^OAuth /);
     });
 
     it('should preserve existing headers', () => {
@@ -138,14 +141,14 @@ describe('OAuth', () => {
         url: 'https://api.example.com/test',
         headers: {
           'Content-Type': 'application/json',
-          'User-Agent': 'test-agent'
-        }
+          'User-Agent': 'test-agent',
+        },
       };
 
       const signedRequest = oauth.signRequest(requestOptions);
-      
-      expect(signedRequest.headers!['Content-Type']).toBe('application/json');
-      expect(signedRequest.headers!['User-Agent']).toBe('test-agent');
+
+      expect(signedRequest.headers?.['Content-Type']).toBe('application/json');
+      expect(signedRequest.headers?.['User-Agent']).toBe('test-agent');
       expect(signedRequest.headers).toHaveProperty('Authorization');
     });
 
@@ -154,12 +157,12 @@ describe('OAuth', () => {
       const requestOptions = {
         method: 'GET' as const,
         url: 'https://api.example.com/test',
-        headers: {}
+        headers: {},
       };
 
       const signedRequest = oauth.signRequest(requestOptions);
-      const authHeader = signedRequest.headers!['Authorization'];
-      
+      const authHeader = signedRequest.headers?.Authorization;
+
       expect(authHeader).toMatch(/oauth_consumer_key="[^"]+"/);
       expect(authHeader).toMatch(/oauth_nonce="[^"]+"/);
       expect(authHeader).toMatch(/oauth_signature="[^"]+"/);

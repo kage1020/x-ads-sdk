@@ -1,20 +1,20 @@
-import { HttpClient, HttpClientConfig } from './client/index.js';
-import { AccountsModule, CampaignsModule, AdGroupsModule, AnalyticsModule } from './modules/index.js';
-import { ClientConfig, Environment } from './types/common.js';
-import { XAdsPlugin } from './plugins/base.js';
-import { APIVersion, APIVersionResponse } from './types/api-version.js';
+import { AccountsModule, AdGroupsModule, AnalyticsModule, CampaignsModule } from '../modules';
+import type { XAdsPlugin } from '../plugins/base';
+import type { APIVersion, APIVersionResponse } from '../types/api-version';
+import { type ClientConfig, Environment } from '../types/common';
+import { HttpClient, type HttpClientConfig } from './base';
 
 /**
  * X Ads SDK Main Client
- * 
+ *
  * The XAdsClient is the primary interface for interacting with the X Ads API.
  * It provides access to all advertising modules including accounts, campaigns,
  * ad groups, and analytics.
- * 
+ *
  * @example Basic Usage
  * ```typescript
  * import { XAdsClient, Environment } from 'x-ads-sdk';
- * 
+ *
  * const client = new XAdsClient({
  *   auth: {
  *     consumer_key: 'your_consumer_key',
@@ -24,10 +24,10 @@ import { APIVersion, APIVersionResponse } from './types/api-version.js';
  *   },
  *   environment: Environment.SANDBOX
  * });
- * 
+ *
  * // Get accounts
  * const accounts = await client.accounts.list();
- * 
+ *
  * // Create a campaign
  * const campaign = await client.campaigns.create(accountId, {
  *   name: 'My Campaign',
@@ -35,32 +35,32 @@ import { APIVersion, APIVersionResponse } from './types/api-version.js';
  *   entity_status: 'ACTIVE'
  * });
  * ```
- * 
+ *
  * @example With Plugins and Version Management
  * ```typescript
  * import { XAdsClient, RateLimitTracker, APIVersion } from 'x-ads-sdk';
- * 
+ *
  * const client = new XAdsClient({
  *   auth: { ... },
  *   apiVersion: APIVersion.V12,
  *   autoUpgradeVersion: false
  * });
- * 
+ *
  * // Add rate limiting plugin
  * client.use(new RateLimitTracker({ logEnabled: true }));
- * 
+ *
  * // Check version status
  * const versionInfo = client.getVersionInfo();
  * if (versionInfo.warnings.length > 0) {
  *   console.log('Version warnings:', versionInfo.warnings);
  * }
  * ```
- * 
+ *
  * @category Client
  */
 export class XAdsClient {
   private httpClient: HttpClient;
-  
+
   /** Accounts module for managing advertising accounts */
   public accounts: AccountsModule;
   /** Campaigns module for managing advertising campaigns */
@@ -72,10 +72,10 @@ export class XAdsClient {
 
   /**
    * Creates a new X Ads SDK client instance
-   * 
+   *
    * @param config - Client configuration including authentication and options
    * @throws {Error} When authentication credentials are invalid or missing
-   * 
+   *
    * @example
    * ```typescript
    * const client = new XAdsClient({
@@ -101,11 +101,11 @@ export class XAdsClient {
       apiVersion: config.apiVersion,
       autoUpgradeVersion: config.autoUpgradeVersion,
       rateLimitOptions: {
-        strategy: config.rateLimitStrategy || 'wait'
+        strategy: config.rateLimitStrategy || 'wait',
       },
       retryOptions: {
-        maxRetries: config.maxRetries || 3
-      }
+        maxRetries: config.maxRetries || 3,
+      },
     };
 
     this.httpClient = new HttpClient(httpConfig);
@@ -119,44 +119,23 @@ export class XAdsClient {
 
   /**
    * Get the underlying HTTP client for advanced usage
-   * 
+   *
+   * This method is for advanced users who need direct access to the HTTP layer
    * @returns The HTTP client instance used by this SDK client
-   * @advanced This method is for advanced users who need direct access to the HTTP layer
    */
   getHttpClient(): HttpClient {
     return this.httpClient;
   }
 
   /**
-   * Test the connection and authentication credentials
-   * 
-   * @returns Promise that resolves to true if authentication is successful, false otherwise
-   * @example
-   * ```typescript
-   * const isConnected = await client.testConnection();
-   * if (!isConnected) {
-   *   throw new Error('Failed to authenticate with X Ads API');
-   * }
-   * ```
-   */
-  async testConnection(): Promise<boolean> {
-    try {
-      await this.accounts.list({ count: 1 });
-      return true;
-    } catch (error) {
-      return false;
-    }
-  }
-
-  /**
    * Add a plugin to the SDK for enhanced functionality
-   * 
+   *
    * @param plugin - The plugin instance to add
    * @returns The client instance for method chaining
    * @example
    * ```typescript
    * import { RateLimitTracker } from 'x-ads-sdk';
-   * 
+   *
    * const rateLimitTracker = new RateLimitTracker({ logEnabled: true });
    * client.use(rateLimitTracker);
    * ```
@@ -168,7 +147,7 @@ export class XAdsClient {
 
   /**
    * Remove a plugin from the SDK
-   * 
+   *
    * @param pluginName - Name of the plugin to remove
    * @returns True if the plugin was removed, false if it wasn't found
    */
@@ -178,7 +157,7 @@ export class XAdsClient {
 
   /**
    * Check if a plugin is currently installed
-   * 
+   *
    * @param pluginName - Name of the plugin to check
    * @returns True if the plugin is installed, false otherwise
    */
@@ -188,7 +167,7 @@ export class XAdsClient {
 
   /**
    * Get the current API version being used for requests
-   * 
+   *
    * @returns The current API version
    */
   getAPIVersion(): APIVersion {
@@ -197,7 +176,7 @@ export class XAdsClient {
 
   /**
    * Set the API version to use for future requests
-   * 
+   *
    * @param version - The API version to use
    * @throws {Error} If the version is not supported
    * @example
@@ -211,7 +190,7 @@ export class XAdsClient {
 
   /**
    * Get detailed version information and upgrade recommendations
-   * 
+   *
    * @returns Version information including warnings and recommendations
    * @example
    * ```typescript
@@ -227,7 +206,7 @@ export class XAdsClient {
 
   /**
    * Check if the current API version is deprecated
-   * 
+   *
    * @returns True if the current version is deprecated, false otherwise
    */
   isVersionDeprecated(): boolean {

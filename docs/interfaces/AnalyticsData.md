@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -26,7 +26,7 @@ Defined in: [types/analytics.ts:126](https://github.com/kage1020/x-ads-sdk/blob/
 
 #### segment
 
-> **segment**: `any`
+> **segment**: [`AnalyticsSegment`](AnalyticsSegment.md)
 
 #### metrics
 

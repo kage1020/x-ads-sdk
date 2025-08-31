@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: PluginError
 
-Defined in: [errors/index.ts:140](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L140)
+Defined in: [errors/index.ts:149](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L149)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: [errors/index.ts:140](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **new PluginError**(`message`, `pluginName?`, `code?`): `PluginError`
 
-Defined in: [errors/index.ts:141](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L141)
+Defined in: [errors/index.ts:150](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L150)
 
 #### Parameters
 
@@ -124,4 +124,4 @@ Defined in: [errors/index.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `readonly` `optional` **pluginName**: `string`
 
-Defined in: [errors/index.ts:143](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L143)
+Defined in: [errors/index.ts:152](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L152)

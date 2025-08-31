@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -8,7 +8,7 @@
 
 > **createAPIError**(`statusCode`, `message`, `errorCode?`, `details?`, `request?`, `response?`): [`APIError`](../classes/APIError.md)
 
-Defined in: [errors/index.ts:152](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L152)
+Defined in: [errors/index.ts:161](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L161)
 
 ## Parameters
 
@@ -26,15 +26,15 @@ Defined in: [errors/index.ts:152](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 ### details?
 
-`any`
+[`APIErrorDetails`](../interfaces/APIErrorDetails.md)
 
 ### request?
 
-`any`
+[`APIErrorRequest`](../interfaces/APIErrorRequest.md)
 
 ### response?
 
-`any`
+[`APIErrorResponse`](../interfaces/APIErrorResponse.md)
 
 ## Returns
 

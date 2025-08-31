@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [modules/campaigns.ts:14](https://github.com/kage1020/x-ads-sdk/blob
 
 ##### client
 
-[`HttpClient`](HttpClient.md)
+[`HttpClient`](../interfaces/HttpClient.md)
 
 #### Returns
 
@@ -102,7 +102,7 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makeGetRequest**\<`T`\>(`endpoint`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L30)
+Defined in: [modules/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L27)
 
 #### Type Parameters
 
@@ -130,7 +130,7 @@ Defined in: [modules/base.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makePostRequest**\<`T`\>(`endpoint`, `body`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L35)
+Defined in: [modules/base.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L32)
 
 #### Type Parameters
 
@@ -146,7 +146,7 @@ Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### body
 
-`any`
+`unknown`
 
 #### Returns
 
@@ -162,7 +162,7 @@ Defined in: [modules/base.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makePutRequest**\<`T`\>(`endpoint`, `body`): `Promise`\<`T`\>
 
-Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L40)
+Defined in: [modules/base.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L37)
 
 #### Type Parameters
 
@@ -178,7 +178,7 @@ Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### body
 
-`any`
+`unknown`
 
 #### Returns
 
@@ -194,7 +194,7 @@ Defined in: [modules/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **makeDeleteRequest**(`endpoint`): `Promise`\<`void`\>
 
-Defined in: [modules/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L45)
+Defined in: [modules/base.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L42)
 
 #### Parameters
 
@@ -216,7 +216,7 @@ Defined in: [modules/base.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `protected` **createPaginator**\<`T`\>(`endpoint`, `baseParams`, `options`): [`CursorPaginator`](CursorPaginator.md)\<`T`\>
 
-Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L49)
+Defined in: [modules/base.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L46)
 
 #### Type Parameters
 
@@ -232,7 +232,7 @@ Defined in: [modules/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### baseParams
 
-`Record`\<`string`, `any`\> = `{}`
+`Record`\<`string`, `unknown`\> = `{}`
 
 ##### options
 
@@ -352,7 +352,7 @@ Update an existing campaign
 
 > **delete**(`accountId`, `campaignId`): `Promise`\<`void`\>
 
-Defined in: [modules/campaigns.ts:73](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L73)
+Defined in: [modules/campaigns.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L69)
 
 Delete a campaign (soft delete)
 
@@ -376,7 +376,7 @@ Delete a campaign (soft delete)
 
 > **pause**(`accountId`, `campaignId`): `Promise`\<[`Campaign`](../interfaces/Campaign.md)\>
 
-Defined in: [modules/campaigns.ts:81](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L81)
+Defined in: [modules/campaigns.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L77)
 
 Pause a campaign
 
@@ -400,7 +400,7 @@ Pause a campaign
 
 > **activate**(`accountId`, `campaignId`): `Promise`\<[`Campaign`](../interfaces/Campaign.md)\>
 
-Defined in: [modules/campaigns.ts:90](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L90)
+Defined in: [modules/campaigns.ts:86](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L86)
 
 Activate a campaign
 
@@ -424,7 +424,7 @@ Activate a campaign
 
 > **getByStatus**(`accountId`, `status`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Campaign`](../interfaces/Campaign.md)\>\>
 
-Defined in: [modules/campaigns.ts:99](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L99)
+Defined in: [modules/campaigns.ts:95](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L95)
 
 Get campaigns by status
 
@@ -452,7 +452,7 @@ Get campaigns by status
 
 > **getActive**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Campaign`](../interfaces/Campaign.md)\>\>
 
-Defined in: [modules/campaigns.ts:121](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L121)
+Defined in: [modules/campaigns.ts:117](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L117)
 
 Get active campaigns
 
@@ -476,7 +476,7 @@ Get active campaigns
 
 > **getPaused**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Campaign`](../interfaces/Campaign.md)\>\>
 
-Defined in: [modules/campaigns.ts:131](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L131)
+Defined in: [modules/campaigns.ts:127](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L127)
 
 Get paused campaigns
 
@@ -500,7 +500,7 @@ Get paused campaigns
 
 > **getDeleted**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Campaign`](../interfaces/Campaign.md)\>\>
 
-Defined in: [modules/campaigns.ts:141](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L141)
+Defined in: [modules/campaigns.ts:137](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L137)
 
 Get deleted campaigns
 
@@ -524,7 +524,7 @@ Get deleted campaigns
 
 > **paginate**(`accountId`, `params`, `options`): [`CursorPaginator`](CursorPaginator.md)\<[`Campaign`](../interfaces/Campaign.md)\>
 
-Defined in: [modules/campaigns.ts:151](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L151)
+Defined in: [modules/campaigns.ts:147](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L147)
 
 Create a paginator for campaigns
 
@@ -552,7 +552,7 @@ Create a paginator for campaigns
 
 > **iterateAll**(`accountId`, `params`): `AsyncIterator`\<[`Campaign`](../interfaces/Campaign.md)\>
 
-Defined in: [modules/campaigns.ts:163](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L163)
+Defined in: [modules/campaigns.ts:159](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/campaigns.ts#L159)
 
 Iterate through all campaigns using async iterator
 
@@ -574,7 +574,7 @@ Iterate through all campaigns using async iterator
 
 ### client
 
-> `protected` **client**: [`HttpClient`](HttpClient.md)
+> `protected` **client**: [`HttpClient`](../interfaces/HttpClient.md)
 
 Defined in: [modules/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L6)
 

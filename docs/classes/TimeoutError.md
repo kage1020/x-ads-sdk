@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: TimeoutError
 
-Defined in: [errors/index.ts:118](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L118)
+Defined in: [errors/index.ts:127](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L127)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: [errors/index.ts:118](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **new TimeoutError**(`message`, `timeoutMs`, `code?`): `TimeoutError`
 
-Defined in: [errors/index.ts:119](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L119)
+Defined in: [errors/index.ts:128](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L128)
 
 #### Parameters
 
@@ -124,4 +124,4 @@ Defined in: [errors/index.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `readonly` **timeoutMs**: `number`
 
-Defined in: [errors/index.ts:121](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L121)
+Defined in: [errors/index.ts:130](https://github.com/kage1020/x-ads-sdk/blob/main/src/errors/index.ts#L130)

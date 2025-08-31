@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -14,7 +14,7 @@ Defined in: [auth/oauth.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/sr
 
 > **new OAuth**(`config`): `OAuth`
 
-Defined in: [auth/oauth.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L11)
+Defined in: [auth/oauth.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L12)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: [auth/oauth.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `private` **validateConfig**(): `void`
 
-Defined in: [auth/oauth.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L20)
+Defined in: [auth/oauth.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L23)
 
 #### Returns
 
@@ -44,7 +44,7 @@ Defined in: [auth/oauth.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateNonce**(): `string`
 
-Defined in: [auth/oauth.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L31)
+Defined in: [auth/oauth.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L32)
 
 #### Returns
 
@@ -56,7 +56,7 @@ Defined in: [auth/oauth.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateTimestamp**(): `string`
 
-Defined in: [auth/oauth.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L35)
+Defined in: [auth/oauth.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L36)
 
 #### Returns
 
@@ -68,7 +68,7 @@ Defined in: [auth/oauth.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **percentEncode**(`str`): `string`
 
-Defined in: [auth/oauth.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L39)
+Defined in: [auth/oauth.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L40)
 
 #### Parameters
 
@@ -86,7 +86,7 @@ Defined in: [auth/oauth.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateSignature**(`httpMethod`, `baseURL`, `parameters`): `string`
 
-Defined in: [auth/oauth.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L44)
+Defined in: [auth/oauth.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L47)
 
 #### Parameters
 
@@ -112,7 +112,7 @@ Defined in: [auth/oauth.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateOAuthSignature**(`options`): [`OAuthSignature`](../interfaces/OAuthSignature.md)
 
-Defined in: [auth/oauth.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L70)
+Defined in: [auth/oauth.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L72)
 
 #### Parameters
 
@@ -130,7 +130,7 @@ Defined in: [auth/oauth.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **generateAuthorizationHeader**(`signature`): `string`
 
-Defined in: [auth/oauth.ts:108](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L108)
+Defined in: [auth/oauth.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L106)
 
 #### Parameters
 
@@ -148,7 +148,7 @@ Defined in: [auth/oauth.ts:108](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **signRequest**(`options`): [`RequestOptions`](../interfaces/RequestOptions.md)
 
-Defined in: [auth/oauth.ts:117](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L117)
+Defined in: [auth/oauth.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L115)
 
 #### Parameters
 
@@ -191,3 +191,11 @@ Defined in: [auth/oauth.ts:8](https://github.com/kage1020/x-ads-sdk/blob/main/sr
 > `private` **access\_token\_secret**: `string`
 
 Defined in: [auth/oauth.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L9)
+
+***
+
+### signature\_method
+
+> `private` **signature\_method**: `"HMAC-SHA1"` \| `"HMAC-SHA256"`
+
+Defined in: [auth/oauth.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L10)
