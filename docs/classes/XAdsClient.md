@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -123,36 +123,11 @@ This method is for advanced users who need direct access to the HTTP layer
 
 ***
 
-### testConnection()
-
-> **testConnection**(): `Promise`\<`boolean`\>
-
-Defined in: [client.ts:142](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L142)
-
-Test the connection and authentication credentials
-
-#### Returns
-
-`Promise`\<`boolean`\>
-
-Promise that resolves to true if authentication is successful, false otherwise
-
-#### Example
-
-```typescript
-const isConnected = await client.testConnection();
-if (!isConnected) {
-  throw new Error('Failed to authenticate with X Ads API');
-}
-```
-
-***
-
 ### use()
 
 > **use**(`plugin`): `this`
 
-Defined in: [client.ts:164](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L164)
+Defined in: [client.ts:143](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L143)
 
 Add a plugin to the SDK for enhanced functionality
 
@@ -185,7 +160,7 @@ client.use(rateLimitTracker);
 
 > **removePlugin**(`pluginName`): `boolean`
 
-Defined in: [client.ts:175](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L175)
+Defined in: [client.ts:154](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L154)
 
 Remove a plugin from the SDK
 
@@ -209,7 +184,7 @@ True if the plugin was removed, false if it wasn't found
 
 > **hasPlugin**(`pluginName`): `boolean`
 
-Defined in: [client.ts:185](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L185)
+Defined in: [client.ts:164](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L164)
 
 Check if a plugin is currently installed
 
@@ -233,7 +208,7 @@ True if the plugin is installed, false otherwise
 
 > **getAPIVersion**(): [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [client.ts:194](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L194)
+Defined in: [client.ts:173](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L173)
 
 Get the current API version being used for requests
 
@@ -249,7 +224,7 @@ The current API version
 
 > **setAPIVersion**(`version`): `void`
 
-Defined in: [client.ts:208](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L208)
+Defined in: [client.ts:187](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L187)
 
 Set the API version to use for future requests
 
@@ -281,7 +256,7 @@ client.setAPIVersion(APIVersion.V12);
 
 > **getVersionInfo**(): [`APIVersionResponse`](../interfaces/APIVersionResponse.md)
 
-Defined in: [client.ts:224](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L224)
+Defined in: [client.ts:203](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L203)
 
 Get detailed version information and upgrade recommendations
 
@@ -306,7 +281,7 @@ if (versionInfo.recommendedAction === 'upgrade') {
 
 > **isVersionDeprecated**(): `boolean`
 
-Defined in: [client.ts:233](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L233)
+Defined in: [client.ts:212](https://github.com/kage1020/x-ads-sdk/blob/main/src/client.ts#L212)
 
 Check if the current API version is deprecated
 

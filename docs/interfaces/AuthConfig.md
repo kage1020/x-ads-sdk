@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.0**](../README.md)
+[**X Ads SDK v1.0.1**](../README.md)
 
 ***
 
@@ -47,3 +47,24 @@ Defined in: [types/auth.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/sr
 > `optional` **sandbox**: `boolean`
 
 Defined in: [types/auth.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L6)
+
+***
+
+### signature\_method?
+
+> `optional` **signature\_method**: `"HMAC-SHA1"` \| `"HMAC-SHA256"`
+
+Defined in: [types/auth.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L13)
+
+OAuth signature method to use for request signing.
+
+#### Default
+
+```ts
+'HMAC-SHA1' - Required by OAuth 1.0a specification for maximum compatibility
+```
+
+#### Description
+
+This is for OAuth signature generation, not password hashing.
+HMAC-SHA1 is the standard OAuth 1.0a signature method as defined in RFC 5849.
