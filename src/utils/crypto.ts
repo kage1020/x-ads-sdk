@@ -40,6 +40,7 @@ export function stringToBytes(str: string): Uint8Array {
 
 /**
  * Convert bytes to base64 string using standard browser API
+ * Uses chunked approach to avoid "Maximum call stack size exceeded" errors
  */
 export function bytesToBase64(bytes: Uint8Array): string {
   if (typeof btoa === 'undefined') {
@@ -47,7 +48,17 @@ export function bytesToBase64(bytes: Uint8Array): string {
       'btoa is not available in this environment. btoa is provided by browsers, but not by Node.js, Deno, or Bun by default. Consider using Buffer or a polyfill for base64 encoding in non-browser environments.'
     );
   }
-  return btoa(String.fromCharCode(...bytes));
+  
+  // Use chunked approach for large arrays to prevent stack overflow
+  const CHUNK_SIZE = 0x8000; // 32KB chunks
+  let result = '';
+  
+  for (let i = 0; i < bytes.length; i += CHUNK_SIZE) {
+    const chunk = bytes.subarray(i, i + CHUNK_SIZE);
+    result += String.fromCharCode(...Array.from(chunk));
+  }
+  
+  return btoa(result);
 }
 
 /**

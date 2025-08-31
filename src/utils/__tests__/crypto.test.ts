@@ -72,6 +72,38 @@ describe('crypto utilities (Web standards)', () => {
       const base64 = bytesToBase64(bytes);
       expect(base64).toBe('');
     });
+
+    it('should handle large arrays without stack overflow', () => {
+      // Test with 100KB of data to ensure chunked approach works
+      const largeArray = new Uint8Array(100000);
+      // Fill with some pattern to make it deterministic
+      for (let i = 0; i < largeArray.length; i++) {
+        largeArray[i] = i % 256;
+      }
+
+      expect(() => bytesToBase64(largeArray)).not.toThrow();
+      const result = bytesToBase64(largeArray);
+      expect(typeof result).toBe('string');
+      expect(result.length).toBeGreaterThan(0);
+      
+      // Verify round-trip works
+      const decoded = Uint8Array.from(atob(result), c => c.charCodeAt(0));
+      expect(decoded).toEqual(largeArray);
+    });
+
+    it('should handle very large arrays (1MB) without stack overflow', () => {
+      // Test with 1MB of data
+      const veryLargeArray = new Uint8Array(1000000);
+      // Fill with random-ish pattern
+      for (let i = 0; i < veryLargeArray.length; i++) {
+        veryLargeArray[i] = (i * 7) % 256;
+      }
+
+      expect(() => bytesToBase64(veryLargeArray)).not.toThrow();
+      const result = bytesToBase64(veryLargeArray);
+      expect(typeof result).toBe('string');
+      expect(result.length).toBeGreaterThan(0);
+    });
   });
 
   describe('hmac', () => {
