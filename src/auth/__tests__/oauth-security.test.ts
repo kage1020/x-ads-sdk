@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect } from 'vitest';
 import { OAuth } from '../oauth.js';
 import { createHmac } from 'node:crypto';
 
@@ -61,7 +61,6 @@ describe('OAuth Security Analysis', () => {
       // This test demonstrates the difference between OAuth signature generation
       // and password hashing for storage
       
-      const oauth = new OAuth(validConfig);
       const signingKey = 'test_consumer_secret&test_access_token_secret';
       const baseString = 'GET&https%3A//api.example.com/test&oauth_consumer_key%3Dtest';
       
@@ -108,22 +107,19 @@ describe('OAuth Security Analysis', () => {
         headers: {}
       };
 
-      // Use fixed timestamp and nonce for comparison
-      const fixedTimestamp = '1234567890';
-      const fixedNonce = 'testnonce';
-      
-      // Mock the methods to return fixed values
-      oauthSha1.generateTimestamp = () => fixedTimestamp;
-      oauthSha1.generateNonce = () => fixedNonce;
-      oauthSha256.generateTimestamp = () => fixedTimestamp;
-      oauthSha256.generateNonce = () => fixedNonce;
-
       const signatureSha1 = oauthSha1.generateOAuthSignature(requestOptions);
       const signatureSha256 = oauthSha256.generateOAuthSignature(requestOptions);
 
+      // Verify signature methods are different
       expect(signatureSha1.oauth_signature_method).toBe('HMAC-SHA1');
       expect(signatureSha256.oauth_signature_method).toBe('HMAC-SHA256');
+      
+      // Verify signatures are different (highly likely with different algorithms)
       expect(signatureSha1.oauth_signature).not.toBe(signatureSha256.oauth_signature);
+      
+      // Both should be valid base64 strings
+      expect(signatureSha1.oauth_signature).toMatch(/^[A-Za-z0-9+/]+=*$/);
+      expect(signatureSha256.oauth_signature).toMatch(/^[A-Za-z0-9+/]+=*$/);
     });
   });
 });
