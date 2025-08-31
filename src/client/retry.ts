@@ -47,7 +47,7 @@ export class RetryHandler {
         }
 
         // Check if error is retryable
-        if (!this.isRetryableError(error as Error)) {
+        if (!this.isRetryable(error as Error)) {
           break;
         }
 
@@ -68,9 +68,26 @@ export class RetryHandler {
     throw lastError || new Error('Max retries exceeded');
   }
 
-  private isRetryableError(error: Error): boolean {
+  getNextDelay(attempt: number): number {
+    return Math.min(
+      this.options.initialDelay * this.options.backoffFactor ** attempt,
+      this.options.maxDelay
+    );
+  }
+
+  isRetryable(error: Error): boolean {
+    // Handle null/undefined errors gracefully
+    if (!error) {
+      return false;
+    }
+
+    // Handle non-Error objects
+    if (typeof error !== 'object') {
+      return false;
+    }
+
     // Check for network errors
-    if (error.name === 'TypeError' && error.message.includes('fetch')) {
+    if (error.name === 'TypeError' && error.message?.includes('fetch')) {
       return true;
     }
 
@@ -80,9 +97,8 @@ export class RetryHandler {
     }
 
     // Check for API errors with retryable status codes
-    if ('statusCode' in error) {
-      const statusCode = (error as { statusCode: number }).statusCode;
-      return this.options.retryableStatusCodes.includes(statusCode);
+    if ('statusCode' in error && typeof error.statusCode === 'number') {
+      return this.options.retryableStatusCodes.includes(error.statusCode);
     }
 
     // Check for rate limit errors (should be handled by rate limiter, but just in case)
@@ -91,16 +107,5 @@ export class RetryHandler {
     }
 
     return false;
-  }
-
-  getNextDelay(attempt: number): number {
-    return Math.min(
-      this.options.initialDelay * this.options.backoffFactor ** attempt,
-      this.options.maxDelay
-    );
-  }
-
-  isRetryable(error: Error): boolean {
-    return this.isRetryableError(error);
   }
 }

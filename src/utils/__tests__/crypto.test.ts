@@ -148,12 +148,12 @@ describe('crypto utilities (Web standards)', () => {
       expect(globalThis.crypto).toBeDefined();
       expect(globalThis.crypto.getRandomValues).toBeDefined();
       expect(globalThis.crypto.subtle).toBeDefined();
-      
+
       // Test that functions work with Web Crypto API
       const bytes = await randomBytes(16);
       expect(bytes).toBeInstanceOf(Uint8Array);
       expect(bytes.length).toBe(16);
-      
+
       const signature = await hmac('SHA-1', 'key', 'data');
       expect(signature).toBeDefined();
       expect(typeof signature).toBe('string');
