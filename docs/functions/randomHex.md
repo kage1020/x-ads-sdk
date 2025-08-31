@@ -8,7 +8,7 @@
 
 > **randomHex**(`length`): `Promise`\<`string`\>
 
-Defined in: [utils/crypto.ts:91](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L91)
+Defined in: [utils/crypto.ts:102](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L102)
 
 Generate a cryptographically secure random hex string
 

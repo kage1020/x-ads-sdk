@@ -85,9 +85,9 @@ describe('crypto utilities (Web standards)', () => {
       const result = bytesToBase64(largeArray);
       expect(typeof result).toBe('string');
       expect(result.length).toBeGreaterThan(0);
-      
+
       // Verify round-trip works
-      const decoded = Uint8Array.from(atob(result), c => c.charCodeAt(0));
+      const decoded = Uint8Array.from(atob(result), (c) => c.charCodeAt(0));
       expect(decoded).toEqual(largeArray);
     });
 
@@ -194,7 +194,7 @@ describe('crypto utilities (Web standards)', () => {
     it('should throw error if btoa is not available', () => {
       // Mock btoa to be undefined
       const originalBtoa = globalThis.btoa;
-      
+
       try {
         Object.defineProperty(globalThis, 'btoa', { value: undefined, configurable: true });
 

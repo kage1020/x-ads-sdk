@@ -48,16 +48,16 @@ export function bytesToBase64(bytes: Uint8Array): string {
       'btoa is not available in this environment. btoa is provided by browsers, but not by Node.js, Deno, or Bun by default. Consider using Buffer or a polyfill for base64 encoding in non-browser environments.'
     );
   }
-  
+
   // Use chunked approach for large arrays to prevent stack overflow
   const CHUNK_SIZE = 0x8000; // 32KB chunks
   let result = '';
-  
+
   for (let i = 0; i < bytes.length; i += CHUNK_SIZE) {
     const chunk = bytes.subarray(i, i + CHUNK_SIZE);
     result += String.fromCharCode(...Array.from(chunk));
   }
-  
+
   return btoa(result);
 }
 

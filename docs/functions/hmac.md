@@ -8,7 +8,7 @@
 
 > **hmac**(`algorithm`, `key`, `data`): `Promise`\<`string`\>
 
-Defined in: [utils/crypto.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L60)
+Defined in: [utils/crypto.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/crypto.ts#L71)
 
 HMAC signature generation using Web Crypto API
 
