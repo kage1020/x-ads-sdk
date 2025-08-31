@@ -1,6 +1,6 @@
-import { createHmac, randomBytes } from 'node:crypto';
 import { AuthenticationError } from '../errors';
 import type { AuthConfig, OAuthSignature, RequestOptions } from '../types/auth';
+import { hmac, randomHex } from '../utils/crypto';
 
 export class OAuth {
   private consumer_key: string;
@@ -29,8 +29,8 @@ export class OAuth {
     }
   }
 
-  generateNonce(): string {
-    return randomBytes(16).toString('hex');
+  async generateNonce(): Promise<string> {
+    return randomHex(32);
   }
 
   generateTimestamp(): string {
@@ -44,11 +44,11 @@ export class OAuth {
     );
   }
 
-  generateSignature(
+  async generateSignature(
     httpMethod: string,
     baseURL: string,
     parameters: Record<string, string>
-  ): string {
+  ): Promise<string> {
     const sortedParams = Object.keys(parameters)
       .sort()
       .map((key) => `${this.percentEncode(key)}=${this.percentEncode(parameters[key])}`)
@@ -65,12 +65,12 @@ export class OAuth {
       this.percentEncode(this.access_token_secret),
     ].join('&');
 
-    const hashAlgorithm = this.signature_method === 'HMAC-SHA256' ? 'sha256' : 'sha1';
-    return createHmac(hashAlgorithm, signingKey).update(signatureBaseString).digest('base64');
+    const algorithm = this.signature_method === 'HMAC-SHA256' ? 'SHA-256' : 'SHA-1';
+    return hmac(algorithm, signingKey, signatureBaseString);
   }
 
-  generateOAuthSignature(options: RequestOptions): OAuthSignature {
-    const nonce = this.generateNonce();
+  async generateOAuthSignature(options: RequestOptions): Promise<OAuthSignature> {
+    const nonce = await this.generateNonce();
     const timestamp = this.generateTimestamp();
 
     const oauthParams: Record<string, string> = {
@@ -90,7 +90,7 @@ export class OAuth {
       });
     }
 
-    const signature = this.generateSignature(options.method, options.url, allParams);
+    const signature = await this.generateSignature(options.method, options.url, allParams);
 
     return {
       oauth_consumer_key: this.consumer_key,
@@ -112,8 +112,8 @@ export class OAuth {
     return `OAuth ${authParams}`;
   }
 
-  signRequest(options: RequestOptions): RequestOptions {
-    const signature = this.generateOAuthSignature(options);
+  async signRequest(options: RequestOptions): Promise<RequestOptions> {
+    const signature = await this.generateOAuthSignature(options);
     const authHeader = this.generateAuthorizationHeader(signature);
 
     return {

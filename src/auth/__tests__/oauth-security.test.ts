@@ -1,5 +1,5 @@
-import { createHmac } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
+import { hmac } from '../../utils/crypto';
 import { OAuth } from '../oauth';
 
 describe('OAuth Security Analysis', () => {
@@ -11,7 +11,7 @@ describe('OAuth Security Analysis', () => {
   };
 
   describe('signature method security', () => {
-    it('should use HMAC-SHA1 for OAuth signature generation (not password hashing)', () => {
+    it('should use HMAC-SHA1 for OAuth signature generation (not password hashing)', async () => {
       const oauth = new OAuth(validConfig);
       const params = {
         oauth_consumer_key: 'test',
@@ -19,7 +19,11 @@ describe('OAuth Security Analysis', () => {
         oauth_nonce: 'testnonce',
       };
 
-      const signature = oauth.generateSignature('GET', 'https://api.example.com/test', params);
+      const signature = await oauth.generateSignature(
+        'GET',
+        'https://api.example.com/test',
+        params
+      );
 
       // Verify this is OAuth signature generation, not password hashing
       expect(typeof signature).toBe('string');
@@ -29,13 +33,13 @@ describe('OAuth Security Analysis', () => {
       expect(signature).toMatch(/^[A-Za-z0-9+/]+=*$/);
     });
 
-    it('should support HMAC-SHA256 for enhanced security', () => {
+    it('should support HMAC-SHA256 for enhanced security', async () => {
       const oauthSha256 = new OAuth({
         ...validConfig,
         signature_method: 'HMAC-SHA256',
       });
 
-      const signature = oauthSha256.generateOAuthSignature({
+      const signature = await oauthSha256.generateOAuthSignature({
         method: 'GET',
         url: 'https://api.example.com/test',
         headers: {},
@@ -46,9 +50,9 @@ describe('OAuth Security Analysis', () => {
       expect(signature.oauth_signature.length).toBeGreaterThan(0);
     });
 
-    it('should default to HMAC-SHA1 for OAuth 1.0a compatibility', () => {
+    it('should default to HMAC-SHA1 for OAuth 1.0a compatibility', async () => {
       const oauth = new OAuth(validConfig);
-      const signature = oauth.generateOAuthSignature({
+      const signature = await oauth.generateOAuthSignature({
         method: 'GET',
         url: 'https://api.example.com/test',
         headers: {},
@@ -57,7 +61,7 @@ describe('OAuth Security Analysis', () => {
       expect(signature.oauth_signature_method).toBe('HMAC-SHA1');
     });
 
-    it('should demonstrate this is HMAC-based signature, not password storage', () => {
+    it('should demonstrate this is HMAC-based signature, not password storage', async () => {
       // This test demonstrates the difference between OAuth signature generation
       // and password hashing for storage
 
@@ -65,7 +69,7 @@ describe('OAuth Security Analysis', () => {
       const baseString = 'GET&https%3A//api.example.com/test&oauth_consumer_key%3Dtest';
 
       // This is HMAC for OAuth signatures (what the code does)
-      const oauthSignature = createHmac('sha1', signingKey).update(baseString).digest('base64');
+      const oauthSignature = await hmac('SHA-1', signingKey, baseString);
 
       // This would be password hashing (what CodeQL thinks we're doing)
       // which would use bcrypt, scrypt, PBKDF2, or Argon2
@@ -74,13 +78,13 @@ describe('OAuth Security Analysis', () => {
       expect(typeof oauthSignature).toBe('string');
 
       // OAuth signatures are deterministic for the same input
-      const repeatSignature = createHmac('sha1', signingKey).update(baseString).digest('base64');
+      const repeatSignature = await hmac('SHA-1', signingKey, baseString);
       expect(oauthSignature).toBe(repeatSignature);
     });
 
-    it('should verify OAuth 1.0a compliance with configurable signature method', () => {
+    it('should verify OAuth 1.0a compliance with configurable signature method', async () => {
       const oauth = new OAuth(validConfig);
-      const signature = oauth.generateOAuthSignature({
+      const signature = await oauth.generateOAuthSignature({
         method: 'GET',
         url: 'https://api.example.com/test',
         headers: {},
@@ -97,7 +101,7 @@ describe('OAuth Security Analysis', () => {
       expect(signature.oauth_signature.length).toBeGreaterThan(0);
     });
 
-    it('should generate different signatures for SHA1 vs SHA256', () => {
+    it('should generate different signatures for SHA1 vs SHA256', async () => {
       const oauthSha1 = new OAuth({ ...validConfig, signature_method: 'HMAC-SHA1' });
       const oauthSha256 = new OAuth({ ...validConfig, signature_method: 'HMAC-SHA256' });
 
@@ -107,8 +111,8 @@ describe('OAuth Security Analysis', () => {
         headers: {},
       };
 
-      const signatureSha1 = oauthSha1.generateOAuthSignature(requestOptions);
-      const signatureSha256 = oauthSha256.generateOAuthSignature(requestOptions);
+      const signatureSha1 = await oauthSha1.generateOAuthSignature(requestOptions);
+      const signatureSha256 = await oauthSha256.generateOAuthSignature(requestOptions);
 
       // Verify signature methods are different
       expect(signatureSha1.oauth_signature_method).toBe('HMAC-SHA1');

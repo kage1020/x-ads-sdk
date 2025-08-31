@@ -178,7 +178,7 @@ export class HttpClient implements PluginClient {
 
   private async makeRequest<T>(config: RequestConfig): Promise<T> {
     const requestOptions = this.buildRequestOptions(config);
-    const signedOptions = this.oauth.signRequest(requestOptions);
+    const signedOptions = await this.oauth.signRequest(requestOptions);
 
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), this.timeout);

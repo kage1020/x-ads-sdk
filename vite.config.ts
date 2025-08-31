@@ -11,11 +11,10 @@ export default defineConfig({
     },
     rollupOptions: {
       // Make sure to externalize deps that shouldn't be bundled
-      external: ['node:crypto', 'node:url'],
+      external: ['node:url'],
       output: {
         // Provide global variables for these externals in UMD build
         globals: {
-          'node:crypto': 'crypto',
           'node:url': 'url'
         }
       }
