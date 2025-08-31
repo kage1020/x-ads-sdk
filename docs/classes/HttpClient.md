@@ -156,7 +156,7 @@ Defined in: [client/base.ts:198](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `private` **headersToRecord**(`headers`): `Record`\<`string`, `string`\>
 
-Defined in: [client/base.ts:247](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L247)
+Defined in: [client/base.ts:250](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L250)
 
 #### Parameters
 
@@ -174,7 +174,7 @@ Defined in: [client/base.ts:247](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **get**\<`T`\>(`endpoint`, `params?`, `headers?`): `Promise`\<`T`\>
 
-Defined in: [client/base.ts:256](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L256)
+Defined in: [client/base.ts:259](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L259)
 
 #### Type Parameters
 
@@ -206,7 +206,7 @@ Defined in: [client/base.ts:256](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **post**\<`T`\>(`endpoint`, `body?`, `headers?`): `Promise`\<`T`\>
 
-Defined in: [client/base.ts:265](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L265)
+Defined in: [client/base.ts:268](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L268)
 
 #### Type Parameters
 
@@ -238,7 +238,7 @@ Defined in: [client/base.ts:265](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **put**\<`T`\>(`endpoint`, `body?`, `headers?`): `Promise`\<`T`\>
 
-Defined in: [client/base.ts:274](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L274)
+Defined in: [client/base.ts:277](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L277)
 
 #### Type Parameters
 
@@ -270,7 +270,7 @@ Defined in: [client/base.ts:274](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **delete**\<`T`\>(`endpoint`, `headers?`): `Promise`\<`T`\>
 
-Defined in: [client/base.ts:283](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L283)
+Defined in: [client/base.ts:286](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L286)
 
 #### Type Parameters
 
@@ -298,7 +298,7 @@ Defined in: [client/base.ts:283](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **getPluginManager**(): [`PluginManager`](../interfaces/PluginManager.md)
 
-Defined in: [client/base.ts:292](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L292)
+Defined in: [client/base.ts:295](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L295)
 
 #### Returns
 
@@ -310,7 +310,7 @@ Defined in: [client/base.ts:292](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **getAPIVersion**(): [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [client/base.ts:297](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L297)
+Defined in: [client/base.ts:300](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L300)
 
 #### Returns
 
@@ -322,7 +322,7 @@ Defined in: [client/base.ts:297](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **setAPIVersion**(`version`): `void`
 
-Defined in: [client/base.ts:301](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L301)
+Defined in: [client/base.ts:304](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L304)
 
 #### Parameters
 
@@ -340,7 +340,7 @@ Defined in: [client/base.ts:301](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **getVersionManager**(): [`APIVersionManager`](APIVersionManager.md)
 
-Defined in: [client/base.ts:305](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L305)
+Defined in: [client/base.ts:308](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L308)
 
 #### Returns
 
@@ -352,7 +352,7 @@ Defined in: [client/base.ts:305](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **getVersionInfo**(): [`APIVersionResponse`](../interfaces/APIVersionResponse.md)
 
-Defined in: [client/base.ts:309](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L309)
+Defined in: [client/base.ts:312](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L312)
 
 #### Returns
 
@@ -364,7 +364,7 @@ Defined in: [client/base.ts:309](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **isVersionDeprecated**(): `boolean`
 
-Defined in: [client/base.ts:313](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L313)
+Defined in: [client/base.ts:316](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L316)
 
 #### Returns
 

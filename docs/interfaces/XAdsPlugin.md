@@ -6,7 +6,7 @@
 
 # Interface: XAdsPlugin
 
-Defined in: plugins/base.ts:1
+Defined in: [plugins/base.ts:1](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L1)
 
 ## Methods
 
@@ -14,7 +14,7 @@ Defined in: plugins/base.ts:1
 
 > `optional` **beforeRequest**(`config`): `any`
 
-Defined in: plugins/base.ts:6
+Defined in: [plugins/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L6)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: plugins/base.ts:6
 
 > `optional` **afterResponse**(`response`, `config`): `any`
 
-Defined in: plugins/base.ts:7
+Defined in: [plugins/base.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L7)
 
 #### Parameters
 
@@ -54,7 +54,7 @@ Defined in: plugins/base.ts:7
 
 > `optional` **onError**(`error`, `config`): `any`
 
-Defined in: plugins/base.ts:8
+Defined in: [plugins/base.ts:8](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L8)
 
 #### Parameters
 
@@ -76,7 +76,7 @@ Defined in: plugins/base.ts:8
 
 > `optional` **install**(`client`): `void` \| `Promise`\<`void`\>
 
-Defined in: plugins/base.ts:11
+Defined in: [plugins/base.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L11)
 
 #### Parameters
 
@@ -94,7 +94,7 @@ Defined in: plugins/base.ts:11
 
 > `optional` **uninstall**(`client`): `void` \| `Promise`\<`void`\>
 
-Defined in: plugins/base.ts:12
+Defined in: [plugins/base.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L12)
 
 #### Parameters
 
@@ -112,7 +112,7 @@ Defined in: plugins/base.ts:12
 
 > **name**: `string`
 
-Defined in: plugins/base.ts:2
+Defined in: [plugins/base.ts:2](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L2)
 
 ***
 
@@ -120,4 +120,4 @@ Defined in: plugins/base.ts:2
 
 > `optional` **version**: `string`
 
-Defined in: plugins/base.ts:3
+Defined in: [plugins/base.ts:3](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L3)

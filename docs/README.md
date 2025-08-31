@@ -4,7 +4,7 @@
 
 # X Ads SDK
 
-A comprehensive Node.js SDK for the X Ads API, built with TypeScript for maximum type safety and developer experience. This SDK provides easy access to advertising campaign management, analytics, and reporting functionality.
+A Node.js SDK for the X Ads API built with TypeScript. This SDK provides easy access to advertising campaign management, analytics, and reporting functionality.
 
 ## 🚀 Features
 
@@ -196,11 +196,11 @@ const client = new XAdsClient({
 ### Error Handling
 
 ```typescript
-import { 
-  AuthenticationError, 
-  RateLimitError, 
-  APIError, 
-  ValidationError 
+import {
+  AuthenticationError,
+  RateLimitError,
+  APIError,
+  ValidationError
 } from 'x-ads-sdk';
 
 try {
@@ -272,12 +272,12 @@ src/
 The SDK is built with TypeScript and provides comprehensive type definitions:
 
 ```typescript
-import { 
-  Campaign, 
-  CampaignStatus, 
+import {
+  Campaign,
+  CampaignStatus,
   CampaignObjective,
   AdGroup,
-  AnalyticsMetrics 
+  AnalyticsMetrics
 } from 'x-ads-sdk';
 
 const campaign: Campaign = {
@@ -305,11 +305,13 @@ For detailed authentication setup, refer to the [X Developer Documentation](http
 The SDK supports both sandbox and production environments:
 
 ### Sandbox (Development)
+
 - Use `Environment.SANDBOX`
 - Safe for testing and development
 - No real money transactions
 
 ### Production
+
 - Use `Environment.PRODUCTION`
 - Live advertising campaigns
 - Real money transactions - use with caution
@@ -334,7 +336,7 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](_media/LICENSE) file for details.
 
 ## 🆘 Support
 

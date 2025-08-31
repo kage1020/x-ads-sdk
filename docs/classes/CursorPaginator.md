@@ -6,7 +6,7 @@
 
 # Class: CursorPaginator\<T\>
 
-Defined in: paginators/index.ts:13
+Defined in: [paginators/index.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L13)
 
 ## Type Parameters
 
@@ -24,7 +24,7 @@ Defined in: paginators/index.ts:13
 
 > **new CursorPaginator**\<`T`\>(`fetcher`, `options`): `CursorPaginator`\<`T`\>
 
-Defined in: paginators/index.ts:18
+Defined in: [paginators/index.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L18)
 
 #### Parameters
 
@@ -46,7 +46,7 @@ Defined in: paginators/index.ts:18
 
 > **\[asyncIterator\]**(): `AsyncIterator`\<`T`[]\>
 
-Defined in: paginators/index.ts:23
+Defined in: [paginators/index.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L23)
 
 #### Returns
 
@@ -62,7 +62,7 @@ Defined in: paginators/index.ts:23
 
 > **items**(): `AsyncIterableIterator`\<`T`\>
 
-Defined in: paginators/index.ts:42
+Defined in: [paginators/index.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L42)
 
 #### Returns
 
@@ -74,7 +74,7 @@ Defined in: paginators/index.ts:42
 
 > **all**(): `Promise`\<`T`[]\>
 
-Defined in: paginators/index.ts:50
+Defined in: [paginators/index.ts:50](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L50)
 
 #### Returns
 
@@ -86,7 +86,7 @@ Defined in: paginators/index.ts:50
 
 > **first**(`count`): `Promise`\<`T`[]\>
 
-Defined in: paginators/index.ts:58
+Defined in: [paginators/index.ts:58](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L58)
 
 #### Parameters
 
@@ -104,7 +104,7 @@ Defined in: paginators/index.ts:58
 
 > `private` **shouldContinue**(): `boolean`
 
-Defined in: paginators/index.ts:69
+Defined in: [paginators/index.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L69)
 
 #### Returns
 
@@ -116,7 +116,7 @@ Defined in: paginators/index.ts:69
 
 > **reset**(): `void`
 
-Defined in: paginators/index.ts:76
+Defined in: [paginators/index.ts:76](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L76)
 
 #### Returns
 
@@ -128,7 +128,7 @@ Defined in: paginators/index.ts:76
 
 > `private` `optional` **currentCursor**: `string`
 
-Defined in: paginators/index.ts:14
+Defined in: [paginators/index.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L14)
 
 ***
 
@@ -136,7 +136,7 @@ Defined in: paginators/index.ts:14
 
 > `private` **hasMore**: `boolean` = `true`
 
-Defined in: paginators/index.ts:15
+Defined in: [paginators/index.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L15)
 
 ***
 
@@ -144,7 +144,7 @@ Defined in: paginators/index.ts:15
 
 > `private` **totalFetched**: `number` = `0`
 
-Defined in: paginators/index.ts:16
+Defined in: [paginators/index.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L16)
 
 ***
 
@@ -152,7 +152,7 @@ Defined in: paginators/index.ts:16
 
 > `private` **fetcher**: (`cursor?`, `count?`) => `Promise`\<`CursorPaginatorResult`\<`T`\>\>
 
-Defined in: paginators/index.ts:19
+Defined in: [paginators/index.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L19)
 
 #### Parameters
 
@@ -174,4 +174,4 @@ Defined in: paginators/index.ts:19
 
 > `private` **options**: [`PaginatorOptions`](../interfaces/PaginatorOptions.md) = `{}`
 
-Defined in: paginators/index.ts:20
+Defined in: [paginators/index.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/paginators/index.ts#L20)

@@ -67,9 +67,7 @@ function generateTypeDoc() {
   run('npm run docs');
   log('green', '✅ HTML documentation generated');
   
-  // Generate markdown documentation
-  run('npm run docs:markdown');
-  log('green', '✅ Markdown documentation generated');
+
   
   // Generate JSON API reference
   run('npm run docs:json');
@@ -369,7 +367,7 @@ function main() {
     log('green', '🎉 Documentation generation completed successfully!');
     log('cyan', '\nGenerated files:');
     log('white', '  - docs/                 (HTML documentation)');
-    log('white', '  - docs-md/              (Markdown documentation)');
+
     log('white', '  - docs/api.json         (JSON API reference)');
     log('white', '  - docs/api-coverage.md  (API coverage report)');
     log('white', '  - docs/migration-guide.md (Migration guide)');

@@ -6,7 +6,7 @@
 
 # Interface: APIVersionInfo
 
-Defined in: types/api-version.ts:20
+Defined in: [types/api-version.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L20)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/api-version.ts:20
 
 > **version**: [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: types/api-version.ts:21
+Defined in: [types/api-version.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L21)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/api-version.ts:21
 
 > **releaseDate**: `Date`
 
-Defined in: types/api-version.ts:22
+Defined in: [types/api-version.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L22)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: types/api-version.ts:22
 
 > `optional` **deprecationDate**: `Date`
 
-Defined in: types/api-version.ts:23
+Defined in: [types/api-version.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L23)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: types/api-version.ts:23
 
 > **isDefault**: `boolean`
 
-Defined in: types/api-version.ts:24
+Defined in: [types/api-version.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L24)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: types/api-version.ts:24
 
 > **isDeprecated**: `boolean`
 
-Defined in: types/api-version.ts:25
+Defined in: [types/api-version.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L25)
 
 ***
 
@@ -54,4 +54,4 @@ Defined in: types/api-version.ts:25
 
 > `optional` **supportedUntil**: `Date`
 
-Defined in: types/api-version.ts:26
+Defined in: [types/api-version.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L26)

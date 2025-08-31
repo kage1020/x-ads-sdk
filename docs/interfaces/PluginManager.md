@@ -6,7 +6,7 @@
 
 # Interface: PluginManager
 
-Defined in: plugins/base.ts:15
+Defined in: [plugins/base.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L15)
 
 ## Methods
 
@@ -14,7 +14,7 @@ Defined in: plugins/base.ts:15
 
 > **use**(`plugin`): `void`
 
-Defined in: plugins/base.ts:18
+Defined in: [plugins/base.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L18)
 
 #### Parameters
 
@@ -32,7 +32,7 @@ Defined in: plugins/base.ts:18
 
 > **remove**(`pluginName`): `boolean`
 
-Defined in: plugins/base.ts:19
+Defined in: [plugins/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L19)
 
 #### Parameters
 
@@ -50,7 +50,7 @@ Defined in: plugins/base.ts:19
 
 > **has**(`pluginName`): `boolean`
 
-Defined in: plugins/base.ts:20
+Defined in: [plugins/base.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L20)
 
 #### Parameters
 
@@ -68,7 +68,7 @@ Defined in: plugins/base.ts:20
 
 > **get**(`pluginName`): `undefined` \| [`XAdsPlugin`](XAdsPlugin.md)
 
-Defined in: plugins/base.ts:21
+Defined in: [plugins/base.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L21)
 
 #### Parameters
 
@@ -86,7 +86,7 @@ Defined in: plugins/base.ts:21
 
 > **executeBeforeRequest**(`config`): `Promise`\<`any`\>
 
-Defined in: plugins/base.ts:24
+Defined in: [plugins/base.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L24)
 
 #### Parameters
 
@@ -104,7 +104,7 @@ Defined in: plugins/base.ts:24
 
 > **executeAfterResponse**(`response`, `config`): `Promise`\<`any`\>
 
-Defined in: plugins/base.ts:25
+Defined in: [plugins/base.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L25)
 
 #### Parameters
 
@@ -126,7 +126,7 @@ Defined in: plugins/base.ts:25
 
 > **executeOnError**(`error`, `config`): `Promise`\<`any`\>
 
-Defined in: plugins/base.ts:26
+Defined in: [plugins/base.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L26)
 
 #### Parameters
 
@@ -148,4 +148,4 @@ Defined in: plugins/base.ts:26
 
 > **plugins**: `Map`\<`string`, [`XAdsPlugin`](XAdsPlugin.md)\>
 
-Defined in: plugins/base.ts:16
+Defined in: [plugins/base.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/plugins/base.ts#L16)

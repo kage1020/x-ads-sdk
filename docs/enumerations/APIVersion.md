@@ -6,7 +6,7 @@
 
 # Enumeration: APIVersion
 
-Defined in: types/api-version.ts:8
+Defined in: [types/api-version.ts:8](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L8)
 
 API Version Management Types for X Ads SDK
 
@@ -19,7 +19,7 @@ This module provides type-safe version management.
 
 > **V11**: `"11.0"`
 
-Defined in: types/api-version.ts:9
+Defined in: [types/api-version.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L9)
 
 ***
 
@@ -27,4 +27,4 @@ Defined in: types/api-version.ts:9
 
 > **V12**: `"12.0"`
 
-Defined in: types/api-version.ts:10
+Defined in: [types/api-version.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L10)
