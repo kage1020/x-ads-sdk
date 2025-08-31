@@ -119,12 +119,6 @@ export class RateLimitTracker implements XAdsPlugin {
     if (headers[lowerName]) {
       return headers[lowerName];
     }
-    // Try case-insensitive search through all keys
-    for (const key in headers) {
-      if (key.toLowerCase() === lowerName) {
-        return headers[key];
-      }
-    }
     return null;
   }
 

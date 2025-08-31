@@ -162,8 +162,7 @@ describe('crypto utilities (Web standards)', () => {
     it('should throw error if btoa is not available', () => {
       // Mock btoa to be undefined
       const originalBtoa = globalThis.btoa;
-      // @ts-expect-error - Intentionally setting to undefined for testing
-      globalThis.btoa = undefined;
+      Object.defineProperty(globalThis, 'btoa', { value: undefined, configurable: true });
 
       const bytes = new Uint8Array([72, 101, 108, 108, 111]);
       expect(() => bytesToBase64(bytes)).toThrow('btoa not available');

@@ -15,7 +15,9 @@
  */
 export async function randomBytes(size: number): Promise<Uint8Array> {
   if (!globalThis.crypto?.getRandomValues) {
-    throw new Error('Web Crypto API not available. This environment is not supported.');
+    throw new Error(
+      'Web Crypto API not available. This requires a modern browser, Node.js 16+, Deno, or Bun environment.'
+    );
   }
   return crypto.getRandomValues(new Uint8Array(size));
 }
@@ -41,7 +43,9 @@ export function stringToBytes(str: string): Uint8Array {
  */
 export function bytesToBase64(bytes: Uint8Array): string {
   if (typeof btoa === 'undefined') {
-    throw new Error('btoa not available. This environment is not supported.');
+    throw new Error(
+      'btoa is not available in this environment. btoa is provided by browsers, but not by Node.js, Deno, or Bun by default. Consider using Buffer or a polyfill for base64 encoding in non-browser environments.'
+    );
   }
   return btoa(String.fromCharCode(...bytes));
 }
@@ -60,7 +64,7 @@ export async function hmac(
 ): Promise<string> {
   if (!globalThis.crypto?.subtle) {
     throw new Error(
-      'Web Crypto API SubtleCrypto not available. This environment is not supported.'
+      'Web Crypto API SubtleCrypto not available. This environment is not supported. Note: In browsers, SubtleCrypto requires HTTPS (secure context). Supported environments include modern browsers (with HTTPS), Node.js 16+, Deno, and Bun.'
     );
   }
 
