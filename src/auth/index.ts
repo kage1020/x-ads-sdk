@@ -1,2 +1,1 @@
-export * from '../types/auth.js';
-export { OAuth } from './oauth.js';
+export * from './oauth.js';

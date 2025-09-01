@@ -57,6 +57,6 @@ export function hasStatusCode(error: unknown, statusCode: number): boolean {
     typeof error === 'object' &&
     error !== null &&
     'statusCode' in error &&
-    (error as { statusCode: number }).statusCode === statusCode
+    error.statusCode === statusCode
   );
 }

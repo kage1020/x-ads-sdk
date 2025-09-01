@@ -6,6 +6,16 @@
 
 ## Hierarchy Summary
 
+### BaseModule
+
+- [BaseModule](classes/BaseModule.md)
+  - [AccountsModule](classes/AccountsModule.md)
+  - [AdGroupsModule](classes/AdGroupsModule.md)
+  - [AnalyticsModule](classes/AnalyticsModule.md)
+  - [CampaignsModule](classes/CampaignsModule.md)
+
+***
+
 ### PluginClient
 
 - [PluginClient](interfaces/PluginClient.md)

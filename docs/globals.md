@@ -27,6 +27,7 @@
 - [AccountsModule](classes/AccountsModule.md)
 - [AdGroupsModule](classes/AdGroupsModule.md)
 - [AnalyticsModule](classes/AnalyticsModule.md)
+- [BaseModule](classes/BaseModule.md)
 - [CampaignsModule](classes/CampaignsModule.md)
 - [CursorPaginator](classes/CursorPaginator.md)
 - [OffsetPaginator](classes/OffsetPaginator.md)
@@ -47,6 +48,7 @@
 - [ClientRateLimitInfo](interfaces/ClientRateLimitInfo.md)
 - [RateLimitOptions](interfaces/RateLimitOptions.md)
 - [RetryOptions](interfaces/RetryOptions.md)
+- [RetryContext](interfaces/RetryContext.md)
 - [APIErrorDetails](interfaces/APIErrorDetails.md)
 - [APIErrorRequest](interfaces/APIErrorRequest.md)
 - [APIErrorResponse](interfaces/APIErrorResponse.md)
@@ -123,9 +125,6 @@
 - [fromPluginConfig](functions/fromPluginConfig.md)
 - [toPluginResponse](functions/toPluginResponse.md)
 - [unixTimestampToDate](functions/unixTimestampToDate.md)
-- [getCurrentUnixTimestamp](functions/getCurrentUnixTimestamp.md)
-- [isInPast](functions/isInPast.md)
-- [formatDateForAPI](functions/formatDateForAPI.md)
 - [sleep](functions/sleep.md)
 
 ## Variables

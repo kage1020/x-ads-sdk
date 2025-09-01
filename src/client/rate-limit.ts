@@ -1,6 +1,6 @@
 import { sleep, unixTimestampToDate } from '../utils/index.js';
 
-export interface RateLimitInfo {
+export interface ClientRateLimitInfo {
   limit: number;
   remaining: number;
   resetTime: Date;
@@ -14,7 +14,7 @@ export interface RateLimitOptions {
 }
 
 export class RateLimiter {
-  private limits: Map<string, RateLimitInfo> = new Map();
+  private limits: Map<string, ClientRateLimitInfo> = new Map();
   private options: RateLimitOptions;
 
   constructor(options: Partial<RateLimitOptions> = {}) {

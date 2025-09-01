@@ -14,7 +14,7 @@ Defined in: [modules/campaigns.ts:13](https://github.com/kage1020/x-ads-sdk/blob
 
 ### Extends
 
-- `BaseModule`
+- [`BaseModule`](BaseModule.md)
 
 ## Constructors
 
@@ -36,7 +36,7 @@ Defined in: [modules/campaigns.ts:14](https://github.com/kage1020/x-ads-sdk/blob
 
 #### Overrides
 
-`BaseModule.constructor`
+[`BaseModule`](BaseModule.md).[`constructor`](BaseModule.md#constructor)
 
 ## Methods
 
@@ -62,7 +62,7 @@ Defined in: [modules/base.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main
 
 #### Inherited from
 
-`BaseModule.buildEndpoint`
+[`BaseModule`](BaseModule.md).[`buildEndpoint`](BaseModule.md#buildendpoint)
 
 ***
 
@@ -94,7 +94,7 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 #### Inherited from
 
-`BaseModule.makeListRequest`
+[`BaseModule`](BaseModule.md).[`makeListRequest`](BaseModule.md#makelistrequest)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in: [modules/base.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main
 
 #### Inherited from
 
-`BaseModule.makeGetRequest`
+[`BaseModule`](BaseModule.md).[`makeGetRequest`](BaseModule.md#makegetrequest)
 
 ***
 
@@ -154,7 +154,7 @@ Defined in: [modules/base.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main
 
 #### Inherited from
 
-`BaseModule.makePostRequest`
+[`BaseModule`](BaseModule.md).[`makePostRequest`](BaseModule.md#makepostrequest)
 
 ***
 
@@ -186,7 +186,7 @@ Defined in: [modules/base.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main
 
 #### Inherited from
 
-`BaseModule.makePutRequest`
+[`BaseModule`](BaseModule.md).[`makePutRequest`](BaseModule.md#makeputrequest)
 
 ***
 
@@ -208,7 +208,7 @@ Defined in: [modules/base.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main
 
 #### Inherited from
 
-`BaseModule.makeDeleteRequest`
+[`BaseModule`](BaseModule.md).[`makeDeleteRequest`](BaseModule.md#makedeleterequest)
 
 ***
 
@@ -244,7 +244,7 @@ Defined in: [modules/base.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main
 
 #### Inherited from
 
-`BaseModule.createPaginator`
+[`BaseModule`](BaseModule.md).[`createPaginator`](BaseModule.md#createpaginator)
 
 ***
 
@@ -580,7 +580,7 @@ Defined in: [modules/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 #### Inherited from
 
-`BaseModule.client`
+[`BaseModule`](BaseModule.md).[`client`](BaseModule.md#client)
 
 ***
 
@@ -592,4 +592,4 @@ Defined in: [modules/base.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 #### Inherited from
 
-`BaseModule.baseEndpoint`
+[`BaseModule`](BaseModule.md).[`baseEndpoint`](BaseModule.md#baseendpoint)
