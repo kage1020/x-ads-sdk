@@ -1,5 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { bytesToBase64, bytesToHex, hmac, randomBytes, randomHex, stringToBytes } from '../crypto';
+import {
+  bytesToBase64,
+  bytesToHex,
+  hmac,
+  randomBytes,
+  randomHex,
+  stringToBytes,
+} from '../crypto.js';
 
 describe('crypto utilities (Web standards)', () => {
   describe('randomBytes', () => {

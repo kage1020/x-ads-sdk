@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { XAdsClient } from '../client';
-import { Environment } from '../types/common';
+import { XAdsClient } from '../client/index.js';
+import { Environment } from '../types/common.js';
 
 // Mock the HTTP client module
 vi.mock('../client/base.js', () => ({

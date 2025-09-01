@@ -5,7 +5,7 @@ import {
   type PluginRequestConfig,
   type PluginResponse,
   type XAdsPlugin,
-} from '../base';
+} from '../base.js';
 
 describe('DefaultPluginManager', () => {
   let pluginManager: DefaultPluginManager;

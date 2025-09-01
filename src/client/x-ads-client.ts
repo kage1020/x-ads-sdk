@@ -1,8 +1,13 @@
-import { AccountsModule, AdGroupsModule, AnalyticsModule, CampaignsModule } from '../modules';
-import type { XAdsPlugin } from '../plugins/base';
-import type { APIVersion, APIVersionResponse } from '../types/api-version';
-import { type ClientConfig, Environment } from '../types/common';
-import { HttpClient, type HttpClientConfig } from './base';
+import {
+  AccountsModule,
+  AdGroupsModule,
+  AnalyticsModule,
+  CampaignsModule,
+} from '../modules/index.js';
+import type { XAdsPlugin } from '../plugins/base.js';
+import type { APIVersion, APIVersionResponse } from '../types/api-version.js';
+import { type ClientConfig, Environment } from '../types/common.js';
+import { HttpClient, type HttpClientConfig } from './base.js';
 
 /**
  * X Ads SDK Main Client

@@ -1,14 +1,19 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import type { HttpClient } from '../../client/base';
+import type { HttpClient } from '../../client/base.js';
 import type {
   AdGroup,
   AdGroupListParams,
   CreateAdGroupData,
   UpdateAdGroupData,
-} from '../../types/ad-group';
-import { AdGroupObjective, AdGroupPlacement, AdGroupStatus, BidType } from '../../types/ad-group';
-import type { PaginatedResponse } from '../../types/common';
-import { AdGroupsModule } from '../ad-groups';
+} from '../../types/ad-group.js';
+import {
+  AdGroupObjective,
+  AdGroupPlacement,
+  AdGroupStatus,
+  BidType,
+} from '../../types/ad-group.js';
+import type { PaginatedResponse } from '../../types/common.js';
+import { AdGroupsModule } from '../ad-groups.js';
 
 describe('AdGroupsModule', () => {
   let mockClient: HttpClient;

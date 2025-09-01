@@ -1,14 +1,14 @@
-import type { HttpClient } from '../client/base';
-import type { CursorPaginator, PaginatorOptions } from '../paginators';
+import type { HttpClient } from '../client/base.js';
+import type { CursorPaginator, PaginatorOptions } from '../paginators/index.js';
 import {
   type Campaign,
   type CampaignListParams,
   CampaignStatus,
   type CreateCampaignData,
   type UpdateCampaignData,
-} from '../types/campaign';
-import type { PaginatedResponse } from '../types/common';
-import { BaseModule } from './base';
+} from '../types/campaign.js';
+import type { PaginatedResponse } from '../types/common.js';
+import { BaseModule } from './base.js';
 
 export class CampaignsModule extends BaseModule {
   constructor(client: HttpClient) {

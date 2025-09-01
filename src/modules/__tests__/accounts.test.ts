@@ -1,9 +1,9 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import type { HttpClient } from '../../client/base';
-import type { Account, AccountListParams, UpdateAccountData } from '../../types/account';
-import { AccountStatus, AccountType } from '../../types/account';
-import type { PaginatedResponse } from '../../types/common';
-import { AccountsModule } from '../accounts';
+import type { HttpClient } from '../../client/base.js';
+import type { Account, AccountListParams, UpdateAccountData } from '../../types/account.js';
+import { AccountStatus, AccountType } from '../../types/account.js';
+import type { PaginatedResponse } from '../../types/common.js';
+import { AccountsModule } from '../accounts.js';
 
 describe('AccountsModule', () => {
   let mockClient: HttpClient;

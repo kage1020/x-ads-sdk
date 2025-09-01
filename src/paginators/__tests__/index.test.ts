@@ -1,5 +1,5 @@
 import { describe, expect, it, vi } from 'vitest';
-import { CursorPaginator, type CursorPaginatorResult, OffsetPaginator } from '../index';
+import { CursorPaginator, type CursorPaginatorResult, OffsetPaginator } from '../index.js';
 
 interface TestItem {
   id: number;

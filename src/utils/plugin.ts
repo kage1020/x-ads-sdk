@@ -2,9 +2,9 @@
  * Plugin system utility functions
  */
 
-import type { RequestConfig } from '../client/base';
-import type { PluginRequestConfig, PluginResponse } from '../plugins/base';
-import { buildURL, extractEndpointFromUrl } from './http';
+import type { RequestConfig } from '../client/base.js';
+import type { PluginRequestConfig, PluginResponse } from '../plugins/base.js';
+import { buildURL, extractEndpointFromUrl } from './http.js';
 
 /**
  * Convert RequestConfig to PluginRequestConfig

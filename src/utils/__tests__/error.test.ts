@@ -4,7 +4,7 @@ import {
   extractErrorDetails,
   extractErrorMessage,
   hasStatusCode,
-} from '../error';
+} from '../error.js';
 
 // Mock Response object
 const createMockResponse = (status: number, statusText: string): Response =>

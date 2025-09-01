@@ -1,4 +1,4 @@
-export { OAuth } from './auth';
+export { OAuth } from './auth/index.js';
 export {
   HttpClient,
   type HttpClientConfig,
@@ -9,20 +9,20 @@ export {
   RetryHandler,
   type RetryOptions,
   XAdsClient,
-} from './client';
-export * from './errors';
+} from './client/index.js';
+export * from './errors/index.js';
 export {
   AccountsModule,
   AdGroupsModule,
   AnalyticsModule,
   CampaignsModule,
-} from './modules';
+} from './modules/index.js';
 export {
   CursorPaginator,
   type CursorPaginatorResult,
   OffsetPaginator,
   type PaginatorOptions,
-} from './paginators';
+} from './paginators/index.js';
 export {
   DefaultPluginManager,
   type PluginClient,
@@ -33,7 +33,7 @@ export {
   RateLimitTracker,
   type RateLimitTrackerOptions,
   type XAdsPlugin,
-} from './plugins';
-export * from './types';
-export { APIVersionManager } from './types/api-version';
-export * from './utils';
+} from './plugins/index.js';
+export { APIVersionManager } from './types/api-version.js';
+export * from './types/index.js';
+export * from './utils/index.js';

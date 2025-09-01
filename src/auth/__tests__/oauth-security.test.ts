@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { hmac } from '../../utils/crypto';
-import { OAuth } from '../oauth';
+import { hmac } from '../../utils/crypto.js';
+import { OAuth } from '../oauth.js';
 
 describe('OAuth Security Analysis', () => {
   const validConfig = {

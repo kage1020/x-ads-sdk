@@ -1,15 +1,15 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import type { HttpClient } from '../../client/base';
-import { CursorPaginator } from '../../paginators';
+import type { HttpClient } from '../../client/base.js';
+import { CursorPaginator } from '../../paginators/index.js';
 import type {
   Campaign,
   CampaignListParams,
   CreateCampaignData,
   UpdateCampaignData,
-} from '../../types/campaign';
-import { CampaignObjective, CampaignPlacement, CampaignStatus } from '../../types/campaign';
-import type { PaginatedResponse } from '../../types/common';
-import { CampaignsModule } from '../campaigns';
+} from '../../types/campaign.js';
+import { CampaignObjective, CampaignPlacement, CampaignStatus } from '../../types/campaign.js';
+import type { PaginatedResponse } from '../../types/common.js';
+import { CampaignsModule } from '../campaigns.js';
 
 describe('CampaignsModule', () => {
   let mockClient: HttpClient;

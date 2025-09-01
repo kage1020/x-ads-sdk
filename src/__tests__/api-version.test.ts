@@ -5,7 +5,7 @@ import {
   APIVersionManager,
   DEFAULT_VERSION,
   SUPPORTED_VERSIONS,
-} from '../types/api-version';
+} from '../types/api-version.js';
 
 describe('APIVersionManager', () => {
   let versionManager: APIVersionManager;

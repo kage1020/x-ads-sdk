@@ -2,7 +2,7 @@
  * Error handling utility functions
  */
 
-import type { APIErrorDetails } from '../errors';
+import type { APIErrorDetails } from '../errors/index.js';
 
 /**
  * Extract error message from unknown error data

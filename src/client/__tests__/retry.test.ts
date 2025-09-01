@@ -1,5 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { RetryHandler } from '../retry';
+import { RetryHandler } from '../retry.js';
 
 describe('RetryHandler', () => {
   beforeEach(() => {

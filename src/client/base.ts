@@ -1,15 +1,24 @@
-import { OAuth } from '../auth/oauth';
-import { AuthenticationError, createAPIError, NetworkError, TimeoutError } from '../errors';
+import { OAuth } from '../auth/oauth.js';
+import {
+  AuthenticationError,
+  createAPIError,
+  NetworkError,
+  TimeoutError,
+} from '../errors/index.js';
 import {
   DefaultPluginManager,
   type PluginClient,
   type PluginManager,
   type PluginRequestConfig,
   type PluginResponse,
-} from '../plugins/base';
-import { type APIVersion, APIVersionManager, type APIVersionResponse } from '../types/api-version';
-import type { RequestOptions } from '../types/auth';
-import { Environment } from '../types/common';
+} from '../plugins/base.js';
+import {
+  type APIVersion,
+  APIVersionManager,
+  type APIVersionResponse,
+} from '../types/api-version.js';
+import type { RequestOptions } from '../types/auth.js';
+import { Environment } from '../types/common.js';
 import {
   buildURL,
   extractErrorCode,
@@ -20,9 +29,9 @@ import {
   toPluginConfig,
   toPluginResponse,
   unixTimestampToDate,
-} from '../utils';
-import { RateLimiter, type RateLimitOptions } from './rate-limit';
-import { RetryHandler, type RetryOptions } from './retry';
+} from '../utils/index.js';
+import { RateLimiter, type RateLimitOptions } from './rate-limit.js';
+import { RetryHandler, type RetryOptions } from './retry.js';
 
 export interface HttpClientConfig {
   auth: {

@@ -1,4 +1,4 @@
-import type { HttpClient } from '../client/base';
+import type { HttpClient } from '../client/base.js';
 import {
   type AnalyticsOptions,
   type AnalyticsQuery,
@@ -7,8 +7,8 @@ import {
   EntityType,
   Granularity,
   METRIC_GROUPS,
-} from '../types/analytics';
-import { BaseModule } from './base';
+} from '../types/analytics.js';
+import { BaseModule } from './base.js';
 
 export class AnalyticsModule extends BaseModule {
   constructor(client: HttpClient) {

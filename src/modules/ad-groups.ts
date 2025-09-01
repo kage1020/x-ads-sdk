@@ -1,13 +1,13 @@
-import type { HttpClient } from '../client/base';
+import type { HttpClient } from '../client/base.js';
 import {
   type AdGroup,
   type AdGroupListParams,
   AdGroupStatus,
   type CreateAdGroupData,
   type UpdateAdGroupData,
-} from '../types/ad-group';
-import type { PaginatedResponse } from '../types/common';
-import { BaseModule } from './base';
+} from '../types/ad-group.js';
+import type { PaginatedResponse } from '../types/common.js';
+import { BaseModule } from './base.js';
 
 export class AdGroupsModule extends BaseModule {
   constructor(client: HttpClient) {

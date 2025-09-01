@@ -1,4 +1,4 @@
-import type { APIVersion } from './api-version';
+import type { APIVersion } from './api-version.js';
 
 export interface ListParams {
   count?: number;

@@ -5,7 +5,7 @@ import {
   isInPast,
   sleep,
   unixTimestampToDate,
-} from '../time';
+} from '../time.js';
 
 describe('time utilities', () => {
   beforeEach(() => {

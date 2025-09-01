@@ -1,12 +1,12 @@
-import type { HttpClient } from '../client/base';
+import type { HttpClient } from '../client/base.js';
 import {
   type Account,
   type AccountListParams,
   AccountStatus,
   type UpdateAccountData,
-} from '../types/account';
-import type { PaginatedResponse } from '../types/common';
-import { BaseModule } from './base';
+} from '../types/account.js';
+import type { PaginatedResponse } from '../types/common.js';
+import { BaseModule } from './base.js';
 
 export class AccountsModule extends BaseModule {
   constructor(client: HttpClient) {

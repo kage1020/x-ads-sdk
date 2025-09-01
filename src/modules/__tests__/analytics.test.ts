@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { HttpClient } from '../../client/base';
-import type { AnalyticsOptions, AnalyticsResponse, DateRange } from '../../types/analytics';
-import { EntityType, Granularity, METRIC_GROUPS, Placement } from '../../types/analytics';
-import { AnalyticsModule } from '../analytics';
+import type { HttpClient } from '../../client/base.js';
+import type { AnalyticsOptions, AnalyticsResponse, DateRange } from '../../types/analytics.js';
+import { EntityType, Granularity, METRIC_GROUPS, Placement } from '../../types/analytics.js';
+import { AnalyticsModule } from '../analytics.js';
 
 describe('AnalyticsModule', () => {
   let mockClient: HttpClient;

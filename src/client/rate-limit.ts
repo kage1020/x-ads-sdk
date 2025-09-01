@@ -1,4 +1,4 @@
-import { sleep, unixTimestampToDate } from '../utils';
+import { sleep, unixTimestampToDate } from '../utils/index.js';
 
 export interface RateLimitInfo {
   limit: number;
