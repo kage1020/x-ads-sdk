@@ -6,7 +6,7 @@
 
 # Class: XAdsClient
 
-Defined in: [client/x-ads-client.ts:61](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L61)
+Defined in: [client/x-ads-client.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L66)
 
 X Ads SDK Main Client
 
@@ -65,7 +65,7 @@ if (versionInfo.warnings.length > 0) {
 
 > **new XAdsClient**(`config`): `XAdsClient`
 
-Defined in: [client/x-ads-client.ts:94](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L94)
+Defined in: [client/x-ads-client.ts:99](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L99)
 
 Creates a new X Ads SDK client instance
 
@@ -107,7 +107,7 @@ const client = new XAdsClient({
 
 > **getHttpClient**(): [`HttpClient`](HttpClient.md)
 
-Defined in: [client/x-ads-client.ts:126](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L126)
+Defined in: [client/x-ads-client.ts:131](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L131)
 
 Get the underlying HTTP client for advanced usage
 
@@ -125,7 +125,7 @@ The HTTP client instance used by this SDK client
 
 > **use**(`plugin`): `this`
 
-Defined in: [client/x-ads-client.ts:143](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L143)
+Defined in: [client/x-ads-client.ts:148](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L148)
 
 Add a plugin to the SDK for enhanced functionality
 
@@ -158,7 +158,7 @@ client.use(rateLimitTracker);
 
 > **removePlugin**(`pluginName`): `boolean`
 
-Defined in: [client/x-ads-client.ts:154](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L154)
+Defined in: [client/x-ads-client.ts:159](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L159)
 
 Remove a plugin from the SDK
 
@@ -182,7 +182,7 @@ True if the plugin was removed, false if it wasn't found
 
 > **hasPlugin**(`pluginName`): `boolean`
 
-Defined in: [client/x-ads-client.ts:164](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L164)
+Defined in: [client/x-ads-client.ts:169](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L169)
 
 Check if a plugin is currently installed
 
@@ -206,7 +206,7 @@ True if the plugin is installed, false otherwise
 
 > **getAPIVersion**(): [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [client/x-ads-client.ts:173](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L173)
+Defined in: [client/x-ads-client.ts:178](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L178)
 
 Get the current API version being used for requests
 
@@ -222,7 +222,7 @@ The current API version
 
 > **setAPIVersion**(`version`): `void`
 
-Defined in: [client/x-ads-client.ts:187](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L187)
+Defined in: [client/x-ads-client.ts:192](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L192)
 
 Set the API version to use for future requests
 
@@ -254,7 +254,7 @@ client.setAPIVersion(APIVersion.V12);
 
 > **getVersionInfo**(): [`APIVersionResponse`](../interfaces/APIVersionResponse.md)
 
-Defined in: [client/x-ads-client.ts:203](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L203)
+Defined in: [client/x-ads-client.ts:208](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L208)
 
 Get detailed version information and upgrade recommendations
 
@@ -279,7 +279,7 @@ if (versionInfo.recommendedAction === 'upgrade') {
 
 > **isVersionDeprecated**(): `boolean`
 
-Defined in: [client/x-ads-client.ts:212](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L212)
+Defined in: [client/x-ads-client.ts:217](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L217)
 
 Check if the current API version is deprecated
 
@@ -295,7 +295,7 @@ True if the current version is deprecated, false otherwise
 
 > `private` **httpClient**: [`HttpClient`](HttpClient.md)
 
-Defined in: [client/x-ads-client.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L62)
+Defined in: [client/x-ads-client.ts:67](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L67)
 
 ***
 
@@ -303,7 +303,7 @@ Defined in: [client/x-ads-client.ts:62](https://github.com/kage1020/x-ads-sdk/bl
 
 > **accounts**: [`AccountsModule`](AccountsModule.md)
 
-Defined in: [client/x-ads-client.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L65)
+Defined in: [client/x-ads-client.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L70)
 
 Accounts module for managing advertising accounts
 
@@ -313,7 +313,7 @@ Accounts module for managing advertising accounts
 
 > **campaigns**: [`CampaignsModule`](CampaignsModule.md)
 
-Defined in: [client/x-ads-client.ts:67](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L67)
+Defined in: [client/x-ads-client.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L72)
 
 Campaigns module for managing advertising campaigns
 
@@ -323,7 +323,7 @@ Campaigns module for managing advertising campaigns
 
 > **adGroups**: [`AdGroupsModule`](AdGroupsModule.md)
 
-Defined in: [client/x-ads-client.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L69)
+Defined in: [client/x-ads-client.ts:74](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L74)
 
 Ad Groups module for managing ad groups within campaigns
 
@@ -333,6 +333,6 @@ Ad Groups module for managing ad groups within campaigns
 
 > **analytics**: [`AnalyticsModule`](AnalyticsModule.md)
 
-Defined in: [client/x-ads-client.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L71)
+Defined in: [client/x-ads-client.ts:76](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L76)
 
 Analytics module for retrieving campaign performance data
