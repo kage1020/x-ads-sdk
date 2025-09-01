@@ -1,6 +1,6 @@
-import type { HttpClient } from '../client/base';
-import { CursorPaginator, type PaginatorOptions } from '../paginators';
-import type { APIResponse, ListParams, PaginatedResponse } from '../types/common';
+import type { HttpClient } from '../client/base.js';
+import { CursorPaginator, type PaginatorOptions } from '../paginators/index.js';
+import type { APIResponse, ListParams, PaginatedResponse } from '../types/common.js';
 
 export abstract class BaseModule {
   protected client: HttpClient;

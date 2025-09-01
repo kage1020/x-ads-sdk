@@ -5,8 +5,8 @@
  * and can be used across different parts of the SDK.
  */
 
-export * from './crypto';
-export * from './error';
-export * from './http';
-export * from './plugin';
-export * from './time';
+export * from './crypto.js';
+export * from './error.js';
+export * from './http.js';
+export * from './plugin.js';
+export * from './time.js';

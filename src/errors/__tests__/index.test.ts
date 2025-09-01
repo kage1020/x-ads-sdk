@@ -21,7 +21,7 @@ import {
   TimeoutError,
   ValidationError,
   XAdsError,
-} from '../index';
+} from '../index.js';
 
 describe('XAdsError', () => {
   beforeEach(() => {

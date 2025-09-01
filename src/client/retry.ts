@@ -1,4 +1,4 @@
-import { sleep } from '../utils';
+import { sleep } from '../utils/index.js';
 
 export interface RetryOptions {
   maxRetries: number;

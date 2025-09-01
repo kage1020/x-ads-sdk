@@ -1,10 +1,15 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { AccountsModule, AdGroupsModule, AnalyticsModule, CampaignsModule } from '../../modules';
-import type { XAdsPlugin } from '../../plugins/base';
-import { APIVersion } from '../../types/api-version';
-import { type ClientConfig, Environment } from '../../types/common';
-import { HttpClient } from '../base';
-import { XAdsClient } from '../x-ads-client';
+import {
+  AccountsModule,
+  AdGroupsModule,
+  AnalyticsModule,
+  CampaignsModule,
+} from '../../modules/index.js';
+import type { XAdsPlugin } from '../../plugins/base.js';
+import { APIVersion } from '../../types/api-version.js';
+import { type ClientConfig, Environment } from '../../types/common.js';
+import { HttpClient } from '../base.js';
+import { XAdsClient } from '../x-ads-client.js';
 
 describe('XAdsClient', () => {
   const defaultConfig: ClientConfig = {

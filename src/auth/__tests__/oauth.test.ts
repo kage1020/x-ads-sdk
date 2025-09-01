@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
-import { AuthenticationError } from '../../errors';
-import type { AuthConfig } from '../../types/auth';
-import { OAuth } from '../oauth';
+import { AuthenticationError } from '../../errors/index.js';
+import type { AuthConfig } from '../../types/auth.js';
+import { OAuth } from '../oauth.js';
 
 describe('OAuth', () => {
   const validConfig = {

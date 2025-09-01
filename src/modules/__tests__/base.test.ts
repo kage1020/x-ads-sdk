@@ -1,8 +1,8 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import type { HttpClient } from '../../client/base';
-import { CursorPaginator } from '../../paginators';
-import type { APIResponse, PaginatedResponse } from '../../types/common';
-import { BaseModule } from '../base';
+import type { HttpClient } from '../../client/base.js';
+import { CursorPaginator } from '../../paginators/index.js';
+import type { APIResponse, PaginatedResponse } from '../../types/common.js';
+import { BaseModule } from '../base.js';
 
 interface TestItem {
   id: number;

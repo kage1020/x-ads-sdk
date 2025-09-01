@@ -1,5 +1,5 @@
-import { hasStatusCode, unixTimestampToDate } from '../utils';
-import type { PluginRequestConfig, PluginResponse, XAdsPlugin } from './base';
+import { hasStatusCode, unixTimestampToDate } from '../utils/index.js';
+import type { PluginRequestConfig, PluginResponse, XAdsPlugin } from './base.js';
 
 export interface RateLimitInfo {
   endpoint: string;

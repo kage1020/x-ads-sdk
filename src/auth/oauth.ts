@@ -1,6 +1,6 @@
-import { AuthenticationError } from '../errors';
-import type { AuthConfig, OAuthSignature, RequestOptions } from '../types/auth';
-import { hmac, randomHex } from '../utils/crypto';
+import { AuthenticationError } from '../errors/index.js';
+import type { AuthConfig, OAuthSignature, RequestOptions } from '../types/auth.js';
+import { hmac, randomHex } from '../utils/crypto.js';
 
 export class OAuth {
   private consumerKey: string;

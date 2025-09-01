@@ -1,5 +1,5 @@
-export { AccountsModule } from './accounts';
-export { AdGroupsModule } from './ad-groups';
-export { AnalyticsModule } from './analytics';
-export { BaseModule } from './base';
-export { CampaignsModule } from './campaigns';
+export { AccountsModule } from './accounts.js';
+export { AdGroupsModule } from './ad-groups.js';
+export { AnalyticsModule } from './analytics.js';
+export { BaseModule } from './base.js';
+export { CampaignsModule } from './campaigns.js';

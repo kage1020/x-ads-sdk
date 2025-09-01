@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import type { PluginRequestConfig, PluginResponse } from '../base';
-import { RateLimitTracker, type RateLimitTrackerOptions } from '../rate-limit-tracker';
+import type { PluginRequestConfig, PluginResponse } from '../base.js';
+import { RateLimitTracker, type RateLimitTrackerOptions } from '../rate-limit-tracker.js';
 
 // Mock console methods
 const mockConsoleWarn = vi.spyOn(console, 'warn').mockImplementation(() => {});

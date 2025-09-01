@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import { APIError, AuthenticationError, NetworkError, TimeoutError } from '../../errors';
-import { APIVersion } from '../../types';
-import { Environment } from '../../types/common';
-import { HttpClient } from '../base';
+import { APIError, AuthenticationError, NetworkError, TimeoutError } from '../../errors/index.js';
+import { Environment } from '../../types/common.js';
+import { APIVersion } from '../../types/index.js';
+import { HttpClient } from '../base.js';
 
 // Mock fetch globally
 const mockFetch = vi.fn();
