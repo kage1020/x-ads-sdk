@@ -7,7 +7,7 @@ import {
 } from '../error.js';
 
 // Mock Response object
-const createMockResponse = (status: number, statusText: string): Response =>
+const createMockResponse = (status: number, statusText: string) =>
   ({
     status,
     statusText,

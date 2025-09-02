@@ -8,4 +8,6 @@
 
 > `const` **LEGACY\_VERSION**: [`V11`](../enumerations/APIVersion.md#v11) = `APIVersion.V11`
 
-Defined in: [types/api-version.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L16)
+Defined in: utils/api-version.ts:31
+
+Legacy API version for backwards compatibility

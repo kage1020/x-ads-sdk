@@ -12,11 +12,7 @@ import {
   type PluginRequestConfig,
   type PluginResponse,
 } from '../plugins/base.js';
-import {
-  type APIVersion,
-  APIVersionManager,
-  type APIVersionResponse,
-} from '../types/api-version.js';
+import type { APIVersion, APIVersionResponse } from '../types/api-version.js';
 import type { RequestOptions } from '../types/auth.js';
 import { Environment } from '../types/common.js';
 import {
@@ -30,6 +26,7 @@ import {
   toPluginResponse,
   unixTimestampToDate,
 } from '../utils/index.js';
+import { APIVersionManager } from './api-version-manager.js';
 import { RateLimiter, type RateLimitOptions } from './rate-limit.js';
 import { RetryHandler, type RetryOptions } from './retry.js';
 

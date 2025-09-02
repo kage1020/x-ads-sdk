@@ -8,4 +8,6 @@
 
 > `const` **DEFAULT\_VERSION**: [`V12`](../enumerations/APIVersion.md#v12) = `APIVersion.V12`
 
-Defined in: [types/api-version.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L15)
+Defined in: utils/api-version.ts:26
+
+Default API version to use when none specified

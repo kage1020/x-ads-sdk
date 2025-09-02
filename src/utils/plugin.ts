@@ -32,7 +32,7 @@ export function toPluginConfig(
     body: config.body,
     headers: {
       'Content-Type': 'application/json',
-      'User-Agent': 'x-ads-sdk/1.0.0',
+      'User-Agent': 'x-ads-sdk',
       ...config.headers,
     },
   };
@@ -53,7 +53,7 @@ export function fromPluginConfig(
   return {
     method: pluginConfig.method,
     endpoint,
-    params: pluginConfig.params as Record<string, unknown>,
+    params: pluginConfig.params,
     body: pluginConfig.body,
     headers: pluginConfig.headers,
   };

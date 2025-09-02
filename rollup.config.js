@@ -1,6 +1,5 @@
-import typescript from '@rollup/plugin-typescript';
-import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser';
+import typescript from '@rollup/plugin-typescript';
 import filesize from 'rollup-plugin-filesize';
 
 export default [
@@ -11,26 +10,20 @@ export default [
       file: 'dist/index.esm.js',
       format: 'esm',
       sourcemap: true,
-      banner: '/* X Ads SDK - ESM Bundle */'
     },
     plugins: [
-      resolve({
-        preferBuiltins: true,
-        exportConditions: ['node']
-      }),
       typescript({
         tsconfig: './tsconfig.build.json',
         declaration: false, // TypeScript compiler will handle declarations
-        sourceMap: true
+        sourceMap: true,
       }),
       filesize({
         showMinifiedSize: false,
-        showGzippedSize: true
-      })
+        showGzippedSize: true,
+      }),
     ],
-    external: []
   },
-  
+
   // Minified ESM build
   {
     input: 'src/index.ts',
@@ -38,40 +31,19 @@ export default [
       file: 'dist/index.esm.min.js',
       format: 'esm',
       sourcemap: true,
-      banner: '/* X Ads SDK - ESM Bundle (Minified) */'
     },
     plugins: [
-      resolve({
-        preferBuiltins: true,
-        exportConditions: ['node']
-      }),
       typescript({
         tsconfig: './tsconfig.build.json',
         declaration: false,
         declarationMap: false,
-        sourceMap: true
+        sourceMap: true,
       }),
-      terser({
-        compress: {
-          drop_console: false, // Keep console statements for debugging
-          drop_debugger: true,
-          pure_funcs: ['console.debug'],
-          passes: 2
-        },
-        mangle: {
-          reserved: ['XAdsClient', 'APIError', 'RateLimitError', 'TimeoutError'],
-          properties: false
-        },
-        format: {
-          comments: /^!/,
-          preserve_annotations: true
-        }
-      }),
+      terser(),
       filesize({
         showMinifiedSize: true,
-        showGzippedSize: true
-      })
+        showGzippedSize: true,
+      }),
     ],
-    external: []
   },
 ];
