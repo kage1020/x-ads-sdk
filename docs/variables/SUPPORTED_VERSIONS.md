@@ -6,6 +6,8 @@
 
 # Variable: SUPPORTED\_VERSIONS
 
-> `const` **SUPPORTED\_VERSIONS**: readonly \[[`V11`](../enumerations/APIVersion.md#v11), [`V12`](../enumerations/APIVersion.md#v12)\]
+> `const` **SUPPORTED\_VERSIONS**: [`SupportedAPIVersion`](../type-aliases/SupportedAPIVersion.md)[]
 
-Defined in: [types/api-version.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L14)
+Defined in: utils/api-version.ts:36
+
+Array of all supported API versions

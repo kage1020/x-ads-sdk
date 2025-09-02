@@ -13,6 +13,7 @@
 ### Other
 
 - [OAuth](classes/OAuth.md)
+- [APIVersionManager](classes/APIVersionManager.md)
 - [RateLimiter](classes/RateLimiter.md)
 - [RetryHandler](classes/RetryHandler.md)
 - [XAdsError](classes/XAdsError.md)
@@ -31,7 +32,6 @@
 - [CampaignsModule](classes/CampaignsModule.md)
 - [CursorPaginator](classes/CursorPaginator.md)
 - [OffsetPaginator](classes/OffsetPaginator.md)
-- [APIVersionManager](classes/APIVersionManager.md)
 
 ### Plugin
 
@@ -130,10 +130,10 @@
 ## Variables
 
 - [METRIC\_GROUPS](variables/METRIC_GROUPS.md)
-- [SUPPORTED\_VERSIONS](variables/SUPPORTED_VERSIONS.md)
+- [API\_VERSION\_METADATA](variables/API_VERSION_METADATA.md)
 - [DEFAULT\_VERSION](variables/DEFAULT_VERSION.md)
 - [LEGACY\_VERSION](variables/LEGACY_VERSION.md)
-- [API\_VERSION\_METADATA](variables/API_VERSION_METADATA.md)
+- [SUPPORTED\_VERSIONS](variables/SUPPORTED_VERSIONS.md)
 
 ## Enumerations
 

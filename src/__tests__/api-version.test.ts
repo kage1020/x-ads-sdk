@@ -1,11 +1,7 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import {
-  API_VERSION_METADATA,
-  APIVersion,
-  APIVersionManager,
-  DEFAULT_VERSION,
-  SUPPORTED_VERSIONS,
-} from '../types/api-version.js';
+import { APIVersionManager } from '../client/api-version-manager.js';
+import { APIVersion } from '../types/api-version.js';
+import { API_VERSION_METADATA, DEFAULT_VERSION, SUPPORTED_VERSIONS } from '../utils/api-version.js';
 
 describe('APIVersionManager', () => {
   let versionManager: APIVersionManager;

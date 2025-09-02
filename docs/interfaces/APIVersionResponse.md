@@ -6,7 +6,9 @@
 
 # Interface: APIVersionResponse
 
-Defined in: [types/api-version.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L46)
+Defined in: [types/api-version.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L37)
+
+Response from API version operations
 
 ## Properties
 
@@ -14,7 +16,7 @@ Defined in: [types/api-version.ts:46](https://github.com/kage1020/x-ads-sdk/blob
 
 > **currentVersion**: [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [types/api-version.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L47)
+Defined in: [types/api-version.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L38)
 
 ***
 
@@ -22,7 +24,7 @@ Defined in: [types/api-version.ts:47](https://github.com/kage1020/x-ads-sdk/blob
 
 > **warnings**: `string`[]
 
-Defined in: [types/api-version.ts:48](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L48)
+Defined in: [types/api-version.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L39)
 
 ***
 
@@ -30,7 +32,7 @@ Defined in: [types/api-version.ts:48](https://github.com/kage1020/x-ads-sdk/blob
 
 > **isVersionSupported**: `boolean`
 
-Defined in: [types/api-version.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L49)
+Defined in: [types/api-version.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L40)
 
 ***
 
@@ -38,4 +40,4 @@ Defined in: [types/api-version.ts:49](https://github.com/kage1020/x-ads-sdk/blob
 
 > `optional` **recommendedAction**: `"upgrade"` \| `"maintain"` \| `"none"`
 
-Defined in: [types/api-version.ts:50](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L50)
+Defined in: [types/api-version.ts:41](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/api-version.ts#L41)

@@ -5,6 +5,7 @@
  * and can be used across different parts of the SDK.
  */
 
+export * from './api-version.js';
 export * from './crypto.js';
 export * from './error.js';
 export * from './http.js';
