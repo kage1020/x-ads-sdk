@@ -42,7 +42,7 @@ Defined in: [modules/accounts.ts:12](https://github.com/kage1020/x-ads-sdk/blob/
 
 ### list()
 
-> **list**(`params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+> **list**(`params`): `Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 Defined in: [modules/accounts.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/accounts.ts#L19)
 
@@ -52,17 +52,17 @@ List all accessible accounts
 
 ##### params
 
-[`AccountListParams`](../interfaces/AccountListParams.md) = `{}`
+`AccountListParams` = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+`Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 ***
 
 ### get()
 
-> **get**(`accountId`): `Promise`\<[`Account`](../interfaces/Account.md)\>
+> **get**(`accountId`): `Promise`\<`Account`\>
 
 Defined in: [modules/accounts.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/accounts.ts#L27)
 
@@ -76,13 +76,13 @@ Get a specific account by ID
 
 #### Returns
 
-`Promise`\<[`Account`](../interfaces/Account.md)\>
+`Promise`\<`Account`\>
 
 ***
 
 ### update()
 
-> **update**(`accountId`, `data`): `Promise`\<[`Account`](../interfaces/Account.md)\>
+> **update**(`accountId`, `data`): `Promise`\<`Account`\>
 
 Defined in: [modules/accounts.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/accounts.ts#L35)
 
@@ -96,17 +96,17 @@ Update an existing account
 
 ##### data
 
-[`UpdateAccountData`](../interfaces/UpdateAccountData.md)
+`UpdateAccountData`
 
 #### Returns
 
-`Promise`\<[`Account`](../interfaces/Account.md)\>
+`Promise`\<`Account`\>
 
 ***
 
 ### getByStatus()
 
-> **getByStatus**(`status`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+> **getByStatus**(`status`, `params`): `Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 Defined in: [modules/accounts.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/accounts.ts#L43)
 
@@ -116,21 +116,21 @@ Get accounts by status
 
 ##### status
 
-[`AccountStatus`](../enumerations/AccountStatus.md)
+`AccountStatus`
 
 ##### params
 
-`Omit`\<[`AccountListParams`](../interfaces/AccountListParams.md), `"with_deleted"`\> = `{}`
+`Omit`\<`AccountListParams`, `"with_deleted"`\> = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+`Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 ***
 
 ### getActive()
 
-> **getActive**(`params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+> **getActive**(`params?`): `Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 Defined in: [modules/accounts.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/accounts.ts#L64)
 
@@ -140,17 +140,17 @@ Get active accounts
 
 ##### params?
 
-`Omit`\<[`AccountListParams`](../interfaces/AccountListParams.md), `"with_deleted"`\>
+`Omit`\<`AccountListParams`, `"with_deleted"`\>
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+`Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 ***
 
 ### getSuspended()
 
-> **getSuspended**(`params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+> **getSuspended**(`params?`): `Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 Defined in: [modules/accounts.ts:73](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/accounts.ts#L73)
 
@@ -160,17 +160,17 @@ Get suspended accounts
 
 ##### params?
 
-`Omit`\<[`AccountListParams`](../interfaces/AccountListParams.md), `"with_deleted"`\>
+`Omit`\<`AccountListParams`, `"with_deleted"`\>
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+`Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 ***
 
 ### getDeleted()
 
-> **getDeleted**(`params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+> **getDeleted**(`params?`): `Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 Defined in: [modules/accounts.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/accounts.ts#L82)
 
@@ -180,17 +180,17 @@ Get deleted accounts
 
 ##### params?
 
-`Omit`\<[`AccountListParams`](../interfaces/AccountListParams.md), `"with_deleted"`\>
+`Omit`\<`AccountListParams`, `"with_deleted"`\>
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`Account`](../interfaces/Account.md)\>\>
+`Promise`\<`PaginatedResponse`\<`Account`\>\>
 
 ***
 
 ### getFirstActive()
 
-> **getFirstActive**(): `Promise`\<`null` \| [`Account`](../interfaces/Account.md)\>
+> **getFirstActive**(): `Promise`\<`null` \| `Account`\>
 
 Defined in: [modules/accounts.ts:91](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/accounts.ts#L91)
 
@@ -198,7 +198,7 @@ Get the first active account (convenience method)
 
 #### Returns
 
-`Promise`\<`null` \| [`Account`](../interfaces/Account.md)\>
+`Promise`\<`null` \| `Account`\>
 
 ***
 
@@ -230,7 +230,7 @@ Defined in: [modules/base.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### makeListRequest()
 
-> `protected` **makeListRequest**\<`T`\>(`endpoint`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`T`\>\>
+> `protected` **makeListRequest**\<`T`\>(`endpoint`, `params`): `Promise`\<`PaginatedResponse`\<`T`\>\>
 
 Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L19)
 
@@ -248,11 +248,11 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### params
 
-[`ListParams`](../interfaces/ListParams.md) = `{}`
+`ListParams` = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`T`\>\>
+`Promise`\<`PaginatedResponse`\<`T`\>\>
 
 #### Inherited from
 

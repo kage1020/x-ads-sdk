@@ -36,7 +36,7 @@ Defined in: [client/base.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ### environment?
 
-> `optional` **environment**: [`Environment`](../enumerations/Environment.md)
+> `optional` **environment**: `Environment`
 
 Defined in: [client/base.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L40)
 

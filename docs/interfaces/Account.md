@@ -6,7 +6,9 @@
 
 # Interface: Account
 
-Defined in: [types/account.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L11)
+Defined in: types/resources/account.ts:4
+
+X Ads Account related types
 
 ## Properties
 
@@ -14,47 +16,49 @@ Defined in: [types/account.ts:11](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **id**: `string`
 
-Defined in: [types/account.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L12)
+Defined in: types/resources/account.ts:6
+
+Account ID in base36 format
 
 ***
 
-### name
+### name?
 
-> **name**: `string`
+> `optional` **name**: `string`
 
-Defined in: [types/account.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L13)
+Defined in: types/resources/account.ts:8
 
-***
-
-### status
-
-> **status**: [`AccountStatus`](../enumerations/AccountStatus.md)
-
-Defined in: [types/account.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L14)
+Display name of the account
 
 ***
 
-### type
+### read\_only?
 
-> **type**: [`PROMOTED_ACCOUNT`](../enumerations/AccountType.md#promoted_account)
+> `optional` **read\_only**: `boolean`
 
-Defined in: [types/account.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L15)
+Defined in: types/resources/account.ts:10
 
-***
-
-### currency
-
-> **currency**: `string`
-
-Defined in: [types/account.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L16)
+Whether the account can be edited by the current user
 
 ***
 
-### timezone
+### industry\_type?
 
-> **timezone**: `string`
+> `optional` **industry\_type**: `string`
 
-Defined in: [types/account.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L17)
+Defined in: types/resources/account.ts:12
+
+Account type
+
+***
+
+### timezone?
+
+> `optional` **timezone**: `string`
+
+Defined in: types/resources/account.ts:14
+
+Account timezone
 
 ***
 
@@ -62,7 +66,9 @@ Defined in: [types/account.ts:17](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > `optional` **timezone\_switch\_at**: `string`
 
-Defined in: [types/account.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L18)
+Defined in: types/resources/account.ts:16
+
+Account timezone switch at
 
 ***
 
@@ -70,7 +76,9 @@ Defined in: [types/account.ts:18](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **created\_at**: `string`
 
-Defined in: [types/account.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L19)
+Defined in: types/resources/account.ts:18
+
+Account creation time
 
 ***
 
@@ -78,7 +86,9 @@ Defined in: [types/account.ts:19](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **updated\_at**: `string`
 
-Defined in: [types/account.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L20)
+Defined in: types/resources/account.ts:20
+
+Account last update time
 
 ***
 
@@ -86,4 +96,6 @@ Defined in: [types/account.ts:20](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > `optional` **deleted**: `boolean`
 
-Defined in: [types/account.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/account.ts#L21)
+Defined in: types/resources/account.ts:22
+
+Whether account is deleted

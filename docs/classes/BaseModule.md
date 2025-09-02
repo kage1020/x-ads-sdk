@@ -67,7 +67,7 @@ Defined in: [modules/base.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### makeListRequest()
 
-> `protected` **makeListRequest**\<`T`\>(`endpoint`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`T`\>\>
+> `protected` **makeListRequest**\<`T`\>(`endpoint`, `params`): `Promise`\<`PaginatedResponse`\<`T`\>\>
 
 Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L19)
 
@@ -85,11 +85,11 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### params
 
-[`ListParams`](../interfaces/ListParams.md) = `{}`
+`ListParams` = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`T`\>\>
+`Promise`\<`PaginatedResponse`\<`T`\>\>
 
 ***
 

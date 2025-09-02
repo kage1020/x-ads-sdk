@@ -73,7 +73,7 @@ Creates a new X Ads SDK client instance
 
 ##### config
 
-[`ClientConfig`](../interfaces/ClientConfig.md)
+`ClientConfig`
 
 Client configuration including authentication and options
 

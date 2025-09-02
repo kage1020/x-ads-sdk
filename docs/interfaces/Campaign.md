@@ -6,7 +6,7 @@
 
 # Interface: Campaign
 
-Defined in: [types/campaign.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L24)
+Defined in: types/resources/campaign.ts:10
 
 ## Properties
 
@@ -14,15 +14,9 @@ Defined in: [types/campaign.ts:24](https://github.com/kage1020/x-ads-sdk/blob/ma
 
 > **id**: `string`
 
-Defined in: [types/campaign.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L25)
+Defined in: types/resources/campaign.ts:12
 
-***
-
-### account\_id
-
-> **account\_id**: `string`
-
-Defined in: [types/campaign.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L26)
+Campaign ID
 
 ***
 
@@ -30,39 +24,39 @@ Defined in: [types/campaign.ts:26](https://github.com/kage1020/x-ads-sdk/blob/ma
 
 > **name**: `string`
 
-Defined in: [types/campaign.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L27)
+Defined in: types/resources/campaign.ts:14
+
+Campaign name
 
 ***
 
-### status
+### funding\_instrument\_id
 
-> **status**: [`CampaignStatus`](../enumerations/CampaignStatus.md)
+> **funding\_instrument\_id**: `string`
 
-Defined in: [types/campaign.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L28)
+Defined in: types/resources/campaign.ts:16
 
-***
-
-### objective
-
-> **objective**: [`CampaignObjective`](../enumerations/CampaignObjective.md)
-
-Defined in: [types/campaign.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L29)
+Associated funding instrument ID
 
 ***
 
-### placement
+### entity\_status
 
-> **placement**: [`CampaignPlacement`](../enumerations/CampaignPlacement.md)
+> **entity\_status**: [`CampaignEntityStatus`](../enumerations/CampaignEntityStatus.md)
 
-Defined in: [types/campaign.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L30)
+Defined in: types/resources/campaign.ts:18
+
+Campaign entity status
 
 ***
 
-### start\_time?
+### start\_time
 
-> `optional` **start\_time**: `string`
+> **start\_time**: `string`
 
-Defined in: [types/campaign.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L31)
+Defined in: types/resources/campaign.ts:20
+
+Campaign start time
 
 ***
 
@@ -70,23 +64,9 @@ Defined in: [types/campaign.ts:31](https://github.com/kage1020/x-ads-sdk/blob/ma
 
 > `optional` **end\_time**: `string`
 
-Defined in: [types/campaign.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L32)
+Defined in: types/resources/campaign.ts:22
 
-***
-
-### daily\_budget\_amount\_local\_micro?
-
-> `optional` **daily\_budget\_amount\_local\_micro**: `number`
-
-Defined in: [types/campaign.ts:33](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L33)
-
-***
-
-### total\_budget\_amount\_local\_micro?
-
-> `optional` **total\_budget\_amount\_local\_micro**: `number`
-
-Defined in: [types/campaign.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L34)
+Campaign end time
 
 ***
 
@@ -94,7 +74,39 @@ Defined in: [types/campaign.ts:34](https://github.com/kage1020/x-ads-sdk/blob/ma
 
 > **currency**: `string`
 
-Defined in: [types/campaign.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L35)
+Defined in: types/resources/campaign.ts:24
+
+Campaign currency
+
+***
+
+### daily\_budget\_amount\_local\_micro?
+
+> `optional` **daily\_budget\_amount\_local\_micro**: `number`
+
+Defined in: types/resources/campaign.ts:26
+
+Daily budget amount in micros
+
+***
+
+### total\_budget\_amount\_local\_micro?
+
+> `optional` **total\_budget\_amount\_local\_micro**: `number`
+
+Defined in: types/resources/campaign.ts:28
+
+Total budget amount in micros
+
+***
+
+### standard\_delivery?
+
+> `optional` **standard\_delivery**: `boolean`
+
+Defined in: types/resources/campaign.ts:30
+
+Whether this is a standard delivery
 
 ***
 
@@ -102,7 +114,9 @@ Defined in: [types/campaign.ts:35](https://github.com/kage1020/x-ads-sdk/blob/ma
 
 > **created\_at**: `string`
 
-Defined in: [types/campaign.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L36)
+Defined in: types/resources/campaign.ts:32
+
+Campaign creation time
 
 ***
 
@@ -110,7 +124,9 @@ Defined in: [types/campaign.ts:36](https://github.com/kage1020/x-ads-sdk/blob/ma
 
 > **updated\_at**: `string`
 
-Defined in: [types/campaign.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L37)
+Defined in: types/resources/campaign.ts:34
+
+Campaign last update time
 
 ***
 
@@ -118,4 +134,6 @@ Defined in: [types/campaign.ts:37](https://github.com/kage1020/x-ads-sdk/blob/ma
 
 > `optional` **deleted**: `boolean`
 
-Defined in: [types/campaign.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/campaign.ts#L38)
+Defined in: types/resources/campaign.ts:36
+
+Whether campaign is deleted

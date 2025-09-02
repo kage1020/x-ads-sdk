@@ -25,6 +25,12 @@ export interface OAuthSignature {
 }
 
 export interface RequestOptions {
+  params?: Record<string, unknown>;
+  headers?: Record<string, string>;
+}
+
+// Internal interface for OAuth signing (includes method and url)
+export interface OAuthRequestOptions {
   method: string;
   url: string;
   params?: Record<string, unknown>;

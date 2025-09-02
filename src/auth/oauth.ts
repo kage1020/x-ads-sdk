@@ -1,5 +1,5 @@
 import { AuthenticationError } from '../errors/index.js';
-import type { AuthConfig, OAuthSignature, RequestOptions } from '../types/auth.js';
+import type { AuthConfig, OAuthRequestOptions, OAuthSignature } from '../types/auth.js';
 import { hmac, randomHex } from '../utils/crypto.js';
 
 export class OAuth {
@@ -69,7 +69,7 @@ export class OAuth {
     return hmac(algorithm, signingKey, signatureBaseString);
   }
 
-  async generateOAuthSignature(options: RequestOptions): Promise<OAuthSignature> {
+  async generateOAuthSignature(options: OAuthRequestOptions): Promise<OAuthSignature> {
     const nonce = await this.generateNonce();
     const timestamp = this.generateTimestamp();
 
@@ -112,7 +112,7 @@ export class OAuth {
     return `OAuth ${authParams}`;
   }
 
-  async signRequest(options: RequestOptions): Promise<RequestOptions> {
+  async signRequest(options: OAuthRequestOptions): Promise<OAuthRequestOptions> {
     const signature = await this.generateOAuthSignature(options);
     const authHeader = this.generateAuthorizationHeader(signature);
 

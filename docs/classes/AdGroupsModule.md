@@ -42,7 +42,7 @@ Defined in: [modules/ad-groups.ts:13](https://github.com/kage1020/x-ads-sdk/blob
 
 ### list()
 
-> **list**(`accountId`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+> **list**(`accountId`, `params`): `Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 Defined in: [modules/ad-groups.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L20)
 
@@ -56,17 +56,17 @@ List ad groups for an account
 
 ##### params
 
-[`AdGroupListParams`](../interfaces/AdGroupListParams.md) = `{}`
+`AdGroupListParams` = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+`Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 ***
 
 ### get()
 
-> **get**(`accountId`, `adGroupId`): `Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+> **get**(`accountId`, `adGroupId`): `Promise`\<`AdGroup`\>
 
 Defined in: [modules/ad-groups.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L31)
 
@@ -84,13 +84,13 @@ Get a specific ad group by ID
 
 #### Returns
 
-`Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+`Promise`\<`AdGroup`\>
 
 ***
 
 ### create()
 
-> **create**(`accountId`, `data`): `Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+> **create**(`accountId`, `data`): `Promise`\<`AdGroup`\>
 
 Defined in: [modules/ad-groups.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L39)
 
@@ -104,17 +104,17 @@ Create a new ad group
 
 ##### data
 
-[`CreateAdGroupData`](../interfaces/CreateAdGroupData.md)
+`CreateAdGroupData`
 
 #### Returns
 
-`Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+`Promise`\<`AdGroup`\>
 
 ***
 
 ### update()
 
-> **update**(`accountId`, `adGroupId`, `data`): `Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+> **update**(`accountId`, `adGroupId`, `data`): `Promise`\<`AdGroup`\>
 
 Defined in: [modules/ad-groups.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L62)
 
@@ -132,11 +132,11 @@ Update an existing ad group
 
 ##### data
 
-[`UpdateAdGroupData`](../interfaces/UpdateAdGroupData.md)
+`UpdateAdGroupData`
 
 #### Returns
 
-`Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+`Promise`\<`AdGroup`\>
 
 ***
 
@@ -166,7 +166,7 @@ Delete an ad group (soft delete)
 
 ### pause()
 
-> **pause**(`accountId`, `adGroupId`): `Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+> **pause**(`accountId`, `adGroupId`): `Promise`\<`AdGroup`\>
 
 Defined in: [modules/ad-groups.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L78)
 
@@ -184,13 +184,13 @@ Pause an ad group
 
 #### Returns
 
-`Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+`Promise`\<`AdGroup`\>
 
 ***
 
 ### activate()
 
-> **activate**(`accountId`, `adGroupId`): `Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+> **activate**(`accountId`, `adGroupId`): `Promise`\<`AdGroup`\>
 
 Defined in: [modules/ad-groups.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L87)
 
@@ -208,13 +208,13 @@ Activate an ad group
 
 #### Returns
 
-`Promise`\<[`AdGroup`](../interfaces/AdGroup.md)\>
+`Promise`\<`AdGroup`\>
 
 ***
 
 ### listByCampaign()
 
-> **listByCampaign**(`accountId`, `campaignId`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+> **listByCampaign**(`accountId`, `campaignId`, `params`): `Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 Defined in: [modules/ad-groups.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L96)
 
@@ -232,17 +232,17 @@ List ad groups for a specific campaign
 
 ##### params
 
-`Omit`\<[`AdGroupListParams`](../interfaces/AdGroupListParams.md), `"campaign_ids"`\> = `{}`
+`Omit`\<`AdGroupListParams`, `"campaign_ids"`\> = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+`Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 ***
 
 ### getByStatus()
 
-> **getByStatus**(`accountId`, `status`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+> **getByStatus**(`accountId`, `status`, `params`): `Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 Defined in: [modules/ad-groups.ts:110](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L110)
 
@@ -256,21 +256,21 @@ Get ad groups by status
 
 ##### status
 
-[`AdGroupStatus`](../enumerations/AdGroupStatus.md)
+`AdGroupStatus`
 
 ##### params
 
-`Omit`\<[`AdGroupListParams`](../interfaces/AdGroupListParams.md), `"with_deleted"`\> = `{}`
+`Omit`\<`AdGroupListParams`, `"with_deleted"`\> = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+`Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 ***
 
 ### getActive()
 
-> **getActive**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+> **getActive**(`accountId`, `params?`): `Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 Defined in: [modules/ad-groups.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L132)
 
@@ -284,17 +284,17 @@ Get active ad groups
 
 ##### params?
 
-`Omit`\<[`AdGroupListParams`](../interfaces/AdGroupListParams.md), `"with_deleted"`\>
+`Omit`\<`AdGroupListParams`, `"with_deleted"`\>
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+`Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 ***
 
 ### getPaused()
 
-> **getPaused**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+> **getPaused**(`accountId`, `params?`): `Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 Defined in: [modules/ad-groups.ts:142](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L142)
 
@@ -308,17 +308,17 @@ Get paused ad groups
 
 ##### params?
 
-`Omit`\<[`AdGroupListParams`](../interfaces/AdGroupListParams.md), `"with_deleted"`\>
+`Omit`\<`AdGroupListParams`, `"with_deleted"`\>
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+`Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 ***
 
 ### getDeleted()
 
-> **getDeleted**(`accountId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+> **getDeleted**(`accountId`, `params?`): `Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 Defined in: [modules/ad-groups.ts:152](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L152)
 
@@ -332,17 +332,17 @@ Get deleted ad groups
 
 ##### params?
 
-`Omit`\<[`AdGroupListParams`](../interfaces/AdGroupListParams.md), `"with_deleted"`\>
+`Omit`\<`AdGroupListParams`, `"with_deleted"`\>
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+`Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 ***
 
 ### getActiveByCampaign()
 
-> **getActiveByCampaign**(`accountId`, `campaignId`, `params?`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+> **getActiveByCampaign**(`accountId`, `campaignId`, `params?`): `Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 Defined in: [modules/ad-groups.ts:162](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/ad-groups.ts#L162)
 
@@ -360,11 +360,11 @@ Get active ad groups for a specific campaign
 
 ##### params?
 
-`Omit`\<[`AdGroupListParams`](../interfaces/AdGroupListParams.md), `"with_deleted"` \| `"campaign_ids"`\>
+`Omit`\<`AdGroupListParams`, `"with_deleted"` \| `"campaign_ids"`\>
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<[`AdGroup`](../interfaces/AdGroup.md)\>\>
+`Promise`\<`PaginatedResponse`\<`AdGroup`\>\>
 
 ***
 
@@ -396,7 +396,7 @@ Defined in: [modules/base.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### makeListRequest()
 
-> `protected` **makeListRequest**\<`T`\>(`endpoint`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`T`\>\>
+> `protected` **makeListRequest**\<`T`\>(`endpoint`, `params`): `Promise`\<`PaginatedResponse`\<`T`\>\>
 
 Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L19)
 
@@ -414,11 +414,11 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### params
 
-[`ListParams`](../interfaces/ListParams.md) = `{}`
+`ListParams` = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`T`\>\>
+`Promise`\<`PaginatedResponse`\<`T`\>\>
 
 #### Inherited from
 

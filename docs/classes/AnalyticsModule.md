@@ -42,7 +42,7 @@ Defined in: [modules/analytics.ts:14](https://github.com/kage1020/x-ads-sdk/blob
 
 ### getAnalytics()
 
-> **getAnalytics**(`accountId`, `options`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getAnalytics**(`accountId`, `options`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L21)
 
@@ -56,17 +56,17 @@ Get analytics data for entities
 
 ##### options
 
-[`AnalyticsOptions`](../interfaces/AnalyticsOptions.md)
+`AnalyticsOptions`
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getCampaignAnalytics()
 
-> **getCampaignAnalytics**(`accountId`, `campaignIds`, `dateRange`, `options`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getCampaignAnalytics**(`accountId`, `campaignIds`, `dateRange`, `options`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L43)
 
@@ -84,21 +84,21 @@ Get campaign analytics
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### options
 
-`Partial`\<[`AnalyticsOptions`](../interfaces/AnalyticsOptions.md)\> = `{}`
+`Partial`\<`AnalyticsOptions`\> = `{}`
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getAdGroupAnalytics()
 
-> **getAdGroupAnalytics**(`accountId`, `adGroupIds`, `dateRange`, `options`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getAdGroupAnalytics**(`accountId`, `adGroupIds`, `dateRange`, `options`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L60)
 
@@ -116,21 +116,21 @@ Get ad group (line item) analytics
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### options
 
-`Partial`\<[`AnalyticsOptions`](../interfaces/AnalyticsOptions.md)\> = `{}`
+`Partial`\<`AnalyticsOptions`\> = `{}`
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getAccountAnalytics()
 
-> **getAccountAnalytics**(`accountId`, `dateRange`, `options`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getAccountAnalytics**(`accountId`, `dateRange`, `options`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L77)
 
@@ -144,21 +144,21 @@ Get account-level analytics
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### options
 
-`Partial`\<[`AnalyticsOptions`](../interfaces/AnalyticsOptions.md)\> = `{}`
+`Partial`\<`AnalyticsOptions`\> = `{}`
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getEngagementAnalytics()
 
-> **getEngagementAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getEngagementAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:93](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L93)
 
@@ -172,7 +172,7 @@ Get analytics with engagement metrics
 
 ##### entityType
 
-[`EntityType`](../enumerations/EntityType.md)
+`EntityType`
 
 ##### entityIds
 
@@ -180,21 +180,21 @@ Get analytics with engagement metrics
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### granularity
 
-[`Granularity`](../enumerations/Granularity.md) = `Granularity.TOTAL`
+`Granularity` = `Granularity.TOTAL`
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getBillingAnalytics()
 
-> **getBillingAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getBillingAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L112)
 
@@ -208,7 +208,7 @@ Get analytics with billing metrics
 
 ##### entityType
 
-[`EntityType`](../enumerations/EntityType.md)
+`EntityType`
 
 ##### entityIds
 
@@ -216,21 +216,21 @@ Get analytics with billing metrics
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### granularity
 
-[`Granularity`](../enumerations/Granularity.md) = `Granularity.TOTAL`
+`Granularity` = `Granularity.TOTAL`
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getVideoAnalytics()
 
-> **getVideoAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getVideoAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:131](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L131)
 
@@ -244,7 +244,7 @@ Get analytics with video metrics
 
 ##### entityType
 
-[`EntityType`](../enumerations/EntityType.md)
+`EntityType`
 
 ##### entityIds
 
@@ -252,21 +252,21 @@ Get analytics with video metrics
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### granularity
 
-[`Granularity`](../enumerations/Granularity.md) = `Granularity.TOTAL`
+`Granularity` = `Granularity.TOTAL`
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getComprehensiveAnalytics()
 
-> **getComprehensiveAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getComprehensiveAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `granularity`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:150](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L150)
 
@@ -280,7 +280,7 @@ Get comprehensive analytics with all metric groups
 
 ##### entityType
 
-[`EntityType`](../enumerations/EntityType.md)
+`EntityType`
 
 ##### entityIds
 
@@ -288,21 +288,21 @@ Get comprehensive analytics with all metric groups
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### granularity
 
-[`Granularity`](../enumerations/Granularity.md) = `Granularity.TOTAL`
+`Granularity` = `Granularity.TOTAL`
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getDailyAnalytics()
 
-> **getDailyAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `metricGroups`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getDailyAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `metricGroups`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:169](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L169)
 
@@ -316,7 +316,7 @@ Get analytics for a specific date range with daily granularity
 
 ##### entityType
 
-[`EntityType`](../enumerations/EntityType.md)
+`EntityType`
 
 ##### entityIds
 
@@ -324,7 +324,7 @@ Get analytics for a specific date range with daily granularity
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### metricGroups
 
@@ -332,13 +332,13 @@ Get analytics for a specific date range with daily granularity
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getHourlyAnalytics()
 
-> **getHourlyAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `metricGroups`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getHourlyAnalytics**(`accountId`, `entityType`, `entityIds`, `dateRange`, `metricGroups`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:188](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L188)
 
@@ -352,7 +352,7 @@ Get analytics for a specific date range with hourly granularity
 
 ##### entityType
 
-[`EntityType`](../enumerations/EntityType.md)
+`EntityType`
 
 ##### entityIds
 
@@ -360,7 +360,7 @@ Get analytics for a specific date range with hourly granularity
 
 ##### dateRange
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ##### metricGroups
 
@@ -368,13 +368,13 @@ Get analytics for a specific date range with hourly granularity
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### createDateRange()
 
-> `static` **createDateRange**(`days`): [`DateRange`](../interfaces/DateRange.md)
+> `static` **createDateRange**(`days`): `DateRange`
 
 Defined in: [modules/analytics.ts:207](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L207)
 
@@ -388,13 +388,13 @@ Create date range for common periods
 
 #### Returns
 
-[`DateRange`](../interfaces/DateRange.md)
+`DateRange`
 
 ***
 
 ### getLastWeekAnalytics()
 
-> **getLastWeekAnalytics**(`accountId`, `entityType`, `entityIds`, `metricGroups`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getLastWeekAnalytics**(`accountId`, `entityType`, `entityIds`, `metricGroups`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:221](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L221)
 
@@ -408,7 +408,7 @@ Get analytics for the last 7 days
 
 ##### entityType
 
-[`EntityType`](../enumerations/EntityType.md)
+`EntityType`
 
 ##### entityIds
 
@@ -420,13 +420,13 @@ Get analytics for the last 7 days
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
 ### getLastMonthAnalytics()
 
-> **getLastMonthAnalytics**(`accountId`, `entityType`, `entityIds`, `metricGroups`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+> **getLastMonthAnalytics**(`accountId`, `entityType`, `entityIds`, `metricGroups`): `Promise`\<`AnalyticsResponse`\>
 
 Defined in: [modules/analytics.ts:239](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/analytics.ts#L239)
 
@@ -440,7 +440,7 @@ Get analytics for the last 30 days
 
 ##### entityType
 
-[`EntityType`](../enumerations/EntityType.md)
+`EntityType`
 
 ##### entityIds
 
@@ -452,7 +452,7 @@ Get analytics for the last 30 days
 
 #### Returns
 
-`Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
+`Promise`\<`AnalyticsResponse`\>
 
 ***
 
@@ -484,7 +484,7 @@ Defined in: [modules/base.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### makeListRequest()
 
-> `protected` **makeListRequest**\<`T`\>(`endpoint`, `params`): `Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`T`\>\>
+> `protected` **makeListRequest**\<`T`\>(`endpoint`, `params`): `Promise`\<`PaginatedResponse`\<`T`\>\>
 
 Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/modules/base.ts#L19)
 
@@ -502,11 +502,11 @@ Defined in: [modules/base.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ##### params
 
-[`ListParams`](../interfaces/ListParams.md) = `{}`
+`ListParams` = `{}`
 
 #### Returns
 
-`Promise`\<[`PaginatedResponse`](../interfaces/PaginatedResponse.md)\<`T`\>\>
+`Promise`\<`PaginatedResponse`\<`T`\>\>
 
 #### Inherited from
 

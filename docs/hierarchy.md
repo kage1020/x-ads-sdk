@@ -16,6 +16,15 @@
 
 ***
 
+### BaseResource
+
+- [BaseResource](classes/BaseResource.md)
+  - [AccountResource](classes/AccountResource.md)
+  - [CampaignResource](classes/CampaignResource.md)
+  - [LineItemResource](classes/LineItemResource.md)
+
+***
+
 ### PluginClient
 
 - [PluginClient](interfaces/PluginClient.md)

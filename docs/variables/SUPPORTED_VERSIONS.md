@@ -8,6 +8,6 @@
 
 > `const` **SUPPORTED\_VERSIONS**: [`SupportedAPIVersion`](../type-aliases/SupportedAPIVersion.md)[]
 
-Defined in: utils/api-version.ts:36
+Defined in: [utils/api-version.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/utils/api-version.ts#L36)
 
 Array of all supported API versions
