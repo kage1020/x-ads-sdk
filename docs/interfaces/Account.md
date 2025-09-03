@@ -6,7 +6,7 @@
 
 # Interface: Account
 
-Defined in: types/resources/account.ts:4
+Defined in: [types/resources/account.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L4)
 
 X Ads Account related types
 
@@ -16,7 +16,7 @@ X Ads Account related types
 
 > **id**: `string`
 
-Defined in: types/resources/account.ts:6
+Defined in: [types/resources/account.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L6)
 
 Account ID in base36 format
 
@@ -26,7 +26,7 @@ Account ID in base36 format
 
 > `optional` **name**: `string`
 
-Defined in: types/resources/account.ts:8
+Defined in: [types/resources/account.ts:8](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L8)
 
 Display name of the account
 
@@ -36,7 +36,7 @@ Display name of the account
 
 > `optional` **read\_only**: `boolean`
 
-Defined in: types/resources/account.ts:10
+Defined in: [types/resources/account.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L10)
 
 Whether the account can be edited by the current user
 
@@ -46,7 +46,7 @@ Whether the account can be edited by the current user
 
 > `optional` **industry\_type**: `string`
 
-Defined in: types/resources/account.ts:12
+Defined in: [types/resources/account.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L12)
 
 Account type
 
@@ -56,7 +56,7 @@ Account type
 
 > `optional` **timezone**: `string`
 
-Defined in: types/resources/account.ts:14
+Defined in: [types/resources/account.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L14)
 
 Account timezone
 
@@ -66,7 +66,7 @@ Account timezone
 
 > `optional` **timezone\_switch\_at**: `string`
 
-Defined in: types/resources/account.ts:16
+Defined in: [types/resources/account.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L16)
 
 Account timezone switch at
 
@@ -76,7 +76,7 @@ Account timezone switch at
 
 > **created\_at**: `string`
 
-Defined in: types/resources/account.ts:18
+Defined in: [types/resources/account.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L18)
 
 Account creation time
 
@@ -86,7 +86,7 @@ Account creation time
 
 > **updated\_at**: `string`
 
-Defined in: types/resources/account.ts:20
+Defined in: [types/resources/account.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L20)
 
 Account last update time
 
@@ -96,6 +96,6 @@ Account last update time
 
 > `optional` **deleted**: `boolean`
 
-Defined in: types/resources/account.ts:22
+Defined in: [types/resources/account.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L22)
 
 Whether account is deleted

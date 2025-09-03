@@ -6,7 +6,7 @@
 
 # Enumeration: LineItemProductType
 
-Defined in: types/resources/line-item.ts:21
+Defined in: [types/resources/line-item.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L21)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: types/resources/line-item.ts:21
 
 > **PROMOTED\_TWEETS**: `"PROMOTED_TWEETS"`
 
-Defined in: types/resources/line-item.ts:22
+Defined in: [types/resources/line-item.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L22)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/resources/line-item.ts:22
 
 > **PROMOTED\_ACCOUNTS**: `"PROMOTED_ACCOUNTS"`
 
-Defined in: types/resources/line-item.ts:23
+Defined in: [types/resources/line-item.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L23)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: types/resources/line-item.ts:23
 
 > **PROMOTED\_VIDEOS**: `"PROMOTED_VIDEOS"`
 
-Defined in: types/resources/line-item.ts:24
+Defined in: [types/resources/line-item.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L24)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: types/resources/line-item.ts:24
 
 > **MEDIA**: `"MEDIA"`
 
-Defined in: types/resources/line-item.ts:25
+Defined in: [types/resources/line-item.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L25)

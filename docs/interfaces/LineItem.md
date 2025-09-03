@@ -6,7 +6,7 @@
 
 # Interface: LineItem
 
-Defined in: types/resources/line-item.ts:38
+Defined in: [types/resources/line-item.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L38)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/line-item.ts:38
 
 > **id**: `string`
 
-Defined in: types/resources/line-item.ts:40
+Defined in: [types/resources/line-item.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L40)
 
 Line item ID
 
@@ -24,7 +24,7 @@ Line item ID
 
 > `optional` **name**: `string`
 
-Defined in: types/resources/line-item.ts:42
+Defined in: [types/resources/line-item.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L42)
 
 Line item name
 
@@ -34,7 +34,7 @@ Line item name
 
 > **campaign\_id**: `string`
 
-Defined in: types/resources/line-item.ts:44
+Defined in: [types/resources/line-item.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L44)
 
 Associated campaign ID
 
@@ -44,7 +44,7 @@ Associated campaign ID
 
 > **entity\_status**: [`LineItemEntityStatus`](../enumerations/LineItemEntityStatus.md)
 
-Defined in: types/resources/line-item.ts:46
+Defined in: [types/resources/line-item.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L46)
 
 Line item entity status
 
@@ -54,7 +54,7 @@ Line item entity status
 
 > **objective**: [`LineItemObjective`](../enumerations/LineItemObjective.md)
 
-Defined in: types/resources/line-item.ts:48
+Defined in: [types/resources/line-item.ts:48](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L48)
 
 Line item objective
 
@@ -64,7 +64,7 @@ Line item objective
 
 > **product\_type**: [`LineItemProductType`](../enumerations/LineItemProductType.md)
 
-Defined in: types/resources/line-item.ts:50
+Defined in: [types/resources/line-item.ts:50](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L50)
 
 Product type
 
@@ -74,7 +74,7 @@ Product type
 
 > **placements**: [`LineItemPlacement`](../enumerations/LineItemPlacement.md)[]
 
-Defined in: types/resources/line-item.ts:52
+Defined in: [types/resources/line-item.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L52)
 
 Placements
 
@@ -84,7 +84,7 @@ Placements
 
 > `optional` **bid\_type**: [`LineItemBidType`](../enumerations/LineItemBidType.md)
 
-Defined in: types/resources/line-item.ts:54
+Defined in: [types/resources/line-item.ts:54](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L54)
 
 Bid type
 
@@ -94,7 +94,7 @@ Bid type
 
 > `optional` **bid\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/line-item.ts:56
+Defined in: [types/resources/line-item.ts:56](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L56)
 
 Bid amount in micros
 
@@ -104,7 +104,7 @@ Bid amount in micros
 
 > `optional` **target\_cpa\_local\_micro**: `number`
 
-Defined in: types/resources/line-item.ts:58
+Defined in: [types/resources/line-item.ts:58](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L58)
 
 Target CPA amount in micros
 
@@ -114,7 +114,7 @@ Target CPA amount in micros
 
 > `optional` **daily\_budget\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/line-item.ts:60
+Defined in: [types/resources/line-item.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L60)
 
 Daily budget amount in micros
 
@@ -124,7 +124,7 @@ Daily budget amount in micros
 
 > `optional` **total\_budget\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/line-item.ts:62
+Defined in: [types/resources/line-item.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L62)
 
 Total budget amount in micros
 
@@ -134,7 +134,7 @@ Total budget amount in micros
 
 > `optional` **automatically\_select\_bid**: `boolean`
 
-Defined in: types/resources/line-item.ts:64
+Defined in: [types/resources/line-item.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L64)
 
 Whether this is automatically select bid
 
@@ -144,7 +144,7 @@ Whether this is automatically select bid
 
 > **created\_at**: `string`
 
-Defined in: types/resources/line-item.ts:66
+Defined in: [types/resources/line-item.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L66)
 
 Line item creation time
 
@@ -154,7 +154,7 @@ Line item creation time
 
 > **updated\_at**: `string`
 
-Defined in: types/resources/line-item.ts:68
+Defined in: [types/resources/line-item.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L68)
 
 Line item last update time
 
@@ -164,6 +164,6 @@ Line item last update time
 
 > `optional` **deleted**: `boolean`
 
-Defined in: types/resources/line-item.ts:70
+Defined in: [types/resources/line-item.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L70)
 
 Whether line item is deleted

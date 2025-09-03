@@ -6,7 +6,7 @@
 
 # Interface: CampaignResponse
 
-Defined in: types/resources/campaign.ts:75
+Defined in: [types/resources/campaign.ts:75](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L75)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/campaign.ts:75
 
 > **data**: [`Campaign`](Campaign.md)[]
 
-Defined in: types/resources/campaign.ts:76
+Defined in: [types/resources/campaign.ts:76](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L76)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/resources/campaign.ts:76
 
 > **request**: `object`
 
-Defined in: types/resources/campaign.ts:77
+Defined in: [types/resources/campaign.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L77)
 
 #### params
 
@@ -34,7 +34,7 @@ Defined in: types/resources/campaign.ts:77
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/resources/campaign.ts:80
+Defined in: [types/resources/campaign.ts:80](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L80)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: types/resources/campaign.ts:80
 
 > `optional` **total\_count**: `number`
 
-Defined in: types/resources/campaign.ts:81
+Defined in: [types/resources/campaign.ts:81](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L81)

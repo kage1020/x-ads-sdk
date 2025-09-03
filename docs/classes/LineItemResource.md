@@ -6,7 +6,7 @@
 
 # Class: LineItemResource
 
-Defined in: resources/line-item.ts:14
+Defined in: [resources/line-item.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L14)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: resources/line-item.ts:14
 
 > **new LineItemResource**(`httpClient`, `accountId`): `LineItemResource`
 
-Defined in: resources/line-item.ts:17
+Defined in: [resources/line-item.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L17)
 
 #### Parameters
 
@@ -48,7 +48,7 @@ Defined in: resources/line-item.ts:17
 
 > **list**(`options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: resources/line-item.ts:27
+Defined in: [resources/line-item.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L27)
 
 Get line items for the account
 
@@ -56,7 +56,7 @@ Get line items for the account
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -72,7 +72,7 @@ Line item response
 
 > **get**(`lineItemId`, `options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: resources/line-item.ts:43
+Defined in: [resources/line-item.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L43)
 
 Get a specific line item by ID
 
@@ -86,7 +86,7 @@ Line item ID
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -102,7 +102,7 @@ Line item response
 
 > **create**(`data`, `options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: resources/line-item.ts:59
+Defined in: [resources/line-item.ts:59](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L59)
 
 Create a new line item
 
@@ -116,7 +116,7 @@ Line item creation data
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -132,7 +132,7 @@ Line item response
 
 > **update**(`lineItemId`, `data`, `options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: resources/line-item.ts:77
+Defined in: [resources/line-item.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L77)
 
 Update a line item
 
@@ -152,7 +152,7 @@ Line item update data
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -168,7 +168,7 @@ Line item response
 
 > **delete**(`lineItemId`, `options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: resources/line-item.ts:98
+Defined in: [resources/line-item.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L98)
 
 Delete a line item
 
@@ -182,7 +182,7 @@ Line item ID
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -198,7 +198,7 @@ Line item response
 
 > `protected` **httpClient**: [`HttpClient`](HttpClient.md)
 
-Defined in: resources/base.ts:7
+Defined in: [resources/base.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L7)
 
 #### Inherited from
 
@@ -210,4 +210,4 @@ Defined in: resources/base.ts:7
 
 > `private` **accountId**: `string`
 
-Defined in: resources/line-item.ts:15
+Defined in: [resources/line-item.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L15)

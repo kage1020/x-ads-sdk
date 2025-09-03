@@ -6,7 +6,7 @@
 
 # Interface: FundingInstrument
 
-Defined in: types/resources/funding-instrument.ts:15
+Defined in: [types/resources/funding-instrument.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L15)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/funding-instrument.ts:15
 
 > **id**: `string`
 
-Defined in: types/resources/funding-instrument.ts:17
+Defined in: [types/resources/funding-instrument.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L17)
 
 Funding instrument ID
 
@@ -24,7 +24,7 @@ Funding instrument ID
 
 > **type**: [`FundingInstrumentType`](../enumerations/FundingInstrumentType.md)
 
-Defined in: types/resources/funding-instrument.ts:19
+Defined in: [types/resources/funding-instrument.ts:19](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L19)
 
 Funding instrument type
 
@@ -34,7 +34,7 @@ Funding instrument type
 
 > **entity\_status**: [`FundingInstrumentEntityStatus`](../enumerations/FundingInstrumentEntityStatus.md)
 
-Defined in: types/resources/funding-instrument.ts:21
+Defined in: [types/resources/funding-instrument.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L21)
 
 Funding instrument entity status
 
@@ -44,7 +44,7 @@ Funding instrument entity status
 
 > **currency**: `string`
 
-Defined in: types/resources/funding-instrument.ts:23
+Defined in: [types/resources/funding-instrument.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L23)
 
 Currency code
 
@@ -54,7 +54,7 @@ Currency code
 
 > `optional` **description**: `string`
 
-Defined in: types/resources/funding-instrument.ts:25
+Defined in: [types/resources/funding-instrument.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L25)
 
 Funding instrument description
 
@@ -64,7 +64,7 @@ Funding instrument description
 
 > `optional` **is\_default**: `boolean`
 
-Defined in: types/resources/funding-instrument.ts:27
+Defined in: [types/resources/funding-instrument.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L27)
 
 Whether this is the account's default funding instrument
 
@@ -74,7 +74,7 @@ Whether this is the account's default funding instrument
 
 > `optional` **credit\_remaining\_local\_micro**: `number`
 
-Defined in: types/resources/funding-instrument.ts:29
+Defined in: [types/resources/funding-instrument.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L29)
 
 Credit remaining in micros
 
@@ -84,7 +84,7 @@ Credit remaining in micros
 
 > `optional` **credit\_limit\_local\_micro**: `number`
 
-Defined in: types/resources/funding-instrument.ts:31
+Defined in: [types/resources/funding-instrument.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L31)
 
 Credit limit in micros
 
@@ -94,7 +94,7 @@ Credit limit in micros
 
 > **created\_at**: `string`
 
-Defined in: types/resources/funding-instrument.ts:33
+Defined in: [types/resources/funding-instrument.ts:33](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L33)
 
 Funding instrument creation time
 
@@ -104,7 +104,7 @@ Funding instrument creation time
 
 > **updated\_at**: `string`
 
-Defined in: types/resources/funding-instrument.ts:35
+Defined in: [types/resources/funding-instrument.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L35)
 
 Funding instrument last update time
 
@@ -114,6 +114,6 @@ Funding instrument last update time
 
 > `optional` **deleted**: `boolean`
 
-Defined in: types/resources/funding-instrument.ts:37
+Defined in: [types/resources/funding-instrument.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L37)
 
 Whether funding instrument is deleted

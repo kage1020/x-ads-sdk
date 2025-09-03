@@ -6,16 +6,6 @@
 
 ## Hierarchy Summary
 
-### BaseModule
-
-- [BaseModule](classes/BaseModule.md)
-  - [AccountsModule](classes/AccountsModule.md)
-  - [AdGroupsModule](classes/AdGroupsModule.md)
-  - [AnalyticsModule](classes/AnalyticsModule.md)
-  - [CampaignsModule](classes/CampaignsModule.md)
-
-***
-
 ### BaseResource
 
 - [BaseResource](classes/BaseResource.md)

@@ -6,7 +6,7 @@
 
 # Interface: AccountUpdateRequest
 
-Defined in: types/resources/account.ts:32
+Defined in: [types/resources/account.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L32)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/account.ts:32
 
 > `optional` **name**: `string`
 
-Defined in: types/resources/account.ts:34
+Defined in: [types/resources/account.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L34)
 
 Display name of the account
 
@@ -24,6 +24,6 @@ Display name of the account
 
 > `optional` **industry\_type**: `string`
 
-Defined in: types/resources/account.ts:36
+Defined in: [types/resources/account.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L36)
 
 Account industry type

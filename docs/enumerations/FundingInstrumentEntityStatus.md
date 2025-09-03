@@ -6,7 +6,7 @@
 
 # Enumeration: FundingInstrumentEntityStatus
 
-Defined in: types/resources/funding-instrument.ts:9
+Defined in: [types/resources/funding-instrument.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L9)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: types/resources/funding-instrument.ts:9
 
 > **ACTIVE**: `"ACTIVE"`
 
-Defined in: types/resources/funding-instrument.ts:10
+Defined in: [types/resources/funding-instrument.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L10)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/resources/funding-instrument.ts:10
 
 > **PAUSED**: `"PAUSED"`
 
-Defined in: types/resources/funding-instrument.ts:11
+Defined in: [types/resources/funding-instrument.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L11)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: types/resources/funding-instrument.ts:11
 
 > **CANCELLED**: `"CANCELLED"`
 
-Defined in: types/resources/funding-instrument.ts:12
+Defined in: [types/resources/funding-instrument.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L12)

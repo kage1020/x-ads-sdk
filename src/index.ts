@@ -1,7 +1,6 @@
 export * from './auth/index.js';
 export * from './client/index.js';
 export * from './errors/index.js';
-export * from './modules/index.js';
 export * from './paginators/index.js';
 export * from './plugins/index.js';
 export * from './resources/index.js';

@@ -6,7 +6,7 @@
 
 # Enumeration: CampaignEntityStatus
 
-Defined in: types/resources/campaign.ts:4
+Defined in: [types/resources/campaign.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L4)
 
 X Ads Campaign related types
 
@@ -16,7 +16,7 @@ X Ads Campaign related types
 
 > **ACTIVE**: `"ACTIVE"`
 
-Defined in: types/resources/campaign.ts:5
+Defined in: [types/resources/campaign.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L5)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/resources/campaign.ts:5
 
 > **PAUSED**: `"PAUSED"`
 
-Defined in: types/resources/campaign.ts:6
+Defined in: [types/resources/campaign.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L6)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: types/resources/campaign.ts:6
 
 > **DRAFT**: `"DRAFT"`
 
-Defined in: types/resources/campaign.ts:7
+Defined in: [types/resources/campaign.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L7)

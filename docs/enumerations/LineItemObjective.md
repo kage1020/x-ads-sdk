@@ -6,7 +6,7 @@
 
 # Enumeration: LineItemObjective
 
-Defined in: types/resources/line-item.ts:10
+Defined in: [types/resources/line-item.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L10)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: types/resources/line-item.ts:10
 
 > **AWARENESS**: `"AWARENESS"`
 
-Defined in: types/resources/line-item.ts:11
+Defined in: [types/resources/line-item.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L11)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/resources/line-item.ts:11
 
 > **VIDEO\_VIEWS**: `"VIDEO_VIEWS"`
 
-Defined in: types/resources/line-item.ts:12
+Defined in: [types/resources/line-item.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L12)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: types/resources/line-item.ts:12
 
 > **WEBSITE\_CLICKS**: `"WEBSITE_CLICKS"`
 
-Defined in: types/resources/line-item.ts:13
+Defined in: [types/resources/line-item.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L13)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: types/resources/line-item.ts:13
 
 > **ENGAGEMENT**: `"ENGAGEMENT"`
 
-Defined in: types/resources/line-item.ts:14
+Defined in: [types/resources/line-item.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L14)
 
 ***
 
@@ -46,7 +46,7 @@ Defined in: types/resources/line-item.ts:14
 
 > **APP\_INSTALLS**: `"APP_INSTALLS"`
 
-Defined in: types/resources/line-item.ts:15
+Defined in: [types/resources/line-item.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L15)
 
 ***
 
@@ -54,7 +54,7 @@ Defined in: types/resources/line-item.ts:15
 
 > **FOLLOWERS**: `"FOLLOWERS"`
 
-Defined in: types/resources/line-item.ts:16
+Defined in: [types/resources/line-item.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L16)
 
 ***
 
@@ -62,7 +62,7 @@ Defined in: types/resources/line-item.ts:16
 
 > **PREROLL\_VIEWS**: `"PREROLL_VIEWS"`
 
-Defined in: types/resources/line-item.ts:17
+Defined in: [types/resources/line-item.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L17)
 
 ***
 
@@ -70,4 +70,4 @@ Defined in: types/resources/line-item.ts:17
 
 > **MOBILE\_CONVERSIONS**: `"MOBILE_CONVERSIONS"`
 
-Defined in: types/resources/line-item.ts:18
+Defined in: [types/resources/line-item.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L18)

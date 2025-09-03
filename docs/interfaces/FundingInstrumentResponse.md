@@ -6,7 +6,7 @@
 
 # Interface: FundingInstrumentResponse
 
-Defined in: types/resources/funding-instrument.ts:40
+Defined in: [types/resources/funding-instrument.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L40)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/funding-instrument.ts:40
 
 > **data**: [`FundingInstrument`](FundingInstrument.md)[]
 
-Defined in: types/resources/funding-instrument.ts:41
+Defined in: [types/resources/funding-instrument.ts:41](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L41)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/resources/funding-instrument.ts:41
 
 > **request**: `object`
 
-Defined in: types/resources/funding-instrument.ts:42
+Defined in: [types/resources/funding-instrument.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L42)
 
 #### params
 
@@ -34,7 +34,7 @@ Defined in: types/resources/funding-instrument.ts:42
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/resources/funding-instrument.ts:45
+Defined in: [types/resources/funding-instrument.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L45)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: types/resources/funding-instrument.ts:45
 
 > `optional` **total\_count**: `number`
 
-Defined in: types/resources/funding-instrument.ts:46
+Defined in: [types/resources/funding-instrument.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/funding-instrument.ts#L46)

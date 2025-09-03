@@ -6,7 +6,7 @@
 
 # Interface: CampaignCreateRequest
 
-Defined in: types/resources/campaign.ts:39
+Defined in: [types/resources/campaign.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L39)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/campaign.ts:39
 
 > **name**: `string`
 
-Defined in: types/resources/campaign.ts:41
+Defined in: [types/resources/campaign.ts:41](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L41)
 
 Campaign name
 
@@ -24,7 +24,7 @@ Campaign name
 
 > **funding\_instrument\_id**: `string`
 
-Defined in: types/resources/campaign.ts:43
+Defined in: [types/resources/campaign.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L43)
 
 Associated funding instrument ID
 
@@ -34,7 +34,7 @@ Associated funding instrument ID
 
 > **start\_time**: `string`
 
-Defined in: types/resources/campaign.ts:45
+Defined in: [types/resources/campaign.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L45)
 
 Campaign start time
 
@@ -44,7 +44,7 @@ Campaign start time
 
 > `optional` **end\_time**: `string`
 
-Defined in: types/resources/campaign.ts:47
+Defined in: [types/resources/campaign.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L47)
 
 Campaign end time
 
@@ -54,7 +54,7 @@ Campaign end time
 
 > **currency**: `string`
 
-Defined in: types/resources/campaign.ts:49
+Defined in: [types/resources/campaign.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L49)
 
 Campaign currency
 
@@ -64,7 +64,7 @@ Campaign currency
 
 > `optional` **daily\_budget\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/campaign.ts:51
+Defined in: [types/resources/campaign.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L51)
 
 Daily budget amount in micros
 
@@ -74,7 +74,7 @@ Daily budget amount in micros
 
 > `optional` **total\_budget\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/campaign.ts:53
+Defined in: [types/resources/campaign.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L53)
 
 Total budget amount in micros
 
@@ -84,7 +84,7 @@ Total budget amount in micros
 
 > `optional` **entity\_status**: [`CampaignEntityStatus`](../enumerations/CampaignEntityStatus.md)
 
-Defined in: types/resources/campaign.ts:55
+Defined in: [types/resources/campaign.ts:55](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L55)
 
 Campaign entity status
 
@@ -94,6 +94,6 @@ Campaign entity status
 
 > `optional` **standard\_delivery**: `boolean`
 
-Defined in: types/resources/campaign.ts:57
+Defined in: [types/resources/campaign.ts:57](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L57)
 
 Whether this is a standard delivery

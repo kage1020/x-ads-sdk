@@ -1,10 +1,5 @@
-import {
-  AccountsModule,
-  AdGroupsModule,
-  AnalyticsModule,
-  CampaignsModule,
-} from '../modules/index.js';
 import type { XAdsPlugin } from '../plugins/base.js';
+import { AccountResource, CampaignResource, LineItemResource } from '../resources/index.js';
 import type { APIVersion, APIVersionResponse } from '../types/api-version.js';
 import { type ClientConfig, Environment } from '../types/common.js';
 import { HttpClient, type HttpClientConfig } from './base.js';
@@ -33,12 +28,9 @@ import { HttpClient, type HttpClientConfig } from './base.js';
  * // Get accounts
  * const accounts = await client.accounts.list();
  *
- * // Create a campaign
- * const campaign = await client.campaigns.create(accountId, {
- *   name: 'My Campaign',
- *   funding_instrument_id: 'abc123',
- *   entity_status: 'ACTIVE'
- * });
+ * // Get campaigns for an account
+ * const campaignResource = client.getCampaignResource(accountId);
+ * const campaigns = await campaignResource.list();
  * ```
  *
  * @example With Plugins and Version Management
@@ -66,14 +58,8 @@ import { HttpClient, type HttpClientConfig } from './base.js';
 export class XAdsClient {
   private httpClient: HttpClient;
 
-  /** Accounts module for managing advertising accounts */
-  public accounts: AccountsModule;
-  /** Campaigns module for managing advertising campaigns */
-  public campaigns: CampaignsModule;
-  /** Ad Groups module for managing ad groups within campaigns */
-  public adGroups: AdGroupsModule;
-  /** Analytics module for retrieving campaign performance data */
-  public analytics: AnalyticsModule;
+  /** Accounts resource for managing advertising accounts */
+  public accounts: AccountResource;
 
   /**
    * Creates a new X Ads SDK client instance
@@ -115,11 +101,38 @@ export class XAdsClient {
 
     this.httpClient = new HttpClient(httpConfig);
 
-    // Initialize modules
-    this.accounts = new AccountsModule(this.httpClient);
-    this.campaigns = new CampaignsModule(this.httpClient);
-    this.adGroups = new AdGroupsModule(this.httpClient);
-    this.analytics = new AnalyticsModule(this.httpClient);
+    // Initialize resources
+    this.accounts = new AccountResource(this.httpClient);
+  }
+
+  /**
+   * Get a campaign resource for the specified account
+   *
+   * @param accountId - The account ID to operate on
+   * @returns Campaign resource instance
+   * @example
+   * ```typescript
+   * const campaignResource = client.getCampaignResource('account_id');
+   * const campaigns = await campaignResource.list();
+   * ```
+   */
+  getCampaignResource(accountId: string): CampaignResource {
+    return new CampaignResource(this.httpClient, accountId);
+  }
+
+  /**
+   * Get a line item resource for the specified account
+   *
+   * @param accountId - The account ID to operate on
+   * @returns Line item resource instance
+   * @example
+   * ```typescript
+   * const lineItemResource = client.getLineItemResource('account_id');
+   * const lineItems = await lineItemResource.list();
+   * ```
+   */
+  getLineItemResource(accountId: string): LineItemResource {
+    return new LineItemResource(this.httpClient, accountId);
   }
 
   /**

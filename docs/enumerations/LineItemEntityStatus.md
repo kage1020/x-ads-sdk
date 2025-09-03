@@ -6,7 +6,7 @@
 
 # Enumeration: LineItemEntityStatus
 
-Defined in: types/resources/line-item.ts:4
+Defined in: [types/resources/line-item.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L4)
 
 X Ads Line Item (Ad Group) related types
 
@@ -16,7 +16,7 @@ X Ads Line Item (Ad Group) related types
 
 > **ACTIVE**: `"ACTIVE"`
 
-Defined in: types/resources/line-item.ts:5
+Defined in: [types/resources/line-item.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L5)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/resources/line-item.ts:5
 
 > **PAUSED**: `"PAUSED"`
 
-Defined in: types/resources/line-item.ts:6
+Defined in: [types/resources/line-item.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L6)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: types/resources/line-item.ts:6
 
 > **DRAFT**: `"DRAFT"`
 
-Defined in: types/resources/line-item.ts:7
+Defined in: [types/resources/line-item.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L7)

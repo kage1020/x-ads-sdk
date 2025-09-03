@@ -6,7 +6,7 @@
 
 # Abstract Class: BaseResource
 
-Defined in: resources/base.ts:6
+Defined in: [resources/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L6)
 
 ## Hierarchy
 
@@ -24,7 +24,7 @@ Defined in: resources/base.ts:6
 
 > **new BaseResource**(`httpClient`): `BaseResource`
 
-Defined in: resources/base.ts:9
+Defined in: [resources/base.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L9)
 
 #### Parameters
 
@@ -42,4 +42,4 @@ Defined in: resources/base.ts:9
 
 > `protected` **httpClient**: [`HttpClient`](HttpClient.md)
 
-Defined in: resources/base.ts:7
+Defined in: [resources/base.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L7)

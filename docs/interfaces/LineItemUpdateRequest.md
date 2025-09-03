@@ -6,7 +6,7 @@
 
 # Interface: LineItemUpdateRequest
 
-Defined in: types/resources/line-item.ts:100
+Defined in: [types/resources/line-item.ts:100](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L100)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/line-item.ts:100
 
 > `optional` **name**: `string`
 
-Defined in: types/resources/line-item.ts:102
+Defined in: [types/resources/line-item.ts:102](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L102)
 
 Line item name
 
@@ -24,7 +24,7 @@ Line item name
 
 > `optional` **entity\_status**: [`LineItemEntityStatus`](../enumerations/LineItemEntityStatus.md)
 
-Defined in: types/resources/line-item.ts:104
+Defined in: [types/resources/line-item.ts:104](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L104)
 
 Line item entity status
 
@@ -34,7 +34,7 @@ Line item entity status
 
 > `optional` **bid\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/line-item.ts:106
+Defined in: [types/resources/line-item.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L106)
 
 Bid amount in micros
 
@@ -44,7 +44,7 @@ Bid amount in micros
 
 > `optional` **target\_cpa\_local\_micro**: `number`
 
-Defined in: types/resources/line-item.ts:108
+Defined in: [types/resources/line-item.ts:108](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L108)
 
 Target CPA amount in micros
 
@@ -54,7 +54,7 @@ Target CPA amount in micros
 
 > `optional` **daily\_budget\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/line-item.ts:110
+Defined in: [types/resources/line-item.ts:110](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L110)
 
 Daily budget amount in micros
 
@@ -64,7 +64,7 @@ Daily budget amount in micros
 
 > `optional` **total\_budget\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/line-item.ts:112
+Defined in: [types/resources/line-item.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L112)
 
 Total budget amount in micros
 
@@ -74,6 +74,6 @@ Total budget amount in micros
 
 > `optional` **automatically\_select\_bid**: `boolean`
 
-Defined in: types/resources/line-item.ts:114
+Defined in: [types/resources/line-item.ts:114](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L114)
 
 Whether this is automatically select bid

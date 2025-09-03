@@ -20,7 +20,7 @@ Defined in: [auth/oauth.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 ##### config
 
-`AuthConfig`
+[`AuthConfig`](../interfaces/AuthConfig.md)
 
 #### Returns
 
@@ -110,7 +110,7 @@ Defined in: [auth/oauth.ts:47](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 ### generateOAuthSignature()
 
-> **generateOAuthSignature**(`options`): `Promise`\<`OAuthSignature`\>
+> **generateOAuthSignature**(`options`): `Promise`\<[`OAuthSignature`](../interfaces/OAuthSignature.md)\>
 
 Defined in: [auth/oauth.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L72)
 
@@ -118,11 +118,11 @@ Defined in: [auth/oauth.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 ##### options
 
-`OAuthRequestOptions`
+[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)
 
 #### Returns
 
-`Promise`\<`OAuthSignature`\>
+`Promise`\<[`OAuthSignature`](../interfaces/OAuthSignature.md)\>
 
 ***
 
@@ -136,7 +136,7 @@ Defined in: [auth/oauth.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ##### signature
 
-`OAuthSignature`
+[`OAuthSignature`](../interfaces/OAuthSignature.md)
 
 #### Returns
 
@@ -146,7 +146,7 @@ Defined in: [auth/oauth.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ### signRequest()
 
-> **signRequest**(`options`): `Promise`\<`OAuthRequestOptions`\>
+> **signRequest**(`options`): `Promise`\<[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)\>
 
 Defined in: [auth/oauth.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L115)
 
@@ -154,11 +154,11 @@ Defined in: [auth/oauth.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ##### options
 
-`OAuthRequestOptions`
+[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)
 
 #### Returns
 
-`Promise`\<`OAuthRequestOptions`\>
+`Promise`\<[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)\>
 
 ## Properties
 

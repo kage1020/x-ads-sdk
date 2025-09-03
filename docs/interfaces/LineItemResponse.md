@@ -6,7 +6,7 @@
 
 # Interface: LineItemResponse
 
-Defined in: types/resources/line-item.ts:117
+Defined in: [types/resources/line-item.ts:117](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L117)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/line-item.ts:117
 
 > **data**: [`LineItem`](LineItem.md)[]
 
-Defined in: types/resources/line-item.ts:118
+Defined in: [types/resources/line-item.ts:118](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L118)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/resources/line-item.ts:118
 
 > **request**: `object`
 
-Defined in: types/resources/line-item.ts:119
+Defined in: [types/resources/line-item.ts:119](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L119)
 
 #### params
 
@@ -34,7 +34,7 @@ Defined in: types/resources/line-item.ts:119
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/resources/line-item.ts:122
+Defined in: [types/resources/line-item.ts:122](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L122)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: types/resources/line-item.ts:122
 
 > `optional` **total\_count**: `number`
 
-Defined in: types/resources/line-item.ts:123
+Defined in: [types/resources/line-item.ts:123](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L123)

@@ -6,7 +6,7 @@
 
 # Enumeration: LineItemBidType
 
-Defined in: types/resources/line-item.ts:33
+Defined in: [types/resources/line-item.ts:33](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L33)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: types/resources/line-item.ts:33
 
 > **AUTO**: `"AUTO"`
 
-Defined in: types/resources/line-item.ts:34
+Defined in: [types/resources/line-item.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L34)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: types/resources/line-item.ts:34
 
 > **MAX**: `"MAX"`
 
-Defined in: types/resources/line-item.ts:35
+Defined in: [types/resources/line-item.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/line-item.ts#L35)

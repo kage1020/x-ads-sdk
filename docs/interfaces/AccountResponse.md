@@ -6,7 +6,7 @@
 
 # Interface: AccountResponse
 
-Defined in: types/resources/account.ts:39
+Defined in: [types/resources/account.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L39)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/account.ts:39
 
 > **data**: [`Account`](Account.md)[]
 
-Defined in: types/resources/account.ts:40
+Defined in: [types/resources/account.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L40)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/resources/account.ts:40
 
 > **request**: `object`
 
-Defined in: types/resources/account.ts:41
+Defined in: [types/resources/account.ts:41](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L41)
 
 #### params
 
@@ -34,7 +34,7 @@ Defined in: types/resources/account.ts:41
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/resources/account.ts:44
+Defined in: [types/resources/account.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L44)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: types/resources/account.ts:44
 
 > `optional` **total\_count**: `number`
 
-Defined in: types/resources/account.ts:45
+Defined in: [types/resources/account.ts:45](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L45)

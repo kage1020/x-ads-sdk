@@ -6,7 +6,7 @@
 
 # Interface: CampaignUpdateRequest
 
-Defined in: types/resources/campaign.ts:60
+Defined in: [types/resources/campaign.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L60)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/campaign.ts:60
 
 > `optional` **name**: `string`
 
-Defined in: types/resources/campaign.ts:62
+Defined in: [types/resources/campaign.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L62)
 
 Campaign name
 
@@ -24,7 +24,7 @@ Campaign name
 
 > `optional` **entity\_status**: [`CampaignEntityStatus`](../enumerations/CampaignEntityStatus.md)
 
-Defined in: types/resources/campaign.ts:64
+Defined in: [types/resources/campaign.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L64)
 
 Campaign entity status
 
@@ -34,7 +34,7 @@ Campaign entity status
 
 > `optional` **end\_time**: `string`
 
-Defined in: types/resources/campaign.ts:66
+Defined in: [types/resources/campaign.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L66)
 
 Campaign end time
 
@@ -44,7 +44,7 @@ Campaign end time
 
 > `optional` **daily\_budget\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/campaign.ts:68
+Defined in: [types/resources/campaign.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L68)
 
 Daily budget amount in micros
 
@@ -54,7 +54,7 @@ Daily budget amount in micros
 
 > `optional` **total\_budget\_amount\_local\_micro**: `number`
 
-Defined in: types/resources/campaign.ts:70
+Defined in: [types/resources/campaign.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L70)
 
 Total budget amount in micros
 
@@ -64,6 +64,6 @@ Total budget amount in micros
 
 > `optional` **standard\_delivery**: `boolean`
 
-Defined in: types/resources/campaign.ts:72
+Defined in: [types/resources/campaign.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/campaign.ts#L72)
 
 Whether this is a standard delivery

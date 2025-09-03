@@ -47,7 +47,7 @@ Defined in: [client/base.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ##### environment
 
-`Environment` = `Environment.SANDBOX`
+[`Environment`](../enumerations/Environment.md) = `Environment.SANDBOX`
 
 #### Returns
 
@@ -79,7 +79,7 @@ Defined in: [client/base.ts:107](https://github.com/kage1020/x-ads-sdk/blob/main
 
 ### buildRequestOptions()
 
-> `private` **buildRequestOptions**(`config`): `OAuthRequestOptions`
+> `private` **buildRequestOptions**(`config`): [`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)
 
 Defined in: [client/base.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L112)
 
@@ -91,7 +91,7 @@ Defined in: [client/base.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main
 
 #### Returns
 
-`OAuthRequestOptions`
+[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)
 
 ***
 

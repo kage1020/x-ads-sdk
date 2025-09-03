@@ -6,7 +6,7 @@
 
 # Class: AccountResource
 
-Defined in: resources/account.ts:14
+Defined in: [resources/account.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L14)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: resources/account.ts:14
 
 > **new AccountResource**(`httpClient`): `AccountResource`
 
-Defined in: resources/base.ts:9
+Defined in: [resources/base.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L9)
 
 #### Parameters
 
@@ -44,7 +44,7 @@ Defined in: resources/base.ts:9
 
 > **list**(`options?`): `Promise`\<[`AccountResponse`](../interfaces/AccountResponse.md)\>
 
-Defined in: resources/account.ts:20
+Defined in: [resources/account.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L20)
 
 Get accounts accessible to the current user
 
@@ -52,7 +52,7 @@ Get accounts accessible to the current user
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -68,7 +68,7 @@ Account response
 
 > **get**(`accountId`, `options?`): `Promise`\<[`AccountResponse`](../interfaces/AccountResponse.md)\>
 
-Defined in: resources/account.ts:36
+Defined in: [resources/account.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L36)
 
 Get a specific account by ID
 
@@ -82,7 +82,7 @@ Account ID
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -98,7 +98,7 @@ Account response
 
 > **create**(`data`, `options?`): `Promise`\<[`AccountResponse`](../interfaces/AccountResponse.md)\>
 
-Defined in: resources/account.ts:52
+Defined in: [resources/account.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L52)
 
 Create a new account (Sandbox only)
 
@@ -112,7 +112,7 @@ Account creation data
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -128,7 +128,7 @@ Account response
 
 > **update**(`accountId`, `data`, `options?`): `Promise`\<[`AccountResponse`](../interfaces/AccountResponse.md)\>
 
-Defined in: resources/account.ts:70
+Defined in: [resources/account.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L70)
 
 Update an account
 
@@ -148,7 +148,7 @@ Account update data
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -164,7 +164,7 @@ Account response
 
 > `protected` **httpClient**: [`HttpClient`](HttpClient.md)
 
-Defined in: resources/base.ts:7
+Defined in: [resources/base.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L7)
 
 #### Inherited from
 

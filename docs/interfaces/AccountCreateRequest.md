@@ -6,7 +6,7 @@
 
 # Interface: AccountCreateRequest
 
-Defined in: types/resources/account.ts:25
+Defined in: [types/resources/account.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L25)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/resources/account.ts:25
 
 > **name**: `string`
 
-Defined in: types/resources/account.ts:27
+Defined in: [types/resources/account.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L27)
 
 Display name of the account
 
@@ -24,6 +24,6 @@ Display name of the account
 
 > `optional` **industry\_type**: `string`
 
-Defined in: types/resources/account.ts:29
+Defined in: [types/resources/account.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/resources/account.ts#L29)
 
 Account industry type

@@ -6,7 +6,7 @@
 
 # Class: CampaignResource
 
-Defined in: resources/campaign.ts:14
+Defined in: [resources/campaign.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L14)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: resources/campaign.ts:14
 
 > **new CampaignResource**(`httpClient`, `accountId`): `CampaignResource`
 
-Defined in: resources/campaign.ts:17
+Defined in: [resources/campaign.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L17)
 
 #### Parameters
 
@@ -48,7 +48,7 @@ Defined in: resources/campaign.ts:17
 
 > **list**(`options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: resources/campaign.ts:27
+Defined in: [resources/campaign.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L27)
 
 Get campaigns for the account
 
@@ -56,7 +56,7 @@ Get campaigns for the account
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -72,7 +72,7 @@ Campaign response
 
 > **get**(`campaignId`, `options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: resources/campaign.ts:43
+Defined in: [resources/campaign.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L43)
 
 Get a specific campaign by ID
 
@@ -86,7 +86,7 @@ Campaign ID
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -102,7 +102,7 @@ Campaign response
 
 > **create**(`data`, `options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: resources/campaign.ts:59
+Defined in: [resources/campaign.ts:59](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L59)
 
 Create a new campaign
 
@@ -116,7 +116,7 @@ Campaign creation data
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -132,7 +132,7 @@ Campaign response
 
 > **update**(`campaignId`, `data`, `options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: resources/campaign.ts:77
+Defined in: [resources/campaign.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L77)
 
 Update a campaign
 
@@ -152,7 +152,7 @@ Campaign update data
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -168,7 +168,7 @@ Campaign response
 
 > **delete**(`campaignId`, `options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: resources/campaign.ts:98
+Defined in: [resources/campaign.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L98)
 
 Delete a campaign
 
@@ -182,7 +182,7 @@ Campaign ID
 
 ##### options?
 
-`RequestOptions`
+[`RequestOptions`](../interfaces/RequestOptions.md)
 
 Request options
 
@@ -198,7 +198,7 @@ Campaign response
 
 > `protected` **httpClient**: [`HttpClient`](HttpClient.md)
 
-Defined in: resources/base.ts:7
+Defined in: [resources/base.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L7)
 
 #### Inherited from
 
@@ -210,4 +210,4 @@ Defined in: resources/base.ts:7
 
 > `private` **accountId**: `string`
 
-Defined in: resources/campaign.ts:15
+Defined in: [resources/campaign.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L15)
