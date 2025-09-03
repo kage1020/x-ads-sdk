@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ScheduledTweetsResponse
 
-Defined in: types/creatives.ts:222
+Defined in: [types/creatives.ts:222](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L222)
 
 Scheduled tweets list response
 
@@ -16,7 +16,7 @@ Scheduled tweets list response
 
 > **data**: [`ScheduledTweet`](ScheduledTweet.md)[]
 
-Defined in: types/creatives.ts:223
+Defined in: [types/creatives.ts:223](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L223)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:223
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/creatives.ts:224
+Defined in: [types/creatives.ts:224](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L224)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:224
 
 > **request**: `object`
 
-Defined in: types/creatives.ts:225
+Defined in: [types/creatives.ts:225](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L225)
 
 #### params
 

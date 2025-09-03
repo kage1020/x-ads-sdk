@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -8,6 +8,6 @@
 
 > **CardType** = `"IMAGE_APP_DOWNLOAD_CARD"` \| `"VIDEO_APP_DOWNLOAD_CARD"` \| `"IMAGE_WEBSITE_CARD"` \| `"VIDEO_WEBSITE_CARD"` \| `"CONVERSATION_CARD"` \| `"IMAGE_CAROUSEL_CARD"` \| `"VIDEO_CAROUSEL_CARD"` \| `"POLL2_CHOICE_CARD"` \| `"POLL3_CHOICE_CARD"` \| `"POLL4_CHOICE_CARD"`
 
-Defined in: types/creatives.ts:26
+Defined in: [types/creatives.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L26)
 
 Card types supported by X Ads

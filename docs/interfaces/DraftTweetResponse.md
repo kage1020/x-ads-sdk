@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: DraftTweetResponse
 
-Defined in: types/creatives.ts:191
+Defined in: [types/creatives.ts:191](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L191)
 
 Draft tweet response
 
@@ -16,7 +16,7 @@ Draft tweet response
 
 > **data**: [`DraftTweet`](DraftTweet.md)
 
-Defined in: types/creatives.ts:192
+Defined in: [types/creatives.ts:192](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L192)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:192
 
 > **request**: `object`
 
-Defined in: types/creatives.ts:193
+Defined in: [types/creatives.ts:193](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L193)
 
 #### params
 

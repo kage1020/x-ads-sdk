@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AccountMedia
 
-Defined in: types/creatives.ts:51
+Defined in: [types/creatives.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L51)
 
 Account media entity
 
@@ -16,7 +16,7 @@ Account media entity
 
 > **id**: `string`
 
-Defined in: types/creatives.ts:52
+Defined in: [types/creatives.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L52)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:52
 
 > **id\_str**: `string`
 
-Defined in: types/creatives.ts:53
+Defined in: [types/creatives.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L53)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:53
 
 > **created\_at**: `string`
 
-Defined in: types/creatives.ts:54
+Defined in: [types/creatives.ts:54](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L54)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/creatives.ts:54
 
 > **updated\_at**: `string`
 
-Defined in: types/creatives.ts:55
+Defined in: [types/creatives.ts:55](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L55)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/creatives.ts:55
 
 > **deleted**: `boolean`
 
-Defined in: types/creatives.ts:56
+Defined in: [types/creatives.ts:56](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L56)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/creatives.ts:56
 
 > **media\_url**: `string`
 
-Defined in: types/creatives.ts:57
+Defined in: [types/creatives.ts:57](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L57)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/creatives.ts:57
 
 > **media\_key**: `string`
 
-Defined in: types/creatives.ts:58
+Defined in: [types/creatives.ts:58](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L58)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: types/creatives.ts:58
 
 > **media\_type**: [`MediaType`](../type-aliases/MediaType.md)
 
-Defined in: types/creatives.ts:59
+Defined in: [types/creatives.ts:59](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L59)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: types/creatives.ts:59
 
 > **media\_category**: [`MediaCategory`](../type-aliases/MediaCategory.md)
 
-Defined in: types/creatives.ts:60
+Defined in: [types/creatives.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L60)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: types/creatives.ts:60
 
 > **tweeted**: `boolean`
 
-Defined in: types/creatives.ts:61
+Defined in: [types/creatives.ts:61](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L61)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: types/creatives.ts:61
 
 > **file\_name**: `string`
 
-Defined in: types/creatives.ts:62
+Defined in: [types/creatives.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L62)
 
 ***
 
@@ -104,7 +104,7 @@ Defined in: types/creatives.ts:62
 
 > **file\_size**: `number`
 
-Defined in: types/creatives.ts:63
+Defined in: [types/creatives.ts:63](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L63)
 
 ***
 
@@ -112,4 +112,4 @@ Defined in: types/creatives.ts:63
 
 > `optional` **creative\_media\_keys**: `string`[]
 
-Defined in: types/creatives.ts:64
+Defined in: [types/creatives.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L64)

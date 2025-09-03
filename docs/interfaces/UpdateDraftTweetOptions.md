@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: UpdateDraftTweetOptions
 
-Defined in: types/creatives.ts:273
+Defined in: [types/creatives.ts:273](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L273)
 
 Draft tweet update options
 
@@ -16,7 +16,7 @@ Draft tweet update options
 
 > `optional` **text**: `string`
 
-Defined in: types/creatives.ts:274
+Defined in: [types/creatives.ts:274](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L274)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:274
 
 > `optional` **as\_user\_id**: `string`
 
-Defined in: types/creatives.ts:275
+Defined in: [types/creatives.ts:275](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L275)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:275
 
 > `optional` **card\_uri**: `string`
 
-Defined in: types/creatives.ts:276
+Defined in: [types/creatives.ts:276](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L276)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/creatives.ts:276
 
 > `optional` **media\_keys**: `string`[]
 
-Defined in: types/creatives.ts:277
+Defined in: [types/creatives.ts:277](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L277)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: types/creatives.ts:277
 
 > `optional` **nullcast**: `boolean`
 
-Defined in: types/creatives.ts:278
+Defined in: [types/creatives.ts:278](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L278)

@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: Card
 
-Defined in: types/creatives.ts:78
+Defined in: [types/creatives.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L78)
 
 Card entity
 
@@ -16,7 +16,7 @@ Card entity
 
 > **id**: `string`
 
-Defined in: types/creatives.ts:79
+Defined in: [types/creatives.ts:79](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L79)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:79
 
 > **id\_str**: `string`
 
-Defined in: types/creatives.ts:80
+Defined in: [types/creatives.ts:80](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L80)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:80
 
 > **name**: `string`
 
-Defined in: types/creatives.ts:81
+Defined in: [types/creatives.ts:81](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L81)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/creatives.ts:81
 
 > **created\_at**: `string`
 
-Defined in: types/creatives.ts:82
+Defined in: [types/creatives.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L82)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/creatives.ts:82
 
 > **updated\_at**: `string`
 
-Defined in: types/creatives.ts:83
+Defined in: [types/creatives.ts:83](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L83)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/creatives.ts:83
 
 > **deleted**: `boolean`
 
-Defined in: types/creatives.ts:84
+Defined in: [types/creatives.ts:84](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L84)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/creatives.ts:84
 
 > **card\_type**: [`CardType`](../type-aliases/CardType.md)
 
-Defined in: types/creatives.ts:85
+Defined in: [types/creatives.ts:85](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L85)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: types/creatives.ts:85
 
 > **card\_uri**: `string`
 
-Defined in: types/creatives.ts:86
+Defined in: [types/creatives.ts:86](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L86)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: types/creatives.ts:86
 
 > `optional` **preview\_url**: `string`
 
-Defined in: types/creatives.ts:87
+Defined in: [types/creatives.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L87)
 
 ***
 
@@ -88,4 +88,4 @@ Defined in: types/creatives.ts:87
 
 > **components**: [`CardComponent`](CardComponent.md)[]
 
-Defined in: types/creatives.ts:88
+Defined in: [types/creatives.ts:88](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L88)

@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: DraftTweet
 
-Defined in: types/creatives.ts:94
+Defined in: [types/creatives.ts:94](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L94)
 
 Draft tweet entity
 
@@ -16,7 +16,7 @@ Draft tweet entity
 
 > **id**: `string`
 
-Defined in: types/creatives.ts:95
+Defined in: [types/creatives.ts:95](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L95)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:95
 
 > **id\_str**: `string`
 
-Defined in: types/creatives.ts:96
+Defined in: [types/creatives.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L96)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:96
 
 > **created\_at**: `string`
 
-Defined in: types/creatives.ts:97
+Defined in: [types/creatives.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L97)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/creatives.ts:97
 
 > **updated\_at**: `string`
 
-Defined in: types/creatives.ts:98
+Defined in: [types/creatives.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L98)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/creatives.ts:98
 
 > **deleted**: `boolean`
 
-Defined in: types/creatives.ts:99
+Defined in: [types/creatives.ts:99](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L99)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/creatives.ts:99
 
 > **tweet\_type**: [`TweetType`](../type-aliases/TweetType.md)
 
-Defined in: types/creatives.ts:100
+Defined in: [types/creatives.ts:100](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L100)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/creatives.ts:100
 
 > **text**: `string`
 
-Defined in: types/creatives.ts:101
+Defined in: [types/creatives.ts:101](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L101)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: types/creatives.ts:101
 
 > `optional` **as\_user\_id**: `string`
 
-Defined in: types/creatives.ts:102
+Defined in: [types/creatives.ts:102](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L102)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: types/creatives.ts:102
 
 > `optional` **card\_uri**: `string`
 
-Defined in: types/creatives.ts:103
+Defined in: [types/creatives.ts:103](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L103)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: types/creatives.ts:103
 
 > `optional` **media\_keys**: `string`[]
 
-Defined in: types/creatives.ts:104
+Defined in: [types/creatives.ts:104](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L104)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: types/creatives.ts:104
 
 > `optional` **nullcast**: `boolean`
 
-Defined in: types/creatives.ts:105
+Defined in: [types/creatives.ts:105](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L105)
 
 ***
 
@@ -104,4 +104,4 @@ Defined in: types/creatives.ts:105
 
 > `optional` **scheduled\_at**: `string`
 
-Defined in: types/creatives.ts:106
+Defined in: [types/creatives.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L106)

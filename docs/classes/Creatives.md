@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: Creatives
 
-Defined in: resources/creatives.ts:32
+Defined in: [resources/creatives.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L32)
 
 Creatives resource class
 
@@ -94,7 +94,7 @@ Complete endpoint with API version
 
 > **getAccountMedia**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`AccountMediaListResponse`](../interfaces/AccountMediaListResponse.md)\>
 
-Defined in: resources/creatives.ts:38
+Defined in: [resources/creatives.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L38)
 
 Get all account media for an account
 
@@ -148,7 +148,7 @@ Get all account media for an account
 
 > **getAccountMediaById**(`accountId`, `mediaId`, `requestOptions?`): `Promise`\<[`AccountMediaResponse`](../interfaces/AccountMediaResponse.md)\>
 
-Defined in: resources/creatives.ts:88
+Defined in: [resources/creatives.ts:88](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L88)
 
 Get a specific account media
 
@@ -176,7 +176,7 @@ Get a specific account media
 
 > **createAccountMedia**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`AccountMediaResponse`](../interfaces/AccountMediaResponse.md)\>
 
-Defined in: resources/creatives.ts:105
+Defined in: [resources/creatives.ts:105](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L105)
 
 Create account media
 
@@ -204,7 +204,7 @@ Create account media
 
 > **updateAccountMedia**(`accountId`, `mediaId`, `options`, `requestOptions?`): `Promise`\<[`AccountMediaResponse`](../interfaces/AccountMediaResponse.md)\>
 
-Defined in: resources/creatives.ts:134
+Defined in: [resources/creatives.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L134)
 
 Update account media
 
@@ -236,7 +236,7 @@ Update account media
 
 > **deleteAccountMedia**(`accountId`, `mediaId`, `requestOptions?`): `Promise`\<[`AccountMediaResponse`](../interfaces/AccountMediaResponse.md)\>
 
-Defined in: resources/creatives.ts:165
+Defined in: [resources/creatives.ts:165](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L165)
 
 Delete account media
 
@@ -264,7 +264,7 @@ Delete account media
 
 > **getCards**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`CardsResponse`](../interfaces/CardsResponse.md)\>
 
-Defined in: resources/creatives.ts:184
+Defined in: [resources/creatives.ts:184](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L184)
 
 Get all cards for an account
 
@@ -314,7 +314,7 @@ Get all cards for an account
 
 > **getCard**(`accountId`, `cardId`, `requestOptions?`): `Promise`\<[`CardResponse`](../interfaces/CardResponse.md)\>
 
-Defined in: resources/creatives.ts:230
+Defined in: [resources/creatives.ts:230](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L230)
 
 Get a specific card
 
@@ -342,7 +342,7 @@ Get a specific card
 
 > **createCard**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`CardResponse`](../interfaces/CardResponse.md)\>
 
-Defined in: resources/creatives.ts:247
+Defined in: [resources/creatives.ts:247](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L247)
 
 Create a new card
 
@@ -370,7 +370,7 @@ Create a new card
 
 > **updateCard**(`accountId`, `cardId`, `options`, `requestOptions?`): `Promise`\<[`CardResponse`](../interfaces/CardResponse.md)\>
 
-Defined in: resources/creatives.ts:271
+Defined in: [resources/creatives.ts:271](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L271)
 
 Update a card
 
@@ -402,7 +402,7 @@ Update a card
 
 > **deleteCard**(`accountId`, `cardId`, `requestOptions?`): `Promise`\<[`CardResponse`](../interfaces/CardResponse.md)\>
 
-Defined in: resources/creatives.ts:299
+Defined in: [resources/creatives.ts:299](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L299)
 
 Delete a card
 
@@ -430,7 +430,7 @@ Delete a card
 
 > **fetchCards**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`CardsFetchResponse`](../interfaces/CardsFetchResponse.md)\>
 
-Defined in: resources/creatives.ts:316
+Defined in: [resources/creatives.ts:316](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L316)
 
 Fetch cards by URIs
 
@@ -458,7 +458,7 @@ Fetch cards by URIs
 
 > **getDraftTweets**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`DraftTweetsResponse`](../interfaces/DraftTweetsResponse.md)\>
 
-Defined in: resources/creatives.ts:340
+Defined in: [resources/creatives.ts:340](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L340)
 
 Get all draft tweets for an account
 
@@ -504,7 +504,7 @@ Get all draft tweets for an account
 
 > **getDraftTweet**(`accountId`, `draftTweetId`, `requestOptions?`): `Promise`\<[`DraftTweetResponse`](../interfaces/DraftTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:382
+Defined in: [resources/creatives.ts:382](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L382)
 
 Get a specific draft tweet
 
@@ -532,7 +532,7 @@ Get a specific draft tweet
 
 > **createDraftTweet**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`DraftTweetResponse`](../interfaces/DraftTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:399
+Defined in: [resources/creatives.ts:399](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L399)
 
 Create a new draft tweet
 
@@ -560,7 +560,7 @@ Create a new draft tweet
 
 > **updateDraftTweet**(`accountId`, `draftTweetId`, `options`, `requestOptions?`): `Promise`\<[`DraftTweetResponse`](../interfaces/DraftTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:425
+Defined in: [resources/creatives.ts:425](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L425)
 
 Update a draft tweet
 
@@ -592,7 +592,7 @@ Update a draft tweet
 
 > **deleteDraftTweet**(`accountId`, `draftTweetId`, `requestOptions?`): `Promise`\<[`DraftTweetResponse`](../interfaces/DraftTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:462
+Defined in: [resources/creatives.ts:462](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L462)
 
 Delete a draft tweet
 
@@ -620,7 +620,7 @@ Delete a draft tweet
 
 > **getScheduledTweets**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`ScheduledTweetsResponse`](../interfaces/ScheduledTweetsResponse.md)\>
 
-Defined in: resources/creatives.ts:481
+Defined in: [resources/creatives.ts:481](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L481)
 
 Get all scheduled tweets for an account
 
@@ -666,7 +666,7 @@ Get all scheduled tweets for an account
 
 > **getScheduledTweet**(`accountId`, `scheduledTweetId`, `requestOptions?`): `Promise`\<[`ScheduledTweetResponse`](../interfaces/ScheduledTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:523
+Defined in: [resources/creatives.ts:523](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L523)
 
 Get a specific scheduled tweet
 
@@ -694,7 +694,7 @@ Get a specific scheduled tweet
 
 > **createScheduledTweet**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`ScheduledTweetResponse`](../interfaces/ScheduledTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:540
+Defined in: [resources/creatives.ts:540](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L540)
 
 Create a new scheduled tweet
 
@@ -722,7 +722,7 @@ Create a new scheduled tweet
 
 > **updateScheduledTweet**(`accountId`, `scheduledTweetId`, `options`, `requestOptions?`): `Promise`\<[`ScheduledTweetResponse`](../interfaces/ScheduledTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:567
+Defined in: [resources/creatives.ts:567](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L567)
 
 Update a scheduled tweet
 
@@ -754,7 +754,7 @@ Update a scheduled tweet
 
 > **deleteScheduledTweet**(`accountId`, `scheduledTweetId`, `requestOptions?`): `Promise`\<[`ScheduledTweetResponse`](../interfaces/ScheduledTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:607
+Defined in: [resources/creatives.ts:607](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L607)
 
 Delete a scheduled tweet
 
@@ -782,7 +782,7 @@ Delete a scheduled tweet
 
 > **createImageWebsiteCard**(`accountId`, `name`, `websiteUrl`, `mediaKey`, `requestOptions?`): `Promise`\<[`CardResponse`](../interfaces/CardResponse.md)\>
 
-Defined in: resources/creatives.ts:626
+Defined in: [resources/creatives.ts:626](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L626)
 
 Create image website card
 
@@ -818,7 +818,7 @@ Create image website card
 
 > **createVideoWebsiteCard**(`accountId`, `name`, `websiteUrl`, `mediaKey`, `requestOptions?`): `Promise`\<[`CardResponse`](../interfaces/CardResponse.md)\>
 
-Defined in: resources/creatives.ts:662
+Defined in: [resources/creatives.ts:662](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L662)
 
 Create video website card
 
@@ -854,7 +854,7 @@ Create video website card
 
 > **createCarouselCard**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`CardResponse`](../interfaces/CardResponse.md)\>
 
-Defined in: resources/creatives.ts:698
+Defined in: [resources/creatives.ts:698](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L698)
 
 Create carousel card
 
@@ -882,7 +882,7 @@ Create carousel card
 
 > **promoteDraftTweet**(`accountId`, `draftTweetId`, `requestOptions?`): `Promise`\<[`DraftTweetResponse`](../interfaces/DraftTweetResponse.md)\>
 
-Defined in: resources/creatives.ts:737
+Defined in: [resources/creatives.ts:737](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L737)
 
 Promote draft tweet (convert to line item)
 
@@ -910,7 +910,7 @@ Promote draft tweet (convert to line item)
 
 > **uploadMedia**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`AccountMediaResponse`](../interfaces/AccountMediaResponse.md)\>
 
-Defined in: resources/creatives.ts:754
+Defined in: [resources/creatives.ts:754](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/creatives.ts#L754)
 
 Upload media to account media library
 

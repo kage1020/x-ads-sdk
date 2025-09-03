@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CreateAccountMediaOptions
 
-Defined in: types/creatives.ts:233
+Defined in: [types/creatives.ts:233](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L233)
 
 Account media creation options
 
@@ -16,7 +16,7 @@ Account media creation options
 
 > **media\_category**: [`MediaCategory`](../type-aliases/MediaCategory.md)
 
-Defined in: types/creatives.ts:234
+Defined in: [types/creatives.ts:234](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L234)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:234
 
 > **media\_type**: [`MediaType`](../type-aliases/MediaType.md)
 
-Defined in: types/creatives.ts:235
+Defined in: [types/creatives.ts:235](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L235)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:235
 
 > `optional` **media\_url**: `string`
 
-Defined in: types/creatives.ts:236
+Defined in: [types/creatives.ts:236](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L236)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/creatives.ts:236
 
 > `optional` **media\_key**: `string`
 
-Defined in: types/creatives.ts:237
+Defined in: [types/creatives.ts:237](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L237)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/creatives.ts:237
 
 > `optional` **creative\_media\_keys**: `string`[]
 
-Defined in: types/creatives.ts:238
+Defined in: [types/creatives.ts:238](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L238)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: types/creatives.ts:238
 
 > `optional` **file\_name**: `string`
 
-Defined in: types/creatives.ts:239
+Defined in: [types/creatives.ts:239](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L239)

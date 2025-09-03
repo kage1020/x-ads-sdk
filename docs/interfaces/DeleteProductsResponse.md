@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: DeleteProductsResponse
 
-Defined in: types/catalog.ts:346
+Defined in: [types/catalog.ts:346](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L346)
 
 Product deletion response
 
@@ -16,7 +16,7 @@ Product deletion response
 
 > **data**: `object`
 
-Defined in: types/catalog.ts:347
+Defined in: [types/catalog.ts:347](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L347)
 
 #### success\_count
 
@@ -36,7 +36,7 @@ Defined in: types/catalog.ts:347
 
 > **request**: `object`
 
-Defined in: types/catalog.ts:355
+Defined in: [types/catalog.ts:355](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L355)
 
 #### params
 

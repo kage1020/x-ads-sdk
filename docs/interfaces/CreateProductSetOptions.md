@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CreateProductSetOptions
 
-Defined in: types/catalog.ts:278
+Defined in: [types/catalog.ts:278](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L278)
 
 Product set creation options
 
@@ -16,7 +16,7 @@ Product set creation options
 
 > **name**: `string`
 
-Defined in: types/catalog.ts:279
+Defined in: [types/catalog.ts:279](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L279)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:279
 
 > `optional` **description**: `string`
 
-Defined in: types/catalog.ts:280
+Defined in: [types/catalog.ts:280](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L280)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/catalog.ts:280
 
 > **type**: [`ProductSetType`](../type-aliases/ProductSetType.md)
 
-Defined in: types/catalog.ts:281
+Defined in: [types/catalog.ts:281](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L281)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/catalog.ts:281
 
 > `optional` **filter\_rules**: [`ProductSetFilter`](ProductSetFilter.md)[]
 
-Defined in: types/catalog.ts:282
+Defined in: [types/catalog.ts:282](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L282)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: types/catalog.ts:282
 
 > `optional` **product\_ids**: `string`[]
 
-Defined in: types/catalog.ts:283
+Defined in: [types/catalog.ts:283](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L283)

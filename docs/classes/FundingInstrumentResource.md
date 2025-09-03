@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: FundingInstrumentResource
 
-Defined in: resources/funding-instrument.ts:24
+Defined in: [resources/funding-instrument.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L24)
 
 Funding Instrument resource class for managing payment methods
 
@@ -94,7 +94,7 @@ Complete endpoint with API version
 
 > **getFundingInstruments**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`FundingInstrumentResponse`](../interfaces/FundingInstrumentResponse.md)\>
 
-Defined in: resources/funding-instrument.ts:28
+Defined in: [resources/funding-instrument.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L28)
 
 Get all funding instruments for an account
 
@@ -148,7 +148,7 @@ Get all funding instruments for an account
 
 > **getFundingInstrument**(`accountId`, `fundingInstrumentId`, `requestOptions?`): `Promise`\<[`SingleFundingInstrumentResponse`](../interfaces/SingleFundingInstrumentResponse.md)\>
 
-Defined in: resources/funding-instrument.ts:78
+Defined in: [resources/funding-instrument.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L78)
 
 Get a specific funding instrument
 
@@ -176,7 +176,7 @@ Get a specific funding instrument
 
 > **getActiveFundingInstruments**(`accountId`, `requestOptions?`): `Promise`\<[`FundingInstrumentResponse`](../interfaces/FundingInstrumentResponse.md)\>
 
-Defined in: resources/funding-instrument.ts:97
+Defined in: [resources/funding-instrument.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L97)
 
 Get all active funding instruments
 
@@ -200,7 +200,7 @@ Get all active funding instruments
 
 > **getCreditCardFundingInstruments**(`accountId`, `requestOptions?`): `Promise`\<[`FundingInstrumentResponse`](../interfaces/FundingInstrumentResponse.md)\>
 
-Defined in: resources/funding-instrument.ts:113
+Defined in: [resources/funding-instrument.ts:113](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L113)
 
 Get all credit card funding instruments
 
@@ -224,7 +224,7 @@ Get all credit card funding instruments
 
 > **getInsertionOrderFundingInstruments**(`accountId`, `requestOptions?`): `Promise`\<[`FundingInstrumentResponse`](../interfaces/FundingInstrumentResponse.md)\>
 
-Defined in: resources/funding-instrument.ts:130
+Defined in: [resources/funding-instrument.ts:130](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L130)
 
 Get all insertion order funding instruments
 
@@ -248,7 +248,7 @@ Get all insertion order funding instruments
 
 > **getDefaultFundingInstrument**(`accountId`, `requestOptions?`): `Promise`\<`null` \| [`SingleFundingInstrumentResponse`](../interfaces/SingleFundingInstrumentResponse.md)\>
 
-Defined in: resources/funding-instrument.ts:147
+Defined in: [resources/funding-instrument.ts:147](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L147)
 
 Get the default funding instrument for an account
 
@@ -272,7 +272,7 @@ Get the default funding instrument for an account
 
 > **hasAvailableCredit**(`accountId`, `requestOptions?`): `Promise`\<\{ `has_credit`: `boolean`; `total_available_credit`: `number`; `funding_instruments_with_credit`: `number`; \}\>
 
-Defined in: resources/funding-instrument.ts:169
+Defined in: [resources/funding-instrument.ts:169](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L169)
 
 Check if account has sufficient credit in any funding instrument
 
@@ -296,7 +296,7 @@ Check if account has sufficient credit in any funding instrument
 
 > **getFundingInstrumentsSummary**(`accountId`, `requestOptions?`): `Promise`\<\{ `total_count`: `number`; `active_count`: `number`; `paused_count`: `number`; `cancelled_count`: `number`; `credit_card_count`: `number`; `insertion_order_count`: `number`; `default_funding_instrument?`: \{ `id`: `string`; `type`: [`FundingInstrumentType`](../enumerations/FundingInstrumentType.md); `currency`: `string`; `credit_remaining?`: `number`; \}; \}\>
 
-Defined in: resources/funding-instrument.ts:199
+Defined in: [resources/funding-instrument.ts:199](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/funding-instrument.ts#L199)
 
 Get funding instruments summary
 

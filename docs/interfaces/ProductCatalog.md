@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductCatalog
 
-Defined in: types/catalog.ts:62
+Defined in: [types/catalog.ts:62](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L62)
 
 Product catalog entity
 
@@ -16,7 +16,7 @@ Product catalog entity
 
 > **id**: `string`
 
-Defined in: types/catalog.ts:63
+Defined in: [types/catalog.ts:63](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L63)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:63
 
 > **id\_str**: `string`
 
-Defined in: types/catalog.ts:64
+Defined in: [types/catalog.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L64)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/catalog.ts:64
 
 > **account\_id**: `string`
 
-Defined in: types/catalog.ts:65
+Defined in: [types/catalog.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L65)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/catalog.ts:65
 
 > **name**: `string`
 
-Defined in: types/catalog.ts:66
+Defined in: [types/catalog.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L66)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/catalog.ts:66
 
 > `optional` **description**: `string`
 
-Defined in: types/catalog.ts:67
+Defined in: [types/catalog.ts:67](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L67)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/catalog.ts:67
 
 > **status**: [`ProductCatalogStatus`](../type-aliases/ProductCatalogStatus.md)
 
-Defined in: types/catalog.ts:68
+Defined in: [types/catalog.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L68)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/catalog.ts:68
 
 > **created\_at**: `string`
 
-Defined in: types/catalog.ts:69
+Defined in: [types/catalog.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L69)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: types/catalog.ts:69
 
 > **updated\_at**: `string`
 
-Defined in: types/catalog.ts:70
+Defined in: [types/catalog.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L70)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: types/catalog.ts:70
 
 > **deleted**: `boolean`
 
-Defined in: types/catalog.ts:71
+Defined in: [types/catalog.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L71)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: types/catalog.ts:71
 
 > `optional` **product\_count**: `number`
 
-Defined in: types/catalog.ts:72
+Defined in: [types/catalog.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L72)
 
 ***
 
@@ -96,4 +96,4 @@ Defined in: types/catalog.ts:72
 
 > `optional` **feed\_count**: `number`
 
-Defined in: types/catalog.ts:73
+Defined in: [types/catalog.ts:73](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L73)

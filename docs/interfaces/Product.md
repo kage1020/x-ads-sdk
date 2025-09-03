@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: Product
 
-Defined in: types/catalog.ts:79
+Defined in: [types/catalog.ts:79](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L79)
 
 Product entity in catalog
 
@@ -16,7 +16,7 @@ Product entity in catalog
 
 > **id**: `string`
 
-Defined in: types/catalog.ts:80
+Defined in: [types/catalog.ts:80](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L80)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:80
 
 > **availability**: [`ProductAvailability`](../type-aliases/ProductAvailability.md)
 
-Defined in: types/catalog.ts:81
+Defined in: [types/catalog.ts:81](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L81)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/catalog.ts:81
 
 > **condition**: [`ProductCondition`](../type-aliases/ProductCondition.md)
 
-Defined in: types/catalog.ts:82
+Defined in: [types/catalog.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L82)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/catalog.ts:82
 
 > `optional` **description**: `string`
 
-Defined in: types/catalog.ts:83
+Defined in: [types/catalog.ts:83](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L83)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/catalog.ts:83
 
 > `optional` **image\_url**: `string`
 
-Defined in: types/catalog.ts:84
+Defined in: [types/catalog.ts:84](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L84)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/catalog.ts:84
 
 > `optional` **link**: `string`
 
-Defined in: types/catalog.ts:85
+Defined in: [types/catalog.ts:85](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L85)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/catalog.ts:85
 
 > `optional` **price**: `string`
 
-Defined in: types/catalog.ts:86
+Defined in: [types/catalog.ts:86](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L86)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: types/catalog.ts:86
 
 > `optional` **sale\_price**: `string`
 
-Defined in: types/catalog.ts:87
+Defined in: [types/catalog.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L87)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: types/catalog.ts:87
 
 > **title**: `string`
 
-Defined in: types/catalog.ts:88
+Defined in: [types/catalog.ts:88](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L88)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: types/catalog.ts:88
 
 > `optional` **brand**: `string`
 
-Defined in: types/catalog.ts:89
+Defined in: [types/catalog.ts:89](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L89)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: types/catalog.ts:89
 
 > `optional` **google\_product\_category**: `string`
 
-Defined in: types/catalog.ts:90
+Defined in: [types/catalog.ts:90](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L90)
 
 ***
 
@@ -104,7 +104,7 @@ Defined in: types/catalog.ts:90
 
 > `optional` **product\_type**: `string`
 
-Defined in: types/catalog.ts:91
+Defined in: [types/catalog.ts:91](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L91)
 
 ***
 
@@ -112,7 +112,7 @@ Defined in: types/catalog.ts:91
 
 > `optional` **custom\_fields**: `Record`\<`string`, `string`\>
 
-Defined in: types/catalog.ts:92
+Defined in: [types/catalog.ts:92](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L92)
 
 ***
 
@@ -120,7 +120,7 @@ Defined in: types/catalog.ts:92
 
 > `optional` **inventory**: `number`
 
-Defined in: types/catalog.ts:93
+Defined in: [types/catalog.ts:93](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L93)
 
 ***
 
@@ -128,7 +128,7 @@ Defined in: types/catalog.ts:93
 
 > `optional` **currency**: `string`
 
-Defined in: types/catalog.ts:94
+Defined in: [types/catalog.ts:94](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L94)
 
 ***
 
@@ -136,7 +136,7 @@ Defined in: types/catalog.ts:94
 
 > **created\_at**: `string`
 
-Defined in: types/catalog.ts:95
+Defined in: [types/catalog.ts:95](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L95)
 
 ***
 
@@ -144,4 +144,4 @@ Defined in: types/catalog.ts:95
 
 > **updated\_at**: `string`
 
-Defined in: types/catalog.ts:96
+Defined in: [types/catalog.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L96)

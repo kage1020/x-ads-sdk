@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductData
 
-Defined in: types/catalog.ts:250
+Defined in: [types/catalog.ts:250](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L250)
 
 Product creation/update data
 
@@ -16,7 +16,7 @@ Product creation/update data
 
 > **id**: `string`
 
-Defined in: types/catalog.ts:251
+Defined in: [types/catalog.ts:251](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L251)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:251
 
 > **availability**: [`ProductAvailability`](../type-aliases/ProductAvailability.md)
 
-Defined in: types/catalog.ts:252
+Defined in: [types/catalog.ts:252](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L252)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/catalog.ts:252
 
 > **condition**: [`ProductCondition`](../type-aliases/ProductCondition.md)
 
-Defined in: types/catalog.ts:253
+Defined in: [types/catalog.ts:253](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L253)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/catalog.ts:253
 
 > `optional` **description**: `string`
 
-Defined in: types/catalog.ts:254
+Defined in: [types/catalog.ts:254](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L254)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/catalog.ts:254
 
 > `optional` **image\_url**: `string`
 
-Defined in: types/catalog.ts:255
+Defined in: [types/catalog.ts:255](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L255)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/catalog.ts:255
 
 > `optional` **link**: `string`
 
-Defined in: types/catalog.ts:256
+Defined in: [types/catalog.ts:256](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L256)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/catalog.ts:256
 
 > `optional` **price**: `string`
 
-Defined in: types/catalog.ts:257
+Defined in: [types/catalog.ts:257](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L257)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: types/catalog.ts:257
 
 > `optional` **sale\_price**: `string`
 
-Defined in: types/catalog.ts:258
+Defined in: [types/catalog.ts:258](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L258)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: types/catalog.ts:258
 
 > **title**: `string`
 
-Defined in: types/catalog.ts:259
+Defined in: [types/catalog.ts:259](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L259)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: types/catalog.ts:259
 
 > `optional` **brand**: `string`
 
-Defined in: types/catalog.ts:260
+Defined in: [types/catalog.ts:260](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L260)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: types/catalog.ts:260
 
 > `optional` **google\_product\_category**: `string`
 
-Defined in: types/catalog.ts:261
+Defined in: [types/catalog.ts:261](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L261)
 
 ***
 
@@ -104,7 +104,7 @@ Defined in: types/catalog.ts:261
 
 > `optional` **product\_type**: `string`
 
-Defined in: types/catalog.ts:262
+Defined in: [types/catalog.ts:262](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L262)
 
 ***
 
@@ -112,7 +112,7 @@ Defined in: types/catalog.ts:262
 
 > `optional` **custom\_fields**: `Record`\<`string`, `string`\>
 
-Defined in: types/catalog.ts:263
+Defined in: [types/catalog.ts:263](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L263)
 
 ***
 
@@ -120,7 +120,7 @@ Defined in: types/catalog.ts:263
 
 > `optional` **inventory**: `number`
 
-Defined in: types/catalog.ts:264
+Defined in: [types/catalog.ts:264](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L264)
 
 ***
 
@@ -128,4 +128,4 @@ Defined in: types/catalog.ts:264
 
 > `optional` **currency**: `string`
 
-Defined in: types/catalog.ts:265
+Defined in: [types/catalog.ts:265](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L265)

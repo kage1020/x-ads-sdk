@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ConversionEventResponse
 
-Defined in: types/conversion-tracking.ts:141
+Defined in: [types/conversion-tracking.ts:141](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L141)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/conversion-tracking.ts:141
 
 > **data**: [`ConversionEvent`](ConversionEvent.md)[]
 
-Defined in: types/conversion-tracking.ts:142
+Defined in: [types/conversion-tracking.ts:142](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L142)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/conversion-tracking.ts:142
 
 > **request**: `object`
 
-Defined in: types/conversion-tracking.ts:143
+Defined in: [types/conversion-tracking.ts:143](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L143)
 
 #### params
 
@@ -34,4 +34,4 @@ Defined in: types/conversion-tracking.ts:143
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/conversion-tracking.ts:146
+Defined in: [types/conversion-tracking.ts:146](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L146)

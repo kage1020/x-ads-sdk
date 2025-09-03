@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CreateProductFeedOptions
 
-Defined in: types/catalog.ts:299
+Defined in: [types/catalog.ts:299](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L299)
 
 Product feed creation options
 
@@ -16,7 +16,7 @@ Product feed creation options
 
 > **name**: `string`
 
-Defined in: types/catalog.ts:300
+Defined in: [types/catalog.ts:300](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L300)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:300
 
 > **url**: `string`
 
-Defined in: types/catalog.ts:301
+Defined in: [types/catalog.ts:301](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L301)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/catalog.ts:301
 
 > **format**: [`ProductFeedFormat`](../type-aliases/ProductFeedFormat.md)
 
-Defined in: types/catalog.ts:302
+Defined in: [types/catalog.ts:302](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L302)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/catalog.ts:302
 
 > `optional` **schedule**: `string`
 
-Defined in: types/catalog.ts:303
+Defined in: [types/catalog.ts:303](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L303)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: types/catalog.ts:303
 
 > `optional` **timezone**: `string`
 
-Defined in: types/catalog.ts:304
+Defined in: [types/catalog.ts:304](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L304)

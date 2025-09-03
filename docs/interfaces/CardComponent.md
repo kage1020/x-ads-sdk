@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CardComponent
 
-Defined in: types/creatives.ts:70
+Defined in: [types/creatives.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L70)
 
 Card component for cards
 
@@ -16,7 +16,7 @@ Card component for cards
 
 > **type**: `string`
 
-Defined in: types/creatives.ts:71
+Defined in: [types/creatives.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L71)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/creatives.ts:71
 
 > **data**: `Record`\<`string`, `unknown`\>
 
-Defined in: types/creatives.ts:72
+Defined in: [types/creatives.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L72)

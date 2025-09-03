@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: MediaUploadOptions
 
-Defined in: types/creatives.ts:319
+Defined in: [types/creatives.ts:319](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L319)
 
 Media upload options
 
@@ -16,7 +16,7 @@ Media upload options
 
 > **media\_data**: `string`
 
-Defined in: types/creatives.ts:320
+Defined in: [types/creatives.ts:320](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L320)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:320
 
 > **media\_type**: [`MediaType`](../type-aliases/MediaType.md)
 
-Defined in: types/creatives.ts:321
+Defined in: [types/creatives.ts:321](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L321)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:321
 
 > `optional` **media\_category**: [`MediaCategory`](../type-aliases/MediaCategory.md)
 
-Defined in: types/creatives.ts:322
+Defined in: [types/creatives.ts:322](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L322)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/creatives.ts:322
 
 > `optional` **additional\_owners**: `string`[]
 
-Defined in: types/creatives.ts:323
+Defined in: [types/creatives.ts:323](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L323)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: types/creatives.ts:323
 
 > `optional` **creative\_metadata\_tags**: [`CreativeMetadataTag`](CreativeMetadataTag.md)[]
 
-Defined in: types/creatives.ts:324
+Defined in: [types/creatives.ts:324](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L324)

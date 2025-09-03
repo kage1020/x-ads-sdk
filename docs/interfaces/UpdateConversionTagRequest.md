@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: UpdateConversionTagRequest
 
-Defined in: types/conversion-tracking.ts:74
+Defined in: [types/conversion-tracking.ts:74](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L74)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/conversion-tracking.ts:74
 
 > `optional` **name**: `string`
 
-Defined in: types/conversion-tracking.ts:76
+Defined in: [types/conversion-tracking.ts:76](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L76)
 
 Tag name
 
@@ -24,7 +24,7 @@ Tag name
 
 > `optional` **state**: [`ConversionTrackingTagState`](../enumerations/ConversionTrackingTagState.md)
 
-Defined in: types/conversion-tracking.ts:78
+Defined in: [types/conversion-tracking.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L78)
 
 Tag state
 
@@ -34,7 +34,7 @@ Tag state
 
 > `optional` **click\_attribution\_window**: [`AttributionWindow`](../enumerations/AttributionWindow.md)
 
-Defined in: types/conversion-tracking.ts:80
+Defined in: [types/conversion-tracking.ts:80](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L80)
 
 Click attribution window
 
@@ -44,7 +44,7 @@ Click attribution window
 
 > `optional` **view\_attribution\_window**: [`AttributionWindow`](../enumerations/AttributionWindow.md)
 
-Defined in: types/conversion-tracking.ts:82
+Defined in: [types/conversion-tracking.ts:82](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L82)
 
 View attribution window
 
@@ -54,6 +54,6 @@ View attribution window
 
 > `optional` **attribution\_model**: [`ConversionAttribution`](../enumerations/ConversionAttribution.md)
 
-Defined in: types/conversion-tracking.ts:84
+Defined in: [types/conversion-tracking.ts:84](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L84)
 
 Attribution model

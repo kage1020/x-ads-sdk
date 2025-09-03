@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -8,6 +8,6 @@
 
 > **MediaCategory** = `"AMPLIFY_VIDEO"` \| `"GIF"` \| `"IMAGE"` \| `"TWEET_GIF"` \| `"TWEET_IMAGE"` \| `"TWEET_VIDEO"` \| `"VIDEO"`
 
-Defined in: types/creatives.ts:14
+Defined in: [types/creatives.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L14)
 
 Media categories for account media library

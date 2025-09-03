@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CreateCardOptions
 
-Defined in: types/creatives.ts:245
+Defined in: [types/creatives.ts:245](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L245)
 
 Card creation options
 
@@ -16,7 +16,7 @@ Card creation options
 
 > **name**: `string`
 
-Defined in: types/creatives.ts:246
+Defined in: [types/creatives.ts:246](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L246)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:246
 
 > **card\_type**: [`CardType`](../type-aliases/CardType.md)
 
-Defined in: types/creatives.ts:247
+Defined in: [types/creatives.ts:247](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L247)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: types/creatives.ts:247
 
 > **components**: [`CardComponent`](CardComponent.md)[]
 
-Defined in: types/creatives.ts:248
+Defined in: [types/creatives.ts:248](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L248)

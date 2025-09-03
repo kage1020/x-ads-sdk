@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: UpdateProductCatalogOptions
 
-Defined in: types/catalog.ts:241
+Defined in: [types/catalog.ts:241](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L241)
 
 Product catalog update options
 
@@ -16,7 +16,7 @@ Product catalog update options
 
 > `optional` **name**: `string`
 
-Defined in: types/catalog.ts:242
+Defined in: [types/catalog.ts:242](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L242)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:242
 
 > `optional` **description**: `string`
 
-Defined in: types/catalog.ts:243
+Defined in: [types/catalog.ts:243](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L243)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: types/catalog.ts:243
 
 > `optional` **status**: [`ProductCatalogStatus`](../type-aliases/ProductCatalogStatus.md)
 
-Defined in: types/catalog.ts:244
+Defined in: [types/catalog.ts:244](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L244)

@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: BatchProductsResponse
 
-Defined in: types/catalog.ts:322
+Defined in: [types/catalog.ts:322](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L322)
 
 Batch products operation response
 
@@ -16,7 +16,7 @@ Batch products operation response
 
 > **data**: `object`
 
-Defined in: types/catalog.ts:323
+Defined in: [types/catalog.ts:323](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L323)
 
 #### success\_count
 
@@ -36,7 +36,7 @@ Defined in: types/catalog.ts:323
 
 > **request**: `object`
 
-Defined in: types/catalog.ts:331
+Defined in: [types/catalog.ts:331](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L331)
 
 #### params
 

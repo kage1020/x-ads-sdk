@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: AccountMediaListResponse
 
-Defined in: types/creatives.ts:159
+Defined in: [types/creatives.ts:159](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L159)
 
 Account media list response
 
@@ -16,7 +16,7 @@ Account media list response
 
 > **data**: [`AccountMedia`](AccountMedia.md)[]
 
-Defined in: types/creatives.ts:160
+Defined in: [types/creatives.ts:160](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L160)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:160
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/creatives.ts:161
+Defined in: [types/creatives.ts:161](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L161)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:161
 
 > **request**: `object`
 
-Defined in: types/creatives.ts:162
+Defined in: [types/creatives.ts:162](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L162)
 
 #### params
 

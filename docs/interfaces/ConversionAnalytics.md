@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ConversionAnalytics
 
-Defined in: types/conversion-tracking.ts:152
+Defined in: [types/conversion-tracking.ts:152](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L152)
 
 Conversion tracking analytics data
 
@@ -16,7 +16,7 @@ Conversion tracking analytics data
 
 > **conversion\_tag\_id**: `string`
 
-Defined in: types/conversion-tracking.ts:154
+Defined in: [types/conversion-tracking.ts:154](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L154)
 
 Tag ID
 
@@ -26,7 +26,7 @@ Tag ID
 
 > **conversion\_tag\_name**: `string`
 
-Defined in: types/conversion-tracking.ts:156
+Defined in: [types/conversion-tracking.ts:156](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L156)
 
 Tag name
 
@@ -36,7 +36,7 @@ Tag name
 
 > **start\_date**: `string`
 
-Defined in: types/conversion-tracking.ts:158
+Defined in: [types/conversion-tracking.ts:158](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L158)
 
 Date range start
 
@@ -46,7 +46,7 @@ Date range start
 
 > **end\_date**: `string`
 
-Defined in: types/conversion-tracking.ts:160
+Defined in: [types/conversion-tracking.ts:160](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L160)
 
 Date range end
 
@@ -56,7 +56,7 @@ Date range end
 
 > **total\_conversions**: `number`
 
-Defined in: types/conversion-tracking.ts:162
+Defined in: [types/conversion-tracking.ts:162](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L162)
 
 Total conversions
 
@@ -66,7 +66,7 @@ Total conversions
 
 > **conversion\_value\_local\_micro**: `number`
 
-Defined in: types/conversion-tracking.ts:164
+Defined in: [types/conversion-tracking.ts:164](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L164)
 
 Conversion value
 
@@ -76,7 +76,7 @@ Conversion value
 
 > `optional` **cost\_per\_conversion\_local\_micro**: `number`
 
-Defined in: types/conversion-tracking.ts:166
+Defined in: [types/conversion-tracking.ts:166](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L166)
 
 Cost per conversion
 
@@ -86,6 +86,6 @@ Cost per conversion
 
 > `optional` **conversion\_rate**: `number`
 
-Defined in: types/conversion-tracking.ts:168
+Defined in: [types/conversion-tracking.ts:168](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L168)
 
 Conversion rate

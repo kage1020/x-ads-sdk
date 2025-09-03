@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: UpdateProductSetOptions
 
-Defined in: types/catalog.ts:289
+Defined in: [types/catalog.ts:289](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L289)
 
 Product set update options
 
@@ -16,7 +16,7 @@ Product set update options
 
 > `optional` **name**: `string`
 
-Defined in: types/catalog.ts:290
+Defined in: [types/catalog.ts:290](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L290)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:290
 
 > `optional` **description**: `string`
 
-Defined in: types/catalog.ts:291
+Defined in: [types/catalog.ts:291](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L291)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/catalog.ts:291
 
 > `optional` **filter\_rules**: [`ProductSetFilter`](ProductSetFilter.md)[]
 
-Defined in: types/catalog.ts:292
+Defined in: [types/catalog.ts:292](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L292)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: types/catalog.ts:292
 
 > `optional` **product\_ids**: `string`[]
 
-Defined in: types/catalog.ts:293
+Defined in: [types/catalog.ts:293](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L293)

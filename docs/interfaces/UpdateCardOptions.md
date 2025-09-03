@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: UpdateCardOptions
 
-Defined in: types/creatives.ts:254
+Defined in: [types/creatives.ts:254](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L254)
 
 Card update options
 
@@ -16,7 +16,7 @@ Card update options
 
 > `optional` **name**: `string`
 
-Defined in: types/creatives.ts:255
+Defined in: [types/creatives.ts:255](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L255)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/creatives.ts:255
 
 > `optional` **components**: [`CardComponent`](CardComponent.md)[]
 
-Defined in: types/creatives.ts:256
+Defined in: [types/creatives.ts:256](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L256)

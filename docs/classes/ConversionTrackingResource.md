@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: ConversionTrackingResource
 
-Defined in: resources/conversion-tracking.ts:28
+Defined in: [resources/conversion-tracking.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L28)
 
 Conversion Tracking resource class for managing conversion tags and events
 
@@ -94,7 +94,7 @@ Complete endpoint with API version
 
 > **getConversionTags**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`ConversionTagResponse`](../interfaces/ConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:34
+Defined in: [resources/conversion-tracking.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L34)
 
 Get all conversion tags for an account
 
@@ -148,7 +148,7 @@ Get all conversion tags for an account
 
 > **getConversionTag**(`accountId`, `conversionTagId`, `requestOptions?`): `Promise`\<[`SingleConversionTagResponse`](../interfaces/SingleConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:84
+Defined in: [resources/conversion-tracking.ts:84](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L84)
 
 Get a specific conversion tag
 
@@ -176,7 +176,7 @@ Get a specific conversion tag
 
 > **createConversionTag**(`accountId`, `tagData`, `requestOptions?`): `Promise`\<[`SingleConversionTagResponse`](../interfaces/SingleConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:101
+Defined in: [resources/conversion-tracking.ts:101](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L101)
 
 Create a new conversion tag
 
@@ -204,7 +204,7 @@ Create a new conversion tag
 
 > **updateConversionTag**(`accountId`, `conversionTagId`, `updates`, `requestOptions?`): `Promise`\<[`SingleConversionTagResponse`](../interfaces/SingleConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:119
+Defined in: [resources/conversion-tracking.ts:119](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L119)
 
 Update a conversion tag
 
@@ -236,7 +236,7 @@ Update a conversion tag
 
 > **deleteConversionTag**(`accountId`, `conversionTagId`, `requestOptions?`): `Promise`\<[`SingleConversionTagResponse`](../interfaces/SingleConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:138
+Defined in: [resources/conversion-tracking.ts:138](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L138)
 
 Delete a conversion tag
 
@@ -264,7 +264,7 @@ Delete a conversion tag
 
 > **submitConversionEvent**(`accountId`, `eventData`, `requestOptions?`): `Promise`\<\{ `success`: `boolean`; `event_id?`: `string`; \}\>
 
-Defined in: resources/conversion-tracking.ts:157
+Defined in: [resources/conversion-tracking.ts:157](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L157)
 
 Submit conversion events (server-to-server tracking)
 
@@ -292,7 +292,7 @@ Submit conversion events (server-to-server tracking)
 
 > **submitConversionEventsBatch**(`accountId`, `events`, `requestOptions?`): `Promise`\<\{ `success`: `boolean`; `processed_events`: `number`; `failed_events`: `number`; `event_ids?`: `string`[]; \}\>
 
-Defined in: resources/conversion-tracking.ts:175
+Defined in: [resources/conversion-tracking.ts:175](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L175)
 
 Submit multiple conversion events in batch
 
@@ -320,7 +320,7 @@ Submit multiple conversion events in batch
 
 > **getWebConversionTags**(`accountId`, `requestOptions?`): `Promise`\<[`ConversionTagResponse`](../interfaces/ConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:205
+Defined in: [resources/conversion-tracking.ts:205](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L205)
 
 Get all web conversion tags
 
@@ -344,7 +344,7 @@ Get all web conversion tags
 
 > **getMobileAppConversionTags**(`accountId`, `requestOptions?`): `Promise`\<[`ConversionTagResponse`](../interfaces/ConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:222
+Defined in: [resources/conversion-tracking.ts:222](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L222)
 
 Get all mobile app conversion tags
 
@@ -368,7 +368,7 @@ Get all mobile app conversion tags
 
 > **getActiveConversionTags**(`accountId`, `requestOptions?`): `Promise`\<[`ConversionTagResponse`](../interfaces/ConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:239
+Defined in: [resources/conversion-tracking.ts:239](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L239)
 
 Get all active conversion tags
 
@@ -392,7 +392,7 @@ Get all active conversion tags
 
 > **pauseConversionTag**(`accountId`, `conversionTagId`, `requestOptions?`): `Promise`\<[`SingleConversionTagResponse`](../interfaces/SingleConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:255
+Defined in: [resources/conversion-tracking.ts:255](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L255)
 
 Pause a conversion tag
 
@@ -420,7 +420,7 @@ Pause a conversion tag
 
 > **resumeConversionTag**(`accountId`, `conversionTagId`, `requestOptions?`): `Promise`\<[`SingleConversionTagResponse`](../interfaces/SingleConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:273
+Defined in: [resources/conversion-tracking.ts:273](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L273)
 
 Resume a conversion tag
 
@@ -448,7 +448,7 @@ Resume a conversion tag
 
 > **createWebConversionTag**(`accountId`, `name`, `options?`, `requestOptions?`): `Promise`\<[`SingleConversionTagResponse`](../interfaces/SingleConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:291
+Defined in: [resources/conversion-tracking.ts:291](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L291)
 
 Create a web conversion tag
 
@@ -486,7 +486,7 @@ Create a web conversion tag
 
 > **createMobileAppConversionTag**(`accountId`, `name`, `appEventProvider`, `appEventName`, `options?`, `requestOptions?`): `Promise`\<[`SingleConversionTagResponse`](../interfaces/SingleConversionTagResponse.md)\>
 
-Defined in: resources/conversion-tracking.ts:312
+Defined in: [resources/conversion-tracking.ts:312](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L312)
 
 Create a mobile app conversion tag
 
@@ -532,7 +532,7 @@ Create a mobile app conversion tag
 
 > **getConversionTagsSummary**(`accountId`, `requestOptions?`): `Promise`\<\{ `total_count`: `number`; `active_count`: `number`; `paused_count`: `number`; `web_tags_count`: `number`; `mobile_app_tags_count`: `number`; \}\>
 
-Defined in: resources/conversion-tracking.ts:337
+Defined in: [resources/conversion-tracking.ts:337](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/conversion-tracking.ts#L337)
 
 Get conversion tags summary
 

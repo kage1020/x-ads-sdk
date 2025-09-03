@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: UpdateScheduledTweetOptions
 
-Defined in: types/creatives.ts:296
+Defined in: [types/creatives.ts:296](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L296)
 
 Scheduled tweet update options
 
@@ -16,7 +16,7 @@ Scheduled tweet update options
 
 > `optional` **text**: `string`
 
-Defined in: types/creatives.ts:297
+Defined in: [types/creatives.ts:297](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L297)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:297
 
 > `optional` **scheduled\_at**: `string`
 
-Defined in: types/creatives.ts:298
+Defined in: [types/creatives.ts:298](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L298)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:298
 
 > `optional` **as\_user\_id**: `string`
 
-Defined in: types/creatives.ts:299
+Defined in: [types/creatives.ts:299](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L299)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/creatives.ts:299
 
 > `optional` **card\_uri**: `string`
 
-Defined in: types/creatives.ts:300
+Defined in: [types/creatives.ts:300](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L300)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/creatives.ts:300
 
 > `optional` **media\_keys**: `string`[]
 
-Defined in: types/creatives.ts:301
+Defined in: [types/creatives.ts:301](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L301)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: types/creatives.ts:301
 
 > `optional` **nullcast**: `boolean`
 
-Defined in: types/creatives.ts:302
+Defined in: [types/creatives.ts:302](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L302)

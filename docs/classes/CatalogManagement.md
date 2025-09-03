@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Class: CatalogManagement
 
-Defined in: resources/catalog.ts:31
+Defined in: [resources/catalog.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L31)
 
 Catalog Management resource class
 
@@ -94,7 +94,7 @@ Complete endpoint with API version
 
 > **getProductCatalogs**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`ProductCatalogsResponse`](../interfaces/ProductCatalogsResponse.md)\>
 
-Defined in: resources/catalog.ts:37
+Defined in: [resources/catalog.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L37)
 
 Get all product catalogs for an account
 
@@ -140,7 +140,7 @@ Get all product catalogs for an account
 
 > **getProductCatalog**(`accountId`, `catalogId`, `requestOptions?`): `Promise`\<[`ProductCatalogResponse`](../interfaces/ProductCatalogResponse.md)\>
 
-Defined in: resources/catalog.ts:79
+Defined in: [resources/catalog.ts:79](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L79)
 
 Get a specific product catalog
 
@@ -168,7 +168,7 @@ Get a specific product catalog
 
 > **createProductCatalog**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`ProductCatalogResponse`](../interfaces/ProductCatalogResponse.md)\>
 
-Defined in: resources/catalog.ts:96
+Defined in: [resources/catalog.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L96)
 
 Create a new product catalog
 
@@ -196,7 +196,7 @@ Create a new product catalog
 
 > **updateProductCatalog**(`accountId`, `catalogId`, `options`, `requestOptions?`): `Promise`\<[`ProductCatalogResponse`](../interfaces/ProductCatalogResponse.md)\>
 
-Defined in: resources/catalog.ts:119
+Defined in: [resources/catalog.ts:119](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L119)
 
 Update a product catalog
 
@@ -228,7 +228,7 @@ Update a product catalog
 
 > **deleteProductCatalog**(`accountId`, `catalogId`, `requestOptions?`): `Promise`\<[`ProductCatalogResponse`](../interfaces/ProductCatalogResponse.md)\>
 
-Defined in: resources/catalog.ts:150
+Defined in: [resources/catalog.ts:150](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L150)
 
 Delete a product catalog
 
@@ -256,7 +256,7 @@ Delete a product catalog
 
 > **getProducts**(`accountId`, `catalogId`, `options?`, `requestOptions?`): `Promise`\<[`ProductsResponse`](../interfaces/ProductsResponse.md)\>
 
-Defined in: resources/catalog.ts:169
+Defined in: [resources/catalog.ts:169](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L169)
 
 Get all products for a catalog
 
@@ -302,7 +302,7 @@ Get all products for a catalog
 
 > **batchUpdateProducts**(`accountId`, `catalogId`, `options`, `requestOptions?`): `Promise`\<[`BatchProductsResponse`](../interfaces/BatchProductsResponse.md)\>
 
-Defined in: resources/catalog.ts:208
+Defined in: [resources/catalog.ts:208](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L208)
 
 Create or update products in batch
 
@@ -334,7 +334,7 @@ Create or update products in batch
 
 > **deleteProducts**(`accountId`, `catalogId`, `options`, `requestOptions?`): `Promise`\<[`DeleteProductsResponse`](../interfaces/DeleteProductsResponse.md)\>
 
-Defined in: resources/catalog.ts:231
+Defined in: [resources/catalog.ts:231](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L231)
 
 Delete products from catalog
 
@@ -366,7 +366,7 @@ Delete products from catalog
 
 > **getProductSets**(`accountId`, `catalogId`, `options?`, `requestOptions?`): `Promise`\<[`ProductSetsResponse`](../interfaces/ProductSetsResponse.md)\>
 
-Defined in: resources/catalog.ts:256
+Defined in: [resources/catalog.ts:256](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L256)
 
 Get all product sets for a catalog
 
@@ -416,7 +416,7 @@ Get all product sets for a catalog
 
 > **getProductSet**(`accountId`, `catalogId`, `productSetId`, `requestOptions?`): `Promise`\<[`ProductSetResponse`](../interfaces/ProductSetResponse.md)\>
 
-Defined in: resources/catalog.ts:299
+Defined in: [resources/catalog.ts:299](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L299)
 
 Get a specific product set
 
@@ -448,7 +448,7 @@ Get a specific product set
 
 > **createProductSet**(`accountId`, `catalogId`, `options`, `requestOptions?`): `Promise`\<[`ProductSetResponse`](../interfaces/ProductSetResponse.md)\>
 
-Defined in: resources/catalog.ts:317
+Defined in: [resources/catalog.ts:317](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L317)
 
 Create a new product set
 
@@ -480,7 +480,7 @@ Create a new product set
 
 > **updateProductSet**(`accountId`, `catalogId`, `productSetId`, `options`, `requestOptions?`): `Promise`\<[`ProductSetResponse`](../interfaces/ProductSetResponse.md)\>
 
-Defined in: resources/catalog.ts:344
+Defined in: [resources/catalog.ts:344](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L344)
 
 Update a product set
 
@@ -516,7 +516,7 @@ Update a product set
 
 > **deleteProductSet**(`accountId`, `catalogId`, `productSetId`, `requestOptions?`): `Promise`\<[`ProductSetResponse`](../interfaces/ProductSetResponse.md)\>
 
-Defined in: resources/catalog.ts:379
+Defined in: [resources/catalog.ts:379](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L379)
 
 Delete a product set
 
@@ -548,7 +548,7 @@ Delete a product set
 
 > **getProductFeeds**(`accountId`, `catalogId`, `options?`, `requestOptions?`): `Promise`\<[`ProductFeedsResponse`](../interfaces/ProductFeedsResponse.md)\>
 
-Defined in: resources/catalog.ts:399
+Defined in: [resources/catalog.ts:399](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L399)
 
 Get all product feeds for a catalog
 
@@ -598,7 +598,7 @@ Get all product feeds for a catalog
 
 > **getProductFeed**(`accountId`, `catalogId`, `feedId`, `requestOptions?`): `Promise`\<[`ProductFeedResponse`](../interfaces/ProductFeedResponse.md)\>
 
-Defined in: resources/catalog.ts:442
+Defined in: [resources/catalog.ts:442](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L442)
 
 Get a specific product feed
 
@@ -630,7 +630,7 @@ Get a specific product feed
 
 > **createProductFeed**(`accountId`, `catalogId`, `options`, `requestOptions?`): `Promise`\<[`ProductFeedResponse`](../interfaces/ProductFeedResponse.md)\>
 
-Defined in: resources/catalog.ts:460
+Defined in: [resources/catalog.ts:460](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L460)
 
 Create a new product feed
 
@@ -662,7 +662,7 @@ Create a new product feed
 
 > **updateProductFeed**(`accountId`, `catalogId`, `feedId`, `options`, `requestOptions?`): `Promise`\<[`ProductFeedResponse`](../interfaces/ProductFeedResponse.md)\>
 
-Defined in: resources/catalog.ts:487
+Defined in: [resources/catalog.ts:487](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L487)
 
 Update a product feed
 
@@ -698,7 +698,7 @@ Update a product feed
 
 > **deleteProductFeed**(`accountId`, `catalogId`, `feedId`, `requestOptions?`): `Promise`\<[`ProductFeedResponse`](../interfaces/ProductFeedResponse.md)\>
 
-Defined in: resources/catalog.ts:528
+Defined in: [resources/catalog.ts:528](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L528)
 
 Delete a product feed
 
@@ -730,7 +730,7 @@ Delete a product feed
 
 > **createManualProductSet**(`accountId`, `catalogId`, `name`, `productIds`, `description?`, `requestOptions?`): `Promise`\<[`ProductSetResponse`](../interfaces/ProductSetResponse.md)\>
 
-Defined in: resources/catalog.ts:548
+Defined in: [resources/catalog.ts:548](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L548)
 
 Create a manual product set with specific product IDs
 
@@ -770,7 +770,7 @@ Create a manual product set with specific product IDs
 
 > **createFilterProductSet**(`accountId`, `catalogId`, `name`, `filterRules`, `description?`, `requestOptions?`): `Promise`\<[`ProductSetResponse`](../interfaces/ProductSetResponse.md)\>
 
-Defined in: resources/catalog.ts:572
+Defined in: [resources/catalog.ts:572](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L572)
 
 Create a filter-based product set
 
@@ -810,7 +810,7 @@ Create a filter-based product set
 
 > **addProductsToSet**(`accountId`, `catalogId`, `productSetId`, `productIds`, `requestOptions?`): `Promise`\<[`ProductSetResponse`](../interfaces/ProductSetResponse.md)\>
 
-Defined in: resources/catalog.ts:596
+Defined in: [resources/catalog.ts:596](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L596)
 
 Add products to a manual product set
 
@@ -846,7 +846,7 @@ Add products to a manual product set
 
 > **removeProductsFromSet**(`accountId`, `catalogId`, `productSetId`, `productIds`, `requestOptions?`): `Promise`\<[`ProductSetResponse`](../interfaces/ProductSetResponse.md)\>
 
-Defined in: resources/catalog.ts:624
+Defined in: [resources/catalog.ts:624](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L624)
 
 Remove products from a manual product set
 
@@ -882,7 +882,7 @@ Remove products from a manual product set
 
 > **createDailyScheduledFeed**(`accountId`, `catalogId`, `name`, `url`, `format`, `timezone`, `requestOptions?`): `Promise`\<[`ProductFeedResponse`](../interfaces/ProductFeedResponse.md)\>
 
-Defined in: resources/catalog.ts:652
+Defined in: [resources/catalog.ts:652](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L652)
 
 Create a daily scheduled feed
 
@@ -926,7 +926,7 @@ Create a daily scheduled feed
 
 > **createWeeklyScheduledFeed**(`accountId`, `catalogId`, `name`, `url`, `format`, `dayOfWeek`, `timezone`, `requestOptions?`): `Promise`\<[`ProductFeedResponse`](../interfaces/ProductFeedResponse.md)\>
 
-Defined in: resources/catalog.ts:678
+Defined in: [resources/catalog.ts:678](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/catalog.ts#L678)
 
 Create a weekly scheduled feed
 

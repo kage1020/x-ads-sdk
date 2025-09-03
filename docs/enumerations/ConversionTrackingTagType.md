@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: ConversionTrackingTagType
 
-Defined in: types/conversion-tracking.ts:5
+Defined in: [types/conversion-tracking.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L5)
 
 X Ads Conversion Tracking related types
 
@@ -16,7 +16,7 @@ X Ads Conversion Tracking related types
 
 > **WEB**: `"WEB"`
 
-Defined in: types/conversion-tracking.ts:6
+Defined in: [types/conversion-tracking.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L6)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/conversion-tracking.ts:6
 
 > **MOBILE\_APP**: `"MOBILE_APP"`
 
-Defined in: types/conversion-tracking.ts:7
+Defined in: [types/conversion-tracking.ts:7](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L7)

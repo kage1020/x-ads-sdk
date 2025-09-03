@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductFeed
 
-Defined in: types/catalog.ts:129
+Defined in: [types/catalog.ts:129](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L129)
 
 Product feed entity
 
@@ -16,7 +16,7 @@ Product feed entity
 
 > **id**: `string`
 
-Defined in: types/catalog.ts:130
+Defined in: [types/catalog.ts:130](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L130)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:130
 
 > **id\_str**: `string`
 
-Defined in: types/catalog.ts:131
+Defined in: [types/catalog.ts:131](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L131)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/catalog.ts:131
 
 > **name**: `string`
 
-Defined in: types/catalog.ts:132
+Defined in: [types/catalog.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L132)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/catalog.ts:132
 
 > **url**: `string`
 
-Defined in: types/catalog.ts:133
+Defined in: [types/catalog.ts:133](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L133)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/catalog.ts:133
 
 > **format**: [`ProductFeedFormat`](../type-aliases/ProductFeedFormat.md)
 
-Defined in: types/catalog.ts:134
+Defined in: [types/catalog.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L134)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/catalog.ts:134
 
 > **status**: [`ProductFeedStatus`](../type-aliases/ProductFeedStatus.md)
 
-Defined in: types/catalog.ts:135
+Defined in: [types/catalog.ts:135](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L135)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/catalog.ts:135
 
 > **product\_catalog\_id**: `string`
 
-Defined in: types/catalog.ts:136
+Defined in: [types/catalog.ts:136](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L136)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: types/catalog.ts:136
 
 > **created\_at**: `string`
 
-Defined in: types/catalog.ts:137
+Defined in: [types/catalog.ts:137](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L137)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: types/catalog.ts:137
 
 > **updated\_at**: `string`
 
-Defined in: types/catalog.ts:138
+Defined in: [types/catalog.ts:138](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L138)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: types/catalog.ts:138
 
 > **deleted**: `boolean`
 
-Defined in: types/catalog.ts:139
+Defined in: [types/catalog.ts:139](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L139)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: types/catalog.ts:139
 
 > `optional` **last\_upload\_at**: `string`
 
-Defined in: types/catalog.ts:140
+Defined in: [types/catalog.ts:140](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L140)
 
 ***
 
@@ -104,7 +104,7 @@ Defined in: types/catalog.ts:140
 
 > `optional` **schedule**: `string`
 
-Defined in: types/catalog.ts:141
+Defined in: [types/catalog.ts:141](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L141)
 
 ***
 
@@ -112,7 +112,7 @@ Defined in: types/catalog.ts:141
 
 > `optional` **timezone**: `string`
 
-Defined in: types/catalog.ts:142
+Defined in: [types/catalog.ts:142](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L142)
 
 ***
 
@@ -120,4 +120,4 @@ Defined in: types/catalog.ts:142
 
 > `optional` **error\_message**: `string`
 
-Defined in: types/catalog.ts:143
+Defined in: [types/catalog.ts:143](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L143)

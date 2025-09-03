@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CardsFetchOptions
 
-Defined in: types/creatives.ts:330
+Defined in: [types/creatives.ts:330](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L330)
 
 Cards fetch options
 
@@ -16,4 +16,4 @@ Cards fetch options
 
 > **card\_uris**: `string`[]
 
-Defined in: types/creatives.ts:331
+Defined in: [types/creatives.ts:331](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L331)

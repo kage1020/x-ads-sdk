@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CardsFetchResponse
 
-Defined in: types/creatives.ts:337
+Defined in: [types/creatives.ts:337](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L337)
 
 Cards fetch response
 
@@ -16,7 +16,7 @@ Cards fetch response
 
 > **data**: [`Card`](Card.md)[]
 
-Defined in: types/creatives.ts:338
+Defined in: [types/creatives.ts:338](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L338)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:338
 
 > **request**: `object`
 
-Defined in: types/creatives.ts:339
+Defined in: [types/creatives.ts:339](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L339)
 
 #### params
 

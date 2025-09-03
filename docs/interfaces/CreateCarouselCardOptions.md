@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CreateCarouselCardOptions
 
-Defined in: types/creatives.ts:308
+Defined in: [types/creatives.ts:308](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L308)
 
 Carousel card creation options
 
@@ -16,7 +16,7 @@ Carousel card creation options
 
 > **name**: `string`
 
-Defined in: types/creatives.ts:309
+Defined in: [types/creatives.ts:309](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L309)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:309
 
 > **first\_cta**: `string`
 
-Defined in: types/creatives.ts:310
+Defined in: [types/creatives.ts:310](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L310)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/creatives.ts:310
 
 > `optional` **second\_cta**: `string`
 
-Defined in: types/creatives.ts:311
+Defined in: [types/creatives.ts:311](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L311)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/creatives.ts:311
 
 > `optional` **destination\_url**: `string`
 
-Defined in: types/creatives.ts:312
+Defined in: [types/creatives.ts:312](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L312)
 
 ***
 
@@ -48,4 +48,4 @@ Defined in: types/creatives.ts:312
 
 > **slides**: [`CarouselSlide`](CarouselSlide.md)[]
 
-Defined in: types/creatives.ts:313
+Defined in: [types/creatives.ts:313](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L313)

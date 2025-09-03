@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductFeedsResponse
 
-Defined in: types/catalog.ts:222
+Defined in: [types/catalog.ts:222](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L222)
 
 Product feeds list response
 
@@ -16,7 +16,7 @@ Product feeds list response
 
 > **data**: [`ProductFeed`](ProductFeed.md)[]
 
-Defined in: types/catalog.ts:223
+Defined in: [types/catalog.ts:223](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L223)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:223
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/catalog.ts:224
+Defined in: [types/catalog.ts:224](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L224)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/catalog.ts:224
 
 > **request**: `object`
 
-Defined in: types/catalog.ts:225
+Defined in: [types/catalog.ts:225](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L225)
 
 #### params
 

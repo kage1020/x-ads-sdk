@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: CardResponse
 
-Defined in: types/creatives.ts:170
+Defined in: [types/creatives.ts:170](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L170)
 
 Card response
 
@@ -16,7 +16,7 @@ Card response
 
 > **data**: [`Card`](Card.md)
 
-Defined in: types/creatives.ts:171
+Defined in: [types/creatives.ts:171](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L171)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/creatives.ts:171
 
 > **request**: `object`
 
-Defined in: types/creatives.ts:172
+Defined in: [types/creatives.ts:172](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/creatives.ts#L172)
 
 #### params
 

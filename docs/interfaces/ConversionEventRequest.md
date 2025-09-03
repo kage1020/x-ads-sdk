@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ConversionEventRequest
 
-Defined in: types/conversion-tracking.ts:123
+Defined in: [types/conversion-tracking.ts:123](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L123)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/conversion-tracking.ts:123
 
 > **conversion\_tag\_id**: `string`
 
-Defined in: types/conversion-tracking.ts:125
+Defined in: [types/conversion-tracking.ts:125](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L125)
 
 Conversion tag ID
 
@@ -24,7 +24,7 @@ Conversion tag ID
 
 > **event\_time**: `string`
 
-Defined in: types/conversion-tracking.ts:127
+Defined in: [types/conversion-tracking.ts:127](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L127)
 
 Event timestamp (ISO 8601)
 
@@ -34,7 +34,7 @@ Event timestamp (ISO 8601)
 
 > `optional` **conversion\_value\_local\_micro**: `number`
 
-Defined in: types/conversion-tracking.ts:129
+Defined in: [types/conversion-tracking.ts:129](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L129)
 
 Conversion value in micros
 
@@ -44,7 +44,7 @@ Conversion value in micros
 
 > `optional` **currency**: `string`
 
-Defined in: types/conversion-tracking.ts:131
+Defined in: [types/conversion-tracking.ts:131](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L131)
 
 Currency code
 
@@ -54,7 +54,7 @@ Currency code
 
 > `optional` **event\_identifier**: `string`
 
-Defined in: types/conversion-tracking.ts:133
+Defined in: [types/conversion-tracking.ts:133](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L133)
 
 Event identifier
 
@@ -64,7 +64,7 @@ Event identifier
 
 > `optional` **user\_identifiers**: `object`
 
-Defined in: types/conversion-tracking.ts:135
+Defined in: [types/conversion-tracking.ts:135](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L135)
 
 User identifier hashes
 

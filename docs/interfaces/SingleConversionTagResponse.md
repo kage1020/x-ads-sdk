@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: SingleConversionTagResponse
 
-Defined in: types/conversion-tracking.ts:96
+Defined in: [types/conversion-tracking.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L96)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/conversion-tracking.ts:96
 
 > **data**: [`ConversionTag`](ConversionTag.md)
 
-Defined in: types/conversion-tracking.ts:97
+Defined in: [types/conversion-tracking.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L97)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/conversion-tracking.ts:97
 
 > **request**: `object`
 
-Defined in: types/conversion-tracking.ts:98
+Defined in: [types/conversion-tracking.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L98)
 
 #### params
 

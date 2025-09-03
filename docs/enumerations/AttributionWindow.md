@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: AttributionWindow
 
-Defined in: types/conversion-tracking.ts:21
+Defined in: [types/conversion-tracking.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L21)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: types/conversion-tracking.ts:21
 
 > **ONE\_DAY**: `"ONE_DAY"`
 
-Defined in: types/conversion-tracking.ts:22
+Defined in: [types/conversion-tracking.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L22)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/conversion-tracking.ts:22
 
 > **SEVEN\_DAYS**: `"SEVEN_DAYS"`
 
-Defined in: types/conversion-tracking.ts:23
+Defined in: [types/conversion-tracking.ts:23](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L23)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: types/conversion-tracking.ts:23
 
 > **FOURTEEN\_DAYS**: `"FOURTEEN_DAYS"`
 
-Defined in: types/conversion-tracking.ts:24
+Defined in: [types/conversion-tracking.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L24)
 
 ***
 
@@ -38,4 +38,4 @@ Defined in: types/conversion-tracking.ts:24
 
 > **THIRTY\_DAYS**: `"THIRTY_DAYS"`
 
-Defined in: types/conversion-tracking.ts:25
+Defined in: [types/conversion-tracking.ts:25](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L25)

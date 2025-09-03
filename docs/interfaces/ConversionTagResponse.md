@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ConversionTagResponse
 
-Defined in: types/conversion-tracking.ts:87
+Defined in: [types/conversion-tracking.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L87)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: types/conversion-tracking.ts:87
 
 > **data**: [`ConversionTag`](ConversionTag.md)[]
 
-Defined in: types/conversion-tracking.ts:88
+Defined in: [types/conversion-tracking.ts:88](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L88)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: types/conversion-tracking.ts:88
 
 > **request**: `object`
 
-Defined in: types/conversion-tracking.ts:89
+Defined in: [types/conversion-tracking.ts:89](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L89)
 
 #### params
 
@@ -34,7 +34,7 @@ Defined in: types/conversion-tracking.ts:89
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/conversion-tracking.ts:92
+Defined in: [types/conversion-tracking.ts:92](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L92)
 
 ***
 
@@ -42,4 +42,4 @@ Defined in: types/conversion-tracking.ts:92
 
 > `optional` **total\_count**: `number`
 
-Defined in: types/conversion-tracking.ts:93
+Defined in: [types/conversion-tracking.ts:93](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/conversion-tracking.ts#L93)

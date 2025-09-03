@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: ProductSetFilter
 
-Defined in: types/catalog.ts:120
+Defined in: [types/catalog.ts:120](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L120)
 
 Product set filter rule
 
@@ -16,7 +16,7 @@ Product set filter rule
 
 > **field**: `string`
 
-Defined in: types/catalog.ts:121
+Defined in: [types/catalog.ts:121](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L121)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/catalog.ts:121
 
 > **operator**: [`FilterOperator`](../type-aliases/FilterOperator.md)
 
-Defined in: types/catalog.ts:122
+Defined in: [types/catalog.ts:122](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L122)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: types/catalog.ts:122
 
 > **value**: `string` \| `number`
 
-Defined in: types/catalog.ts:123
+Defined in: [types/catalog.ts:123](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/catalog.ts#L123)
