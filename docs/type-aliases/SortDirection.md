@@ -8,6 +8,6 @@
 
 > **SortDirection** = `"asc"` \| `"desc"`
 
-Defined in: types/sorting.ts:10
+Defined in: [types/sorting.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/sorting.ts#L9)
 
 Sort direction

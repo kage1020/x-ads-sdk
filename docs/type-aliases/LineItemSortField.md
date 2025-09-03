@@ -8,6 +8,6 @@
 
 > **LineItemSortField** = [`SortField`](SortField.md)\<`"created_at"` \| `"updated_at"` \| `"deleted"` \| `"bid_amount_local_micro"`\>
 
-Defined in: types/sorting.ts:40
+Defined in: [types/sorting.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/sorting.ts#L39)
 
 Line Item sortable fields

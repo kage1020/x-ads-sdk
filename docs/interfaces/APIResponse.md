@@ -6,7 +6,7 @@
 
 # Interface: APIResponse\<T\>
 
-Defined in: [types/common.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L14)
+Defined in: [types/common.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L13)
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ Defined in: [types/common.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **data**: `T`
 
-Defined in: [types/common.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L15)
+Defined in: [types/common.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L14)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [types/common.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **request**: `object`
 
-Defined in: [types/common.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L16)
+Defined in: [types/common.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L15)
 
 #### params
 

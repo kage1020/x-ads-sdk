@@ -1,0 +1,13 @@
+[**X Ads SDK v1.0.3**](../README.md)
+
+***
+
+[X Ads SDK](../globals.md) / AnalyticsEntityType
+
+# Type Alias: AnalyticsEntityType
+
+> **AnalyticsEntityType** = `"ACCOUNT"` \| `"CAMPAIGN"` \| `"FUNDING_INSTRUMENT"` \| `"LINE_ITEM"` \| `"PROMOTED_TWEET"` \| `"PROMOTED_ACCOUNT"` \| `"MEDIA_CREATIVE"` \| `"ORGANIC_TWEET"`
+
+Defined in: types/analytics.ts:9
+
+Entity types for analytics queries

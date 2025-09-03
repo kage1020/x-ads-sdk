@@ -1,3 +1,4 @@
+export * from './analytics.js';
 export * from './api-version.js';
 export * from './auth.js';
 export * from './common.js';

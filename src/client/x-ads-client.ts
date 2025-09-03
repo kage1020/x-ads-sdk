@@ -1,5 +1,10 @@
 import type { XAdsPlugin } from '../plugins/base.js';
-import { AccountResource, CampaignResource, LineItemResource } from '../resources/index.js';
+import {
+  AccountResource,
+  Analytics,
+  CampaignResource,
+  LineItemResource,
+} from '../resources/index.js';
 import type { APIVersion, APIVersionResponse } from '../types/api-version.js';
 import { type ClientConfig, Environment } from '../types/common.js';
 import { HttpClient, type HttpClientConfig } from './base.js';
@@ -61,6 +66,9 @@ export class XAdsClient {
   /** Accounts resource for managing advertising accounts */
   public accounts: AccountResource;
 
+  /** Analytics resource for retrieving performance data */
+  public analytics: Analytics;
+
   /**
    * Creates a new X Ads SDK client instance
    *
@@ -103,6 +111,7 @@ export class XAdsClient {
 
     // Initialize resources
     this.accounts = new AccountResource(this.httpClient);
+    this.analytics = new Analytics(this.httpClient);
   }
 
   /**

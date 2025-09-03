@@ -8,7 +8,7 @@
 
 > **SortField**\<`T`\> = `` `${T}-${SortDirection}` ``
 
-Defined in: types/sorting.ts:15
+Defined in: [types/sorting.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/sorting.ts#L14)
 
 Generic sort field type
 

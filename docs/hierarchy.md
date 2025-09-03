@@ -6,10 +6,18 @@
 
 ## Hierarchy Summary
 
+### AnalyticsRequestOptions
+
+- [AnalyticsRequestOptions](interfaces/AnalyticsRequestOptions.md)
+  - [AsyncAnalyticsRequestOptions](interfaces/AsyncAnalyticsRequestOptions.md)
+
+***
+
 ### BaseResource
 
 - [BaseResource](classes/BaseResource.md)
   - [AccountResource](classes/AccountResource.md)
+  - [Analytics](classes/Analytics.md)
   - [CampaignResource](classes/CampaignResource.md)
   - [LineItemResource](classes/LineItemResource.md)
 

@@ -5,7 +5,7 @@
  * performance data for campaigns and ad groups.
  */
 
-import { EntityType, Environment, Granularity, XAdsClient } from '../src/index.js';
+import { AnalyticsEntityType, AnalyticsGranularity, Environment, XAdsClient } from '../src/index.js';
 
 async function analyticsReportingExample() {
   const client = new XAdsClient({
@@ -31,7 +31,8 @@ async function analyticsReportingExample() {
     console.log(`Using account: ${accounts.data[0].name}\n`);
 
     // Get campaigns for analysis
-    const campaigns = await client.campaigns.getActive(accountId, { count: 5 });
+    const campaignResource = client.getCampaignResource(accountId);
+    const campaigns = await campaignResource.list({ params: { count: 5 } });
     if (campaigns.data.length === 0) {
       console.log('❌ No active campaigns found for analytics');
       return;
@@ -44,8 +45,8 @@ async function analyticsReportingExample() {
     console.log('='.repeat(50));
 
     const accountAnalytics = await client.analytics.getAccountAnalytics(accountId, {
-      start_date: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-      end_date: new Date().toISOString().split('T')[0],
+      start_time: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString(),
+      end_time: new Date().toISOString(),
     });
 
     if (accountAnalytics.data.length > 0 && accountAnalytics.data[0].id_data.length > 0) {
@@ -61,8 +62,8 @@ async function analyticsReportingExample() {
 
     const campaignIds = campaigns.data.map((c) => c.id);
     const campaignAnalytics = await client.analytics.getCampaignAnalytics(accountId, campaignIds, {
-      start_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-      end_date: new Date().toISOString().split('T')[0],
+      start_time: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+      end_time: new Date().toISOString(),
     });
 
     // Create a map for easy lookup
@@ -92,11 +93,11 @@ async function analyticsReportingExample() {
 
       const dailyAnalytics = await client.analytics.getDailyAnalytics(
         accountId,
-        EntityType.CAMPAIGN,
+        'CAMPAIGN' as AnalyticsEntityType,
         [topCampaign.id],
         {
-          start_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-          end_date: new Date().toISOString().split('T')[0],
+          start_time: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+          end_time: new Date().toISOString(),
         }
       );
 
@@ -118,34 +119,35 @@ async function analyticsReportingExample() {
       console.log('='.repeat(50));
 
       const topCampaign = campaigns.data[0];
-      const adGroups = await client.adGroups.listByCampaign(accountId, topCampaign.id);
+      const lineItemResource = client.getLineItemResource(accountId);
+      const lineItems = await lineItemResource.list({ params: { campaign_id: topCampaign.id } });
 
-      if (adGroups.data.length > 0) {
-        console.log(`Analyzing ${adGroups.data.length} ad groups in: ${topCampaign.name}\n`);
+      if (lineItems.data.length > 0) {
+        console.log(`Analyzing ${lineItems.data.length} line items in: ${topCampaign.name}\n`);
 
-        const adGroupIds = adGroups.data.map((ag) => ag.id);
-        const adGroupAnalytics = await client.analytics.getAdGroupAnalytics(accountId, adGroupIds, {
-          start_date: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-          end_date: new Date().toISOString().split('T')[0],
+        const lineItemIds = lineItems.data.map((li) => li.id);
+        const lineItemAnalytics = await client.analytics.getLineItemAnalytics(accountId, lineItemIds, {
+          start_time: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString(),
+          end_time: new Date().toISOString(),
         });
 
-        const adGroupMap = new Map(adGroups.data.map((ag) => [ag.id, ag]));
+        const lineItemMap = new Map(lineItems.data.map((li) => [li.id, li]));
 
-        if (adGroupAnalytics.data.length > 0) {
-          adGroupAnalytics.data.forEach((analyticsData) => {
-            const adGroup = adGroupMap.get(analyticsData.id);
-            const adGroupName = adGroup?.name || 'Unknown Ad Group';
+        if (lineItemAnalytics.data.length > 0) {
+          lineItemAnalytics.data.forEach((analyticsData) => {
+            const lineItem = lineItemMap.get(analyticsData.id);
+            const lineItemName = lineItem?.name || 'Unknown Line Item';
 
             if (analyticsData.id_data.length > 0) {
               const metrics = analyticsData.id_data[0].metrics;
-              displayMetrics(`${adGroupName} (${adGroup?.status})`, metrics);
+              displayMetrics(`${lineItemName} (${lineItem?.entity_status})`, metrics);
             }
           });
         } else {
-          console.log('No ad group analytics data available');
+          console.log('No line item analytics data available');
         }
       } else {
-        console.log('No ad groups found in the campaign');
+        console.log('No line items found in the campaign');
       }
     }
 
@@ -155,13 +157,13 @@ async function analyticsReportingExample() {
 
     const customAnalytics = await client.analytics.getComprehensiveAnalytics(
       accountId,
-      EntityType.CAMPAIGN,
+      'CAMPAIGN' as AnalyticsEntityType,
       campaignIds.slice(0, 3), // Top 3 campaigns
       {
-        start_date: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-        end_date: new Date().toISOString().split('T')[0],
+        start_time: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000).toISOString(),
+        end_time: new Date().toISOString(),
       },
-      Granularity.TOTAL
+      'TOTAL' as AnalyticsGranularity
     );
 
     if (customAnalytics.data.length > 0) {
@@ -173,10 +175,10 @@ async function analyticsReportingExample() {
           console.log(`\n📊 ${campaign?.name || 'Unknown Campaign'}`);
 
           // Calculate key performance indicators
-          const impressions = metrics.impressions || 0;
-          const clicks = metrics.clicks || 0;
-          const engagements = metrics.engagements || 0;
-          const cost = metrics.billed_charge_local_micro || 0;
+          const impressions = (metrics.impressions && metrics.impressions[0]) || 0;
+          const clicks = (metrics.clicks && metrics.clicks[0]) || 0;
+          const engagements = (metrics.engagements && metrics.engagements[0]) || 0;
+          const cost = (metrics.billed_charge_local_micro && metrics.billed_charge_local_micro[0]) || 0;
 
           const ctr = impressions > 0 ? (clicks / impressions) * 100 : 0;
           const engagementRate = impressions > 0 ? (engagements / impressions) * 100 : 0;
@@ -211,21 +213,28 @@ async function analyticsReportingExample() {
 // Helper function to display metrics in a formatted way
 function displayMetrics(title: string, metrics: any) {
   console.log(`📊 ${title}`);
-  console.log(`   Impressions: ${(metrics.impressions || 0).toLocaleString()}`);
-  console.log(`   Clicks: ${(metrics.clicks || 0).toLocaleString()}`);
-  console.log(`   Engagements: ${(metrics.engagements || 0).toLocaleString()}`);
+  
+  const impressions = (metrics.impressions && metrics.impressions[0]) || 0;
+  const clicks = (metrics.clicks && metrics.clicks[0]) || 0;
+  const engagements = (metrics.engagements && metrics.engagements[0]) || 0;
+  const cost = (metrics.billed_charge_local_micro && metrics.billed_charge_local_micro[0]) || 0;
+  const videoViews = (metrics.video_total_views && metrics.video_total_views[0]) || 0;
 
-  if (metrics.billed_charge_local_micro) {
-    console.log(`   Cost: $${(metrics.billed_charge_local_micro / 1000000).toFixed(2)}`);
+  console.log(`   Impressions: ${impressions.toLocaleString()}`);
+  console.log(`   Clicks: ${clicks.toLocaleString()}`);
+  console.log(`   Engagements: ${engagements.toLocaleString()}`);
+
+  if (cost > 0) {
+    console.log(`   Cost: $${(cost / 1000000).toFixed(2)}`);
   }
 
-  if (metrics.video_total_views) {
-    console.log(`   Video Views: ${metrics.video_total_views.toLocaleString()}`);
+  if (videoViews > 0) {
+    console.log(`   Video Views: ${videoViews.toLocaleString()}`);
   }
 
   // Calculate CTR if we have impressions and clicks
-  if (metrics.impressions && metrics.clicks) {
-    const ctr = ((metrics.clicks / metrics.impressions) * 100).toFixed(2);
+  if (impressions > 0 && clicks > 0) {
+    const ctr = ((clicks / impressions) * 100).toFixed(2);
     console.log(`   CTR: ${ctr}%`);
   }
 
@@ -239,8 +248,8 @@ function createDateRange(daysAgo: number) {
   startDate.setDate(endDate.getDate() - daysAgo);
 
   return {
-    start_date: startDate.toISOString().split('T')[0],
-    end_date: endDate.toISOString().split('T')[0],
+    start_time: startDate.toISOString(),
+    end_time: endDate.toISOString(),
   };
 }
 
