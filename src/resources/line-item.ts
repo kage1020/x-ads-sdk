@@ -2,7 +2,7 @@
  * Line Item resource management
  */
 
-import type { RequestConfig } from '../client/base.js';
+import type { HttpClient, RequestConfig } from '../client/base.js';
 import type { RequestOptions } from '../types/auth.js';
 import type {
   LineItemCreateRequest,
@@ -14,7 +14,7 @@ import { BaseResource } from './base.js';
 export class LineItemResource extends BaseResource {
   private accountId: string;
 
-  constructor(httpClient: import('../client/base.js').HttpClient, accountId: string) {
+  constructor(httpClient: HttpClient, accountId: string) {
     super(httpClient);
     this.accountId = accountId;
   }
@@ -26,8 +26,8 @@ export class LineItemResource extends BaseResource {
    */
   async list(options?: RequestOptions): Promise<LineItemResponse> {
     const requestConfig: RequestConfig = {
-      method: 'GET' as const,
-      endpoint: `/12/accounts/${this.accountId}/line_items`,
+      method: 'GET',
+      endpoint: this.buildEndpoint(`/accounts/${this.accountId}/line_items`),
       ...(options || {}),
     };
     const response = await this.httpClient.request<LineItemResponse>(requestConfig);
@@ -42,8 +42,8 @@ export class LineItemResource extends BaseResource {
    */
   async get(lineItemId: string, options?: RequestOptions): Promise<LineItemResponse> {
     const requestConfig: RequestConfig = {
-      method: 'GET' as const,
-      endpoint: `/12/accounts/${this.accountId}/line_items/${lineItemId}`,
+      method: 'GET',
+      endpoint: this.buildEndpoint(`/accounts/${this.accountId}/line_items/${lineItemId}`),
       ...(options || {}),
     };
     const response = await this.httpClient.request<LineItemResponse>(requestConfig);
@@ -58,8 +58,8 @@ export class LineItemResource extends BaseResource {
    */
   async create(data: LineItemCreateRequest, options?: RequestOptions): Promise<LineItemResponse> {
     const requestConfig: RequestConfig = {
-      method: 'POST' as const,
-      endpoint: `/12/accounts/${this.accountId}/line_items`,
+      method: 'POST',
+      endpoint: this.buildEndpoint(`/accounts/${this.accountId}/line_items`),
       body: data,
       ...(options || {}),
     };
@@ -80,8 +80,8 @@ export class LineItemResource extends BaseResource {
     options?: RequestOptions
   ): Promise<LineItemResponse> {
     const requestConfig: RequestConfig = {
-      method: 'PUT' as const,
-      endpoint: `/12/accounts/${this.accountId}/line_items/${lineItemId}`,
+      method: 'PUT',
+      endpoint: this.buildEndpoint(`/accounts/${this.accountId}/line_items/${lineItemId}`),
       body: data,
       ...(options || {}),
     };
@@ -97,8 +97,8 @@ export class LineItemResource extends BaseResource {
    */
   async delete(lineItemId: string, options?: RequestOptions): Promise<LineItemResponse> {
     const requestConfig: RequestConfig = {
-      method: 'DELETE' as const,
-      endpoint: `/12/accounts/${this.accountId}/line_items/${lineItemId}`,
+      method: 'DELETE',
+      endpoint: this.buildEndpoint(`/accounts/${this.accountId}/line_items/${lineItemId}`),
       ...(options || {}),
     };
     const response = await this.httpClient.request<LineItemResponse>(requestConfig);

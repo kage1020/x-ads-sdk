@@ -3,6 +3,7 @@ import {
   AuthenticationError,
   createAPIError,
   NetworkError,
+  RateLimitError,
   TimeoutError,
 } from '../errors/index.js';
 import {
@@ -282,7 +283,6 @@ export class HttpClient implements PluginClient {
       case 429: {
         const resetTime = response.headers.get('x-rate-limit-reset');
         const resetDate = resetTime ? unixTimestampToDate(resetTime) : undefined;
-        const { RateLimitError } = await import('../errors/index.js');
         throw new RateLimitError(message, resetDate, 'RATE_LIMIT_EXCEEDED');
       }
       default: {

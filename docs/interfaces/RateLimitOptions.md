@@ -6,7 +6,7 @@
 
 # Interface: RateLimitOptions
 
-Defined in: [client/rate-limit.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L10)
+Defined in: [client/rate-limit.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L11)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [client/rate-limit.ts:10](https://github.com/kage1020/x-ads-sdk/blob
 
 > **strategy**: `"wait"` \| `"throw"`
 
-Defined in: [client/rate-limit.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L11)
+Defined in: [client/rate-limit.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L12)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [client/rate-limit.ts:11](https://github.com/kage1020/x-ads-sdk/blob
 
 > **defaultLimit**: `number`
 
-Defined in: [client/rate-limit.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L12)
+Defined in: [client/rate-limit.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L13)
 
 ***
 
@@ -30,4 +30,4 @@ Defined in: [client/rate-limit.ts:12](https://github.com/kage1020/x-ads-sdk/blob
 
 > **defaultWindow**: `number`
 
-Defined in: [client/rate-limit.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L13)
+Defined in: [client/rate-limit.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/rate-limit.ts#L14)

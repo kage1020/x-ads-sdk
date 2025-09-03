@@ -6,7 +6,7 @@
 
 # Class: HttpClient
 
-Defined in: [client/base.ts:57](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L57)
+Defined in: [client/base.ts:58](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L58)
 
 Basic client interface that plugins can interact with
 
@@ -23,7 +23,7 @@ configuration without exposing internal implementation details.
 
 > **new HttpClient**(`config`): `HttpClient`
 
-Defined in: [client/base.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L72)
+Defined in: [client/base.ts:73](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L73)
 
 #### Parameters
 
@@ -41,7 +41,7 @@ Defined in: [client/base.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `private` **getBaseURL**(`environment`): `string`
 
-Defined in: [client/base.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L98)
+Defined in: [client/base.ts:99](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L99)
 
 #### Parameters
 
@@ -59,7 +59,7 @@ Defined in: [client/base.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `private` **buildURL**(`endpoint`, `params?`): `string`
 
-Defined in: [client/base.ts:107](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L107)
+Defined in: [client/base.ts:108](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L108)
 
 #### Parameters
 
@@ -81,7 +81,7 @@ Defined in: [client/base.ts:107](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `private` **buildRequestOptions**(`config`): [`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)
 
-Defined in: [client/base.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L112)
+Defined in: [client/base.ts:113](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L113)
 
 #### Parameters
 
@@ -99,7 +99,7 @@ Defined in: [client/base.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `private` **toPluginConfig**(`config`): [`PluginRequestConfig`](../interfaces/PluginRequestConfig.md)
 
-Defined in: [client/base.ts:129](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L129)
+Defined in: [client/base.ts:130](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L130)
 
 #### Parameters
 
@@ -117,7 +117,7 @@ Defined in: [client/base.ts:129](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `private` **fromPluginConfig**(`pluginConfig`): [`RequestConfig`](../interfaces/RequestConfig.md)
 
-Defined in: [client/base.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L134)
+Defined in: [client/base.ts:135](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L135)
 
 #### Parameters
 
@@ -135,7 +135,7 @@ Defined in: [client/base.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `private` **toPluginResponse**\<`T`\>(`data`, `status`, `statusText`, `headers`): [`PluginResponse`](../interfaces/PluginResponse.md)\<`T`\>
 
-Defined in: [client/base.ts:139](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L139)
+Defined in: [client/base.ts:140](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L140)
 
 #### Type Parameters
 
@@ -171,7 +171,7 @@ Defined in: [client/base.ts:139](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **request**\<`T`\>(`config`): `Promise`\<`T`\>
 
-Defined in: [client/base.ts:148](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L148)
+Defined in: [client/base.ts:149](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L149)
 
 #### Type Parameters
 
@@ -195,7 +195,7 @@ Defined in: [client/base.ts:148](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `private` **makeRequest**\<`T`\>(`config`): `Promise`\<`T`\>
 
-Defined in: [client/base.ts:185](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L185)
+Defined in: [client/base.ts:186](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L186)
 
 #### Type Parameters
 
@@ -219,7 +219,7 @@ Defined in: [client/base.ts:185](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `private` **handleErrorResponse**(`response`): `Promise`\<`void`\>
 
-Defined in: [client/base.ts:251](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L251)
+Defined in: [client/base.ts:252](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L252)
 
 #### Parameters
 
@@ -439,7 +439,7 @@ Defined in: [client/base.ts:363](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `readonly` **config**: `object`
 
-Defined in: [client/base.ts:59](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L59)
+Defined in: [client/base.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L60)
 
 Read-only client configuration
 
@@ -465,7 +465,7 @@ Read-only client configuration
 
 > `private` **oauth**: [`OAuth`](OAuth.md)
 
-Defined in: [client/base.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L64)
+Defined in: [client/base.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L65)
 
 ***
 
@@ -473,7 +473,7 @@ Defined in: [client/base.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `private` **rateLimiter**: [`RateLimiter`](RateLimiter.md)
 
-Defined in: [client/base.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L65)
+Defined in: [client/base.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L66)
 
 ***
 
@@ -481,7 +481,7 @@ Defined in: [client/base.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `private` **retryHandler**: [`RetryHandler`](RetryHandler.md)
 
-Defined in: [client/base.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L66)
+Defined in: [client/base.ts:67](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L67)
 
 ***
 
@@ -489,7 +489,7 @@ Defined in: [client/base.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `private` **baseURL**: `string`
 
-Defined in: [client/base.ts:67](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L67)
+Defined in: [client/base.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L68)
 
 ***
 
@@ -497,7 +497,7 @@ Defined in: [client/base.ts:67](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `private` **timeout**: `number`
 
-Defined in: [client/base.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L68)
+Defined in: [client/base.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L69)
 
 ***
 
@@ -505,7 +505,7 @@ Defined in: [client/base.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `private` **pluginManager**: [`PluginManager`](../interfaces/PluginManager.md)
 
-Defined in: [client/base.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L69)
+Defined in: [client/base.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L70)
 
 ***
 
@@ -513,4 +513,4 @@ Defined in: [client/base.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `private` **versionManager**: [`APIVersionManager`](APIVersionManager.md)
 
-Defined in: [client/base.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L70)
+Defined in: [client/base.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L71)

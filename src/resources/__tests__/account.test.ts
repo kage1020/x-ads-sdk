@@ -5,6 +5,7 @@ import { AccountResource } from '../account.js';
 describe('AccountResource', () => {
   const mockHttpClient = {
     request: vi.fn(),
+    getAPIVersion: vi.fn().mockReturnValue('12'),
   } as unknown as HttpClient;
 
   const accountResource = new AccountResource(mockHttpClient);

@@ -1,3 +1,4 @@
+import { RateLimitError } from '../errors/index.js';
 import { sleep, unixTimestampToDate } from '../utils/index.js';
 
 export interface ClientRateLimitInfo {
@@ -64,7 +65,6 @@ export class RateLimiter {
       const waitTime = rateLimitInfo.resetTime.getTime() - now.getTime();
 
       if (this.options.strategy === 'throw') {
-        const { RateLimitError } = await import('../errors/index.js');
         throw new RateLimitError(
           `Rate limit exceeded for ${endpoint}. Resets at ${rateLimitInfo.resetTime.toISOString()}`,
           rateLimitInfo.resetTime

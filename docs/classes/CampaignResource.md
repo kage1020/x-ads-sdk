@@ -44,6 +44,54 @@ Defined in: [resources/campaign.ts:17](https://github.com/kage1020/x-ads-sdk/blo
 
 ## Methods
 
+### getApiVersionPath()
+
+> `protected` **getApiVersionPath**(): `string`
+
+Defined in: [resources/base.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L17)
+
+Get the current API version path from the HTTP client
+
+#### Returns
+
+`string`
+
+API version path (e.g., '/12')
+
+#### Inherited from
+
+[`BaseResource`](BaseResource.md).[`getApiVersionPath`](BaseResource.md#getapiversionpath)
+
+***
+
+### buildEndpoint()
+
+> `protected` **buildEndpoint**(`path`): `string`
+
+Defined in: [resources/base.ts:26](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/base.ts#L26)
+
+Build endpoint with current API version
+
+#### Parameters
+
+##### path
+
+`string`
+
+API path without version
+
+#### Returns
+
+`string`
+
+Complete endpoint with API version
+
+#### Inherited from
+
+[`BaseResource`](BaseResource.md).[`buildEndpoint`](BaseResource.md#buildendpoint)
+
+***
+
 ### list()
 
 > **list**(`options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>

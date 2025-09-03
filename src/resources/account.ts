@@ -19,8 +19,8 @@ export class AccountResource extends BaseResource {
    */
   async list(options?: RequestOptions): Promise<AccountResponse> {
     const requestConfig: RequestConfig = {
-      method: 'GET' as const,
-      endpoint: '/12/accounts',
+      method: 'GET',
+      endpoint: this.buildEndpoint('/accounts'),
       ...(options || {}),
     };
     const response = await this.httpClient.request<AccountResponse>(requestConfig);
@@ -35,8 +35,8 @@ export class AccountResource extends BaseResource {
    */
   async get(accountId: string, options?: RequestOptions): Promise<AccountResponse> {
     const requestConfig: RequestConfig = {
-      method: 'GET' as const,
-      endpoint: `/12/accounts/${accountId}`,
+      method: 'GET',
+      endpoint: this.buildEndpoint(`/accounts/${accountId}`),
       ...(options || {}),
     };
     const response = await this.httpClient.request<AccountResponse>(requestConfig);
@@ -51,8 +51,8 @@ export class AccountResource extends BaseResource {
    */
   async create(data: AccountCreateRequest, options?: RequestOptions): Promise<AccountResponse> {
     const requestConfig: RequestConfig = {
-      method: 'POST' as const,
-      endpoint: '/12/accounts',
+      method: 'POST',
+      endpoint: this.buildEndpoint('/accounts'),
       body: data,
       ...(options || {}),
     };
@@ -73,8 +73,8 @@ export class AccountResource extends BaseResource {
     options?: RequestOptions
   ): Promise<AccountResponse> {
     const requestConfig: RequestConfig = {
-      method: 'PUT' as const,
-      endpoint: `/12/accounts/${accountId}`,
+      method: 'PUT',
+      endpoint: this.buildEndpoint(`/accounts/${accountId}`),
       body: data,
       ...(options || {}),
     };
