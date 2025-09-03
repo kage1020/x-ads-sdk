@@ -6,7 +6,7 @@
 
 # Class: LineItemResource
 
-Defined in: [resources/line-item.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L14)
+Defined in: [resources/line-item.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L15)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: [resources/line-item.ts:14](https://github.com/kage1020/x-ads-sdk/bl
 
 > **new LineItemResource**(`httpClient`, `accountId`): `LineItemResource`
 
-Defined in: [resources/line-item.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L17)
+Defined in: [resources/line-item.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L18)
 
 #### Parameters
 
@@ -96,7 +96,7 @@ Complete endpoint with API version
 
 > **list**(`options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: [resources/line-item.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L27)
+Defined in: [resources/line-item.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L28)
 
 Get line items for the account
 
@@ -104,9 +104,9 @@ Get line items for the account
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<[`LineItemSortField`](../type-aliases/LineItemSortField.md)\>
 
-Request options
+Request options (supports sorting with sort_by parameter)
 
 #### Returns
 
@@ -120,7 +120,7 @@ Line item response
 
 > **get**(`lineItemId`, `options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: [resources/line-item.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L43)
+Defined in: [resources/line-item.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L44)
 
 Get a specific line item by ID
 
@@ -134,7 +134,7 @@ Line item ID
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -150,7 +150,7 @@ Line item response
 
 > **create**(`data`, `options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: [resources/line-item.ts:59](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L59)
+Defined in: [resources/line-item.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L60)
 
 Create a new line item
 
@@ -164,7 +164,7 @@ Line item creation data
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -180,7 +180,7 @@ Line item response
 
 > **update**(`lineItemId`, `data`, `options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: [resources/line-item.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L77)
+Defined in: [resources/line-item.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L78)
 
 Update a line item
 
@@ -200,7 +200,7 @@ Line item update data
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -216,7 +216,7 @@ Line item response
 
 > **delete**(`lineItemId`, `options?`): `Promise`\<[`LineItemResponse`](../interfaces/LineItemResponse.md)\>
 
-Defined in: [resources/line-item.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L98)
+Defined in: [resources/line-item.ts:99](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L99)
 
 Delete a line item
 
@@ -230,7 +230,7 @@ Line item ID
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -258,4 +258,4 @@ Defined in: [resources/base.ts:7](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > `private` **accountId**: `string`
 
-Defined in: [resources/line-item.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L15)
+Defined in: [resources/line-item.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/line-item.ts#L16)

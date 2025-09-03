@@ -83,6 +83,42 @@ describe('LineItemResource', () => {
         params: { count: 10 },
       });
     });
+
+    it('should list line items with sort_by parameter', async () => {
+      const options = { params: { sort_by: 'bid_amount_local_micro-desc' as const } };
+      const mockResponse: LineItemResponse = {
+        data: [],
+        request: { params: {} },
+      };
+
+      vi.mocked(mockHttpClient.request).mockResolvedValue(mockResponse);
+
+      await resource.list(options);
+
+      expect(mockHttpClient.request).toHaveBeenCalledWith({
+        method: 'GET',
+        endpoint: `/12/accounts/${accountId}/line_items`,
+        params: { sort_by: 'bid_amount_local_micro-desc' },
+      });
+    });
+
+    it('should list line items with updated_at sort parameter', async () => {
+      const options = { params: { sort_by: 'updated_at-asc' as const } };
+      const mockResponse: LineItemResponse = {
+        data: [],
+        request: { params: {} },
+      };
+
+      vi.mocked(mockHttpClient.request).mockResolvedValue(mockResponse);
+
+      await resource.list(options);
+
+      expect(mockHttpClient.request).toHaveBeenCalledWith({
+        method: 'GET',
+        endpoint: `/12/accounts/${accountId}/line_items`,
+        params: { sort_by: 'updated_at-asc' },
+      });
+    });
   });
 
   describe('get', () => {

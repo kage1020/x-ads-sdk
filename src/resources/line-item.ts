@@ -9,6 +9,7 @@ import type {
   LineItemResponse,
   LineItemUpdateRequest,
 } from '../types/resources/line-item.js';
+import type { LineItemSortField } from '../types/sorting.js';
 import { BaseResource } from './base.js';
 
 export class LineItemResource extends BaseResource {
@@ -21,10 +22,10 @@ export class LineItemResource extends BaseResource {
 
   /**
    * Get line items for the account
-   * @param options Request options
+   * @param options Request options (supports sorting with sort_by parameter)
    * @returns Line item response
    */
-  async list(options?: RequestOptions): Promise<LineItemResponse> {
+  async list(options?: RequestOptions<LineItemSortField>): Promise<LineItemResponse> {
     const requestConfig: RequestConfig = {
       method: 'GET',
       endpoint: this.buildEndpoint(`/accounts/${this.accountId}/line_items`),

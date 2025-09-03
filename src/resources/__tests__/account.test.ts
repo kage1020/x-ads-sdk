@@ -44,6 +44,34 @@ describe('AccountResource', () => {
         ...options,
       });
     });
+
+    it('should list accounts with sort_by parameter', async () => {
+      const options = { params: { sort_by: 'name-asc' as const } };
+      const mockResponse = { data: [], request: { params: {} } };
+      mockHttpClient.request = vi.fn().mockResolvedValue(mockResponse);
+
+      await accountResource.list(options);
+
+      expect(mockHttpClient.request).toHaveBeenCalledWith({
+        method: 'GET',
+        endpoint: '/12/accounts',
+        params: { sort_by: 'name-asc' },
+      });
+    });
+
+    it('should list accounts with created_at sort parameter', async () => {
+      const options = { params: { sort_by: 'created_at-desc' as const } };
+      const mockResponse = { data: [], request: { params: {} } };
+      mockHttpClient.request = vi.fn().mockResolvedValue(mockResponse);
+
+      await accountResource.list(options);
+
+      expect(mockHttpClient.request).toHaveBeenCalledWith({
+        method: 'GET',
+        endpoint: '/12/accounts',
+        params: { sort_by: 'created_at-desc' },
+      });
+    });
   });
 
   describe('get', () => {

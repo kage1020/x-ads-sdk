@@ -9,6 +9,7 @@ import type {
   CampaignResponse,
   CampaignUpdateRequest,
 } from '../types/resources/campaign.js';
+import type { CampaignSortField } from '../types/sorting.js';
 import { BaseResource } from './base.js';
 
 export class CampaignResource extends BaseResource {
@@ -21,10 +22,10 @@ export class CampaignResource extends BaseResource {
 
   /**
    * Get campaigns for the account
-   * @param options Request options
+   * @param options Request options (supports sorting with sort_by parameter)
    * @returns Campaign response
    */
-  async list(options?: RequestOptions): Promise<CampaignResponse> {
+  async list(options?: RequestOptions<CampaignSortField>): Promise<CampaignResponse> {
     const requestConfig: RequestConfig = {
       method: 'GET',
       endpoint: this.buildEndpoint(`/accounts/${this.accountId}/campaigns`),

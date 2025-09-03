@@ -24,8 +24,14 @@ export interface OAuthSignature {
   oauth_version: string;
 }
 
-export interface RequestOptions {
-  params?: Record<string, unknown>;
+export interface RequestOptions<TSortField = string> {
+  params?: {
+    count?: number;
+    cursor?: string;
+    sort_by?: TSortField;
+    with_deleted?: boolean;
+    [key: string]: unknown;
+  };
   headers?: Record<string, string>;
 }
 

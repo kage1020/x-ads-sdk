@@ -6,7 +6,7 @@
 
 # Class: CampaignResource
 
-Defined in: [resources/campaign.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L14)
+Defined in: [resources/campaign.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L15)
 
 ## Hierarchy
 
@@ -22,7 +22,7 @@ Defined in: [resources/campaign.ts:14](https://github.com/kage1020/x-ads-sdk/blo
 
 > **new CampaignResource**(`httpClient`, `accountId`): `CampaignResource`
 
-Defined in: [resources/campaign.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L17)
+Defined in: [resources/campaign.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L18)
 
 #### Parameters
 
@@ -96,7 +96,7 @@ Complete endpoint with API version
 
 > **list**(`options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: [resources/campaign.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L27)
+Defined in: [resources/campaign.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L28)
 
 Get campaigns for the account
 
@@ -104,9 +104,9 @@ Get campaigns for the account
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<[`CampaignSortField`](../type-aliases/CampaignSortField.md)\>
 
-Request options
+Request options (supports sorting with sort_by parameter)
 
 #### Returns
 
@@ -120,7 +120,7 @@ Campaign response
 
 > **get**(`campaignId`, `options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: [resources/campaign.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L43)
+Defined in: [resources/campaign.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L44)
 
 Get a specific campaign by ID
 
@@ -134,7 +134,7 @@ Campaign ID
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -150,7 +150,7 @@ Campaign response
 
 > **create**(`data`, `options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: [resources/campaign.ts:59](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L59)
+Defined in: [resources/campaign.ts:60](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L60)
 
 Create a new campaign
 
@@ -164,7 +164,7 @@ Campaign creation data
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -180,7 +180,7 @@ Campaign response
 
 > **update**(`campaignId`, `data`, `options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: [resources/campaign.ts:77](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L77)
+Defined in: [resources/campaign.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L78)
 
 Update a campaign
 
@@ -200,7 +200,7 @@ Campaign update data
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -216,7 +216,7 @@ Campaign response
 
 > **delete**(`campaignId`, `options?`): `Promise`\<[`CampaignResponse`](../interfaces/CampaignResponse.md)\>
 
-Defined in: [resources/campaign.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L98)
+Defined in: [resources/campaign.ts:99](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L99)
 
 Delete a campaign
 
@@ -230,7 +230,7 @@ Campaign ID
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -258,4 +258,4 @@ Defined in: [resources/base.ts:7](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > `private` **accountId**: `string`
 
-Defined in: [resources/campaign.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L15)
+Defined in: [resources/campaign.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/campaign.ts#L16)

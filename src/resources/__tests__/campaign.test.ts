@@ -77,6 +77,42 @@ describe('CampaignResource', () => {
         headers: { 'Custom-Header': 'value' },
       });
     });
+
+    it('should list campaigns with sort_by parameter', async () => {
+      const options = { params: { sort_by: 'name-asc' as const } };
+      const mockResponse: CampaignResponse = {
+        data: [],
+        request: { params: {} },
+      };
+
+      vi.mocked(mockHttpClient.request).mockResolvedValue(mockResponse);
+
+      await resource.list(options);
+
+      expect(mockHttpClient.request).toHaveBeenCalledWith({
+        method: 'GET',
+        endpoint: `/12/accounts/${accountId}/campaigns`,
+        params: { sort_by: 'name-asc' },
+      });
+    });
+
+    it('should list campaigns with total budget sort parameter', async () => {
+      const options = { params: { sort_by: 'total_budget_amount_local_micro-desc' as const } };
+      const mockResponse: CampaignResponse = {
+        data: [],
+        request: { params: {} },
+      };
+
+      vi.mocked(mockHttpClient.request).mockResolvedValue(mockResponse);
+
+      await resource.list(options);
+
+      expect(mockHttpClient.request).toHaveBeenCalledWith({
+        method: 'GET',
+        endpoint: `/12/accounts/${accountId}/campaigns`,
+        params: { sort_by: 'total_budget_amount_local_micro-desc' },
+      });
+    });
   });
 
   describe('get', () => {

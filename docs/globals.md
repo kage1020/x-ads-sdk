@@ -61,7 +61,6 @@
 - [OAuthSignature](interfaces/OAuthSignature.md)
 - [RequestOptions](interfaces/RequestOptions.md)
 - [OAuthRequestOptions](interfaces/OAuthRequestOptions.md)
-- [ListParams](interfaces/ListParams.md)
 - [PaginatedResponse](interfaces/PaginatedResponse.md)
 - [APIResponse](interfaces/APIResponse.md)
 - [ClientConfig](interfaces/ClientConfig.md)
@@ -91,6 +90,16 @@
 ## Type Aliases
 
 - [SupportedAPIVersion](type-aliases/SupportedAPIVersion.md)
+- [SortDirection](type-aliases/SortDirection.md)
+- [SortField](type-aliases/SortField.md)
+- [AccountSortField](type-aliases/AccountSortField.md)
+- [CampaignSortField](type-aliases/CampaignSortField.md)
+- [LineItemSortField](type-aliases/LineItemSortField.md)
+- [FundingInstrumentSortField](type-aliases/FundingInstrumentSortField.md)
+- [CardSortField](type-aliases/CardSortField.md)
+- [PromotedAccountSortField](type-aliases/PromotedAccountSortField.md)
+- [PromotedTweetSortField](type-aliases/PromotedTweetSortField.md)
+- [AppEventTagSortField](type-aliases/AppEventTagSortField.md)
 
 ## Functions
 

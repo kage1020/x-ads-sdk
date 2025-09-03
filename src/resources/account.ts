@@ -9,15 +9,16 @@ import type {
   AccountResponse,
   AccountUpdateRequest,
 } from '../types/resources/account.js';
+import type { AccountSortField } from '../types/sorting.js';
 import { BaseResource } from './base.js';
 
 export class AccountResource extends BaseResource {
   /**
    * Get accounts accessible to the current user
-   * @param options Request options
+   * @param options Request options (supports sorting with sort_by parameter)
    * @returns Account response
    */
-  async list(options?: RequestOptions): Promise<AccountResponse> {
+  async list(options?: RequestOptions<AccountSortField>): Promise<AccountResponse> {
     const requestConfig: RequestConfig = {
       method: 'GET',
       endpoint: this.buildEndpoint('/accounts'),

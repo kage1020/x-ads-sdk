@@ -6,7 +6,7 @@
 
 # Interface: PaginatedResponse\<T\>
 
-Defined in: [types/common.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L11)
+Defined in: [types/common.ts:4](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L4)
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ Defined in: [types/common.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **data**: `T`[]
 
-Defined in: [types/common.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L12)
+Defined in: [types/common.ts:5](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L5)
 
 ***
 
@@ -28,7 +28,7 @@ Defined in: [types/common.ts:12](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **request**: `object`
 
-Defined in: [types/common.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L13)
+Defined in: [types/common.ts:6](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L6)
 
 #### params
 
@@ -40,7 +40,7 @@ Defined in: [types/common.ts:13](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: [types/common.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L16)
+Defined in: [types/common.ts:9](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L9)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: [types/common.ts:16](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **previous\_cursor**: `string`
 
-Defined in: [types/common.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L17)
+Defined in: [types/common.ts:10](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L10)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: [types/common.ts:17](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > `optional` **total\_count**: `number`
 
-Defined in: [types/common.ts:18](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L18)
+Defined in: [types/common.ts:11](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L11)

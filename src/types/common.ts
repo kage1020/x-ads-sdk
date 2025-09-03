@@ -1,13 +1,5 @@
 import type { APIVersion } from './api-version.js';
 
-export interface ListParams {
-  count?: number;
-  cursor?: string;
-  sort_by?: string;
-  with_deleted?: boolean;
-  [key: string]: unknown;
-}
-
 export interface PaginatedResponse<T> {
   data: T[];
   request?: {

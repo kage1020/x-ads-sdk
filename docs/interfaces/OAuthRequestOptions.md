@@ -6,7 +6,7 @@
 
 # Interface: OAuthRequestOptions
 
-Defined in: [types/auth.ts:33](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L33)
+Defined in: [types/auth.ts:39](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L39)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [types/auth.ts:33](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **method**: `string`
 
-Defined in: [types/auth.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L34)
+Defined in: [types/auth.ts:40](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L40)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [types/auth.ts:34](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > **url**: `string`
 
-Defined in: [types/auth.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L35)
+Defined in: [types/auth.ts:41](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L41)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [types/auth.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `optional` **params**: `Record`\<`string`, `unknown`\>
 
-Defined in: [types/auth.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L36)
+Defined in: [types/auth.ts:42](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L42)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [types/auth.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `optional` **body**: `unknown`
 
-Defined in: [types/auth.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L37)
+Defined in: [types/auth.ts:43](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L43)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [types/auth.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [types/auth.ts:38](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L38)
+Defined in: [types/auth.ts:44](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L44)

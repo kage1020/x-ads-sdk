@@ -6,7 +6,7 @@
 
 # Class: AccountResource
 
-Defined in: [resources/account.ts:14](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L14)
+Defined in: [resources/account.ts:15](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L15)
 
 ## Hierarchy
 
@@ -44,7 +44,7 @@ Defined in: [resources/base.ts:9](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **list**(`options?`): `Promise`\<[`AccountResponse`](../interfaces/AccountResponse.md)\>
 
-Defined in: [resources/account.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L20)
+Defined in: [resources/account.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L21)
 
 Get accounts accessible to the current user
 
@@ -52,9 +52,9 @@ Get accounts accessible to the current user
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<[`AccountSortField`](../type-aliases/AccountSortField.md)\>
 
-Request options
+Request options (supports sorting with sort_by parameter)
 
 #### Returns
 
@@ -68,7 +68,7 @@ Account response
 
 > **get**(`accountId`, `options?`): `Promise`\<[`AccountResponse`](../interfaces/AccountResponse.md)\>
 
-Defined in: [resources/account.ts:36](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L36)
+Defined in: [resources/account.ts:37](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L37)
 
 Get a specific account by ID
 
@@ -82,7 +82,7 @@ Account ID
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -98,7 +98,7 @@ Account response
 
 > **create**(`data`, `options?`): `Promise`\<[`AccountResponse`](../interfaces/AccountResponse.md)\>
 
-Defined in: [resources/account.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L52)
+Defined in: [resources/account.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L53)
 
 Create a new account (Sandbox only)
 
@@ -112,7 +112,7 @@ Account creation data
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
@@ -128,7 +128,7 @@ Account response
 
 > **update**(`accountId`, `data`, `options?`): `Promise`\<[`AccountResponse`](../interfaces/AccountResponse.md)\>
 
-Defined in: [resources/account.ts:70](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L70)
+Defined in: [resources/account.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/account.ts#L71)
 
 Update an account
 
@@ -148,7 +148,7 @@ Account update data
 
 ##### options?
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`RequestOptions`](../interfaces/RequestOptions.md)\<`string`\>
 
 Request options
 
