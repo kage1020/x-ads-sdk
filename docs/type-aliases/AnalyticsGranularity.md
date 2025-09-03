@@ -8,6 +8,6 @@
 
 > **AnalyticsGranularity** = `"HOUR"` \| `"DAY"` \| `"TOTAL"`
 
-Defined in: types/analytics.ts:22
+Defined in: [types/analytics.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L22)
 
 Granularity for analytics data

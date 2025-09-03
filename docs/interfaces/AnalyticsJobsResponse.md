@@ -6,7 +6,7 @@
 
 # Interface: AnalyticsJobsResponse
 
-Defined in: types/analytics.ts:192
+Defined in: [types/analytics.ts:192](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L192)
 
 Asynchronous analytics jobs list response
 
@@ -16,7 +16,7 @@ Asynchronous analytics jobs list response
 
 > **data**: [`AnalyticsJob`](AnalyticsJob.md)[]
 
-Defined in: types/analytics.ts:193
+Defined in: [types/analytics.ts:193](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L193)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/analytics.ts:193
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/analytics.ts:194
+Defined in: [types/analytics.ts:194](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L194)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/analytics.ts:194
 
 > **request**: `object`
 
-Defined in: types/analytics.ts:195
+Defined in: [types/analytics.ts:195](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L195)
 
 #### params
 

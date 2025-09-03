@@ -6,7 +6,7 @@
 
 # Interface: AnalyticsSegmentData
 
-Defined in: types/analytics.ts:130
+Defined in: [types/analytics.ts:130](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L130)
 
 Analytics segment data
 
@@ -16,7 +16,7 @@ Analytics segment data
 
 > **segment**: `null` \| `string`
 
-Defined in: types/analytics.ts:131
+Defined in: [types/analytics.ts:131](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L131)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/analytics.ts:131
 
 > **metrics**: [`AnalyticsMetrics`](AnalyticsMetrics.md)
 
-Defined in: types/analytics.ts:132
+Defined in: [types/analytics.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L132)

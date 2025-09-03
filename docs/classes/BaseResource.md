@@ -16,6 +16,7 @@ Defined in: [resources/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 - [`AccountResource`](AccountResource.md)
 - [`Analytics`](Analytics.md)
+- [`Audiences`](Audiences.md)
 - [`CampaignResource`](CampaignResource.md)
 - [`LineItemResource`](LineItemResource.md)
 

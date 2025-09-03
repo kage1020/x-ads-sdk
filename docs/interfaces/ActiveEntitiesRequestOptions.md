@@ -6,7 +6,7 @@
 
 # Interface: ActiveEntitiesRequestOptions
 
-Defined in: types/analytics.ts:245
+Defined in: [types/analytics.ts:245](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L245)
 
 Active entities request options
 
@@ -16,7 +16,7 @@ Active entities request options
 
 > **entity**: [`AnalyticsEntityType`](../type-aliases/AnalyticsEntityType.md)
 
-Defined in: types/analytics.ts:246
+Defined in: [types/analytics.ts:246](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L246)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/analytics.ts:246
 
 > **start\_time**: `string`
 
-Defined in: types/analytics.ts:247
+Defined in: [types/analytics.ts:247](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L247)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/analytics.ts:247
 
 > **end\_time**: `string`
 
-Defined in: types/analytics.ts:248
+Defined in: [types/analytics.ts:248](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L248)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/analytics.ts:248
 
 > `optional` **campaign\_ids**: `string`[]
 
-Defined in: types/analytics.ts:249
+Defined in: [types/analytics.ts:249](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L249)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/analytics.ts:249
 
 > `optional` **funding\_instrument\_ids**: `string`[]
 
-Defined in: types/analytics.ts:250
+Defined in: [types/analytics.ts:250](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L250)
 
 ***
 
@@ -56,4 +56,4 @@ Defined in: types/analytics.ts:250
 
 > `optional` **line\_item\_ids**: `string`[]
 
-Defined in: types/analytics.ts:251
+Defined in: [types/analytics.ts:251](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L251)

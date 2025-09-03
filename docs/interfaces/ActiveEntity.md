@@ -6,7 +6,7 @@
 
 # Interface: ActiveEntity
 
-Defined in: types/analytics.ts:203
+Defined in: [types/analytics.ts:203](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L203)
 
 Active entity data
 
@@ -16,7 +16,7 @@ Active entity data
 
 > **entity\_id**: `string`
 
-Defined in: types/analytics.ts:204
+Defined in: [types/analytics.ts:204](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L204)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/analytics.ts:204
 
 > **activity\_start\_time**: `string`
 
-Defined in: types/analytics.ts:205
+Defined in: [types/analytics.ts:205](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L205)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/analytics.ts:205
 
 > **activity\_end\_time**: `string`
 
-Defined in: types/analytics.ts:206
+Defined in: [types/analytics.ts:206](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L206)
 
 ***
 
@@ -40,4 +40,4 @@ Defined in: types/analytics.ts:206
 
 > **placements**: [`AnalyticsPlacement`](../type-aliases/AnalyticsPlacement.md)[]
 
-Defined in: types/analytics.ts:207
+Defined in: [types/analytics.ts:207](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L207)

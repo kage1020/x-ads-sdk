@@ -2,6 +2,7 @@ import type { XAdsPlugin } from '../plugins/base.js';
 import {
   AccountResource,
   Analytics,
+  Audiences,
   CampaignResource,
   LineItemResource,
 } from '../resources/index.js';
@@ -69,6 +70,9 @@ export class XAdsClient {
   /** Analytics resource for retrieving performance data */
   public analytics: Analytics;
 
+  /** Audiences resource for managing custom and tailored audiences */
+  public audiences: Audiences;
+
   /**
    * Creates a new X Ads SDK client instance
    *
@@ -112,6 +116,7 @@ export class XAdsClient {
     // Initialize resources
     this.accounts = new AccountResource(this.httpClient);
     this.analytics = new Analytics(this.httpClient);
+    this.audiences = new Audiences(this.httpClient);
   }
 
   /**

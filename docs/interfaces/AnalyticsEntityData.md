@@ -6,7 +6,7 @@
 
 # Interface: AnalyticsEntityData
 
-Defined in: types/analytics.ts:138
+Defined in: [types/analytics.ts:138](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L138)
 
 Analytics entity data
 
@@ -16,7 +16,7 @@ Analytics entity data
 
 > **id**: `string`
 
-Defined in: types/analytics.ts:139
+Defined in: [types/analytics.ts:139](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L139)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/analytics.ts:139
 
 > **id\_data**: [`AnalyticsSegmentData`](AnalyticsSegmentData.md)[]
 
-Defined in: types/analytics.ts:140
+Defined in: [types/analytics.ts:140](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L140)

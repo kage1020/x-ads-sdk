@@ -18,6 +18,7 @@
 - [BaseResource](classes/BaseResource.md)
   - [AccountResource](classes/AccountResource.md)
   - [Analytics](classes/Analytics.md)
+  - [Audiences](classes/Audiences.md)
   - [CampaignResource](classes/CampaignResource.md)
   - [LineItemResource](classes/LineItemResource.md)
 

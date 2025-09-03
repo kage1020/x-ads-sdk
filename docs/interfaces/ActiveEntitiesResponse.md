@@ -6,7 +6,7 @@
 
 # Interface: ActiveEntitiesResponse
 
-Defined in: types/analytics.ts:213
+Defined in: [types/analytics.ts:213](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L213)
 
 Active entities response
 
@@ -16,7 +16,7 @@ Active entities response
 
 > **data**: [`ActiveEntity`](ActiveEntity.md)[]
 
-Defined in: types/analytics.ts:214
+Defined in: [types/analytics.ts:214](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L214)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/analytics.ts:214
 
 > **request**: `object`
 
-Defined in: types/analytics.ts:215
+Defined in: [types/analytics.ts:215](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L215)
 
 #### params
 

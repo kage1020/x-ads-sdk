@@ -6,7 +6,7 @@
 
 # Class: Analytics
 
-Defined in: resources/analytics.ts:24
+Defined in: [resources/analytics.ts:24](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L24)
 
 Analytics resource class
 
@@ -46,7 +46,7 @@ Defined in: [resources/base.ts:9](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **getSyncAnalytics**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: resources/analytics.ts:29
+Defined in: [resources/analytics.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L29)
 
 Get synchronous analytics data
 Maximum time range of 7 days allowed
@@ -75,7 +75,7 @@ Maximum time range of 7 days allowed
 
 > **createAsyncJob**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`AnalyticsJobResponse`](../interfaces/AnalyticsJobResponse.md)\>
 
-Defined in: resources/analytics.ts:57
+Defined in: [resources/analytics.ts:57](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L57)
 
 Create an asynchronous analytics job
 Supports up to 90 days of data and segmentation
@@ -104,7 +104,7 @@ Supports up to 90 days of data and segmentation
 
 > **getAsyncJobs**(`accountId`, `jobIds?`, `requestOptions?`): `Promise`\<[`AnalyticsJobsResponse`](../interfaces/AnalyticsJobsResponse.md)\>
 
-Defined in: resources/analytics.ts:87
+Defined in: [resources/analytics.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L87)
 
 Get status of asynchronous analytics jobs
 
@@ -132,7 +132,7 @@ Get status of asynchronous analytics jobs
 
 > **getActiveEntities**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`ActiveEntitiesResponse`](../interfaces/ActiveEntitiesResponse.md)\>
 
-Defined in: resources/analytics.ts:107
+Defined in: [resources/analytics.ts:107](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L107)
 
 Get active entities that have analytics changes
 Maximum time range of 90 days allowed
@@ -161,7 +161,7 @@ Maximum time range of 90 days allowed
 
 > **downloadAsyncData**(`downloadUrl`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: resources/analytics.ts:135
+Defined in: [resources/analytics.ts:135](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L135)
 
 Download completed async analytics data
 
@@ -181,7 +181,7 @@ Download completed async analytics data
 
 > `private` **decompressGzip**(`buffer`): `Promise`\<`string`\>
 
-Defined in: resources/analytics.ts:162
+Defined in: [resources/analytics.ts:162](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L162)
 
 Helper method to decompress gzip data
 
@@ -201,7 +201,7 @@ Helper method to decompress gzip data
 
 > **getAccountAnalytics**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: resources/analytics.ts:204
+Defined in: [resources/analytics.ts:204](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L204)
 
 Get account-level analytics
 
@@ -247,7 +247,7 @@ Get account-level analytics
 
 > **getCampaignAnalytics**(`accountId`, `campaignIds`, `options`, `requestOptions?`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: resources/analytics.ts:233
+Defined in: [resources/analytics.ts:233](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L233)
 
 Get campaign analytics
 
@@ -297,7 +297,7 @@ Get campaign analytics
 
 > **getLineItemAnalytics**(`accountId`, `lineItemIds`, `options`, `requestOptions?`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: resources/analytics.ts:263
+Defined in: [resources/analytics.ts:263](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L263)
 
 Get line item analytics
 
@@ -347,7 +347,7 @@ Get line item analytics
 
 > **getComprehensiveAnalytics**(`accountId`, `entityType`, `entityIds`, `options`, `granularity`, `requestOptions?`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: resources/analytics.ts:293
+Defined in: [resources/analytics.ts:293](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L293)
 
 Get comprehensive analytics with multiple metric groups
 
@@ -397,7 +397,7 @@ Get comprehensive analytics with multiple metric groups
 
 > **getDailyAnalytics**(`accountId`, `entityType`, `entityIds`, `options`, `requestOptions?`): `Promise`\<[`AnalyticsResponse`](../interfaces/AnalyticsResponse.md)\>
 
-Defined in: resources/analytics.ts:330
+Defined in: [resources/analytics.ts:330](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/analytics.ts#L330)
 
 Get daily analytics for trending analysis
 
