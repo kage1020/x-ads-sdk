@@ -1,18 +1,30 @@
-[**X Ads SDK v1.0.3**](README.md)
+[**X Ads SDK v1.0.4**](README.md)
 
 ***
 
-# X Ads SDK v1.0.3
+# X Ads SDK v1.0.4
 
 ## Hierarchy Summary
 
-### BaseModule
+### AnalyticsRequestOptions
 
-- [BaseModule](classes/BaseModule.md)
-  - [AccountsModule](classes/AccountsModule.md)
-  - [AdGroupsModule](classes/AdGroupsModule.md)
-  - [AnalyticsModule](classes/AnalyticsModule.md)
-  - [CampaignsModule](classes/CampaignsModule.md)
+- [AnalyticsRequestOptions](interfaces/AnalyticsRequestOptions.md)
+  - [AsyncAnalyticsRequestOptions](interfaces/AsyncAnalyticsRequestOptions.md)
+
+***
+
+### BaseResource
+
+- [BaseResource](classes/BaseResource.md)
+  - [AccountResource](classes/AccountResource.md)
+  - [Analytics](classes/Analytics.md)
+  - [Audiences](classes/Audiences.md)
+  - [CampaignResource](classes/CampaignResource.md)
+  - [CatalogManagement](classes/CatalogManagement.md)
+  - [ConversionTrackingResource](classes/ConversionTrackingResource.md)
+  - [Creatives](classes/Creatives.md)
+  - [FundingInstrumentResource](classes/FundingInstrumentResource.md)
+  - [LineItemResource](classes/LineItemResource.md)
 
 ***
 

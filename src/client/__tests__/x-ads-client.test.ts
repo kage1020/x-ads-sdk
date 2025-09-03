@@ -1,11 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
-import {
-  AccountsModule,
-  AdGroupsModule,
-  AnalyticsModule,
-  CampaignsModule,
-} from '../../modules/index.js';
 import type { XAdsPlugin } from '../../plugins/base.js';
+import { AccountResource, CampaignResource, LineItemResource } from '../../resources/index.js';
 import { APIVersion } from '../../types/api-version.js';
 import { type ClientConfig, Environment } from '../../types/common.js';
 import { HttpClient } from '../base.js';
@@ -145,12 +140,9 @@ describe('XAdsClient', () => {
       expect(client).toBeInstanceOf(XAdsClient);
     });
 
-    it('should initialize all modules', () => {
+    it('should initialize accounts resource', () => {
       const client = new XAdsClient(defaultConfig);
-      expect(client.accounts).toBeInstanceOf(AccountsModule);
-      expect(client.campaigns).toBeInstanceOf(CampaignsModule);
-      expect(client.adGroups).toBeInstanceOf(AdGroupsModule);
-      expect(client.analytics).toBeInstanceOf(AnalyticsModule);
+      expect(client.accounts).toBeInstanceOf(AccountResource);
     });
   });
 
@@ -243,38 +235,40 @@ describe('XAdsClient', () => {
     });
   });
 
-  describe('module integration', () => {
-    it('should have accounts module with expected methods', () => {
+  describe('resource integration', () => {
+    it('should have accounts resource with expected methods', () => {
       expect(client.accounts).toBeDefined();
       expect(typeof client.accounts.list).toBe('function');
       expect(typeof client.accounts.get).toBe('function');
+      expect(typeof client.accounts.create).toBe('function');
       expect(typeof client.accounts.update).toBe('function');
     });
 
-    it('should have campaigns module with expected methods', () => {
-      expect(client.campaigns).toBeDefined();
-      expect(typeof client.campaigns.list).toBe('function');
-      expect(typeof client.campaigns.get).toBe('function');
-      expect(typeof client.campaigns.create).toBe('function');
-      expect(typeof client.campaigns.update).toBe('function');
-      expect(typeof client.campaigns.delete).toBe('function');
+    it('should provide resource factory methods', () => {
+      expect(typeof client.getCampaignResource).toBe('function');
+      expect(typeof client.getLineItemResource).toBe('function');
     });
 
-    it('should have adGroups module with expected methods', () => {
-      expect(client.adGroups).toBeDefined();
-      expect(typeof client.adGroups.list).toBe('function');
-      expect(typeof client.adGroups.get).toBe('function');
-      expect(typeof client.adGroups.create).toBe('function');
-      expect(typeof client.adGroups.update).toBe('function');
-      expect(typeof client.adGroups.delete).toBe('function');
+    it('should create campaign resource for specific account', () => {
+      const accountId = 'test_account_id';
+      const campaignResource = client.getCampaignResource(accountId);
+      expect(campaignResource).toBeInstanceOf(CampaignResource);
+      expect(typeof campaignResource.list).toBe('function');
+      expect(typeof campaignResource.get).toBe('function');
+      expect(typeof campaignResource.create).toBe('function');
+      expect(typeof campaignResource.update).toBe('function');
+      expect(typeof campaignResource.delete).toBe('function');
     });
 
-    it('should have analytics module with expected methods', () => {
-      expect(client.analytics).toBeDefined();
-      expect(typeof client.analytics.getCampaignAnalytics).toBe('function');
-      expect(typeof client.analytics.getAdGroupAnalytics).toBe('function');
-      expect(typeof client.analytics.getAccountAnalytics).toBe('function');
-      expect(typeof client.analytics.getAnalytics).toBe('function');
+    it('should create line item resource for specific account', () => {
+      const accountId = 'test_account_id';
+      const lineItemResource = client.getLineItemResource(accountId);
+      expect(lineItemResource).toBeInstanceOf(LineItemResource);
+      expect(typeof lineItemResource.list).toBe('function');
+      expect(typeof lineItemResource.get).toBe('function');
+      expect(typeof lineItemResource.create).toBe('function');
+      expect(typeof lineItemResource.update).toBe('function');
+      expect(typeof lineItemResource.delete).toBe('function');
     });
   });
 
@@ -313,10 +307,7 @@ describe('XAdsClient', () => {
 
       const minimalClient = new XAdsClient(minimalConfig);
       expect(minimalClient).toBeInstanceOf(XAdsClient);
-      expect(minimalClient.accounts).toBeInstanceOf(AccountsModule);
-      expect(minimalClient.campaigns).toBeInstanceOf(CampaignsModule);
-      expect(minimalClient.adGroups).toBeInstanceOf(AdGroupsModule);
-      expect(minimalClient.analytics).toBeInstanceOf(AnalyticsModule);
+      expect(minimalClient.accounts).toBeInstanceOf(AccountResource);
     });
   });
 

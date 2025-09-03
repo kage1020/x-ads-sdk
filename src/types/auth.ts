@@ -24,7 +24,19 @@ export interface OAuthSignature {
   oauth_version: string;
 }
 
-export interface RequestOptions {
+export interface RequestOptions<TSortField = string> {
+  params?: {
+    count?: number;
+    cursor?: string;
+    sort_by?: TSortField;
+    with_deleted?: boolean;
+    [key: string]: unknown;
+  };
+  headers?: Record<string, string>;
+}
+
+// Internal interface for OAuth signing (includes method and url)
+export interface OAuthRequestOptions {
   method: string;
   url: string;
   params?: Record<string, unknown>;

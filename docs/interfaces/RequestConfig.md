@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Interface: RequestConfig
 
-Defined in: [client/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L49)
+Defined in: [client/base.ts:50](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L50)
 
 ## Properties
 
@@ -14,7 +14,7 @@ Defined in: [client/base.ts:49](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **method**: `"GET"` \| `"POST"` \| `"PUT"` \| `"DELETE"`
 
-Defined in: [client/base.ts:50](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L50)
+Defined in: [client/base.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L51)
 
 ***
 
@@ -22,7 +22,7 @@ Defined in: [client/base.ts:50](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > **endpoint**: `string`
 
-Defined in: [client/base.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L51)
+Defined in: [client/base.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L52)
 
 ***
 
@@ -30,7 +30,7 @@ Defined in: [client/base.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **params**: `Record`\<`string`, `unknown`\>
 
-Defined in: [client/base.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L52)
+Defined in: [client/base.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L53)
 
 ***
 
@@ -38,7 +38,7 @@ Defined in: [client/base.ts:52](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **body**: `unknown`
 
-Defined in: [client/base.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L53)
+Defined in: [client/base.ts:54](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L54)
 
 ***
 
@@ -46,4 +46,4 @@ Defined in: [client/base.ts:53](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [client/base.ts:54](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L54)
+Defined in: [client/base.ts:55](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/base.ts#L55)

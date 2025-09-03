@@ -497,4 +497,155 @@ describe('HttpClient', () => {
       expect(versionClient).toBeInstanceOf(HttpClient);
     });
   });
+
+  describe('API version warnings', () => {
+    it('should log warnings when API version warnings are present', async () => {
+      const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+      // Mock the version manager to return warnings
+      const versionManagerSpy = vi
+        .spyOn(client.getVersionManager(), 'parseResponseHeaders')
+        .mockReturnValue({
+          currentVersion: APIVersion.V11,
+          warnings: ['API version v11 is deprecated'],
+          isVersionSupported: true,
+          recommendedAction: 'upgrade',
+        });
+
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Map([['content-type', 'application/json']]) as unknown as Headers,
+        json: () => Promise.resolve({ data: 'test' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse);
+
+      await client.get('/test');
+
+      expect(consoleWarnSpy).toHaveBeenCalledWith(
+        '[X Ads SDK] API Version Warnings:',
+        expect.any(Array)
+      );
+
+      consoleWarnSpy.mockRestore();
+      versionManagerSpy.mockRestore();
+    });
+
+    it('should not log warnings when no API version warnings are present', async () => {
+      const consoleWarnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+      // Mock the version manager to return no warnings
+      const versionManagerSpy = vi
+        .spyOn(client.getVersionManager(), 'parseResponseHeaders')
+        .mockReturnValue({
+          currentVersion: APIVersion.V12,
+          warnings: [],
+          isVersionSupported: true,
+          recommendedAction: 'none',
+        });
+
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Map([['content-type', 'application/json']]) as unknown as Headers,
+        json: () => Promise.resolve({ data: 'test' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse);
+
+      await client.get('/test');
+
+      expect(consoleWarnSpy).not.toHaveBeenCalled();
+
+      consoleWarnSpy.mockRestore();
+      versionManagerSpy.mockRestore();
+    });
+  });
+
+  describe('error response handling', () => {
+    it('should handle error response with JSON content', async () => {
+      const mockErrorResponse = {
+        ok: false,
+        status: 400,
+        statusText: 'Bad Request',
+        headers: new Map([['content-type', 'application/json']]) as unknown as Headers,
+        json: () => Promise.resolve({ error: 'Invalid request', code: 400 }),
+      };
+
+      mockFetch.mockResolvedValue(mockErrorResponse);
+
+      await expect(client.get('/test')).rejects.toThrow();
+    });
+
+    it('should handle error response with text content', async () => {
+      const mockErrorResponse = {
+        ok: false,
+        status: 500,
+        statusText: 'Internal Server Error',
+        headers: new Map([['content-type', 'text/plain']]) as unknown as Headers,
+        text: () => Promise.resolve('Internal server error occurred'),
+      };
+
+      mockFetch.mockResolvedValue(mockErrorResponse);
+
+      await expect(client.get('/test')).rejects.toThrow();
+    });
+
+    it('should handle error response without content-type', async () => {
+      const mockErrorResponse = {
+        ok: false,
+        status: 404,
+        statusText: 'Not Found',
+        headers: new Map() as unknown as Headers,
+        text: () => Promise.resolve('Not found'),
+      };
+
+      mockFetch.mockResolvedValue(mockErrorResponse);
+
+      await expect(client.get('/test')).rejects.toThrow();
+    });
+  });
+
+  describe('response content handling', () => {
+    it('should handle 204 No Content response', async () => {
+      const mockResponse = {
+        ok: true,
+        status: 204,
+        headers: new Map() as unknown as Headers,
+      };
+
+      mockFetch.mockResolvedValue(mockResponse);
+
+      const result = await client.delete('/test');
+      expect(result).toEqual({});
+    });
+
+    it('should handle response without content-type', async () => {
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Map() as unknown as Headers,
+      };
+
+      mockFetch.mockResolvedValue(mockResponse);
+
+      const result = await client.get('/test');
+      expect(result).toEqual({});
+    });
+
+    it('should handle non-JSON response', async () => {
+      const mockResponse = {
+        ok: true,
+        status: 200,
+        headers: new Map([['content-type', 'text/plain']]) as unknown as Headers,
+        text: () => Promise.resolve('plain text response'),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse);
+
+      const result = await client.get('/test');
+      expect(result).toBe('plain text response');
+    });
+  });
 });

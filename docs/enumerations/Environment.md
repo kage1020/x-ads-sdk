@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 # Enumeration: Environment
 
-Defined in: [types/common.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L28)
+Defined in: [types/common.ts:20](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L20)
 
 ## Enumeration Members
 
@@ -14,7 +14,7 @@ Defined in: [types/common.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **PRODUCTION**: `"production"`
 
-Defined in: [types/common.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L29)
+Defined in: [types/common.ts:21](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L21)
 
 ***
 
@@ -22,4 +22,4 @@ Defined in: [types/common.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main
 
 > **SANDBOX**: `"sandbox"`
 
-Defined in: [types/common.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L30)
+Defined in: [types/common.ts:22](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/common.ts#L22)

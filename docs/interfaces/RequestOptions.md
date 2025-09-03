@@ -1,44 +1,46 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
 [X Ads SDK](../globals.md) / RequestOptions
 
-# Interface: RequestOptions
+# Interface: RequestOptions\<TSortField\>
 
 Defined in: [types/auth.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L27)
 
+## Type Parameters
+
+### TSortField
+
+`TSortField` = `string`
+
 ## Properties
-
-### method
-
-> **method**: `string`
-
-Defined in: [types/auth.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L28)
-
-***
-
-### url
-
-> **url**: `string`
-
-Defined in: [types/auth.ts:29](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L29)
-
-***
 
 ### params?
 
-> `optional` **params**: `Record`\<`string`, `unknown`\>
+> `optional` **params**: `object`
 
-Defined in: [types/auth.ts:30](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L30)
+Defined in: [types/auth.ts:28](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L28)
 
-***
+#### Index Signature
 
-### body?
+\[`key`: `string`\]: `unknown`
 
-> `optional` **body**: `unknown`
+#### count?
 
-Defined in: [types/auth.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L31)
+> `optional` **count**: `number`
+
+#### cursor?
+
+> `optional` **cursor**: `string`
+
+#### sort\_by?
+
+> `optional` **sort\_by**: `TSortField`
+
+#### with\_deleted?
+
+> `optional` **with\_deleted**: `boolean`
 
 ***
 
@@ -46,4 +48,4 @@ Defined in: [types/auth.ts:31](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 > `optional` **headers**: `Record`\<`string`, `string`\>
 
-Defined in: [types/auth.ts:32](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L32)
+Defined in: [types/auth.ts:35](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/auth.ts#L35)

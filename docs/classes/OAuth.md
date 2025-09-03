@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -118,7 +118,7 @@ Defined in: [auth/oauth.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/s
 
 ##### options
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)
 
 #### Returns
 
@@ -146,7 +146,7 @@ Defined in: [auth/oauth.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ### signRequest()
 
-> **signRequest**(`options`): `Promise`\<[`RequestOptions`](../interfaces/RequestOptions.md)\>
+> **signRequest**(`options`): `Promise`\<[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)\>
 
 Defined in: [auth/oauth.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/src/auth/oauth.ts#L115)
 
@@ -154,11 +154,11 @@ Defined in: [auth/oauth.ts:115](https://github.com/kage1020/x-ads-sdk/blob/main/
 
 ##### options
 
-[`RequestOptions`](../interfaces/RequestOptions.md)
+[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)
 
 #### Returns
 
-`Promise`\<[`RequestOptions`](../interfaces/RequestOptions.md)\>
+`Promise`\<[`OAuthRequestOptions`](../interfaces/OAuthRequestOptions.md)\>
 
 ## Properties
 

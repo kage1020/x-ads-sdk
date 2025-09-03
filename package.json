@@ -1,6 +1,6 @@
 {
   "name": "x-ads-sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Strongly typed, full-featured X (Twitter) Ads API client for Node.js",
   "keywords": [
     "twitter",

@@ -29,14 +29,11 @@ describe('XAdsClient', () => {
   });
 
   describe('constructor', () => {
-    it('should create XAdsClient with all modules', () => {
+    it('should create XAdsClient with accounts resource', () => {
       client = new XAdsClient(testConfig);
 
       expect(client).toBeInstanceOf(XAdsClient);
       expect(client.accounts).toBeDefined();
-      expect(client.campaigns).toBeDefined();
-      expect(client.adGroups).toBeDefined();
-      expect(client.analytics).toBeDefined();
     });
 
     it('should use default environment when not specified', () => {
@@ -63,42 +60,22 @@ describe('XAdsClient', () => {
     });
   });
 
-  describe('modules', () => {
+  describe('resources', () => {
     beforeEach(() => {
       client = new XAdsClient(testConfig);
     });
 
-    it('should have accounts module with correct methods', () => {
+    it('should have accounts resource with correct methods', () => {
       expect(client.accounts).toBeDefined();
       expect(typeof client.accounts.list).toBe('function');
       expect(typeof client.accounts.get).toBe('function');
+      expect(typeof client.accounts.create).toBe('function');
       expect(typeof client.accounts.update).toBe('function');
     });
 
-    it('should have campaigns module with correct methods', () => {
-      expect(client.campaigns).toBeDefined();
-      expect(typeof client.campaigns.list).toBe('function');
-      expect(typeof client.campaigns.get).toBe('function');
-      expect(typeof client.campaigns.create).toBe('function');
-      expect(typeof client.campaigns.update).toBe('function');
-      expect(typeof client.campaigns.delete).toBe('function');
-    });
-
-    it('should have adGroups module with correct methods', () => {
-      expect(client.adGroups).toBeDefined();
-      expect(typeof client.adGroups.list).toBe('function');
-      expect(typeof client.adGroups.get).toBe('function');
-      expect(typeof client.adGroups.create).toBe('function');
-      expect(typeof client.adGroups.update).toBe('function');
-      expect(typeof client.adGroups.delete).toBe('function');
-    });
-
-    it('should have analytics module with correct methods', () => {
-      expect(client.analytics).toBeDefined();
-      expect(typeof client.analytics.getAnalytics).toBe('function');
-      expect(typeof client.analytics.getCampaignAnalytics).toBe('function');
-      expect(typeof client.analytics.getAdGroupAnalytics).toBe('function');
-      expect(typeof client.analytics.getAccountAnalytics).toBe('function');
+    it('should provide resource factory methods', () => {
+      expect(typeof client.getCampaignResource).toBe('function');
+      expect(typeof client.getLineItemResource).toBe('function');
     });
   });
 

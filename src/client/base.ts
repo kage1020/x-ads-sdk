@@ -3,6 +3,7 @@ import {
   AuthenticationError,
   createAPIError,
   NetworkError,
+  RateLimitError,
   TimeoutError,
 } from '../errors/index.js';
 import {
@@ -13,7 +14,7 @@ import {
   type PluginResponse,
 } from '../plugins/base.js';
 import type { APIVersion, APIVersionResponse } from '../types/api-version.js';
-import type { RequestOptions } from '../types/auth.js';
+import type { OAuthRequestOptions } from '../types/auth.js';
 import { Environment } from '../types/common.js';
 import {
   buildURL,
@@ -109,7 +110,7 @@ export class HttpClient implements PluginClient {
     return buildURL(this.baseURL, versionedEndpoint, params);
   }
 
-  private buildRequestOptions(config: RequestConfig): RequestOptions {
+  private buildRequestOptions(config: RequestConfig): OAuthRequestOptions {
     const url = this.buildURL(config.endpoint, config.method === 'GET' ? config.params : undefined);
 
     return {
@@ -282,7 +283,6 @@ export class HttpClient implements PluginClient {
       case 429: {
         const resetTime = response.headers.get('x-rate-limit-reset');
         const resetDate = resetTime ? unixTimestampToDate(resetTime) : undefined;
-        const { RateLimitError } = await import('../errors/index.js');
         throw new RateLimitError(message, resetDate, 'RATE_LIMIT_EXCEEDED');
       }
       default: {

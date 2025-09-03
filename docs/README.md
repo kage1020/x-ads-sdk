@@ -1,4 +1,4 @@
-**X Ads SDK v1.0.3**
+**X Ads SDK v1.0.4**
 
 ***
 
@@ -223,10 +223,10 @@ try {
 
 Check out the comprehensive examples in the `examples/` directory:
 
-- [`basic-usage.ts`](_media/basic-usage.ts) - Basic SDK setup and usage
-- [`campaign-management.ts`](_media/campaign-management.ts) - Campaign and ad group management
-- [`analytics-reporting.ts`](_media/analytics-reporting.ts) - Performance analytics and reporting
-- [`environment-setup.ts`](_media/environment-setup.ts) - Environment configuration
+- [`basic-usage.ts`](examples/basic-usage.ts) - Basic SDK setup and usage
+- [`campaign-management.ts`](examples/campaign-management.ts) - Campaign and ad group management
+- [`analytics-reporting.ts`](examples/analytics-reporting.ts) - Performance analytics and reporting
+- [`environment-setup.ts`](examples/environment-setup.ts) - Environment configuration
 
 Run an example:
 

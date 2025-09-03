@@ -1,4 +1,4 @@
-[**X Ads SDK v1.0.3**](../README.md)
+[**X Ads SDK v1.0.4**](../README.md)
 
 ***
 
@@ -6,24 +6,42 @@
 
 # Interface: AnalyticsResponse
 
-Defined in: [types/analytics.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L132)
+Defined in: [types/analytics.ts:146](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L146)
+
+Synchronous analytics response
 
 ## Properties
 
-### request
+### data\_type
 
-> **request**: `object`
+> **data\_type**: `"stats"`
 
-Defined in: [types/analytics.ts:133](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L133)
+Defined in: [types/analytics.ts:147](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L147)
 
-#### params
+***
 
-> **params**: [`AnalyticsQuery`](AnalyticsQuery.md)
+### time\_series\_length
+
+> **time\_series\_length**: `number`
+
+Defined in: [types/analytics.ts:148](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L148)
 
 ***
 
 ### data
 
-> **data**: [`AnalyticsData`](AnalyticsData.md)[]
+> **data**: [`AnalyticsEntityData`](AnalyticsEntityData.md)[]
 
-Defined in: [types/analytics.ts:136](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L136)
+Defined in: [types/analytics.ts:149](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L149)
+
+***
+
+### request
+
+> **request**: `object`
+
+Defined in: [types/analytics.ts:150](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/analytics.ts#L150)
+
+#### params
+
+> **params**: `Record`\<`string`, `unknown`\>

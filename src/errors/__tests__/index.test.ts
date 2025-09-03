@@ -712,22 +712,21 @@ describe('Error Stack Trace Handling', () => {
     expect(captureStackTraceSpy).toHaveBeenCalledWith(error, XAdsError);
 
     // Restore original
-    // biome-ignore lint/suspicious/noExplicitAny: Testing internal API behavior
-    (Error as any).captureStackTrace = originalCaptureStackTrace;
+    (Error as unknown as { captureStackTrace?: unknown }).captureStackTrace =
+      originalCaptureStackTrace;
   });
 
   it('should handle absence of Error.captureStackTrace gracefully', () => {
     // Mock Error.captureStackTrace to be undefined
     const originalCaptureStackTrace = Error.captureStackTrace;
-    // biome-ignore lint/suspicious/noExplicitAny: Testing internal API behavior
-    (Error as any).captureStackTrace = undefined;
+    (Error as unknown as { captureStackTrace?: unknown }).captureStackTrace = undefined;
 
     expect(() => {
       new XAdsError('Test error');
     }).not.toThrow();
 
     // Restore original
-    // biome-ignore lint/suspicious/noExplicitAny: Testing internal API behavior
-    (Error as any).captureStackTrace = originalCaptureStackTrace;
+    (Error as unknown as { captureStackTrace?: unknown }).captureStackTrace =
+      originalCaptureStackTrace;
   });
 });
