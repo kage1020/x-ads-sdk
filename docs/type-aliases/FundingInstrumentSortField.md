@@ -6,8 +6,8 @@
 
 # Type Alias: FundingInstrumentSortField
 
-> **FundingInstrumentSortField** = [`SortField`](SortField.md)\<`"created_at"` \| `"updated_at"` \| `"deleted"` \| `"funded_amount_local_micro"` \| `"start_time"` \| `"end_time"`\>
+> **FundingInstrumentSortField** = `"created_at"` \| `"updated_at"` \| `"entity_status"` \| `"type"`
 
-Defined in: [types/sorting.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/sorting.ts#L46)
+Defined in: resources/funding-instrument.ts:19
 
-Funding Instrument sortable fields
+Funding instrument sort field type

@@ -6,7 +6,7 @@
 
 # Interface: AudiencePermission
 
-Defined in: types/audiences.ts:127
+Defined in: [types/audiences.ts:127](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L127)
 
 Audience permission entity
 
@@ -16,7 +16,7 @@ Audience permission entity
 
 > **id**: `string`
 
-Defined in: types/audiences.ts:128
+Defined in: [types/audiences.ts:128](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L128)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/audiences.ts:128
 
 > **id\_str**: `string`
 
-Defined in: types/audiences.ts:129
+Defined in: [types/audiences.ts:129](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L129)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/audiences.ts:129
 
 > **account\_id**: `string`
 
-Defined in: types/audiences.ts:130
+Defined in: [types/audiences.ts:130](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L130)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/audiences.ts:130
 
 > **granted\_account\_id**: `string`
 
-Defined in: types/audiences.ts:131
+Defined in: [types/audiences.ts:131](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L131)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/audiences.ts:131
 
 > **permission\_level**: [`AudiencePermissionLevel`](../type-aliases/AudiencePermissionLevel.md)
 
-Defined in: types/audiences.ts:132
+Defined in: [types/audiences.ts:132](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L132)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/audiences.ts:132
 
 > **created\_at**: `string`
 
-Defined in: types/audiences.ts:133
+Defined in: [types/audiences.ts:133](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L133)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/audiences.ts:133
 
 > **updated\_at**: `string`
 
-Defined in: types/audiences.ts:134
+Defined in: [types/audiences.ts:134](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L134)
 
 ***
 
@@ -72,4 +72,4 @@ Defined in: types/audiences.ts:134
 
 > **deleted**: `boolean`
 
-Defined in: types/audiences.ts:135
+Defined in: [types/audiences.ts:135](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L135)

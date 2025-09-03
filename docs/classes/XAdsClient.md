@@ -6,7 +6,7 @@
 
 # Class: XAdsClient
 
-Defined in: [client/x-ads-client.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L64)
+Defined in: [client/x-ads-client.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L68)
 
 X Ads SDK Main Client
 
@@ -62,7 +62,7 @@ if (versionInfo.warnings.length > 0) {
 
 > **new XAdsClient**(`config`): `XAdsClient`
 
-Defined in: [client/x-ads-client.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L97)
+Defined in: [client/x-ads-client.ts:113](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L113)
 
 Creates a new X Ads SDK client instance
 
@@ -104,7 +104,7 @@ const client = new XAdsClient({
 
 > **getCampaignResource**(`accountId`): [`CampaignResource`](CampaignResource.md)
 
-Defined in: [client/x-ads-client.ts:133](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L133)
+Defined in: [client/x-ads-client.ts:153](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L153)
 
 Get a campaign resource for the specified account
 
@@ -135,7 +135,7 @@ const campaigns = await campaignResource.list();
 
 > **getLineItemResource**(`accountId`): [`LineItemResource`](LineItemResource.md)
 
-Defined in: [client/x-ads-client.ts:148](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L148)
+Defined in: [client/x-ads-client.ts:168](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L168)
 
 Get a line item resource for the specified account
 
@@ -166,7 +166,7 @@ const lineItems = await lineItemResource.list();
 
 > **getHttpClient**(): [`HttpClient`](HttpClient.md)
 
-Defined in: [client/x-ads-client.ts:158](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L158)
+Defined in: [client/x-ads-client.ts:178](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L178)
 
 Get the underlying HTTP client for advanced usage
 
@@ -184,7 +184,7 @@ The HTTP client instance used by this SDK client
 
 > **use**(`plugin`): `this`
 
-Defined in: [client/x-ads-client.ts:175](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L175)
+Defined in: [client/x-ads-client.ts:195](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L195)
 
 Add a plugin to the SDK for enhanced functionality
 
@@ -217,7 +217,7 @@ client.use(rateLimitTracker);
 
 > **removePlugin**(`pluginName`): `boolean`
 
-Defined in: [client/x-ads-client.ts:186](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L186)
+Defined in: [client/x-ads-client.ts:206](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L206)
 
 Remove a plugin from the SDK
 
@@ -241,7 +241,7 @@ True if the plugin was removed, false if it wasn't found
 
 > **hasPlugin**(`pluginName`): `boolean`
 
-Defined in: [client/x-ads-client.ts:196](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L196)
+Defined in: [client/x-ads-client.ts:216](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L216)
 
 Check if a plugin is currently installed
 
@@ -265,7 +265,7 @@ True if the plugin is installed, false otherwise
 
 > **getAPIVersion**(): [`APIVersion`](../enumerations/APIVersion.md)
 
-Defined in: [client/x-ads-client.ts:205](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L205)
+Defined in: [client/x-ads-client.ts:225](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L225)
 
 Get the current API version being used for requests
 
@@ -281,7 +281,7 @@ The current API version
 
 > **setAPIVersion**(`version`): `void`
 
-Defined in: [client/x-ads-client.ts:219](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L219)
+Defined in: [client/x-ads-client.ts:239](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L239)
 
 Set the API version to use for future requests
 
@@ -313,7 +313,7 @@ client.setAPIVersion(APIVersion.V12);
 
 > **getVersionInfo**(): [`APIVersionResponse`](../interfaces/APIVersionResponse.md)
 
-Defined in: [client/x-ads-client.ts:235](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L235)
+Defined in: [client/x-ads-client.ts:255](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L255)
 
 Get detailed version information and upgrade recommendations
 
@@ -338,7 +338,7 @@ if (versionInfo.recommendedAction === 'upgrade') {
 
 > **isVersionDeprecated**(): `boolean`
 
-Defined in: [client/x-ads-client.ts:244](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L244)
+Defined in: [client/x-ads-client.ts:264](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L264)
 
 Check if the current API version is deprecated
 
@@ -354,7 +354,7 @@ True if the current version is deprecated, false otherwise
 
 > `private` **httpClient**: [`HttpClient`](HttpClient.md)
 
-Defined in: [client/x-ads-client.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L65)
+Defined in: [client/x-ads-client.ts:69](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L69)
 
 ***
 
@@ -362,7 +362,7 @@ Defined in: [client/x-ads-client.ts:65](https://github.com/kage1020/x-ads-sdk/bl
 
 > **accounts**: [`AccountResource`](AccountResource.md)
 
-Defined in: [client/x-ads-client.ts:68](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L68)
+Defined in: [client/x-ads-client.ts:72](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L72)
 
 Accounts resource for managing advertising accounts
 
@@ -372,7 +372,7 @@ Accounts resource for managing advertising accounts
 
 > **analytics**: [`Analytics`](Analytics.md)
 
-Defined in: [client/x-ads-client.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L71)
+Defined in: [client/x-ads-client.ts:75](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L75)
 
 Analytics resource for retrieving performance data
 
@@ -382,6 +382,46 @@ Analytics resource for retrieving performance data
 
 > **audiences**: [`Audiences`](Audiences.md)
 
-Defined in: [client/x-ads-client.ts:74](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L74)
+Defined in: [client/x-ads-client.ts:78](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L78)
 
 Audiences resource for managing custom and tailored audiences
+
+***
+
+### creatives
+
+> **creatives**: [`Creatives`](Creatives.md)
+
+Defined in: [client/x-ads-client.ts:81](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L81)
+
+Creatives resource for managing posts, cards, and media
+
+***
+
+### catalogManagement
+
+> **catalogManagement**: [`CatalogManagement`](CatalogManagement.md)
+
+Defined in: [client/x-ads-client.ts:84](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L84)
+
+Catalog Management resource for managing product catalogs and e-commerce
+
+***
+
+### conversionTracking
+
+> **conversionTracking**: [`ConversionTrackingResource`](ConversionTrackingResource.md)
+
+Defined in: [client/x-ads-client.ts:87](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L87)
+
+Conversion Tracking resource for managing conversion tags and events
+
+***
+
+### fundingInstrument
+
+> **fundingInstrument**: [`FundingInstrumentResource`](FundingInstrumentResource.md)
+
+Defined in: [client/x-ads-client.ts:90](https://github.com/kage1020/x-ads-sdk/blob/main/src/client/x-ads-client.ts#L90)
+
+Funding Instrument resource for managing payment methods

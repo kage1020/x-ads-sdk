@@ -6,7 +6,7 @@
 
 # Interface: CustomAudienceData
 
-Defined in: types/audiences.ts:64
+Defined in: [types/audiences.ts:64](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L64)
 
 Custom audience data structure
 
@@ -16,7 +16,7 @@ Custom audience data structure
 
 > **data\_type**: [`CustomAudienceDataType`](../type-aliases/CustomAudienceDataType.md)
 
-Defined in: types/audiences.ts:65
+Defined in: [types/audiences.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L65)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/audiences.ts:65
 
 > **data**: `string`[]
 
-Defined in: types/audiences.ts:66
+Defined in: [types/audiences.ts:66](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L66)

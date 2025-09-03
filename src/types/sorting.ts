@@ -41,13 +41,6 @@ export type LineItemSortField = SortField<
 >;
 
 /**
- * Funding Instrument sortable fields
- */
-export type FundingInstrumentSortField = SortField<
-  'created_at' | 'updated_at' | 'deleted' | 'funded_amount_local_micro' | 'start_time' | 'end_time'
->;
-
-/**
  * Card sortable fields
  */
 export type CardSortField = SortField<'created_at' | 'updated_at' | 'deleted' | 'name'>;

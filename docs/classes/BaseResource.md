@@ -18,6 +18,10 @@ Defined in: [resources/base.ts:6](https://github.com/kage1020/x-ads-sdk/blob/mai
 - [`Analytics`](Analytics.md)
 - [`Audiences`](Audiences.md)
 - [`CampaignResource`](CampaignResource.md)
+- [`CatalogManagement`](CatalogManagement.md)
+- [`ConversionTrackingResource`](ConversionTrackingResource.md)
+- [`Creatives`](Creatives.md)
+- [`FundingInstrumentResource`](FundingInstrumentResource.md)
 - [`LineItemResource`](LineItemResource.md)
 
 ## Constructors

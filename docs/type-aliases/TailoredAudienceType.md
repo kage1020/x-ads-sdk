@@ -8,6 +8,6 @@
 
 > **TailoredAudienceType** = `"FLEXIBLE"` \| `"WEB"` \| `"CRM"` \| `"LOOKALIKE"` \| `"REMARKETING"` \| `"ENGAGEMENT"` \| `"VIDEO_VIEW"` \| `"CONVERSION"`
 
-Defined in: types/audiences.ts:51
+Defined in: [types/audiences.ts:51](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L51)
 
 Tailored audience types

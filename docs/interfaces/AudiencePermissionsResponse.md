@@ -6,7 +6,7 @@
 
 # Interface: AudiencePermissionsResponse
 
-Defined in: types/audiences.ts:204
+Defined in: [types/audiences.ts:204](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L204)
 
 Audience permissions response
 
@@ -16,7 +16,7 @@ Audience permissions response
 
 > **data**: [`AudiencePermission`](AudiencePermission.md)[]
 
-Defined in: types/audiences.ts:205
+Defined in: [types/audiences.ts:205](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L205)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/audiences.ts:205
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/audiences.ts:206
+Defined in: [types/audiences.ts:206](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L206)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/audiences.ts:206
 
 > **request**: `object`
 
-Defined in: types/audiences.ts:207
+Defined in: [types/audiences.ts:207](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L207)
 
 #### params
 

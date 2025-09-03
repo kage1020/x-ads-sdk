@@ -20,6 +20,10 @@
   - [Analytics](classes/Analytics.md)
   - [Audiences](classes/Audiences.md)
   - [CampaignResource](classes/CampaignResource.md)
+  - [CatalogManagement](classes/CatalogManagement.md)
+  - [ConversionTrackingResource](classes/ConversionTrackingResource.md)
+  - [Creatives](classes/Creatives.md)
+  - [FundingInstrumentResource](classes/FundingInstrumentResource.md)
   - [LineItemResource](classes/LineItemResource.md)
 
 ***

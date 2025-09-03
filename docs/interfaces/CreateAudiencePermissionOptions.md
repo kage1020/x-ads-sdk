@@ -6,7 +6,7 @@
 
 # Interface: CreateAudiencePermissionOptions
 
-Defined in: types/audiences.ts:261
+Defined in: [types/audiences.ts:261](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L261)
 
 Audience permission creation options
 
@@ -16,7 +16,7 @@ Audience permission creation options
 
 > **granted\_account\_id**: `string`
 
-Defined in: types/audiences.ts:262
+Defined in: [types/audiences.ts:262](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L262)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/audiences.ts:262
 
 > **permission\_level**: [`AudiencePermissionLevel`](../type-aliases/AudiencePermissionLevel.md)
 
-Defined in: types/audiences.ts:263
+Defined in: [types/audiences.ts:263](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L263)

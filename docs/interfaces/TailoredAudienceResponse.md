@@ -6,7 +6,7 @@
 
 # Interface: TailoredAudienceResponse
 
-Defined in: types/audiences.ts:162
+Defined in: [types/audiences.ts:162](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L162)
 
 Tailored audience response
 
@@ -16,7 +16,7 @@ Tailored audience response
 
 > **data**: [`TailoredAudience`](TailoredAudience.md)
 
-Defined in: types/audiences.ts:163
+Defined in: [types/audiences.ts:163](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L163)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/audiences.ts:163
 
 > **request**: `object`
 
-Defined in: types/audiences.ts:164
+Defined in: [types/audiences.ts:164](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L164)
 
 #### params
 

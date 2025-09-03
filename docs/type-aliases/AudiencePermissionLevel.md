@@ -8,6 +8,6 @@
 
 > **AudiencePermissionLevel** = `"READ"` \| `"WRITE"`
 
-Defined in: types/audiences.ts:46
+Defined in: [types/audiences.ts:46](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L46)
 
 Audience sharing permissions

@@ -6,7 +6,7 @@
 
 # Interface: DoNotReachListResponse
 
-Defined in: types/audiences.ts:183
+Defined in: [types/audiences.ts:183](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L183)
 
 Do not reach list response
 
@@ -16,7 +16,7 @@ Do not reach list response
 
 > **data**: [`DoNotReachList`](DoNotReachList.md)
 
-Defined in: types/audiences.ts:184
+Defined in: [types/audiences.ts:184](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L184)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/audiences.ts:184
 
 > **request**: `object`
 
-Defined in: types/audiences.ts:185
+Defined in: [types/audiences.ts:185](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L185)
 
 #### params
 

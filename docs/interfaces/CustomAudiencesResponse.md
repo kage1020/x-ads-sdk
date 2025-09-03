@@ -6,7 +6,7 @@
 
 # Interface: CustomAudiencesResponse
 
-Defined in: types/audiences.ts:151
+Defined in: [types/audiences.ts:151](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L151)
 
 Custom audiences list response
 
@@ -16,7 +16,7 @@ Custom audiences list response
 
 > **data**: [`CustomAudience`](CustomAudience.md)[]
 
-Defined in: types/audiences.ts:152
+Defined in: [types/audiences.ts:152](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L152)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/audiences.ts:152
 
 > `optional` **next\_cursor**: `string`
 
-Defined in: types/audiences.ts:153
+Defined in: [types/audiences.ts:153](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L153)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/audiences.ts:153
 
 > **request**: `object`
 
-Defined in: types/audiences.ts:154
+Defined in: [types/audiences.ts:154](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L154)
 
 #### params
 

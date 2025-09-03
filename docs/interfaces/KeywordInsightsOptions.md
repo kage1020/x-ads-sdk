@@ -6,7 +6,7 @@
 
 # Interface: KeywordInsightsOptions
 
-Defined in: types/audiences.ts:291
+Defined in: [types/audiences.ts:291](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L291)
 
 Keyword insights query options
 
@@ -16,7 +16,7 @@ Keyword insights query options
 
 > **keywords**: `string`[]
 
-Defined in: types/audiences.ts:292
+Defined in: [types/audiences.ts:292](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L292)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/audiences.ts:292
 
 > `optional` **country\_code**: `string`
 
-Defined in: types/audiences.ts:293
+Defined in: [types/audiences.ts:293](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L293)
 
 ***
 
@@ -32,4 +32,4 @@ Defined in: types/audiences.ts:293
 
 > `optional` **language**: `string`
 
-Defined in: types/audiences.ts:294
+Defined in: [types/audiences.ts:294](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L294)

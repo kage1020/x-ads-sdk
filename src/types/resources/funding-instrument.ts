@@ -45,3 +45,13 @@ export interface FundingInstrumentResponse {
   next_cursor?: string;
   total_count?: number;
 }
+
+/**
+ * Single funding instrument response
+ */
+export interface SingleFundingInstrumentResponse {
+  data: FundingInstrument;
+  request: {
+    params: Record<string, unknown>;
+  };
+}

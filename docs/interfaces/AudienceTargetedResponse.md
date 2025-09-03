@@ -6,7 +6,7 @@
 
 # Interface: AudienceTargetedResponse
 
-Defined in: types/audiences.ts:215
+Defined in: [types/audiences.ts:215](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L215)
 
 Audience targeted response
 
@@ -16,7 +16,7 @@ Audience targeted response
 
 > **data**: `object`
 
-Defined in: types/audiences.ts:216
+Defined in: [types/audiences.ts:216](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L216)
 
 #### targeted
 
@@ -28,7 +28,7 @@ Defined in: types/audiences.ts:216
 
 > **request**: `object`
 
-Defined in: types/audiences.ts:219
+Defined in: [types/audiences.ts:219](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L219)
 
 #### params
 

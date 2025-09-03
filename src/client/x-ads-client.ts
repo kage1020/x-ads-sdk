@@ -4,6 +4,10 @@ import {
   Analytics,
   Audiences,
   CampaignResource,
+  CatalogManagement,
+  ConversionTrackingResource,
+  Creatives,
+  FundingInstrumentResource,
   LineItemResource,
 } from '../resources/index.js';
 import type { APIVersion, APIVersionResponse } from '../types/api-version.js';
@@ -73,6 +77,18 @@ export class XAdsClient {
   /** Audiences resource for managing custom and tailored audiences */
   public audiences: Audiences;
 
+  /** Creatives resource for managing posts, cards, and media */
+  public creatives: Creatives;
+
+  /** Catalog Management resource for managing product catalogs and e-commerce */
+  public catalogManagement: CatalogManagement;
+
+  /** Conversion Tracking resource for managing conversion tags and events */
+  public conversionTracking: ConversionTrackingResource;
+
+  /** Funding Instrument resource for managing payment methods */
+  public fundingInstrument: FundingInstrumentResource;
+
   /**
    * Creates a new X Ads SDK client instance
    *
@@ -117,6 +133,10 @@ export class XAdsClient {
     this.accounts = new AccountResource(this.httpClient);
     this.analytics = new Analytics(this.httpClient);
     this.audiences = new Audiences(this.httpClient);
+    this.creatives = new Creatives(this.httpClient);
+    this.catalogManagement = new CatalogManagement(this.httpClient);
+    this.conversionTracking = new ConversionTrackingResource(this.httpClient);
+    this.fundingInstrument = new FundingInstrumentResource(this.httpClient);
   }
 
   /**

@@ -6,7 +6,7 @@
 
 # Interface: CreateTailoredAudienceOptions
 
-Defined in: types/audiences.ts:245
+Defined in: [types/audiences.ts:245](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L245)
 
 Tailored audience creation options
 
@@ -16,7 +16,7 @@ Tailored audience creation options
 
 > **name**: `string`
 
-Defined in: types/audiences.ts:246
+Defined in: [types/audiences.ts:246](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L246)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/audiences.ts:246
 
 > **audience\_type**: [`TailoredAudienceType`](../type-aliases/TailoredAudienceType.md)
 
-Defined in: types/audiences.ts:247
+Defined in: [types/audiences.ts:247](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L247)

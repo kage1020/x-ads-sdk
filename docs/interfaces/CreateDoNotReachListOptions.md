@@ -6,7 +6,7 @@
 
 # Interface: CreateDoNotReachListOptions
 
-Defined in: types/audiences.ts:253
+Defined in: [types/audiences.ts:253](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L253)
 
 Do not reach list creation options
 
@@ -16,7 +16,7 @@ Do not reach list creation options
 
 > **name**: `string`
 
-Defined in: types/audiences.ts:254
+Defined in: [types/audiences.ts:254](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L254)
 
 ***
 
@@ -24,4 +24,4 @@ Defined in: types/audiences.ts:254
 
 > **list\_type**: [`DoNotReachListType`](../type-aliases/DoNotReachListType.md)
 
-Defined in: types/audiences.ts:255
+Defined in: [types/audiences.ts:255](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L255)

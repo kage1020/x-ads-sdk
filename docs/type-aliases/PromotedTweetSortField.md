@@ -8,6 +8,6 @@
 
 > **PromotedTweetSortField** = [`SortField`](SortField.md)\<`"created_at"` \| `"updated_at"` \| `"deleted"` \| `"paused"`\>
 
-Defined in: [types/sorting.ts:65](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/sorting.ts#L65)
+Defined in: [types/sorting.ts:58](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/sorting.ts#L58)
 
 Promoted Tweet sortable fields

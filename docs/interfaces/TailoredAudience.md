@@ -6,7 +6,7 @@
 
 # Interface: TailoredAudience
 
-Defined in: types/audiences.ts:93
+Defined in: [types/audiences.ts:93](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L93)
 
 Tailored audience entity
 
@@ -16,7 +16,7 @@ Tailored audience entity
 
 > **id**: `string`
 
-Defined in: types/audiences.ts:94
+Defined in: [types/audiences.ts:94](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L94)
 
 ***
 
@@ -24,7 +24,7 @@ Defined in: types/audiences.ts:94
 
 > **id\_str**: `string`
 
-Defined in: types/audiences.ts:95
+Defined in: [types/audiences.ts:95](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L95)
 
 ***
 
@@ -32,7 +32,7 @@ Defined in: types/audiences.ts:95
 
 > **name**: `string`
 
-Defined in: types/audiences.ts:96
+Defined in: [types/audiences.ts:96](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L96)
 
 ***
 
@@ -40,7 +40,7 @@ Defined in: types/audiences.ts:96
 
 > **audience\_type**: [`TailoredAudienceType`](../type-aliases/TailoredAudienceType.md)
 
-Defined in: types/audiences.ts:97
+Defined in: [types/audiences.ts:97](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L97)
 
 ***
 
@@ -48,7 +48,7 @@ Defined in: types/audiences.ts:97
 
 > **audience\_size**: `number`
 
-Defined in: types/audiences.ts:98
+Defined in: [types/audiences.ts:98](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L98)
 
 ***
 
@@ -56,7 +56,7 @@ Defined in: types/audiences.ts:98
 
 > **created\_at**: `string`
 
-Defined in: types/audiences.ts:99
+Defined in: [types/audiences.ts:99](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L99)
 
 ***
 
@@ -64,7 +64,7 @@ Defined in: types/audiences.ts:99
 
 > **updated\_at**: `string`
 
-Defined in: types/audiences.ts:100
+Defined in: [types/audiences.ts:100](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L100)
 
 ***
 
@@ -72,7 +72,7 @@ Defined in: types/audiences.ts:100
 
 > **deleted**: `boolean`
 
-Defined in: types/audiences.ts:101
+Defined in: [types/audiences.ts:101](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L101)
 
 ***
 
@@ -80,7 +80,7 @@ Defined in: types/audiences.ts:101
 
 > **is\_owner**: `boolean`
 
-Defined in: types/audiences.ts:102
+Defined in: [types/audiences.ts:102](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L102)
 
 ***
 
@@ -88,7 +88,7 @@ Defined in: types/audiences.ts:102
 
 > **permission\_level**: [`AudiencePermissionLevel`](../type-aliases/AudiencePermissionLevel.md)
 
-Defined in: types/audiences.ts:103
+Defined in: [types/audiences.ts:103](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L103)
 
 ***
 
@@ -96,7 +96,7 @@ Defined in: types/audiences.ts:103
 
 > `optional` **reasons\_not\_targetable**: `string`[]
 
-Defined in: types/audiences.ts:104
+Defined in: [types/audiences.ts:104](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L104)
 
 ***
 
@@ -104,7 +104,7 @@ Defined in: types/audiences.ts:104
 
 > `optional` **targetable**: `boolean`
 
-Defined in: types/audiences.ts:105
+Defined in: [types/audiences.ts:105](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L105)
 
 ***
 
@@ -112,7 +112,7 @@ Defined in: types/audiences.ts:105
 
 > `optional` **targetable\_types**: `string`[]
 
-Defined in: types/audiences.ts:106
+Defined in: [types/audiences.ts:106](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L106)
 
 ***
 
@@ -120,4 +120,4 @@ Defined in: types/audiences.ts:106
 
 > `optional` **partner\_source**: `string`
 
-Defined in: types/audiences.ts:107
+Defined in: [types/audiences.ts:107](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L107)

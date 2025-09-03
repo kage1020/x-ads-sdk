@@ -6,7 +6,7 @@
 
 # Interface: KeywordInsightsResponse
 
-Defined in: types/audiences.ts:277
+Defined in: [types/audiences.ts:277](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L277)
 
 Keyword insights response
 
@@ -16,7 +16,7 @@ Keyword insights response
 
 > **data**: `object`[]
 
-Defined in: types/audiences.ts:278
+Defined in: [types/audiences.ts:278](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L278)
 
 #### keyword
 
@@ -36,7 +36,7 @@ Defined in: types/audiences.ts:278
 
 > **request**: `object`
 
-Defined in: types/audiences.ts:283
+Defined in: [types/audiences.ts:283](https://github.com/kage1020/x-ads-sdk/blob/main/src/types/audiences.ts#L283)
 
 #### params
 

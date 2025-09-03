@@ -6,7 +6,7 @@
 
 # Class: Audiences
 
-Defined in: resources/audiences.ts:27
+Defined in: [resources/audiences.ts:27](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L27)
 
 Audiences resource class
 
@@ -46,7 +46,7 @@ Defined in: [resources/base.ts:9](https://github.com/kage1020/x-ads-sdk/blob/mai
 
 > **getCustomAudiences**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`CustomAudiencesResponse`](../interfaces/CustomAudiencesResponse.md)\>
 
-Defined in: resources/audiences.ts:33
+Defined in: [resources/audiences.ts:33](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L33)
 
 Get all custom audiences for an account
 
@@ -88,7 +88,7 @@ Get all custom audiences for an account
 
 > **getCustomAudience**(`accountId`, `customAudienceId`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:71
+Defined in: [resources/audiences.ts:71](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L71)
 
 Get a specific custom audience
 
@@ -116,7 +116,7 @@ Get a specific custom audience
 
 > **createCustomAudience**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:88
+Defined in: [resources/audiences.ts:88](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L88)
 
 Create a new custom audience
 
@@ -144,7 +144,7 @@ Create a new custom audience
 
 > **updateCustomAudience**(`accountId`, `customAudienceId`, `options`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:112
+Defined in: [resources/audiences.ts:112](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L112)
 
 Update a custom audience
 
@@ -176,7 +176,7 @@ Update a custom audience
 
 > **deleteCustomAudience**(`accountId`, `customAudienceId`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:143
+Defined in: [resources/audiences.ts:143](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L143)
 
 Delete a custom audience
 
@@ -204,7 +204,7 @@ Delete a custom audience
 
 > **addUsersToAudience**(`accountId`, `customAudienceId`, `options`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:160
+Defined in: [resources/audiences.ts:160](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L160)
 
 Add users to a custom audience
 
@@ -236,7 +236,7 @@ Add users to a custom audience
 
 > **isCustomAudienceTargeted**(`accountId`, `customAudienceId`, `requestOptions?`): `Promise`\<[`AudienceTargetedResponse`](../interfaces/AudienceTargetedResponse.md)\>
 
-Defined in: resources/audiences.ts:184
+Defined in: [resources/audiences.ts:184](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L184)
 
 Check if a custom audience is being targeted
 
@@ -264,7 +264,7 @@ Check if a custom audience is being targeted
 
 > **getCustomAudiencePermissions**(`accountId`, `customAudienceId`, `requestOptions?`): `Promise`\<[`AudiencePermissionsResponse`](../interfaces/AudiencePermissionsResponse.md)\>
 
-Defined in: resources/audiences.ts:203
+Defined in: [resources/audiences.ts:203](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L203)
 
 Get custom audience permissions
 
@@ -292,7 +292,7 @@ Get custom audience permissions
 
 > **createCustomAudiencePermission**(`accountId`, `customAudienceId`, `options`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:220
+Defined in: [resources/audiences.ts:220](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L220)
 
 Create custom audience permission
 
@@ -324,7 +324,7 @@ Create custom audience permission
 
 > **deleteCustomAudiencePermission**(`accountId`, `customAudienceId`, `permissionId`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:244
+Defined in: [resources/audiences.ts:244](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L244)
 
 Delete custom audience permission
 
@@ -356,7 +356,7 @@ Delete custom audience permission
 
 > **getTailoredAudiencePermissions**(`accountId`, `tailoredAudienceId`, `requestOptions?`): `Promise`\<[`AudiencePermissionsResponse`](../interfaces/AudiencePermissionsResponse.md)\>
 
-Defined in: resources/audiences.ts:264
+Defined in: [resources/audiences.ts:264](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L264)
 
 Get tailored audience permissions
 
@@ -384,7 +384,7 @@ Get tailored audience permissions
 
 > **createTailoredAudiencePermission**(`accountId`, `tailoredAudienceId`, `options`, `requestOptions?`): `Promise`\<[`TailoredAudienceResponse`](../interfaces/TailoredAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:281
+Defined in: [resources/audiences.ts:281](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L281)
 
 Create tailored audience permission
 
@@ -416,7 +416,7 @@ Create tailored audience permission
 
 > **deleteTailoredAudiencePermission**(`accountId`, `tailoredAudienceId`, `permissionId`, `requestOptions?`): `Promise`\<[`TailoredAudienceResponse`](../interfaces/TailoredAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:305
+Defined in: [resources/audiences.ts:305](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L305)
 
 Delete tailored audience permission
 
@@ -448,7 +448,7 @@ Delete tailored audience permission
 
 > **getDoNotReachLists**(`accountId`, `options?`, `requestOptions?`): `Promise`\<[`DoNotReachListsResponse`](../interfaces/DoNotReachListsResponse.md)\>
 
-Defined in: resources/audiences.ts:325
+Defined in: [resources/audiences.ts:325](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L325)
 
 Get all do not reach lists
 
@@ -482,7 +482,7 @@ Get all do not reach lists
 
 > **createDoNotReachList**(`accountId`, `options`, `requestOptions?`): `Promise`\<[`DoNotReachListResponse`](../interfaces/DoNotReachListResponse.md)\>
 
-Defined in: resources/audiences.ts:355
+Defined in: [resources/audiences.ts:355](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L355)
 
 Create a do not reach list
 
@@ -510,7 +510,7 @@ Create a do not reach list
 
 > **addUsersToDoNotReachList**(`accountId`, `doNotReachListId`, `options`, `requestOptions?`): `Promise`\<[`DoNotReachListResponse`](../interfaces/DoNotReachListResponse.md)\>
 
-Defined in: resources/audiences.ts:378
+Defined in: [resources/audiences.ts:378](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L378)
 
 Add users to do not reach list
 
@@ -542,7 +542,7 @@ Add users to do not reach list
 
 > **deleteDoNotReachList**(`accountId`, `doNotReachListId`, `requestOptions?`): `Promise`\<[`DoNotReachListResponse`](../interfaces/DoNotReachListResponse.md)\>
 
-Defined in: resources/audiences.ts:402
+Defined in: [resources/audiences.ts:402](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L402)
 
 Delete a do not reach list
 
@@ -570,7 +570,7 @@ Delete a do not reach list
 
 > **searchKeywordInsights**(`options`, `requestOptions?`): `Promise`\<[`KeywordInsightsResponse`](../interfaces/KeywordInsightsResponse.md)\>
 
-Defined in: resources/audiences.ts:421
+Defined in: [resources/audiences.ts:421](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L421)
 
 Search for keyword insights
 
@@ -594,7 +594,7 @@ Search for keyword insights
 
 > **createEmailAudience**(`accountId`, `name`, `emails`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:446
+Defined in: [resources/audiences.ts:446](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L446)
 
 Create CRM custom audience with email list
 
@@ -626,7 +626,7 @@ Create CRM custom audience with email list
 
 > **createMobileIdAudience**(`accountId`, `name`, `mobileIds`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:486
+Defined in: [resources/audiences.ts:486](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L486)
 
 Create mobile advertising ID audience
 
@@ -658,7 +658,7 @@ Create mobile advertising ID audience
 
 > **createXUserIdAudience**(`accountId`, `name`, `userIds`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:526
+Defined in: [resources/audiences.ts:526](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L526)
 
 Create X User ID audience
 
@@ -690,7 +690,7 @@ Create X User ID audience
 
 > **removeUsersFromAudience**(`accountId`, `customAudienceId`, `options`, `requestOptions?`): `Promise`\<[`CustomAudienceResponse`](../interfaces/CustomAudienceResponse.md)\>
 
-Defined in: resources/audiences.ts:566
+Defined in: [resources/audiences.ts:566](https://github.com/kage1020/x-ads-sdk/blob/main/src/resources/audiences.ts#L566)
 
 Remove users from audience (opt-out)
 
