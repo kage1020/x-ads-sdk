@@ -1,45 +1,38 @@
-export interface AuthConfig {
+export interface OAuthCredentials {
   consumerKey: string;
   consumerSecret: string;
   accessToken: string;
   accessTokenSecret: string;
-  sandbox?: boolean;
-  /**
-   * @default 'HMAC-SHA1' - Required by OAuth 1.0a specification for maximum compatibility
-   *
-   * OAuth signature method to use for request signing.
-   * This is for OAuth signature generation, not password hashing.
-   * HMAC-SHA1 is the standard OAuth 1.0a signature method as defined in RFC 5849.
-   */
-  signatureMethod?: 'HMAC-SHA1' | 'HMAC-SHA256';
+}
+
+export interface SDKConfig {
+  credentials: OAuthCredentials;
+  environment: 'sandbox' | 'production';
+  timeout?: number;
+  rateLimitBuffer?: number;
+  debug?: boolean;
 }
 
 export interface OAuthSignature {
   oauth_consumer_key: string;
   oauth_nonce: string;
-  oauth_signature: string;
   oauth_signature_method: string;
   oauth_timestamp: string;
   oauth_token: string;
   oauth_version: string;
+  oauth_signature: string;
 }
 
-export interface RequestOptions<TSortField = string> {
-  params?: {
-    count?: number;
-    cursor?: string;
-    sort_by?: TSortField;
-    with_deleted?: boolean;
-    [key: string]: unknown;
-  };
-  headers?: Record<string, string>;
+export interface AuthenticationContext {
+  credentials: OAuthCredentials;
+  environment: 'sandbox' | 'production';
+  baseUrl: string;
+  debug: boolean;
 }
 
-// Internal interface for OAuth signing (includes method and url)
-export interface OAuthRequestOptions {
-  method: string;
-  url: string;
-  params?: Record<string, unknown>;
-  body?: unknown;
-  headers?: Record<string, string>;
-}
+export const ENVIRONMENTS = {
+  sandbox: 'https://ads-api-sandbox.twitter.com/12',
+  production: 'https://ads-api.twitter.com/12',
+} as const;
+
+export type Environment = keyof typeof ENVIRONMENTS;

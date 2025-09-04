@@ -1,4 +1,6 @@
-# X Ads SDK
+# X Ads SDK for TypeScript
+
+A TypeScript SDK for the X Ads API, providing type-safe access to advertising campaigns, analytics, media management, and more.
 
 [![NPM Version](https://img.shields.io/npm/v/x-ads-sdk.svg)](https://www.npmjs.com/package/x-ads-sdk)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/x-ads-sdk.svg)](https://bundlephobia.com/package/x-ads-sdk)
@@ -7,341 +9,295 @@
 [![Build Status](https://img.shields.io/github/actions/workflow/status/kage1020/x-ads-sdk/ci.yml?branch=main)](https://github.com/kage1020/x-ads-sdk/actions)
 [![Coverage](https://img.shields.io/codecov/c/github/kage1020/x-ads-sdk.svg)](https://codecov.io/gh/kage1020/x-ads-sdk)
 
-A Node.js SDK for the X Ads API built with TypeScript. This SDK provides easy access to advertising campaign management, analytics, and reporting functionality.
+## Features
 
-## 🚀 Features
+- 🔒 **OAuth 1.0a Authentication** - Secure authentication with X Ads API
+- 📊 **Analytics & Reporting** - Comprehensive analytics with async job support
+- 🎯 **Campaign Management** - Create, update, and manage advertising campaigns
+- 📱 **Media Management** - Upload and manage media assets
+- 🎨 **Targeting Options** - Advanced audience targeting capabilities
+- 📈 **Rate Limiting** - Built-in rate limiting with exponential backoff
+- 🛡️ **Type Safety** - Full TypeScript support with comprehensive type definitions
+- 🌐 **Runtime Agnostic** - Works in browsers, Node.js, and edge environments
+- 🧪 **Well Tested** - Comprehensive test coverage with contract and integration tests
 
-- **Full TypeScript Support** - Complete type definitions for all API endpoints
-- **OAuth 1.0a Authentication** - Secure authentication with automatic request signing
-- **Comprehensive API Coverage** - Account management, campaigns, ad groups, and analytics
-- **Rate Limit Handling** - Automatic rate limiting with configurable strategies
-- **Retry Logic** - Built-in exponential backoff retry mechanism
-- **Environment Support** - Easy switching between sandbox and production environments
-- **Modern Architecture** - Built with ES modules and modern Node.js features
-
-## 📦 Installation
+## Installation
 
 ```bash
 npm install x-ads-sdk
 ```
 
-## 🏁 Quick Start
-
-### Basic Setup
+## Quick Start
 
 ```typescript
-import { XAdsClient, Environment } from 'x-ads-sdk';
+import { XAdsClient } from 'x-ads-sdk';
 
+// Initialize the client
 const client = new XAdsClient({
-  auth: {
-    consumerKey: 'your_consumer_key',
-    consumerSecret: 'your_consumer_secret',
-    accessToken: 'your_access_token',
-    accessTokenSecret: 'your_access_token_secret'
+  credentials: {
+    consumerKey: 'your-consumer-key',
+    consumerSecret: 'your-consumer-secret',
+    accessToken: 'your-access-token',
+    accessTokenSecret: 'your-access-token-secret',
   },
-  environment: Environment.SANDBOX // or Environment.PRODUCTION
+  environment: 'sandbox', // or 'production'
 });
-```
 
-### Environment Variables Setup
-
-Create a `.env` file in your project root:
-
-```env
-X_CONSUMER_KEY=your_consumer_key
-X_CONSUMER_SECRET=your_consumer_secret
-X_ACCESS_TOKEN=your_access_token
-X_ACCESS_TOKEN_SECRET=your_access_token_secret
-```
-
-Then use in your code:
-
-```typescript
-const client = new XAdsClient({
-  auth: {
-    consumerKey: process.env.X_CONSUMER_KEY!,
-    consumerSecret: process.env.X_CONSUMER_SECRET!,
-    accessToken: process.env.X_ACCESS_TOKEN!,
-    accessTokenSecret: process.env.X_ACCESS_TOKEN_SECRET!
-  },
-  environment: Environment.SANDBOX
-});
-```
-
-## 📚 Usage Examples
-
-### Account Management
-
-```typescript
-// List all accessible accounts
+// Get advertising accounts
 const accounts = await client.accounts.list();
 console.log(`Found ${accounts.data.length} accounts`);
 
-// Get specific account
-const account = await client.accounts.get('account_id');
-console.log(`Account: ${account.name}`);
-```
-
-### Campaign Management
-
-```typescript
-// List campaigns
-const campaigns = await client.campaigns.list('account_id');
-
-// Create a new campaign
-const newCampaign = await client.campaigns.create('account_id', {
-  name: 'My New Campaign',
-  objective: CampaignObjective.ENGAGEMENTS,
+// Create a campaign
+const campaign = await client.campaigns.create(accounts.data[0].id, {
+  name: 'My First Campaign',
+  funding_instrument_id: 'funding-instrument-id',
+  entity_status: 'PAUSED',
+  objective: 'AWARENESS',
+  start_time: new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString(),
   daily_budget_amount_local_micro: 10000000, // $10 in micro currency
-  currency: 'USD'
 });
 
-// Update campaign
-const updatedCampaign = await client.campaigns.update('account_id', 'campaign_id', {
-  name: 'Updated Campaign Name',
-  status: CampaignStatus.PAUSED
+// Get campaign analytics
+const analytics = await client.analytics.getStats(accounts.data[0].id, {
+  entity: 'CAMPAIGN',
+  entity_ids: [campaign.data.id],
+  start_time: '2024-01-01T00:00:00Z',
+  end_time: '2024-01-07T00:00:00Z',
+  granularity: 'DAY',
+  placement: 'ALL_ON_TWITTER',
+  metrics: ['impressions', 'clicks', 'spend_micro'],
 });
-
-// Convenience methods
-await client.campaigns.pause('account_id', 'campaign_id');
-await client.campaigns.activate('account_id', 'campaign_id');
 ```
 
-### Ad Group Management
+## API Reference
 
-```typescript
-// List ad groups
-const adGroups = await client.adGroups.list('account_id');
-
-// Create ad group
-const newAdGroup = await client.adGroups.create('account_id', {
-  campaign_id: 'campaign_id',
-  name: 'My Ad Group',
-  bid_amount_local_micro: 1000000 // $1 bid
-});
-
-// Get ad groups by campaign
-const campaignAdGroups = await client.adGroups.listByCampaign('account_id', 'campaign_id');
-```
-
-### Analytics and Reporting
-
-```typescript
-import { EntityType, Granularity } from 'x-ads-sdk';
-
-// Get campaign analytics for the last 7 days
-const analytics = await client.analytics.getCampaignAnalytics(
-  'account_id',
-  ['campaign_id1', 'campaign_id2'],
-  {
-    start_date: '2024-01-01',
-    end_date: '2024-01-07'
-  }
-);
-
-// Get daily performance trend
-const dailyAnalytics = await client.analytics.getDailyAnalytics(
-  'account_id',
-  EntityType.CAMPAIGN,
-  ['campaign_id'],
-  {
-    start_date: '2024-01-01',
-    end_date: '2024-01-07'
-  }
-);
-
-// Convenience methods
-const lastWeekAnalytics = await client.analytics.getLastWeekAnalytics(
-  'account_id',
-  EntityType.CAMPAIGN,
-  ['campaign_id']
-);
-```
-
-## ⚙️ Configuration Options
-
-### Client Configuration
+### Client Initialization
 
 ```typescript
 const client = new XAdsClient({
-  auth: {
-    consumerKey: 'your_key',
-    consumerSecret: 'your_secret',
-    accessToken: 'your_token',
-    accessTokenSecret: 'your_token_secret'
+  credentials: {
+    consumerKey: string;
+    consumerSecret: string;
+    accessToken: string;
+    accessTokenSecret: string;
   },
-  environment: Environment.SANDBOX, // or Environment.PRODUCTION
-  timeout: 30000, // Request timeout in milliseconds
-  maxRetries: 3, // Maximum retry attempts
-  rateLimitStrategy: 'wait', // or 'throw'
-  baseURL: 'https://custom-api.example.com' // Optional custom base URL
+  environment: 'sandbox' | 'production';
+  timeout?: number; // Request timeout in ms (default: 60000)
+  debug?: boolean; // Enable debug logging (default: false)
+  rateLimitBuffer?: number; // Rate limit buffer (0-1, default: 0.1)
 });
+```
+
+### Available Resources
+
+#### Accounts
+
+```typescript
+// List advertising accounts
+const accounts = await client.accounts.list();
+
+// Get specific account
+const account = await client.accounts.get(accountId);
+```
+
+#### Campaigns
+
+```typescript
+// List campaigns
+const campaigns = await client.campaigns.list(accountId, {
+  count: 10,
+  entity_statuses: ['ACTIVE', 'PAUSED'],
+});
+
+// Create campaign
+const campaign = await client.campaigns.create(accountId, {
+  name: 'Campaign Name',
+  funding_instrument_id: 'funding-id',
+  objective: 'AWARENESS',
+  // ... other campaign data
+});
+
+// Update campaign
+const updatedCampaign = await client.campaigns.update(accountId, campaignId, {
+  name: 'Updated Name',
+  entity_status: 'ACTIVE',
+});
+
+// Get campaign details
+const campaign = await client.campaigns.getCampaign(accountId, campaignId);
+
+// Delete campaign
+await client.campaigns.delete(accountId, campaignId);
+```
+
+#### Line Items
+
+```typescript
+// List line items
+const lineItems = await client.lineItems.list(accountId, {
+  campaign_ids: ['campaign-id'],
+});
+
+// Create line item
+const lineItem = await client.lineItems.create(accountId, {
+  name: 'Line Item Name',
+  campaign_id: 'campaign-id',
+  objective: 'AWARENESS',
+  product_type: 'PROMOTED_TWEETS',
+  // ... other line item data
+});
+```
+
+#### Analytics
+
+```typescript
+// Get synchronous analytics (small date ranges)
+const analytics = await client.analytics.getStats(accountId, {
+  entity: 'CAMPAIGN',
+  entity_ids: ['campaign-id'],
+  start_time: '2024-01-01T00:00:00Z',
+  end_time: '2024-01-07T00:00:00Z',
+  granularity: 'DAY',
+  placement: 'ALL_ON_TWITTER',
+  metrics: ['impressions', 'clicks', 'spend_micro'],
+});
+
+// Create asynchronous analytics job (large date ranges)
+const job = await client.analytics.createJob(accountId, {
+  entity: 'CAMPAIGN',
+  entity_ids: ['campaign-id'],
+  start_time: '2024-01-01T00:00:00Z',
+  end_time: '2024-03-31T00:00:00Z',
+  granularity: 'DAY',
+  placement: 'ALL_ON_TWITTER',
+  metrics: ['impressions', 'clicks', 'spend_micro'],
+});
+
+// Check job status
+const jobStatus = await client.analytics.getJob(accountId, job.data.job_id);
+
+// List recent jobs
+const jobs = await client.analytics.listJobs(accountId, { count: 10 });
+```
+
+#### Media
+
+```typescript
+// Upload media
+const media = await client.media.upload(accountId, {
+  file: fileData, // File object or Blob
+  media_category: 'TWEET_IMAGE',
+  name: 'My Creative Asset',
+});
+
+// List media library
+const mediaList = await client.media.list(accountId, {
+  media_category: 'TWEET_IMAGE',
+  count: 20,
+});
+
+// Get media details
+const mediaDetails = await client.media.getMedia(accountId, mediaId);
+
+// Delete media
+await client.media.delete(accountId, mediaId);
+```
+
+#### Targeting
+
+```typescript
+// Get targeting criteria
+const locations = await client.targeting.getLocations('US');
+const interests = await client.targeting.getInterests('technology');
+const behaviors = await client.targeting.getBehaviors();
 ```
 
 ### Rate Limiting
 
-The SDK includes built-in rate limiting with two strategies:
-
-- `'wait'` (default): Wait until rate limit resets
-- `'throw'`: Throw an error when rate limit is hit
+The SDK includes built-in rate limiting with exponential backoff:
 
 ```typescript
-const client = new XAdsClient({
-  auth: { /* auth config */ },
-  rateLimitStrategy: 'throw' // Fail fast on rate limits
-});
+// Check current rate limit status
+const status = client.getRateLimitStatus();
+console.log(`Remaining requests: ${status.remaining}`);
+
+// Reset rate limiter (if needed)
+client.resetRateLimit();
 ```
 
 ### Error Handling
 
 ```typescript
-import {
-  AuthenticationError,
-  RateLimitError,
-  APIError,
-  ValidationError
-} from 'x-ads-sdk';
-
 try {
-  const campaigns = await client.campaigns.list('account_id');
+  const campaigns = await client.campaigns.list(accountId);
 } catch (error) {
-  if (error instanceof AuthenticationError) {
-    console.error('Authentication failed:', error.message);
-  } else if (error instanceof RateLimitError) {
-    console.error('Rate limit hit, resets at:', error.resetTime);
-  } else if (error instanceof APIError) {
-    console.error('API error:', error.statusCode, error.message);
+  if (error instanceof Error) {
+    console.error('API Error:', error.message);
+
+    // Handle specific error types
+    if (error.message.includes('rate limit')) {
+      // Handle rate limiting
+    } else if (error.message.includes('unauthorized')) {
+      // Handle authentication errors
+    }
   }
 }
 ```
 
-## 🧪 Examples
+## Authentication
 
-Check out the comprehensive examples in the `examples/` directory:
+To use the X Ads API, you need to:
 
-- [`basic-usage.ts`](examples/basic-usage.ts) - Basic SDK setup and usage
-- [`campaign-management.ts`](examples/campaign-management.ts) - Campaign and ad group management
-- [`analytics-reporting.ts`](examples/analytics-reporting.ts) - Performance analytics and reporting
-- [`environment-setup.ts`](examples/environment-setup.ts) - Environment configuration
+1. Create a Twitter/X Developer App
+2. Apply for Ads API access
+3. Generate OAuth 1.0a credentials
 
-Run an example:
+### Environment Variables
 
-```bash
-npm run build
-node dist/examples/basic-usage.js
-```
-
-## 🔧 Development
-
-### Building the SDK
+For security, use environment variables for credentials:
 
 ```bash
-npm run build
+# For Vite projects (browser)
+VITE_CONSUMER_KEY=your-consumer-key
+VITE_CONSUMER_SECRET=your-consumer-secret
+VITE_ACCESS_TOKEN=your-access-token
+VITE_ACCESS_TOKEN_SECRET=your-access-token-secret
+
+# For Node.js projects
+CONSUMER_KEY=your-consumer-key
+CONSUMER_SECRET=your-consumer-secret
+ACCESS_TOKEN=your-access-token
+ACCESS_TOKEN_SECRET=your-access-token-secret
 ```
 
-### Running Tests
+## Examples
+
+Comprehensive examples are available in the [`examples/`](./examples/) directory:
+
+- [Basic Usage](./examples/01-basic-usage.ts) - SDK initialization and basic operations
+- [Campaign Management](./examples/02-campaign-management.ts) - Creating and managing campaigns
+- [Analytics](./examples/03-analytics.ts) - Retrieving analytics data and managing jobs
+- [Media Upload](./examples/04-media-upload.ts) - Uploading and managing media assets
+
+### Running Examples
 
 ```bash
-# Run all tests
-npm test
+# Install dependencies
+npm install
 
-# Run tests in watch mode
-npm run test:watch
+# Run specific example
+npx ts-node examples/01-basic-usage.ts
 
-# Run tests with coverage
-npm run test:coverage
+# Or use the example scripts
+npm run example:basic
+npm run example:campaigns
+npm run example:analytics
+npm run example:media
 ```
 
-### Project Structure
-
-```
-src/
-├── auth/           # OAuth authentication
-├── client/         # HTTP client and base functionality
-├── errors/         # Error definitions
-├── modules/        # API modules (accounts, campaigns, etc.)
-├── types/          # TypeScript type definitions
-├── utils/          # Utility functions
-├── client.ts       # Main SDK client
-└── index.ts        # Package exports
-```
-
-## 📝 TypeScript Support
-
-The SDK is built with TypeScript and provides comprehensive type definitions:
-
-```typescript
-import {
-  Campaign,
-  CampaignStatus,
-  CampaignObjective,
-  AdGroup,
-  AnalyticsMetrics
-} from 'x-ads-sdk';
-
-const campaign: Campaign = {
-  id: 'campaign_id',
-  name: 'My Campaign',
-  status: CampaignStatus.ACTIVE,
-  objective: CampaignObjective.ENGAGEMENTS,
-  // ... other properties with full type checking
-};
-```
-
-## 🔐 Authentication
-
-This SDK uses OAuth 1.0a for authentication. You'll need to:
-
-1. Create a X Developer Account
-2. Create an App in the X Developer Portal
-3. Generate Consumer Keys and Access Tokens
-4. Use these credentials in your SDK configuration
-
-For detailed authentication setup, refer to the [X Developer Documentation](https://developer.x.com/en/docs/authentication/oauth-1-0a).
-
-## 🌐 Environment Support
-
-The SDK supports both sandbox and production environments:
-
-### Sandbox (Development)
-
-- Use `Environment.SANDBOX`
-- Safe for testing and development
-- No real money transactions
-
-### Production
-
-- Use `Environment.PRODUCTION`
-- Live advertising campaigns
-- Real money transactions - use with caution
-
-## 📊 Supported Metrics
-
-The analytics module supports comprehensive metrics:
-
-- **Engagement Metrics**: Impressions, clicks, engagements, retweets, replies, likes
-- **Billing Metrics**: Billed charges, billed engagements
-- **Video Metrics**: Video views, completion rates, CTA clicks
-- **Conversion Metrics**: Website conversions, app installs, custom events
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these guidelines:
-
-- Code style and standards
-- Testing requirements
-- Pull request process
-- Issue reporting
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-- **Documentation**: Check the examples and TypeScript definitions
-- **Issues**: Report bugs and request features on [GitHub Issues](https://github.com/kage1020/x-ads-sdk/issues)
-- **X Ads API**: Official [X Ads API Documentation](https://docs.x.com/x-ads-api/introduction)
 
 ## 🔗 Resources
 
@@ -352,4 +308,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Note**: This SDK is not officially maintained by X (formerly Twitter). It's a community-driven project designed to provide a robust Node.js/TypeScript interface to the X Ads API.
+**Note**: This SDK is not officially endorsed by X. It's a community-driven project to help developers integrate with the X Ads API more easily.

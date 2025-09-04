@@ -12,10 +12,6 @@ dist
 dist-ssr
 *.local
 
-# Coverage reports
-coverage
-*.lcov
-
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -26,13 +22,16 @@ coverage
 *.njsproj
 *.sln
 *.sw?
-.serena
 
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Claude Code
+# Agents
 .claude
 CLAUDE.md
+.serena
+memory
+scripts
+templates
+specs
+docs
+
+# Tests
+coverage

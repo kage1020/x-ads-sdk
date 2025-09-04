@@ -1,127 +1,161 @@
-import { AuthenticationError } from '../errors/index.js';
-import type { AuthConfig, OAuthRequestOptions, OAuthSignature } from '../types/auth.js';
-import { hmac, randomHex } from '../utils/crypto.js';
+import type { OAuthCredentials, RequestOptions } from '../types';
 
-export class OAuth {
-  private consumerKey: string;
-  private consumerSecret: string;
-  private accessToken: string;
-  private accessTokenSecret: string;
-  private signatureMethod: 'HMAC-SHA1' | 'HMAC-SHA256';
+interface OAuthParams {
+  oauth_consumer_key: string;
+  oauth_nonce: string;
+  oauth_signature_method: string;
+  oauth_timestamp: string;
+  oauth_token: string;
+  oauth_version: string;
+  oauth_signature: string;
+}
 
-  constructor(config: AuthConfig) {
-    this.consumerKey = config.consumerKey;
-    this.consumerSecret = config.consumerSecret;
-    this.accessToken = config.accessToken;
-    this.accessTokenSecret = config.accessTokenSecret;
-    // Default to HMAC-SHA1 for OAuth 1.0a compatibility as per RFC 5849
-    this.signatureMethod = config.signatureMethod || 'HMAC-SHA1';
+export class OAuthService {
+  private credentials: OAuthCredentials;
 
-    this.validateConfig();
+  constructor(credentials: OAuthCredentials) {
+    this.credentials = credentials;
   }
 
-  private validateConfig(): void {
-    const required = ['consumerKey', 'consumerSecret', 'accessToken', 'accessTokenSecret'];
-    const missing = required.filter((key) => !this[key as keyof OAuth]);
-
-    if (missing.length > 0) {
-      throw new AuthenticationError(`Missing required OAuth parameters: ${missing.join(', ')}`);
-    }
-  }
-
-  async generateNonce(): Promise<string> {
-    return randomHex(32);
-  }
-
-  generateTimestamp(): string {
-    return Math.floor(Date.now() / 1000).toString();
-  }
-
-  percentEncode(str: string): string {
-    return encodeURIComponent(str).replace(
-      /[!'()*]/g,
-      (c) => `%${c.charCodeAt(0).toString(16).toUpperCase()}`
-    );
-  }
-
-  async generateSignature(
-    httpMethod: string,
-    baseURL: string,
-    parameters: Record<string, string>
-  ): Promise<string> {
-    const sortedParams = Object.keys(parameters)
-      .sort()
-      .map((key) => `${this.percentEncode(key)}=${this.percentEncode(parameters[key])}`)
-      .join('&');
-
-    const signatureBaseString = [
-      httpMethod.toUpperCase(),
-      this.percentEncode(baseURL),
-      this.percentEncode(sortedParams),
-    ].join('&');
-
-    const signingKey = [
-      this.percentEncode(this.consumerSecret),
-      this.percentEncode(this.accessTokenSecret),
-    ].join('&');
-
-    const algorithm = this.signatureMethod === 'HMAC-SHA256' ? 'SHA-256' : 'SHA-1';
-    return hmac(algorithm, signingKey, signatureBaseString);
-  }
-
-  async generateOAuthSignature(options: OAuthRequestOptions): Promise<OAuthSignature> {
-    const nonce = await this.generateNonce();
-    const timestamp = this.generateTimestamp();
-
-    const oauthParams: Record<string, string> = {
-      oauth_consumer_key: this.consumerKey,
-      oauth_nonce: nonce,
-      oauth_signature_method: this.signatureMethod,
-      oauth_timestamp: timestamp,
-      oauth_token: this.accessToken,
-      oauth_version: '1.0',
-    };
-
-    // Combine OAuth params with request params for signature generation
-    const allParams = { ...oauthParams };
-    if (options.params) {
-      Object.keys(options.params).forEach((key) => {
-        allParams[key] = String(options.params?.[key]);
-      });
-    }
-
-    const signature = await this.generateSignature(options.method, options.url, allParams);
+  public async signRequest(requestOptions: RequestOptions): Promise<RequestOptions> {
+    const authHeader = await this.getAuthorizationHeader(requestOptions);
 
     return {
-      oauth_consumer_key: this.consumerKey,
-      oauth_nonce: nonce,
-      oauth_signature: signature,
-      oauth_signature_method: this.signatureMethod,
-      oauth_timestamp: timestamp,
-      oauth_token: this.accessToken,
-      oauth_version: '1.0',
-    };
-  }
-
-  generateAuthorizationHeader(signature: OAuthSignature): string {
-    const authParams = Object.keys(signature)
-      .sort()
-      .map((key) => `${key}="${this.percentEncode(signature[key as keyof OAuthSignature])}"`)
-      .join(', ');
-
-    return `OAuth ${authParams}`;
-  }
-
-  async signRequest(options: OAuthRequestOptions): Promise<OAuthRequestOptions> {
-    const signature = await this.generateOAuthSignature(options);
-    const authHeader = this.generateAuthorizationHeader(signature);
-
-    return {
-      ...options,
+      ...requestOptions,
       headers: {
-        ...options.headers,
+        ...requestOptions.headers,
         Authorization: authHeader,
       },
     };
+  }
+
+  public async getAuthorizationHeader(requestOptions: RequestOptions): Promise<string> {
+    const oauthParams: Omit<OAuthParams, 'oauth_signature'> = {
+      oauth_consumer_key: this.credentials.consumerKey,
+      oauth_nonce: this.generateNonce(),
+      oauth_signature_method: 'HMAC-SHA1',
+      oauth_timestamp: Math.floor(Date.now() / 1000).toString(),
+      oauth_token: this.credentials.accessToken,
+      oauth_version: '1.0',
+    };
+
+    const signature = await this.generateSignature(requestOptions.method, requestOptions.url, {
+      ...oauthParams,
+      ...(requestOptions.params || {}),
+    });
+
+    const fullOAuthParams: OAuthParams = {
+      ...oauthParams,
+      oauth_signature: signature,
+    };
+
+    return this.buildAuthorizationHeader(fullOAuthParams);
+  }
+
+  public validateCredentials(): void {
+    if (!this.credentials.consumerKey) {
+      throw new Error('Consumer key is required');
+    }
+    if (!this.credentials.consumerSecret) {
+      throw new Error('Consumer secret is required');
+    }
+    if (!this.credentials.accessToken) {
+      throw new Error('Access token is required');
+    }
+    if (!this.credentials.accessTokenSecret) {
+      throw new Error('Access token secret is required');
+    }
+
+    if (!/^[a-zA-Z0-9\-_]+$/.test(this.credentials.accessToken)) {
+      throw new Error('Invalid token format');
+    }
+  }
+
+  public updateCredentials(newCredentials: OAuthCredentials): void {
+    this.credentials = newCredentials;
+  }
+
+  private generateNonce(): string {
+    const array = new Uint8Array(32);
+    crypto.getRandomValues(array);
+    return Array.from(array, (byte) => byte.toString(16).padStart(2, '0')).join('');
+  }
+
+  private percentEncode(value: string): string {
+    return encodeURIComponent(value).replace(
+      /[!'()*]/g,
+      (char) => `%${char.charCodeAt(0).toString(16).toUpperCase()}`
+    );
+  }
+
+  private buildAuthorizationHeader(oauthParams: OAuthParams): string {
+    const headerParams = Object.entries(oauthParams)
+      .map(([key, value]) => `${key}="${this.percentEncode(value)}"`)
+      .join(', ');
+
+    return `OAuth ${headerParams}`;
+  }
+
+  private async generateSignature(
+    method: string,
+    url: string,
+    params: Record<string, unknown>
+  ): Promise<string> {
+    const normalizedParams = this.normalizeParams(params);
+    const baseString = this.createSignatureBaseString(method, url, normalizedParams);
+    const signingKey = this.createSigningKey();
+
+    return this.hmacSha1(baseString, signingKey);
+  }
+
+  private normalizeParams(params: Record<string, unknown>): string {
+    const encodedParams = Object.entries(params)
+      .filter(([_, value]) => value !== undefined && value !== null)
+      .map(([key, value]) => [this.percentEncode(key), this.percentEncode(String(value))])
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([key, value]) => `${key}=${value}`)
+      .join('&');
+
+    return encodedParams;
+  }
+
+  private createSignatureBaseString(method: string, url: string, normalizedParams: string): string {
+    const baseUrl = url.split('?')[0];
+    return [
+      method.toUpperCase(),
+      this.percentEncode(baseUrl),
+      this.percentEncode(normalizedParams),
+    ].join('&');
+  }
+
+  private createSigningKey(): string {
+    return [
+      this.percentEncode(this.credentials.consumerSecret),
+      this.percentEncode(this.credentials.accessTokenSecret),
+    ].join('&');
+  }
+
+  private async hmacSha1(data: string, key: string): Promise<string> {
+    const encoder = new TextEncoder();
+    const keyData = encoder.encode(key);
+    const dataToSign = encoder.encode(data);
+
+    const cryptoKey = await crypto.subtle.importKey(
+      'raw',
+      keyData,
+      { name: 'HMAC', hash: 'SHA-1' },
+      false,
+      ['sign']
+    );
+
+    const signature = await crypto.subtle.sign('HMAC', cryptoKey, dataToSign);
+
+    // Convert to base64
+    const signatureArray = new Uint8Array(signature);
+    let binary = '';
+    for (let i = 0; i < signatureArray.byteLength; i++) {
+      binary += String.fromCharCode(signatureArray[i]);
+    }
+    return btoa(binary);
   }
 }
