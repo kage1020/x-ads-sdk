@@ -1,0 +1,20 @@
+{
+  "name": "x-ads-sdk-examples",
+  "version": "1.0.0",
+  "description": "Examples for X Ads SDK usage",
+  "private": true,
+  "scripts": {
+    "example:basic": "ts-node 01-basic-usage.ts",
+    "example:campaigns": "ts-node 02-campaign-management.ts",
+    "example:analytics": "ts-node 03-analytics.ts",
+    "example:media": "ts-node 04-media-upload.ts",
+    "example:all": "npm run example:basic && npm run example:campaigns && npm run example:analytics && npm run example:media"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.0",
+    "@types/node": "^18.0.0"
+  }
+}

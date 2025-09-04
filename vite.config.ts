@@ -1,25 +1,46 @@
+import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import dts from 'vite-plugin-dts';
 
 export default defineConfig({
+  plugins: [
+    dts({
+      include: ['src/**/*'],
+      exclude: ['src/**/*.test.ts', 'src/**/*.spec.ts'],
+    }),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'XAdsSDK',
-      formats: ['es', 'cjs'],
-      fileName: (format) => `x-ads-sdk.${format}.js`
+      formats: ['es', 'cjs', 'umd'],
+      fileName: (format) => {
+        switch (format) {
+          case 'es':
+            return 'index.js';
+          case 'cjs':
+            return 'index.cjs';
+          case 'umd':
+            return 'index.umd.js';
+          default:
+            return `index.${format}.js`;
+        }
+      },
     },
     rollupOptions: {
-      // Make sure to externalize deps that shouldn't be bundled
-      external: ['node:url'],
+      external: ['oauth-1.0a'],
       output: {
-        // Provide global variables for these externals in UMD build
         globals: {
-          'node:url': 'url'
-        }
-      }
+          'oauth-1.0a': 'OAuth',
+        },
+      },
     },
     sourcemap: true,
-    target: 'es2020'
-  }
+    minify: true,
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
+  },
 });
